@@ -1,0 +1,403 @@
+{
+  "study_overview": "\n            Brief Summary\n\n            This is a Phase 1/2, multicenter, randomized, placebo-controlled, double-blind study to evaluate the safety, tolerability, pharmacokinetics (PK), and pharmacodynamics (PD) of single and multiple doses of DNL593 in two parts followed by an optional open-label extension (OLE) period.\n\n            Part A will evaluate the safety, tolerability, PK, and PD of single doses of DNL593 in healthy male and healthy female participants of nonchildbearing potential. Part B will evaluate the safety, tolerability, PK, and PD of multiple doses of DNL593 in participants with frontotemporal dementia (FTD) over 25 weeks. Part B will be followed by Part C, an optional 18-month OLE period available for all participants who complete Part B.\n            Official Title\n            A Phase 1/2, Multicenter, Randomized, Placebo-Controlled, Double Blind Single Dose and Multiple Dose Study to Evaluate the Safety, Tolerability, Pharmacokinetics, and Pharmacodynamics of DNL593 in Healthy Participants and Participants With Frontotemporal Dementia Followed by an Open-Label Extension\n            Conditions\n            Frontotemporal Dementia\n            Intervention / Treatment\n\n                Drug: DNL593\n                Drug: Placebo\n\n            Sponsor: Denali Therapeutics\n          ",
+  "role": "Clinical Research Associate",
+  "threads": [
+    {
+      "emails": [
+        {
+          "from_address": "maria.garcia@med.ucla.edu",
+          "to_addresses": [
+            "alex.johnson@denalitx.com",
+            "study.DNLI-123@cro-syneos.com"
+          ],
+          "cc_addresses": [
+            "robert.chen@med.ucla.edu",
+            "sarah.lee@cro-syneos.com"
+          ],
+          "subject": "URGENT: New SAE Report - Study DNLI-123 - Site 101 (UCLA) - Patient 101-005",
+          "timestamp": "2023-10-23T09:15:30-07:00",
+          "body": "Dear Study Team,\n\nPlease see the attached Serious Adverse Event (SAE) form for patient 101-005 enrolled in Part B of the DNLI-123 study.\n\nThe patient was hospitalized yesterday evening for pneumonia.\n\nPlease confirm receipt of this report and let us know the next steps.\n\nBest regards,\n\nMaria Garcia\nClinical Research Coordinator\nUCLA Department of Neurology\n(310) 555-1234\nmaria.garcia@med.ucla.edu",
+          "attachments": [
+            "SAE_Report_DNLI-123_101-005_Initial.pdf"
+          ],
+          "message_id": 1671819300,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "sarah.lee@cro-syneos.com",
+          "to_addresses": [
+            "maria.garcia@med.ucla.edu"
+          ],
+          "cc_addresses": [
+            "alex.johnson@denalitx.com",
+            "robert.chen@med.ucla.edu",
+            "safety@denalitx.com"
+          ],
+          "subject": "Re: URGENT: New SAE Report - Study DNLI-123 - Site 101 (UCLA) - Patient 101-005",
+          "timestamp": "2023-10-23T09:45:10-07:00",
+          "body": "Hi Maria,\n\nThank you for the prompt notification and for sending the initial SAE report. We have received it.\n\nAlex, can you please take the lead on this from the sponsor side? Please acknowledge the report with the site, request the necessary source documents, and confirm the 24-hour reporting timeline has been met with the Denali safety team (cc'd).\n\nMaria, Alex will be in touch with you shortly regarding the next steps.\n\nBest,\n\nSarah Lee\nProject Manager\nSyneos Health",
+          "attachments": [],
+          "message_id": 1671819301,
+          "in_reply_to": 1671819300
+        }
+      ],
+      "role_descriptions": [
+        "maria.garcia@med.ucla.edu: UCLA (Site), Clinical Research Coordinator",
+        "robert.chen@med.ucla.edu: UCLA (Site), Principal Investigator",
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "sarah.lee@cro-syneos.com: Syneos Health (CRO), Project Manager",
+        "safety@denalitx.com: Denali Therapeutics (Sponsor), Safety Team",
+        "study.DNLI-123@cro-syneos.com: Syneos Health (CRO), Study Mailbox"
+      ],
+      "description": "An urgent email thread initiated by a site coordinator at UCLA reporting a Serious Adverse Event (SAE) for a patient in Part B. The patient was hospitalized for pneumonia. The thread involves Alex Johnson acknowledging the report, requesting source documents, and confirming the 24-hour reporting timeline with the Denali safety team."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "alex.johnson@denalitx.com",
+          "to_addresses": [
+            "m.garcia@summitclinical.com"
+          ],
+          "cc_addresses": [
+            "d.chen@syneos.com"
+          ],
+          "subject": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101",
+          "timestamp": "2024-07-15T10:30:00-05:00",
+          "body": "Hi Maria,\n\nHope you are having a good week.\n\nI'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I would like to propose the week of August 5th or the week of August 12th for the visit.\n\nPlease let me know which of these weeks works best for you and Dr. Reed's availability. Once we have a week selected, we can lock in the specific dates.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+          "attachments": [],
+          "message_id": 1654,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "m.garcia@summitclinical.com",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "d.chen@syneos.com"
+          ],
+          "subject": "Re: DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101",
+          "timestamp": "2024-07-16T14:45:00-05:00",
+          "body": "Hi Alex,\n\nThanks for reaching out.\n\nUnfortunately, Dr. Reed will be on vacation for the first three weeks of August, so the weeks of the 5th and 12th will not work for us.\n\nWould the week of August 26th be a possibility for you? We have good availability on August 27-28.\n\nPlease let me know if that works for your schedule.\n\nThank you,\n\nMaria Garcia\nClinical Research Coordinator\nSummit Clinical Research",
+          "attachments": [],
+          "message_id": 1655,
+          "in_reply_to": 1654
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "m.garcia@summitclinical.com: Summit Clinical Research (Site), Clinical Research Coordinator",
+        "d.chen@syneos.com: Syneos Health (CRO), Project Manager"
+      ],
+      "description": "A routine scheduling back-and-forth between Alex Johnson and a clinical research coordinator at a study site to finalize dates for the next quarterly Interim Monitoring Visit (IMV). The thread includes proposed dates from Alex, a counter-proposal from the site due to the Principal Investigator's vacation, and a final confirmation."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "alex.johnson@denalitherapeutics.com",
+          "to_addresses": [
+            "brian.neal@cvsresearch.org",
+            "dr.marta.gomez@cvsresearch.org"
+          ],
+          "cc_addresses": [
+            "sandra.wong@denalitherapeutics.com"
+          ],
+          "subject": "URGENT Follow-Up: Outstanding Data Queries for Study DNLI-001 at Site 305",
+          "timestamp": "2024-05-21T11:30:00-04:00",
+          "body": "Dear Dr. Gomez and Brian,\n\nI hope this email finds you well.\n\nI am writing to follow up on the outstanding data queries for study DNLI-001. As of this morning, there are over 30 queries that have remained open for more than 14 days. Timely resolution is critical as we are approaching the database lock for Part A, and these delays are putting our timeline at risk.\n\nI have attached a detailed line listing of the outstanding queries for your convenience. \n\nCould you please review the list and provide an estimated timeline for when your team expects to have these resolved? Please let me know if you are encountering any issues or require support from our end to address these items.\n\nThank you for your prompt attention to this important matter.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics\nalex.johnson@denalitherapeutics.com",
+          "attachments": [
+            "DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx"
+          ],
+          "message_id": 1,
+          "in_reply_to": null
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "brian.neal@cvsresearch.org: Cardiovascular Specialist Research (Site), Clinical Research Coordinator",
+        "dr.marta.gomez@cvsresearch.org: Cardiovascular Specialist Research (Site), Principal Investigator",
+        "sandra.wong@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Trial Manager"
+      ],
+      "description": "An email from Alex Johnson to a low-performing site's research team following up on a list of over 30 data queries that have been outstanding for more than 14 days. The email serves as a formal reminder and requests an estimated timeline for resolution to ensure the database lock for Part A is not delayed."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "e.reed@maplewoodresearch.com",
+          "to_addresses": [
+            "alex.johnson@denalithx.com"
+          ],
+          "cc_addresses": [
+            "c.ruiz@maplewoodresearch.com",
+            "sarah.chen@synergycro.com"
+          ],
+          "subject": "URGENT: Protocol Deviation Report - Dosing Error - Study DNLI-001 - Site 102",
+          "timestamp": "2024-05-10T15:15:00Z",
+          "body": "Dear Alex,\n\nThis email is to urgently inform you of a significant protocol deviation that occurred today at our site (102) for study DNLI-001.\n\nThis morning, participant 102-2005, enrolled in Part B (FTD cohort), was inadvertently administered a double dose of the investigational product during their scheduled Visit 5 infusion.\n\nThe error was identified by the infusion nurse immediately following the procedure. The participant is currently stable, asymptomatic, and is being held for an extended 8-hour observation period as a precaution. All vital signs are being monitored closely and remain within normal limits.\n\nWe have documented the event and completed the attached Protocol Deviation form. We require immediate guidance on the necessary follow-up, safety monitoring, and reporting procedures. Please escalate this to the study's Medical Monitor as soon as possible for their assessment and recommendations.\n\nWe await your urgent response.\n\nBest regards,\n\nDr. Evelyn Reed\nPrincipal Investigator\nMaplewood Clinical Research\nSite 102",
+          "attachments": [
+            "PD_Form_102-2005_DoubleDose_10MAY2024.pdf"
+          ],
+          "message_id": 811,
+          "in_reply_to": null
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalithx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "e.reed@maplewoodresearch.com: Maplewood Clinical Research (Site), Principal Investigator",
+        "c.ruiz@maplewoodresearch.com: Maplewood Clinical Research (Site), Study Coordinator",
+        "sarah.chen@synergycro.com: Synergy CRO (CRO), Project Manager"
+      ],
+      "description": "A multi-part discussion with a Principal Investigator who reported a protocol deviation where a participant in the FTD cohort (Part B) was accidentally administered a double dose of the investigational product. The thread involves Alex Johnson escalating the issue to the study's medical monitor for guidance on patient safety and follow-up procedures."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "sarah.chen@maplewoodresearch.com",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "maria.garcia@maplewoodresearch.com",
+            "ben.carter@synergyclinical.com"
+          ],
+          "subject": "URGENT Notification: Temperature Excursion for DNL593/Placebo - Site 101",
+          "timestamp": "2023-11-06T08:32:00Z",
+          "body": "Dear Alex,\n\nThis is an urgent notification regarding a temperature excursion for the Investigational Product refrigerator at Site 101, Maplewood Clinical Research Center.\n\nThe excursion was noted this morning at 8:00 AM EST. The refrigerator stores all kits for the DNL593 study, including active drug and placebo.\n\nDetails:\n- Duration of excursion: Approximately 6 hours (from 1:45 AM to 7:45 AM EST).\n- Minimum Temperature Recorded: 1.2\u00b0C\n- Maximum Temperature Recorded: 9.5\u00b0C (briefly)\n- Standard Range: 2\u00b0C to 8\u00b0C\n\nI have attached the continuous temperature monitoring log for your review. All affected DNL593 and placebo kits have been identified and remain in the refrigerator, but are not being dispensed.\n\nPlease provide immediate guidance on the viability of the affected product and instructions on next steps.\n\nBest regards,\n\nDr. Sarah Chen\nInvestigational Drug Pharmacist\nMaplewood Clinical Research Center\n(555) 123-4567",
+          "attachments": [
+            "TempLog_Site101_20231106.pdf"
+          ],
+          "message_id": 9501,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "alex.johnson@denalitx.com",
+          "to_addresses": [
+            "sarah.chen@maplewoodresearch.com",
+            "david.lee@denalitx.com"
+          ],
+          "cc_addresses": [
+            "maria.garcia@maplewoodresearch.com",
+            "ben.carter@synergyclinical.com"
+          ],
+          "subject": "Re: URGENT Notification: Temperature Excursion for DNL593/Placebo - Site 101",
+          "timestamp": "2023-11-06T09:15:00Z",
+          "body": "Hi Sarah,\n\nThank you for the prompt and detailed notification. I have received the temperature log.\n\nPlease immediately quarantine all affected DNL593 and placebo kits. Label the stock clearly with \"QUARANTINED - DO NOT USE PENDING SPONSOR ASSESSMENT.\"\n\nI am looping in David Lee, our Clinical Supply Manager at Denali, to conduct a formal stability assessment based on the data you provided.\n\nDavid, can you please review the attached log from the previous email and advise on the viability of the product? Please let us know if you require any further information from the site.\n\nSarah, we will provide further instructions as soon as the assessment is complete. Please confirm once the product has been quarantined.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+          "attachments": [],
+          "message_id": 9502,
+          "in_reply_to": 9501
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "david.lee@denalitx.com: Denali Therapeutics (Sponsor), Clinical Supply Manager",
+        "sarah.chen@maplewoodresearch.com: Maplewood Clinical Research Center (Site), Investigational Drug Pharmacist",
+        "maria.garcia@maplewoodresearch.com: Maplewood Clinical Research Center (Site), Clinical Research Coordinator",
+        "ben.carter@synergyclinical.com: Synergy Clinical (CRO), Project Manager"
+      ],
+      "description": "An urgent notification from a site pharmacist regarding a temperature excursion in the refrigerator storing the DNL593 and placebo. The thread shows Alex Johnson coordinating with Denali's clinical supply manager to determine if the product is still viable and providing instructions to the site to quarantine the affected stock."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "alex.johnson@denalitx.com",
+          "to_addresses": [
+            "sarah.miller@ucsfmed.org"
+          ],
+          "cc_addresses": [
+            "pm_lead@ pinnaclecro.com",
+            "emily.vance@ucsfmed.org"
+          ],
+          "subject": "Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102",
+          "timestamp": "2023-11-06T11:15:00Z",
+          "body": "Hi Sarah,\n\nI hope you are having a good week.\n\nI'm following up on the Monitoring Visit Report from our visit on October 25th. There are a couple of outstanding action items that we need to close out:\n\n1.  Updated Delegation of Authority Log: Please provide the updated log reflecting the addition of Dr. James Peterson as a new Sub-Investigator.\n2.  Training Confirmation: Please provide documentation confirming that Dr. Peterson has completed the required protocol and GCP training.\n\nPlease let me know if you have an estimated timeline for when these items can be provided.\n\nThanks for your continued hard work on this study.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+          "attachments": [],
+          "message_id": 16541,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "sarah.miller@ucsfmed.org",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "pm_lead@pinnaclecro.com",
+            "emily.vance@ucsfmed.org"
+          ],
+          "subject": "Re: Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102",
+          "timestamp": "2023-11-06T16:45:22Z",
+          "body": "Hi Alex,\n\nThanks for the reminder. \n\nWe have Dr. Peterson's training documentation ready, which I've attached to this email. \n\nI am still waiting for Dr. Vance to sign the updated Delegation of Authority Log. She has been in back-to-back patient visits today but I expect to have it signed and sent over to you by EOD tomorrow.\n\nI will let you know if there are any further delays.\n\nBest,\n\nSarah Miller\nClinical Research Coordinator\nUCSF Medical Center",
+          "attachments": [
+            "JPeterson_Training_Confirmation_DNLI-001.pdf"
+          ],
+          "message_id": 16542,
+          "in_reply_to": 16541
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "sarah.miller@ucsfmed.org: UCSF Medical Center (Site), Clinical Research Coordinator",
+        "emily.vance@ucsfmed.org: UCSF Medical Center (Site), Principal Investigator",
+        "pm_lead@pinnaclecro.com: Pinnacle CRO (CRO), Project Management Lead"
+      ],
+      "description": "A routine follow-up email from Alex Johnson to a site coordinator regarding outstanding action items from the last monitoring visit report. The email specifically requests an updated Delegation of Authority Log to reflect a new sub-investigator and confirmation of completed training for the new staff member."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "mgarcia@westwoodcrc.com",
+          "to_addresses": [
+            "ben.carter@synergyclinical.com"
+          ],
+          "cc_addresses": [
+            "ereed@westwoodcrc.com"
+          ],
+          "subject": "Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria",
+          "timestamp": "2023-10-26T10:15:00-04:00",
+          "body": "Hi Ben,\n\nHope you're having a good week.\n\nWe have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During the pre-screen review, we noted their liver function tests (LFTs) are slightly above the upper limit of normal (ULN). Specifically, their ALT is 1.2x ULN.\n\nThe protocol exclusion criterion #5 states 'Clinically significant abnormal laboratory values,' but it's a bit ambiguous for this specific case. Could you please provide clarification on the acceptable range for LFTs for healthy volunteers in this part of the study? We want to ensure we are interpreting this correctly before proceeding with the formal screening visit.\n\nThanks for your help.\n\nBest regards,\n\nMaria Garcia\nClinical Research Coordinator\nWestwood Clinical Research Center",
+          "attachments": [],
+          "message_id": 1001,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "ben.carter@synergyclinical.com",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "mgarcia@westwoodcrc.com",
+            "ereed@westwoodcrc.com",
+            "sarah.chen@denalitx.com"
+          ],
+          "subject": "Fwd: Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria",
+          "timestamp": "2023-10-26T11:30:00-04:00",
+          "body": "Hi Alex,\n\nPlease see the query below from the team at Westwood CRC regarding the LFT exclusion criteria for Part A.\n\nCould you please provide the official guidance from the sponsor on this and reference the relevant protocol section?\n\nThanks,\n\nBen\n\nBen Carter\nClinical Research Associate\nSynergy Clinical\n\n--- Original Message ---\nFrom: Maria Garcia <mgarcia@westwoodcrc.com>\nSent: Thursday, October 26, 2023 10:15 AM\nTo: Ben Carter <ben.carter@synergyclinical.com>\nCc: Dr. Emily Reed <ereed@westwoodcrc.com>\nSubject: Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria\n\nHi Ben,\n\nHope you're having a good week.\n\nWe have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During the pre-screen review, we noted their liver function tests (LFTs) are slightly above the upper limit of normal (ULN). Specifically, their ALT is 1.2x ULN.\n\nThe protocol exclusion criterion #5 states 'Clinically significant abnormal laboratory values,' but it's a bit ambiguous for this specific case. Could you please provide clarification on the acceptable range for LFTs for healthy volunteers in this part of the study? We want to ensure we are interpreting this correctly before proceeding with the formal screening visit.\n\nThanks for your help.\n\nBest regards,\n\nMaria Garcia\nClinical Research Coordinator\nWestwood Clinical Research Center",
+          "attachments": [],
+          "message_id": 1002,
+          "in_reply_to": 1001
+        }
+      ],
+      "role_descriptions": [
+        "mgarcia@westwoodcrc.com: Westwood Clinical Research Center (Site), Clinical Research Coordinator",
+        "ereed@westwoodcrc.com: Westwood Clinical Research Center (Site), Principal Investigator",
+        "ben.carter@synergyclinical.com: Synergy Clinical (CRO), Clinical Research Associate",
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "sarah.chen@denalitx.com: Denali Therapeutics (Sponsor), Clinical Project Manager"
+      ],
+      "description": "An inquiry from a site coordinator asking for clarification on the screening procedures for healthy volunteers in Part A, specifically regarding the exclusion criteria related to liver function tests. Alex Johnson provides a clear answer by referencing the specific section of the protocol."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "alex.johnson@denalitx.com",
+          "to_addresses": [
+            "s.chen@universityhealth.org"
+          ],
+          "cc_addresses": [
+            "d.roberts@universityhealth.org",
+            "lisa.wong@syneos.com"
+          ],
+          "subject": "Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123",
+          "timestamp": "2024-05-20T10:30:00Z",
+          "body": "Dear Sarah,\n\nI hope this email finds you well.\n\nI'm reaching out today for a proactive check-in regarding recruitment for the FTD cohort (Part B) of the DNLI-001 study at University Health Center. In reviewing the recent screening logs, I noted that your site has not yet screened any patients for this specific cohort.\n\nWe understand that recruiting for specific patient populations can present unique challenges. Our team at Denali is here to support you in any way we can. We'd be happy to schedule a brief call to discuss your site's current pre-screening and recruitment strategies. We can also explore if any additional resources might be helpful.\n\nTo that end, I've attached our latest approved patient recruitment flyer and an updated FAQ document for sites, which you may find useful.\n\nPlease let me know if you and Dr. Roberts would be available for a 15-20 minute call sometime next week to brainstorm potential solutions.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics\nalex.johnson@denalitx.com",
+          "attachments": [
+            "DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf",
+            "DNLI-001_FAQ_for_Sites_v2.1.pdf"
+          ],
+          "message_id": 1716201000,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "s.chen@universityhealth.org",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "d.roberts@universityhealth.org",
+            "lisa.wong@syneos.com"
+          ],
+          "subject": "Re: Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123",
+          "timestamp": "2024-05-21T14:15:00Z",
+          "body": "Hi Alex,\n\nThank you for reaching out and for the attached materials. We appreciate the proactive support.\n\nYou are correct, we have been facing some challenges identifying potential candidates for the FTD cohort. A call to discuss our strategy would be very helpful.\n\nDr. Roberts and I are generally available next Tuesday or Thursday afternoon. Please let us know what time works best for you to send a meeting invitation.\n\nThank you,\n\nSarah Chen\nClinical Research Coordinator\nUniversity Health Center\ns.chen@universityhealth.org",
+          "attachments": [],
+          "message_id": 1716300900,
+          "in_reply_to": 1716201000
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "s.chen@universityhealth.org: University Health Center (Site), Clinical Research Coordinator",
+        "d.roberts@universityhealth.org: University Health Center (Site), Principal Investigator",
+        "lisa.wong@syneos.com: Syneos Health (CRO), Project Manager"
+      ],
+      "description": "A thread initiated by Alex Johnson to a site that has not yet screened any patients for the FTD cohort (Part B). The email is a proactive check-in to discuss potential recruitment barriers and offer support, such as reviewing their pre-screening strategies or providing new recruitment materials."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "sarah.chen@denalitx.com",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "tmf.queries@denalitx.com",
+            "david.lee@denalitx.com"
+          ],
+          "subject": "URGENT: Missing Document in eTMF for Study DNLI-CNS-002 - IRB Approval",
+          "timestamp": "2023-11-06T14:30:00Z",
+          "body": "Hi Alex,\n\nHope you are well.\n\nDuring a routine QC of the Trial Master File for study DNLI-CNS-002, I was unable to locate the IRB approval letter for the recently submitted Protocol Amendment 4 (dated 2023-10-15) for our central site, Summit Neurosciences (Site 101).\n\nCould you please investigate this? If you have the document, please upload it to the correct placeholder in the eTMF as soon as possible. If the site has not yet provided it, could you follow up with them?\n\nThis is currently holding up our periodic TMF review milestone.\n\nThanks for your help.\n\nBest regards,\n\nSarah Chen\nTMF Specialist\nDenali Therapeutics\nsarah.chen@denalitx.com",
+          "attachments": [],
+          "message_id": 1,
+          "in_reply_to": null
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "sarah.chen@denalitx.com: Denali Therapeutics (Sponsor), TMF Specialist",
+        "david.lee@denalitx.com: Denali Therapeutics (Sponsor), Clinical Project Manager"
+      ],
+      "description": "A request from Denali's internal TMF specialist to Alex Johnson asking for the IRB approval letter for a recently submitted protocol amendment from a central site. Alex needs to locate the document and ensure it is uploaded to the eTMF system correctly."
+    },
+    {
+      "emails": [
+        {
+          "from_address": "schen@ucsfmed.org",
+          "to_addresses": [
+            "david.miller@syneos.com"
+          ],
+          "cc_addresses": [
+            "mlee@ucsfmed.org"
+          ],
+          "subject": "[DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query",
+          "timestamp": "2023-10-26T10:15:00Z",
+          "body": "Hi David,\n\nHope you are well.\n\nWe have a query regarding participant 101-005. The participant is approaching their Week 25 visit and has expressed strong interest in continuing into the Open-Label Extension (Part C) of the study.\n\nTo ensure we can properly consent them, could you please provide clarification on the visit schedule and any specific procedures required for the OLE portion of the trial? We want to make sure we have all the correct information to discuss with the participant.\n\nPlease let us know.\n\nBest regards,\n\nSarah Chen\nClinical Research Coordinator\nUCSF Medical Center",
+          "attachments": [],
+          "message_id": 1,
+          "in_reply_to": null
+        },
+        {
+          "from_address": "david.miller@syneos.com",
+          "to_addresses": [
+            "alex.johnson@denalitx.com"
+          ],
+          "cc_addresses": [
+            "maria.garcia@denalitx.com"
+          ],
+          "subject": "Fwd: [DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query",
+          "timestamp": "2023-10-26T11:30:00Z",
+          "body": "Hi Alex,\n\nPlease see the query below from Site 101 regarding the OLE rollover for participant 101-005.\n\nCould you please provide the site with the requested clarification on the visit schedule and procedures for Part C?\n\nThanks,\nDavid\n\n--- Forwarded message ---\nFrom: Sarah Chen <schen@ucsfmed.org>\nDate: Thu, Oct 26, 2023 at 10:15 AM\nSubject: [DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query\nTo: David Miller <david.miller@syneos.com>\nCc: Michael Lee <mlee@ucsfmed.org>\n\nHi David,\n\nHope you are well.\n\nWe have a query regarding participant 101-005. The participant is approaching their Week 25 visit and has expressed strong interest in continuing into the Open-Label Extension (Part C) of the study.\n\nTo ensure we can properly consent them, could you please provide clarification on the visit schedule and any specific procedures required for the OLE portion of the trial? We want to make sure we have all the correct information to discuss with the participant.\n\nPlease let us know.\n\nBest regards,\n\nSarah Chen\nClinical Research Coordinator\nUCSF Medical Center",
+          "attachments": [],
+          "message_id": 2,
+          "in_reply_to": null
+        }
+      ],
+      "role_descriptions": [
+        "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+        "maria.garcia@denalitx.com: Denali Therapeutics (Sponsor), Clinical Trial Manager",
+        "david.miller@syneos.com: Syneos Health (CRO), Clinical Research Associate",
+        "schen@ucsfmed.org: UCSF Medical Center (Site), Clinical Research Coordinator",
+        "mlee@ucsfmed.org: UCSF Medical Center (Site), Principal Investigator"
+      ],
+      "description": "A back-and-forth conversation with a site regarding a participant in Part B who is nearing the end of the 25-week treatment period and has questions about rolling over into the Open-Label Extension (Part C). The site is asking for clarification on the visit schedule and procedures in the OLE to properly consent the participant."
+    }
+  ]
+}

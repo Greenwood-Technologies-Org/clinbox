@@ -1,0 +1,42 @@
+{
+  "emails": [
+    {
+      "from_address": "schen@ucsfmed.org",
+      "to_addresses": [
+        "david.miller@syneos.com"
+      ],
+      "cc_addresses": [
+        "mlee@ucsfmed.org"
+      ],
+      "subject": "[DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query",
+      "timestamp": "2023-10-26T10:15:00Z",
+      "body": "Hi David,\n\nHope you are well.\n\nWe have a query regarding participant 101-005. The participant is approaching their Week 25 visit and has expressed strong interest in continuing into the Open-Label Extension (Part C) of the study.\n\nTo ensure we can properly consent them, could you please provide clarification on the visit schedule and any specific procedures required for the OLE portion of the trial? We want to make sure we have all the correct information to discuss with the participant.\n\nPlease let us know.\n\nBest regards,\n\nSarah Chen\nClinical Research Coordinator\nUCSF Medical Center",
+      "attachments": [],
+      "message_id": 1,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "david.miller@syneos.com",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "maria.garcia@denalitx.com"
+      ],
+      "subject": "Fwd: [DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query",
+      "timestamp": "2023-10-26T11:30:00Z",
+      "body": "Hi Alex,\n\nPlease see the query below from Site 101 regarding the OLE rollover for participant 101-005.\n\nCould you please provide the site with the requested clarification on the visit schedule and procedures for Part C?\n\nThanks,\nDavid\n\n--- Forwarded message ---\nFrom: Sarah Chen <schen@ucsfmed.org>\nDate: Thu, Oct 26, 2023 at 10:15 AM\nSubject: [DNLI-001] Site 101 - Participant 101-005 - OLE Rollover Query\nTo: David Miller <david.miller@syneos.com>\nCc: Michael Lee <mlee@ucsfmed.org>\n\nHi David,\n\nHope you are well.\n\nWe have a query regarding participant 101-005. The participant is approaching their Week 25 visit and has expressed strong interest in continuing into the Open-Label Extension (Part C) of the study.\n\nTo ensure we can properly consent them, could you please provide clarification on the visit schedule and any specific procedures required for the OLE portion of the trial? We want to make sure we have all the correct information to discuss with the participant.\n\nPlease let us know.\n\nBest regards,\n\nSarah Chen\nClinical Research Coordinator\nUCSF Medical Center",
+      "attachments": [],
+      "message_id": 2,
+      "in_reply_to": null
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "maria.garcia@denalitx.com: Denali Therapeutics (Sponsor), Clinical Trial Manager",
+    "david.miller@syneos.com: Syneos Health (CRO), Clinical Research Associate",
+    "schen@ucsfmed.org: UCSF Medical Center (Site), Clinical Research Coordinator",
+    "mlee@ucsfmed.org: UCSF Medical Center (Site), Principal Investigator"
+  ],
+  "description": "A back-and-forth conversation with a site regarding a participant in Part B who is nearing the end of the 25-week treatment period and has questions about rolling over into the Open-Label Extension (Part C). The site is asking for clarification on the visit schedule and procedures in the OLE to properly consent the participant."
+}

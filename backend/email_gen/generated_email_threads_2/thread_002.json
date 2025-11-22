@@ -1,0 +1,29 @@
+{
+  "emails": [
+    {
+      "from_address": "alex.johnson@denalitherapeutics.com",
+      "to_addresses": [
+        "brian.neal@cvsresearch.org",
+        "dr.marta.gomez@cvsresearch.org"
+      ],
+      "cc_addresses": [
+        "sandra.wong@denalitherapeutics.com"
+      ],
+      "subject": "URGENT Follow-Up: Outstanding Data Queries for Study DNLI-001 at Site 305",
+      "timestamp": "2024-05-21T11:30:00-04:00",
+      "body": "Dear Dr. Gomez and Brian,\n\nI hope this email finds you well.\n\nI am writing to follow up on the outstanding data queries for study DNLI-001. As of this morning, there are over 30 queries that have remained open for more than 14 days. Timely resolution is critical as we are approaching the database lock for Part A, and these delays are putting our timeline at risk.\n\nI have attached a detailed line listing of the outstanding queries for your convenience. \n\nCould you please review the list and provide an estimated timeline for when your team expects to have these resolved? Please let me know if you are encountering any issues or require support from our end to address these items.\n\nThank you for your prompt attention to this important matter.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics\nalex.johnson@denalitherapeutics.com",
+      "attachments": [
+        "DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx"
+      ],
+      "message_id": 1,
+      "in_reply_to": null
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "brian.neal@cvsresearch.org: Cardiovascular Specialist Research (Site), Clinical Research Coordinator",
+    "dr.marta.gomez@cvsresearch.org: Cardiovascular Specialist Research (Site), Principal Investigator",
+    "sandra.wong@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Trial Manager"
+  ],
+  "description": "An email from Alex Johnson to a low-performing site's research team following up on a list of over 30 data queries that have been outstanding for more than 14 days. The email serves as a formal reminder and requests an estimated timeline for resolution to ensure the database lock for Part A is not delayed."
+}

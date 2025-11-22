@@ -1,0 +1,40 @@
+{
+  "emails": [
+    {
+      "from_address": "alex.johnson@denalitx.com",
+      "to_addresses": [
+        "m.garcia@summitclinical.com"
+      ],
+      "cc_addresses": [
+        "d.chen@syneos.com"
+      ],
+      "subject": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101",
+      "timestamp": "2024-07-15T10:30:00-05:00",
+      "body": "Hi Maria,\n\nHope you are having a good week.\n\nI'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I would like to propose the week of August 5th or the week of August 12th for the visit.\n\nPlease let me know which of these weeks works best for you and Dr. Reed's availability. Once we have a week selected, we can lock in the specific dates.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+      "attachments": [],
+      "message_id": 1654,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "m.garcia@summitclinical.com",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "d.chen@syneos.com"
+      ],
+      "subject": "Re: DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101",
+      "timestamp": "2024-07-16T14:45:00-05:00",
+      "body": "Hi Alex,\n\nThanks for reaching out.\n\nUnfortunately, Dr. Reed will be on vacation for the first three weeks of August, so the weeks of the 5th and 12th will not work for us.\n\nWould the week of August 26th be a possibility for you? We have good availability on August 27-28.\n\nPlease let me know if that works for your schedule.\n\nThank you,\n\nMaria Garcia\nClinical Research Coordinator\nSummit Clinical Research",
+      "attachments": [],
+      "message_id": 1655,
+      "in_reply_to": 1654
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "m.garcia@summitclinical.com: Summit Clinical Research (Site), Clinical Research Coordinator",
+    "d.chen@syneos.com: Syneos Health (CRO), Project Manager"
+  ],
+  "description": "A routine scheduling back-and-forth between Alex Johnson and a clinical research coordinator at a study site to finalize dates for the next quarterly Interim Monitoring Visit (IMV). The thread includes proposed dates from Alex, a counter-proposal from the site due to the Principal Investigator's vacation, and a final confirmation."
+}

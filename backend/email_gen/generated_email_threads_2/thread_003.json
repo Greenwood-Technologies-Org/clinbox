@@ -1,0 +1,29 @@
+{
+  "emails": [
+    {
+      "from_address": "e.reed@maplewoodresearch.com",
+      "to_addresses": [
+        "alex.johnson@denalithx.com"
+      ],
+      "cc_addresses": [
+        "c.ruiz@maplewoodresearch.com",
+        "sarah.chen@synergycro.com"
+      ],
+      "subject": "URGENT: Protocol Deviation Report - Dosing Error - Study DNLI-001 - Site 102",
+      "timestamp": "2024-05-10T15:15:00Z",
+      "body": "Dear Alex,\n\nThis email is to urgently inform you of a significant protocol deviation that occurred today at our site (102) for study DNLI-001.\n\nThis morning, participant 102-2005, enrolled in Part B (FTD cohort), was inadvertently administered a double dose of the investigational product during their scheduled Visit 5 infusion.\n\nThe error was identified by the infusion nurse immediately following the procedure. The participant is currently stable, asymptomatic, and is being held for an extended 8-hour observation period as a precaution. All vital signs are being monitored closely and remain within normal limits.\n\nWe have documented the event and completed the attached Protocol Deviation form. We require immediate guidance on the necessary follow-up, safety monitoring, and reporting procedures. Please escalate this to the study's Medical Monitor as soon as possible for their assessment and recommendations.\n\nWe await your urgent response.\n\nBest regards,\n\nDr. Evelyn Reed\nPrincipal Investigator\nMaplewood Clinical Research\nSite 102",
+      "attachments": [
+        "PD_Form_102-2005_DoubleDose_10MAY2024.pdf"
+      ],
+      "message_id": 811,
+      "in_reply_to": null
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalithx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "e.reed@maplewoodresearch.com: Maplewood Clinical Research (Site), Principal Investigator",
+    "c.ruiz@maplewoodresearch.com: Maplewood Clinical Research (Site), Study Coordinator",
+    "sarah.chen@synergycro.com: Synergy CRO (CRO), Project Manager"
+  ],
+  "description": "A multi-part discussion with a Principal Investigator who reported a protocol deviation where a participant in the FTD cohort (Part B) was accidentally administered a double dose of the investigational product. The thread involves Alex Johnson escalating the issue to the study's medical monitor for guidance on patient safety and follow-up procedures."
+}

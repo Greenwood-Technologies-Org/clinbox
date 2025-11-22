@@ -1,0 +1,74 @@
+{
+  "emails": [
+    {
+      "from_address": "alex.johnson@denalitx.com",
+      "to_addresses": [
+        "maria.garcia@centennialmedical.org"
+      ],
+      "cc_addresses": [
+        "david.chen@syneos.com"
+      ],
+      "subject": "[DT-1234] Scheduling Request: Interim Monitoring Visit at Site 105",
+      "timestamp": "2024-06-10T10:15:00Z",
+      "body": "Hi Maria,\n\nHope you are having a good week.\n\nI'm writing to schedule the next interim monitoring visit (IMV) for the DT-1234 study at Centennial Medical Center. I am proposing the weeks of June 24th or July 8th for a 2-day visit.\n\nPlease let me know what dates within that timeframe work best for you and the PI.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+      "attachments": [],
+      "message_id": 101,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "maria.garcia@centennialmedical.org",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "david.chen@syneos.com"
+      ],
+      "subject": "Re: [DT-1234] Scheduling Request: Interim Monitoring Visit at Site 105",
+      "timestamp": "2024-06-11T14:30:00Z",
+      "body": "Hi Alex,\n\nThanks for reaching out. The week of July 8th works better for us. How about Tuesday, July 9th and Wednesday, July 10th?\n\nCould you please send over the monitoring plan for our review prior to the visit?\n\nThanks,\n\nMaria Garcia\nStudy Coordinator\nCentennial Medical Center",
+      "attachments": [],
+      "message_id": 102,
+      "in_reply_to": 101
+    },
+    {
+      "from_address": "alex.johnson@denalitx.com",
+      "to_addresses": [
+        "maria.garcia@centennialmedical.org"
+      ],
+      "cc_addresses": [
+        "david.chen@syneos.com"
+      ],
+      "subject": "Re: [DT-1234] Scheduling Request: Interim Monitoring Visit at Site 105",
+      "timestamp": "2024-06-12T09:05:00Z",
+      "body": "Hi Maria,\n\nThat's great, July 9th and 10th are confirmed on my end.\n\nI've attached the monitoring plan for your review. To help streamline the visit, could we arrange for remote access to your EMR system a few days prior? Please let me know the process for requesting temporary credentials.\n\nI will send the official confirmation letter once we have the access details sorted.\n\nBest,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+      "attachments": [
+        "DT-1234_IMV_Plan_Site105_2024-07-09.pdf"
+      ],
+      "message_id": 103,
+      "in_reply_to": 102
+    },
+    {
+      "from_address": "maria.garcia@centennialmedical.org",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "david.chen@syneos.com"
+      ],
+      "subject": "Re: [DT-1234] Scheduling Request: Interim Monitoring Visit at Site 105",
+      "timestamp": "2024-06-12T16:45:00Z",
+      "body": "Hi Alex,\n\nThanks for the monitoring plan. I've forwarded it to Dr. Evans.\n\nFor EMR access, please fill out the attached Non-Employee Access Request form and return it to me. Our IT department typically takes 2-3 business days to process these requests.\n\nOnce you send it back, I'll submit it and we can consider the dates fully confirmed. Let me know if you have any questions.\n\nBest,\n\nMaria",
+      "attachments": [
+        "Centennial_EMR_Access_Request_Form.pdf"
+      ],
+      "message_id": 104,
+      "in_reply_to": 103
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "maria.garcia@centennialmedical.org: Centennial Medical Center (Site), Study Coordinator",
+    "david.chen@syneos.com: Syneos Health (CRO), Project Manager"
+  ],
+  "description": "A routine scheduling request you initiated with the Study Coordinator at Site 105 to arrange the next interim monitoring visit. The back-and-forth conversation involves confirming dates, discussing the monitoring plan, and requesting remote access to the site's electronic medical records system."
+}

@@ -1,0 +1,27 @@
+{
+  "emails": [
+    {
+      "from_address": "emily.carter@oakwoodresearch.com",
+      "to_addresses": [
+        "alex.johnson@denalitherapeutics.com"
+      ],
+      "cc_addresses": [
+        "david.lee@synergycro.com",
+        "jessica.chen@oakwoodresearch.com"
+      ],
+      "subject": "Inquiry: DNL593 Study - Site 210 - Upcoming IP Shipment",
+      "timestamp": "2023-11-06T11:30:00-05:00",
+      "body": "Hi Alex,\n\nHope you are having a productive week.\n\nThe pharmacy team here at Oakwood Clinical Research (Site 210) would like to confirm the details for our next shipment of the investigational product, DNL593.\n\nWe are preparing for a couple of new participants who are scheduled for randomization soon and want to ensure our stock levels are adequate. Could you please provide an update on the quantity being shipped and the expected delivery date?\n\nThank you for your help.\n\nBest regards,\n\nDr. Emily Carter, PharmD\nInvestigational Drug Services\nOakwood Clinical Research",
+      "attachments": [],
+      "message_id": 16734,
+      "in_reply_to": null
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "emily.carter@oakwoodresearch.com: Site, Pharmacist",
+    "david.lee@synergycro.com: CRO, Clinical Research Associate",
+    "jessica.chen@oakwoodresearch.com: Site, Study Coordinator"
+  ],
+  "description": "A straightforward inquiry from the pharmacy at Site 210 regarding an upcoming shipment of the investigational product, DNL593. They are confirming the quantity and expected delivery date to ensure they have adequate supply for newly randomized participants."
+}
