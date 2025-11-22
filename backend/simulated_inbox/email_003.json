@@ -1,0 +1,151 @@
+{
+  "id": "18c4d7c3a9e28b56",
+  "threadId": "18c4d7c3a9e28b56",
+  "labelIds": ["INBOX", "UNREAD", "CATEGORY_PERSONAL", "STARRED"],
+  "snippet": "Hey! Are we still on for coffee tomorrow at 3pm? I wanted to chat about the upcoming conference and maybe brainstorm some ideas for...",
+  "historyId": "2847289",
+  "internalDate": "1732204800000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/mixed",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Received",
+        "value": "by 2002:a05:6402:45c1:b0:54d:7e23:9f1a with SMTP id bs1csp1234567qtb; Thu, 21 Nov 2024 06:20:00 -0800 (PST)"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<alex.martinez@gmail.com>"
+      },
+      {
+        "name": "From",
+        "value": "Alex Martinez <alex.martinez@gmail.com>"
+      },
+      {
+        "name": "To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Re: Coffee tomorrow?"
+      },
+      {
+        "name": "Date",
+        "value": "Thu, 21 Nov 2024 06:20:00 -0800"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<CADe4F5g6H7i8J9k0L1m2N3o4P5q6R7s8T9u0V1w2X3y4Z5a6@mail.gmail.com>"
+      },
+      {
+        "name": "In-Reply-To",
+        "value": "<CABc3d4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Y@mail.gmail.com>"
+      },
+      {
+        "name": "References",
+        "value": "<CABc3d4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Y@mail.gmail.com> <CADe4F5g6H7i8J9k0L1m2N3o4P5q6R7s8T9u0V1w2X3y4Z5a6@mail.gmail.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/mixed; boundary=\"000000000000f9e8d7c6b5a4\""
+      },
+      {
+        "name": "X-Mailer",
+        "value": "Apple Mail (2.3654.60.62.1)"
+      }
+    ],
+    "body": {
+      "size": 0
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000f9e8d7c6b5a3\""
+          }
+        ],
+        "body": {
+          "size": 0
+        },
+        "parts": [
+          {
+            "partId": "0.0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              },
+              {
+                "name": "Content-Transfer-Encoding",
+                "value": "quoted-printable"
+              }
+            ],
+            "body": {
+              "size": 567,
+              "data": "SGV5IQoKQXJlIHdlIHN0aWxsIG9uIGZvciBjb2ZmZWUgdG9tb3Jyb3cgYXQgM3BtPw=="
+            }
+          },
+          {
+            "partId": "0.1",
+            "mimeType": "text/html",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=\"UTF-8\""
+              },
+              {
+                "name": "Content-Transfer-Encoding",
+                "value": "quoted-printable"
+              }
+            ],
+            "body": {
+              "size": 1234,
+              "data": "PGRpdiBkaXI9Imx0ciI+SGV5ITxkaXY+PGJyPjwvZGl2PjxkaXY+QXJlIHdlIHN0aWxsIG9uIGZvcg=="
+            }
+          }
+        ]
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "conference_schedule.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf; name=\"conference_schedule.pdf\""
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"conference_schedule.pdf\""
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "base64"
+          }
+        ],
+        "body": {
+          "attachmentId": "ANGjdJ9xN4qL8yAB",
+          "size": 245678
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 247479,
+  "raw": null
+}

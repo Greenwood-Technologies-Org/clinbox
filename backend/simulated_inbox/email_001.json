@@ -1,0 +1,104 @@
+{
+  "id": "18c4f2a3b5d67e89",
+  "threadId": "18c4f2a3b5d67e89",
+  "labelIds": ["INBOX", "UNREAD", "IMPORTANT"],
+  "snippet": "Hi team, I wanted to follow up on the Q4 roadmap discussion we had last week. I've compiled the feedback from all stakeholders and...",
+  "historyId": "2847563",
+  "internalDate": "1732233600000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Received",
+        "value": "by 2002:a05:6214:2d4d:b0:6a3:8f2c:1a45 with SMTP id ds13csp4289657qvb; Thu, 21 Nov 2024 14:20:00 -0800 (PST)"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<sarah.chen@techcorp.com>"
+      },
+      {
+        "name": "From",
+        "value": "Sarah Chen <sarah.chen@techcorp.com>"
+      },
+      {
+        "name": "To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Cc",
+        "value": "product-team@techcorp.com, engineering@techcorp.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Q4 Roadmap Review - Action Items & Next Steps"
+      },
+      {
+        "name": "Date",
+        "value": "Thu, 21 Nov 2024 14:20:00 -0800"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<CABc3d4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Z@mail.techcorp.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      },
+      {
+        "name": "X-Priority",
+        "value": "1"
+      },
+      {
+        "name": "Importance",
+        "value": "high"
+      }
+    ],
+    "body": {
+      "size": 3847
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 2134,
+          "data": "SGkgdGVhbSwKCkkgd2FudGVkIHRvIGZvbGxvdyB1cCBvbiB0aGUgUTQgcm9hZG1hcCBkaXNjdXNzaW9uIHdlIGhhZCBsYXN0IHdlZWsu"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "text/html",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/html; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 4892,
+          "data": "PGRpdj5IaSB0ZWFtLDwvZGl2Pgo8ZGl2Pgo8YnIvPjwvZGl2Pgo8ZGl2Pkkgd2FudGVkIHRvIGZvbGxvdyB1cA=="
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 8739,
+  "raw": null
+}

@@ -1,0 +1,151 @@
+{
+  "id": "18c4e9b2c8f15a47",
+  "threadId": "18c4e8a1b7e04936",
+  "labelIds": ["INBOX", "CATEGORY_PROMOTIONS"],
+  "snippet": "Black Friday Early Access: 40% Off Everything! Your exclusive early access starts now. Don't miss out on our biggest sale of the year...",
+  "historyId": "2847421",
+  "internalDate": "1732219200000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/related",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Received",
+        "value": "by 2002:a17:902:ea8d:b0:1e5:c3d2:4f67 with SMTP id g13csp2154873plg; Thu, 21 Nov 2024 10:20:00 -0800 (PST)"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<newsletter@shop.retailstore.com>"
+      },
+      {
+        "name": "From",
+        "value": "RetailStore <newsletter@shop.retailstore.com>"
+      },
+      {
+        "name": "Reply-To",
+        "value": "support@retailstore.com"
+      },
+      {
+        "name": "To",
+        "value": "you@example.com"
+      },
+      {
+        "name": "Subject",
+        "value": "🎉 Black Friday Early Access: 40% Off Everything!"
+      },
+      {
+        "name": "Date",
+        "value": "Thu, 21 Nov 2024 10:20:00 -0800"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<campaign-987654321@mail.retailstore.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/related; boundary=\"----=_Part_123456_789012345.1732219200000\""
+      },
+      {
+        "name": "X-Mailer",
+        "value": "Mailchimp/2.0"
+      },
+      {
+        "name": "List-Unsubscribe",
+        "value": "<mailto:unsubscribe@retailstore.com?subject=unsubscribe>, <https://retailstore.com/unsubscribe?id=abc123>"
+      },
+      {
+        "name": "Precedence",
+        "value": "bulk"
+      }
+    ],
+    "body": {
+      "size": 0
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"----=_Part_123457_789012346.1732219200000\""
+          }
+        ],
+        "body": {
+          "size": 0
+        },
+        "parts": [
+          {
+            "partId": "0.0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 1024,
+              "data": "QmxhY2sgRnJpZGF5IEVhcmx5IEFjY2VzczogNDAlIE9mZiBFdmVyeXRoaW5nIQ=="
+            }
+          },
+          {
+            "partId": "0.1",
+            "mimeType": "text/html",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/html; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 15678,
+              "data": "PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KPG1ldGEgY2hhcnNldD0iVVRGLTgiPg=="
+            }
+          }
+        ]
+      },
+      {
+        "partId": "1",
+        "mimeType": "image/png",
+        "filename": "logo.png",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "image/png; name=\"logo.png\""
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "inline; filename=\"logo.png\""
+          },
+          {
+            "name": "Content-Transfer-Encoding",
+            "value": "base64"
+          },
+          {
+            "name": "Content-ID",
+            "value": "<logo@retailstore.com>"
+          }
+        ],
+        "body": {
+          "attachmentId": "ANGjdJ8wM3pK7xYZ",
+          "size": 12456
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 29158,
+  "raw": null
+}
