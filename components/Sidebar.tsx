@@ -10,8 +10,8 @@ interface SidebarProps {
 
 export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
   return (
-    <div className="w-9 bg-white border-r border-gray-200 flex flex-col items-center">
-      <div className="flex flex-col pt-3 gap-2">
+    <div className="w-9 bg-white border-r border-gray-200 flex flex-col items-center py-3">
+      <div className="flex flex-col gap-2">
         <button 
           onClick={() => setActiveView('email')}
           className="hover:bg-gray-50 rounded-lg transition-colors"
@@ -34,7 +34,7 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
       
       <div className="flex-1" />
       
-      <div className="flex flex-col pb-3">
+      <div className="flex flex-col gap-2">
         <button className="hover:bg-gray-50 rounded-lg transition-colors">
           <TrendingUpDown {...getIconProps()} />
         </button>

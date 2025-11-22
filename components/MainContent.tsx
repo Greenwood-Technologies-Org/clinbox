@@ -11,7 +11,7 @@ interface MainContentProps {
 
 export default function MainContent({ children, activeView }: MainContentProps) {
   const [activeGroup, setActiveGroup] = useState<string>('Important');
-  const groups = ['Important', 'Critical', 'Urgent', 'IRB'];
+  const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
 
   return (
     <div className="flex-[0.7] bg-white flex flex-col">
