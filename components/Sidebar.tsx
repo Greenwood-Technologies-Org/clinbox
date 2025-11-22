@@ -2,15 +2,26 @@
 
 import { Mail, Calendar, ListTodo, Sparkle, TrendingUpDown, FileText, Settings, HelpCircle } from 'lucide-react';
 
-export default function Sidebar() {
+interface SidebarProps {
+  activeView: 'email' | 'calendar';
+  setActiveView: (view: 'email' | 'calendar') => void;
+}
+
+export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
   return (
     <div className="w-9 bg-white border-r border-gray-200 flex flex-col items-center">
       <div className="h-3" />
       <div className="flex flex-col gap-2">
-        <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+        <button 
+          onClick={() => setActiveView('email')}
+          className="p-2 hover:bg-gray-50 rounded-lg transition-colors"
+        >
           <Mail className="w-5 h-5 text-foreground" strokeWidth={1.25} />
         </button>
-        <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
+        <button 
+          onClick={() => setActiveView('calendar')}
+          className="p-2 hover:bg-gray-50 rounded-lg transition-colors"
+        >
           <Calendar className="w-5 h-5 text-foreground" strokeWidth={1.25} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
