@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
+import MainContent from "@/components/MainContent";
+import SupplementaryPanel from "@/components/SupplementaryPanel";
 
 export const metadata: Metadata = {
   title: "ClinBox",
@@ -13,8 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-background text-foreground">
-        {children}
+      <body className="antialiased bg-white text-foreground">
+        <div className="flex h-screen overflow-hidden">
+          <Sidebar />
+          <MainContent>{children}</MainContent>
+          <SupplementaryPanel>
+            <div className="flex items-center justify-center h-full">
+              <p className="text-muted">Supp Info</p>
+            </div>
+          </SupplementaryPanel>
+        </div>
       </body>
     </html>
   );

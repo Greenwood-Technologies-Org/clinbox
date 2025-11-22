@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-semibold">ClinBox</h1>
+    <div className="flex items-center justify-center h-full">
+      <h1 className="text-muted">inbox</h1>
     </div>
   );
 }
