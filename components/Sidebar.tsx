@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Calendar, ListTodo, Sparkle, TrendingUpDown, FileText, Settings, HelpCircle } from 'lucide-react';
+import { getIconProps } from '@/lib/icon-utils';
 
 interface SidebarProps {
   activeView: 'email' | 'calendar';
@@ -16,19 +17,19 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           onClick={() => setActiveView('email')}
           className="p-2 hover:bg-gray-50 rounded-lg transition-colors"
         >
-          <Mail className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <Mail {...getIconProps(activeView === 'email')} />
         </button>
         <button 
           onClick={() => setActiveView('calendar')}
           className="p-2 hover:bg-gray-50 rounded-lg transition-colors"
         >
-          <Calendar className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <Calendar {...getIconProps(activeView === 'calendar')} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <ListTodo className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <ListTodo {...getIconProps()} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <Sparkle className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <Sparkle {...getIconProps()} />
         </button>
       </div>
       
@@ -36,16 +37,16 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
       
       <div className="flex flex-col gap-2">
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <TrendingUpDown className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <TrendingUpDown {...getIconProps()} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <FileText className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <FileText {...getIconProps()} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <Settings className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <Settings {...getIconProps()} />
         </button>
         <button className="p-2 hover:bg-gray-50 rounded-lg transition-colors">
-          <HelpCircle className="w-5 h-5 text-foreground" strokeWidth={1.25} />
+          <HelpCircle {...getIconProps()} />
         </button>
       </div>
       <div className="h-3" />
