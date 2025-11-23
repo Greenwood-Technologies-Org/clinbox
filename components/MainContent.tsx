@@ -120,7 +120,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
               <p className="text-gray-400">No {activeGroup} Emails</p>
             </div>
           ) : (
-            <div className="divide-y divide-gray-200">
+            <div>
               {emails.map((email) => {
                 const fromHeader = email.payload.headers.find(h => h.name === 'From');
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
