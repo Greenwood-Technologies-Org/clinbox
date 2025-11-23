@@ -133,13 +133,21 @@ export default function MainContent({ children, activeView }: MainContentProps) 
                 return (
                   <div
                     key={email.id}
-                    className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
+                    className="px-6 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
                   >
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-gray-900 truncate">
+                    <div className="flex items-center text-sm">
+                      {/* Sender - 20% width */}
+                      <span className="w-30 font-medium text-gray-900 truncate pr-4">
                         {from.replace(/<.*>/, '').trim()}
                       </span>
-                      <span className="text-gray-500 shrink-0 ml-4">
+                      
+                      {/* Subject/Snippet - flexible width */}
+                      <span className="flex-1 text-gray-700 truncate px-2">
+                        {subject}
+                      </span>
+                      
+                      {/* Date - fixed width */}
+                      <span className="w-20 text-gray-500 text-right shrink-0 pl-4">
                         {date}
                       </span>
                     </div>
