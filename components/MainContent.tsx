@@ -124,34 +124,26 @@ export default function MainContent({ children, activeView }: MainContentProps) 
               {emails.map((email) => {
                 const fromHeader = email.payload.headers.find(h => h.name === 'From');
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
-                const dateHeader = email.payload.headers.find(h => h.name === 'Date');
                 
                 const from = fromHeader?.value || 'Unknown';
                 const subject = subjectHeader?.value || 'No Subject';
-                const date = dateHeader?.value || new Date(parseInt(email.internalDate)).toLocaleString();
+                const date = new Date(parseInt(email.internalDate)).toLocaleDateString();
                 
                 return (
                   <div
                     key={email.id}
                     className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-baseline gap-2 mb-1">
-                          <p className="font-medium text-sm text-gray-900 truncate">
-                            {from.replace(/<.*>/, '').trim()}
-                          </p>
-                          <p className="text-xs text-gray-500 shrink-0">
-                            {new Date(parseInt(email.internalDate)).toLocaleDateString()}
-                          </p>
-                        </div>
-                        <p className="text-sm font-medium text-gray-900 mb-1 truncate">
-                          {subject}
-                        </p>
-                        <p className="text-sm text-gray-600 truncate">
-                          {email.snippet}
-                        </p>
-                      </div>
+                    <div className="flex items-center gap-4 text-sm">
+                      <span className="font-medium text-gray-900 w-48 truncate">
+                        {from.replace(/<.*>/, '').trim()}
+                      </span>
+                      <span className="text-gray-500 w-24 shrink-0">
+                        {date}
+                      </span>
+                      <span className="text-gray-900 flex-1 truncate">
+                        {subject}
+                      </span>
                     </div>
                   </div>
                 );
