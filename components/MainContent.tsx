@@ -40,7 +40,7 @@ interface EmailAIAnalysis {
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
 }
 
 export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
@@ -68,6 +68,23 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
     } catch (error) {
       console.error('Error loading thread attachments:', error);
       return [];
+    }
+  };
+
+  // Helper function to load thread emails and extract sender email
+  const loadSenderEmail = async (filename: string): Promise<string | undefined> => {
+    try {
+      const response = await fetch(`/api/emails/${filename}`);
+      const emailData = await response.json();
+      
+      if (emailData.threadEmails) {
+        const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
+        return extractSenderEmailFromThread(emailData.threadEmails);
+      }
+      return undefined;
+    } catch (error) {
+      console.error('Error loading sender email:', error);
+      return undefined;
     }
   };
 
@@ -113,11 +130,17 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             const filename = firstEmail.filename;
             setSelectedEmailFilename(filename);
             
-            // Load thread emails to extract attachments
-            loadThreadAttachments(filename).then(attachments => {
+            // Load thread emails to extract attachments and sender email
+            Promise.all([
+              loadThreadAttachments(filename),
+              loadSenderEmail(filename)
+            ]).then(([attachments, senderEmail]) => {
               onSelectEmail({
                 filename: filename,
-                sender: emailDataJson[filename].sender,
+                sender: {
+                  ...emailDataJson[filename].sender!,
+                  email: senderEmail
+                },
                 aiAnalysis: aiAnalysisJson[filename],
                 tasks: emailDataJson[filename].tasks,
                 hasAttachments: emailDataJson[filename].hasAttachments,
@@ -173,13 +196,19 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             onAttachmentsChange={(attachments) => {
               setCurrentAttachments(attachments);
               if (selectedEmailFilename && emailData[selectedEmailFilename]?.sender) {
-                onSelectEmail({
-                  filename: selectedEmailFilename,
-                  sender: emailData[selectedEmailFilename].sender,
-                  aiAnalysis: emailAIAnalysis[selectedEmailFilename],
-                  tasks: emailData[selectedEmailFilename].tasks,
-                  hasAttachments: emailData[selectedEmailFilename].hasAttachments,
-                  attachments: attachments
+                // Load sender email when attachments change
+                loadSenderEmail(selectedEmailFilename).then(senderEmail => {
+                  onSelectEmail({
+                    filename: selectedEmailFilename,
+                    sender: {
+                      ...emailData[selectedEmailFilename].sender!,
+                      email: senderEmail
+                    },
+                    aiAnalysis: emailAIAnalysis[selectedEmailFilename],
+                    tasks: emailData[selectedEmailFilename].tasks,
+                    hasAttachments: emailData[selectedEmailFilename].hasAttachments,
+                    attachments: attachments
+                  });
                 });
               }
             }}

@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download, Copy } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -11,6 +11,7 @@ interface SelectedEmail {
     name: string;
     title: string;
     organization: string;
+    email?: string;
   };
   aiAnalysis?: {
     summary: string;
@@ -32,6 +33,7 @@ interface EmailData {
       name: string;
       title: string;
       organization: string;
+      email?: string;
     };
     tasks?: string[];
   };
@@ -65,6 +67,10 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
       loadAllTasks();
     }
   }, [showTasksPanel]);
+
+  const copyEmailToClipboard = (email: string) => {
+    navigator.clipboard.writeText(email);
+  };
 
   const getFileType = (attachment: Attachment): string => {
     // Try to get extension from filename first
@@ -151,9 +157,24 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
             <p className="text-sm text-gray-600">
               {selectedEmail.sender.title}
             </p>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-gray-600">
               {selectedEmail.sender.organization}
             </p>
+            {selectedEmail.sender.email && (
+              <div className="flex items-center gap-1.5 mt-1 mb-4">
+                <p className="text-xs text-gray-500">
+                  {selectedEmail.sender.email}
+                </p>
+                <button 
+                  onClick={() => copyEmailToClipboard(selectedEmail.sender?.email || '')}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  title="Copy email"
+                >
+                  <Copy className="w-3 h-3" />
+                </button>
+              </div>
+            )}
+            {!selectedEmail.sender.email && <div className="mb-4"></div>}
             <div className="border-b border-gray-200"></div>
           </div>
 

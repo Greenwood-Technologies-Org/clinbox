@@ -41,8 +41,8 @@ interface EmailListProps {
   loading: boolean;
   activeGroup: string;
   onActiveGroupChange: (group: string) => void;
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
-  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
   onSetSelectedFilename: (filename: string | null) => void;
   onOpenEmail: (subject: string) => void;
   loadThreadAttachments: (filename: string) => Promise<Array<{ filename: string; mimeType: string }>>;
@@ -142,10 +142,19 @@ export default function EmailList({
           // Set a new timeout for 0.1 seconds
           const timeout = setTimeout(async () => {
             if (email.filename && emailData[email.filename]?.sender) {
+              // Extract sender email from thread
+              const response = await fetch(`/api/emails/${email.filename}`);
+              const emailThreadData = await response.json();
+              const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
+              const senderEmail = emailThreadData.threadEmails ? extractSenderEmailFromThread(emailThreadData.threadEmails) : undefined;
+              
               const attachments = await loadThreadAttachments(email.filename);
               onEmailHover({
                 filename: email.filename,
-                sender: emailData[email.filename].sender,
+                sender: {
+                  ...emailData[email.filename].sender!,
+                  email: senderEmail
+                },
                 aiAnalysis: emailAIAnalysis[email.filename],
                 tasks: emailData[email.filename].tasks,
                 hasAttachments: emailData[email.filename].hasAttachments,
@@ -175,12 +184,21 @@ export default function EmailList({
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
                 const subject = subjectHeader?.value || 'No Subject';
                 
+                // Extract sender email from thread
+                const response = await fetch(`/api/emails/${email.filename}`);
+                const emailThreadData = await response.json();
+                const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
+                const senderEmail = emailThreadData.threadEmails ? extractSenderEmailFromThread(emailThreadData.threadEmails) : undefined;
+                
                 const attachments = await loadThreadAttachments(email.filename);
                 
                 onSetSelectedFilename(email.filename);
                 onSelectEmail({
                   filename: email.filename,
-                  sender: emailData[email.filename].sender,
+                  sender: {
+                    ...emailData[email.filename].sender!,
+                    email: senderEmail
+                  },
                   aiAnalysis: emailAIAnalysis[email.filename],
                   tasks: emailData[email.filename].tasks,
                   hasAttachments: emailData[email.filename].hasAttachments,

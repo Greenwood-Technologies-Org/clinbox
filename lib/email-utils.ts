@@ -104,3 +104,29 @@ export function extractAttachmentsFromThread(threadEmails: ThreadEmail[]): Attac
   
   return attachments;
 }
+
+interface EmailHeader {
+  name: string;
+  value: string;
+}
+
+interface ThreadEmailWithHeaders {
+  payload: {
+    headers: EmailHeader[];
+    parts?: EmailPart[];
+  };
+}
+
+export function extractSenderEmailFromThread(threadEmails: ThreadEmailWithHeaders[]): string | undefined {
+  if (!threadEmails || threadEmails.length === 0) return undefined;
+  
+  // Get the last email in the thread (most recent)
+  const lastEmail = threadEmails[threadEmails.length - 1];
+  const fromHeader = lastEmail.payload.headers.find(h => h.name.toLowerCase() === 'from');
+  
+  if (!fromHeader) return undefined;
+  
+  // Extract email from formats like "Name <email@example.com>" or just "email@example.com"
+  const emailMatch = fromHeader.value.match(/<(.+?)>/) || fromHeader.value.match(/([^\s]+@[^\s]+)/);
+  return emailMatch ? emailMatch[1] : undefined;
+}
