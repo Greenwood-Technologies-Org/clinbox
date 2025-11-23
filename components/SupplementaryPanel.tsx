@@ -24,6 +24,14 @@ interface SelectedEmail {
 interface SupplementaryPanelProps {
   children?: React.ReactNode;
   selectedEmail: SelectedEmail | null;
+  selectedDocument?: {
+    id: string;
+    name: string;
+    description: string;
+    modified: string;
+    version: string;
+    type: string;
+  } | null;
   isDocsView?: boolean;
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
@@ -47,6 +55,7 @@ interface EmailData {
 export default function SupplementaryPanel({ 
   children, 
   selectedEmail, 
+  selectedDocument,
   isDocsView = false,
   showAllTasks = false,
   onToggleAllTasks,
@@ -185,12 +194,17 @@ export default function SupplementaryPanel({
     if (isDocsView) {
       return (
         <div className="py-3 px-4">
-          <div className="mb-6">
-            <h1 className="text-xl font-medium text-gray-900 mb-4">
-              Documents
-            </h1>
-            <div className="border-b border-gray-200"></div>
-          </div>
+          {selectedDocument && (
+            <div>
+              <button className="w-full px-4 py-2 mb-4 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors">
+                Update
+              </button>
+              <h3 className="font-medium mb-2">Description</h3>
+              <p className="text-sm text-gray-600">
+                {selectedDocument.description}
+              </p>
+            </div>
+          )}
         </div>
       );
     }
