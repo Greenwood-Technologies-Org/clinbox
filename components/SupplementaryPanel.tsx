@@ -6,7 +6,7 @@ interface SupplementaryPanelProps {
 
 export default function SupplementaryPanel({ children }: SupplementaryPanelProps) {
   return (
-    <div className="w-60 md:w-72 lg:w-80 xl:w-96 shrink-0 bg-white border-l border-gray-200 overflow-y-auto">
+    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto">
       {children}
     </div>
   );
