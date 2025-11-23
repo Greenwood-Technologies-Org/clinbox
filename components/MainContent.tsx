@@ -70,7 +70,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
   }, [activeGroup, activeView]);
 
   return (
-    <div className="flex-[0.7] bg-white flex flex-col">
+    <div className="flex-1 bg-white flex flex-col">
       {/* Navigation Bar - Only show for email view */}
       {activeView === 'email' && (
         <div className="px-4 pt-4 pb-3 flex items-start justify-between shrink-0">
@@ -127,22 +127,20 @@ export default function MainContent({ children, activeView }: MainContentProps) 
                 
                 const from = fromHeader?.value || 'Unknown';
                 const subject = subjectHeader?.value || 'No Subject';
-                const date = new Date(parseInt(email.internalDate)).toLocaleDateString();
+                const dateObj = new Date(parseInt(email.internalDate));
+                const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                 
                 return (
                   <div
                     key={email.id}
                     className="px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
                   >
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="font-medium text-gray-900 w-48 truncate">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="font-medium text-gray-900 truncate">
                         {from.replace(/<.*>/, '').trim()}
                       </span>
-                      <span className="text-gray-500 w-24 shrink-0">
+                      <span className="text-gray-500 shrink-0 ml-4">
                         {date}
-                      </span>
-                      <span className="text-gray-900 flex-1 truncate">
-                        {subject}
                       </span>
                     </div>
                   </div>
