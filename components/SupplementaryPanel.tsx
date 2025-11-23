@@ -24,7 +24,7 @@ interface SupplementaryPanelProps {
 
 export default function SupplementaryPanel({ children, selectedEmail }: SupplementaryPanelProps) {
   return (
-    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto">
+    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
       {selectedEmail?.sender ? (
         <div className="py-3 px-4">
           {/* Sender Information */}
@@ -123,6 +123,16 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
       ) : (
         children
       )}
+      
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-3 right-3 flex gap-3">
+        <button>
+          <ListTodo {...getIconProps()} />
+        </button>
+        <button>
+          <Sparkle {...getIconProps()} />
+        </button>
+      </div>
     </div>
   );
 }

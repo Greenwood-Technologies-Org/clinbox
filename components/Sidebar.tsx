@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Calendar, ListTodo, Sparkle, TrendingUpDown, FileText, Settings, HelpCircle } from 'lucide-react';
+import { Mail, Calendar, TrendingUpDown, FileText, Settings, HelpCircle } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
 interface SidebarProps {
@@ -23,12 +23,6 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           className="hover:bg-gray-50 rounded-lg transition-colors"
         >
           <Calendar {...getIconProps(activeView === 'calendar')} />
-        </button>
-        <button className="hover:bg-gray-50 rounded-lg transition-colors">
-          <ListTodo {...getIconProps()} />
-        </button>
-        <button className="hover:bg-gray-50 rounded-lg transition-colors">
-          <Sparkle {...getIconProps()} />
         </button>
       </div>
       
