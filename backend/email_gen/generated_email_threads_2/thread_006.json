@@ -1,0 +1,44 @@
+{
+  "emails": [
+    {
+      "from_address": "mgarcia@westwoodcrc.com",
+      "to_addresses": [
+        "ben.carter@synergyclinical.com"
+      ],
+      "cc_addresses": [
+        "ereed@westwoodcrc.com"
+      ],
+      "subject": "Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria",
+      "timestamp": "2023-10-26T10:15:00-04:00",
+      "body": "Hi Ben,\n\nHope you're having a good week.\n\nWe have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During the pre-screen review, we noted their liver function tests (LFTs) are slightly above the upper limit of normal (ULN). Specifically, their ALT is 1.2x ULN.\n\nThe protocol exclusion criterion #5 states 'Clinically significant abnormal laboratory values,' but it's a bit ambiguous for this specific case. Could you please provide clarification on the acceptable range for LFTs for healthy volunteers in this part of the study? We want to ensure we are interpreting this correctly before proceeding with the formal screening visit.\n\nThanks for your help.\n\nBest regards,\n\nMaria Garcia\nClinical Research Coordinator\nWestwood Clinical Research Center",
+      "attachments": [],
+      "message_id": 1001,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "ben.carter@synergyclinical.com",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "mgarcia@westwoodcrc.com",
+        "ereed@westwoodcrc.com",
+        "sarah.chen@denalitx.com"
+      ],
+      "subject": "Fwd: Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria",
+      "timestamp": "2023-10-26T11:30:00-04:00",
+      "body": "Hi Alex,\n\nPlease see the query below from the team at Westwood CRC regarding the LFT exclusion criteria for Part A.\n\nCould you please provide the official guidance from the sponsor on this and reference the relevant protocol section?\n\nThanks,\n\nBen\n\nBen Carter\nClinical Research Associate\nSynergy Clinical\n\n--- Original Message ---\nFrom: Maria Garcia <mgarcia@westwoodcrc.com>\nSent: Thursday, October 26, 2023 10:15 AM\nTo: Ben Carter <ben.carter@synergyclinical.com>\nCc: Dr. Emily Reed <ereed@westwoodcrc.com>\nSubject: Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria\n\nHi Ben,\n\nHope you're having a good week.\n\nWe have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During the pre-screen review, we noted their liver function tests (LFTs) are slightly above the upper limit of normal (ULN). Specifically, their ALT is 1.2x ULN.\n\nThe protocol exclusion criterion #5 states 'Clinically significant abnormal laboratory values,' but it's a bit ambiguous for this specific case. Could you please provide clarification on the acceptable range for LFTs for healthy volunteers in this part of the study? We want to ensure we are interpreting this correctly before proceeding with the formal screening visit.\n\nThanks for your help.\n\nBest regards,\n\nMaria Garcia\nClinical Research Coordinator\nWestwood Clinical Research Center",
+      "attachments": [],
+      "message_id": 1002,
+      "in_reply_to": 1001
+    }
+  ],
+  "role_descriptions": [
+    "mgarcia@westwoodcrc.com: Westwood Clinical Research Center (Site), Clinical Research Coordinator",
+    "ereed@westwoodcrc.com: Westwood Clinical Research Center (Site), Principal Investigator",
+    "ben.carter@synergyclinical.com: Synergy Clinical (CRO), Clinical Research Associate",
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "sarah.chen@denalitx.com: Denali Therapeutics (Sponsor), Clinical Project Manager"
+  ],
+  "description": "An inquiry from a site coordinator asking for clarification on the screening procedures for healthy volunteers in Part A, specifically regarding the exclusion criteria related to liver function tests. Alex Johnson provides a clear answer by referencing the specific section of the protocol."
+}

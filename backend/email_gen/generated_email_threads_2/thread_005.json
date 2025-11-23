@@ -1,0 +1,45 @@
+{
+  "emails": [
+    {
+      "from_address": "alex.johnson@denalitx.com",
+      "to_addresses": [
+        "sarah.miller@ucsfmed.org"
+      ],
+      "cc_addresses": [
+        "pm_lead@ pinnaclecro.com",
+        "emily.vance@ucsfmed.org"
+      ],
+      "subject": "Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102",
+      "timestamp": "2023-11-06T11:15:00Z",
+      "body": "Hi Sarah,\n\nI hope you are having a good week.\n\nI'm following up on the Monitoring Visit Report from our visit on October 25th. There are a couple of outstanding action items that we need to close out:\n\n1.  Updated Delegation of Authority Log: Please provide the updated log reflecting the addition of Dr. James Peterson as a new Sub-Investigator.\n2.  Training Confirmation: Please provide documentation confirming that Dr. Peterson has completed the required protocol and GCP training.\n\nPlease let me know if you have an estimated timeline for when these items can be provided.\n\nThanks for your continued hard work on this study.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics",
+      "attachments": [],
+      "message_id": 16541,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "sarah.miller@ucsfmed.org",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "pm_lead@pinnaclecro.com",
+        "emily.vance@ucsfmed.org"
+      ],
+      "subject": "Re: Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102",
+      "timestamp": "2023-11-06T16:45:22Z",
+      "body": "Hi Alex,\n\nThanks for the reminder. \n\nWe have Dr. Peterson's training documentation ready, which I've attached to this email. \n\nI am still waiting for Dr. Vance to sign the updated Delegation of Authority Log. She has been in back-to-back patient visits today but I expect to have it signed and sent over to you by EOD tomorrow.\n\nI will let you know if there are any further delays.\n\nBest,\n\nSarah Miller\nClinical Research Coordinator\nUCSF Medical Center",
+      "attachments": [
+        "JPeterson_Training_Confirmation_DNLI-001.pdf"
+      ],
+      "message_id": 16542,
+      "in_reply_to": 16541
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "sarah.miller@ucsfmed.org: UCSF Medical Center (Site), Clinical Research Coordinator",
+    "emily.vance@ucsfmed.org: UCSF Medical Center (Site), Principal Investigator",
+    "pm_lead@pinnaclecro.com: Pinnacle CRO (CRO), Project Management Lead"
+  ],
+  "description": "A routine follow-up email from Alex Johnson to a site coordinator regarding outstanding action items from the last monitoring visit report. The email specifically requests an updated Delegation of Authority Log to reflect a new sub-investigator and confirmation of completed training for the new staff member."
+}

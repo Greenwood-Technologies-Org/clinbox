@@ -1,0 +1,46 @@
+{
+  "emails": [
+    {
+      "from_address": "alex.johnson@denalitx.com",
+      "to_addresses": [
+        "s.chen@universityhealth.org"
+      ],
+      "cc_addresses": [
+        "d.roberts@universityhealth.org",
+        "lisa.wong@syneos.com"
+      ],
+      "subject": "Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123",
+      "timestamp": "2024-05-20T10:30:00Z",
+      "body": "Dear Sarah,\n\nI hope this email finds you well.\n\nI'm reaching out today for a proactive check-in regarding recruitment for the FTD cohort (Part B) of the DNLI-001 study at University Health Center. In reviewing the recent screening logs, I noted that your site has not yet screened any patients for this specific cohort.\n\nWe understand that recruiting for specific patient populations can present unique challenges. Our team at Denali is here to support you in any way we can. We'd be happy to schedule a brief call to discuss your site's current pre-screening and recruitment strategies. We can also explore if any additional resources might be helpful.\n\nTo that end, I've attached our latest approved patient recruitment flyer and an updated FAQ document for sites, which you may find useful.\n\nPlease let me know if you and Dr. Roberts would be available for a 15-20 minute call sometime next week to brainstorm potential solutions.\n\nBest regards,\n\nAlex Johnson\nClinical Research Associate\nDenali Therapeutics\nalex.johnson@denalitx.com",
+      "attachments": [
+        "DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf",
+        "DNLI-001_FAQ_for_Sites_v2.1.pdf"
+      ],
+      "message_id": 1716201000,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "s.chen@universityhealth.org",
+      "to_addresses": [
+        "alex.johnson@denalitx.com"
+      ],
+      "cc_addresses": [
+        "d.roberts@universityhealth.org",
+        "lisa.wong@syneos.com"
+      ],
+      "subject": "Re: Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123",
+      "timestamp": "2024-05-21T14:15:00Z",
+      "body": "Hi Alex,\n\nThank you for reaching out and for the attached materials. We appreciate the proactive support.\n\nYou are correct, we have been facing some challenges identifying potential candidates for the FTD cohort. A call to discuss our strategy would be very helpful.\n\nDr. Roberts and I are generally available next Tuesday or Thursday afternoon. Please let us know what time works best for you to send a meeting invitation.\n\nThank you,\n\nSarah Chen\nClinical Research Coordinator\nUniversity Health Center\ns.chen@universityhealth.org",
+      "attachments": [],
+      "message_id": 1716300900,
+      "in_reply_to": 1716201000
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitx.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "s.chen@universityhealth.org: University Health Center (Site), Clinical Research Coordinator",
+    "d.roberts@universityhealth.org: University Health Center (Site), Principal Investigator",
+    "lisa.wong@syneos.com: Syneos Health (CRO), Project Manager"
+  ],
+  "description": "A thread initiated by Alex Johnson to a site that has not yet screened any patients for the FTD cohort (Part B). The email is a proactive check-in to discuss potential recruitment barriers and offer support, such as reviewing their pre-screening strategies or providing new recruitment materials."
+}

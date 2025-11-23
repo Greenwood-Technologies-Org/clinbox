@@ -1,0 +1,249 @@
+{
+  "id": "b8c37e33defde51c",
+  "threadId": "b8c37e33defde51c",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Hi Ben, Hope you're having a good week. We have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During t...",
+  "historyId": "1698329700",
+  "internalDate": "1698329700000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<mgarcia@westwoodcrc.com>"
+      },
+      {
+        "name": "From",
+        "value": "mgarcia@westwoodcrc.com"
+      },
+      {
+        "name": "To",
+        "value": "ben.carter@synergyclinical.com"
+      },
+      {
+        "name": "Cc",
+        "value": "ereed@westwoodcrc.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria"
+      },
+      {
+        "name": "Date",
+        "value": "2023-10-26T10:15:00-04:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1001@mail.example.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 793
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 793,
+          "data": "SGkgQmVuLAoKSG9wZSB5b3UncmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKV2UgaGF2ZSBhIHBvdGVudGlhbCBoZWFsdGh5IHZvbHVudGVlciBmb3IgUGFydCBBIG9mIHRoZSBETkwtMTIzIHN0dWR5IHdobyBpcyBpbnRlcmVzdGVkIGluIHNjcmVlbmluZy4gRHVyaW5nIHRoZSBwcmUtc2NyZWVuIHJldmlldywgd2Ugbm90ZWQgdGhlaXIgbGl2ZXIgZnVuY3Rpb24gdGVzdHMgKExGVHMpIGFyZSBzbGlnaHRseSBhYm92ZSB0aGUgdXBwZXIgbGltaXQgb2Ygbm9ybWFsIChVTE4pLiBTcGVjaWZpY2FsbHksIHRoZWlyIEFMVCBpcyAxLjJ4IFVMTi4KClRoZSBwcm90b2NvbCBleGNsdXNpb24gY3JpdGVyaW9uICM1IHN0YXRlcyAnQ2xpbmljYWxseSBzaWduaWZpY2FudCBhYm5vcm1hbCBsYWJvcmF0b3J5IHZhbHVlcywnIGJ1dCBpdCdzIGEgYml0IGFtYmlndW91cyBmb3IgdGhpcyBzcGVjaWZpYyBjYXNlLiBDb3VsZCB5b3UgcGxlYXNlIHByb3ZpZGUgY2xhcmlmaWNhdGlvbiBvbiB0aGUgYWNjZXB0YWJsZSByYW5nZSBmb3IgTEZUcyBmb3IgaGVhbHRoeSB2b2x1bnRlZXJzIGluIHRoaXMgcGFydCBvZiB0aGUgc3R1ZHk_IFdlIHdhbnQgdG8gZW5zdXJlIHdlIGFyZSBpbnRlcnByZXRpbmcgdGhpcyBjb3JyZWN0bHkgYmVmb3JlIHByb2NlZWRpbmcgd2l0aCB0aGUgZm9ybWFsIHNjcmVlbmluZyB2aXNpdC4KClRoYW5rcyBmb3IgeW91ciBoZWxwLgoKQmVzdCByZWdhcmRzLAoKTWFyaWEgR2FyY2lhCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yCldlc3R3b29kIENsaW5pY2FsIFJlc2VhcmNoIENlbnRlcg"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1793,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "b8c37e33defde51c",
+      "threadId": "b8c37e33defde51c",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Hi Ben, Hope you're having a good week. We have a potential healthy volunteer for Part A of the DNL-123 study who is interested in screening. During t...",
+      "historyId": "1698329700",
+      "internalDate": "1698329700000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<mgarcia@westwoodcrc.com>"
+          },
+          {
+            "name": "From",
+            "value": "mgarcia@westwoodcrc.com"
+          },
+          {
+            "name": "To",
+            "value": "ben.carter@synergyclinical.com"
+          },
+          {
+            "name": "Cc",
+            "value": "ereed@westwoodcrc.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria"
+          },
+          {
+            "name": "Date",
+            "value": "2023-10-26T10:15:00-04:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1001@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 793
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 793,
+              "data": "SGkgQmVuLAoKSG9wZSB5b3UncmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKV2UgaGF2ZSBhIHBvdGVudGlhbCBoZWFsdGh5IHZvbHVudGVlciBmb3IgUGFydCBBIG9mIHRoZSBETkwtMTIzIHN0dWR5IHdobyBpcyBpbnRlcmVzdGVkIGluIHNjcmVlbmluZy4gRHVyaW5nIHRoZSBwcmUtc2NyZWVuIHJldmlldywgd2Ugbm90ZWQgdGhlaXIgbGl2ZXIgZnVuY3Rpb24gdGVzdHMgKExGVHMpIGFyZSBzbGlnaHRseSBhYm92ZSB0aGUgdXBwZXIgbGltaXQgb2Ygbm9ybWFsIChVTE4pLiBTcGVjaWZpY2FsbHksIHRoZWlyIEFMVCBpcyAxLjJ4IFVMTi4KClRoZSBwcm90b2NvbCBleGNsdXNpb24gY3JpdGVyaW9uICM1IHN0YXRlcyAnQ2xpbmljYWxseSBzaWduaWZpY2FudCBhYm5vcm1hbCBsYWJvcmF0b3J5IHZhbHVlcywnIGJ1dCBpdCdzIGEgYml0IGFtYmlndW91cyBmb3IgdGhpcyBzcGVjaWZpYyBjYXNlLiBDb3VsZCB5b3UgcGxlYXNlIHByb3ZpZGUgY2xhcmlmaWNhdGlvbiBvbiB0aGUgYWNjZXB0YWJsZSByYW5nZSBmb3IgTEZUcyBmb3IgaGVhbHRoeSB2b2x1bnRlZXJzIGluIHRoaXMgcGFydCBvZiB0aGUgc3R1ZHk_IFdlIHdhbnQgdG8gZW5zdXJlIHdlIGFyZSBpbnRlcnByZXRpbmcgdGhpcyBjb3JyZWN0bHkgYmVmb3JlIHByb2NlZWRpbmcgd2l0aCB0aGUgZm9ybWFsIHNjcmVlbmluZyB2aXNpdC4KClRoYW5rcyBmb3IgeW91ciBoZWxwLgoKQmVzdCByZWdhcmRzLAoKTWFyaWEgR2FyY2lhCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yCldlc3R3b29kIENsaW5pY2FsIFJlc2VhcmNoIENlbnRlcg"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1793,
+      "raw": null
+    },
+    {
+      "id": "fba9d88164f3e2d9",
+      "threadId": "b8c37e33defde51c",
+      "labelIds": [
+        "INBOX"
+      ],
+      "snippet": "Hi Alex, Please see the query below from the team at Westwood CRC regarding the LFT exclusion criteria for Part A. Could you please provide the offici...",
+      "historyId": "1698334200",
+      "internalDate": "1698334200000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<ben.carter@synergyclinical.com>"
+          },
+          {
+            "name": "From",
+            "value": "ben.carter@synergyclinical.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "mgarcia@westwoodcrc.com, ereed@westwoodcrc.com, sarah.chen@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Fwd: Protocol DNL-123 - Query re: Part A Screening Exclusion Criteria"
+          },
+          {
+            "name": "Date",
+            "value": "2023-10-26T11:30:00-04:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1002@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          },
+          {
+            "name": "In-Reply-To",
+            "value": "<1001@mail.example.com>"
+          },
+          {
+            "name": "References",
+            "value": "<1001@mail.example.com>"
+          }
+        ],
+        "body": {
+          "size": 1377
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 1377,
+              "data": "SGkgQWxleCwKClBsZWFzZSBzZWUgdGhlIHF1ZXJ5IGJlbG93IGZyb20gdGhlIHRlYW0gYXQgV2VzdHdvb2QgQ1JDIHJlZ2FyZGluZyB0aGUgTEZUIGV4Y2x1c2lvbiBjcml0ZXJpYSBmb3IgUGFydCBBLgoKQ291bGQgeW91IHBsZWFzZSBwcm92aWRlIHRoZSBvZmZpY2lhbCBndWlkYW5jZSBmcm9tIHRoZSBzcG9uc29yIG9uIHRoaXMgYW5kIHJlZmVyZW5jZSB0aGUgcmVsZXZhbnQgcHJvdG9jb2wgc2VjdGlvbj8KClRoYW5rcywKCkJlbgoKQmVuIENhcnRlcgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKU3luZXJneSBDbGluaWNhbAoKLS0tIE9yaWdpbmFsIE1lc3NhZ2UgLS0tCkZyb206IE1hcmlhIEdhcmNpYSA8bWdhcmNpYUB3ZXN0d29vZGNyYy5jb20-ClNlbnQ6IFRodXJzZGF5LCBPY3RvYmVyIDI2LCAyMDIzIDEwOjE1IEFNClRvOiBCZW4gQ2FydGVyIDxiZW4uY2FydGVyQHN5bmVyZ3ljbGluaWNhbC5jb20-CkNjOiBEci4gRW1pbHkgUmVlZCA8ZXJlZWRAd2VzdHdvb2RjcmMuY29tPgpTdWJqZWN0OiBQcm90b2NvbCBETkwtMTIzIC0gUXVlcnkgcmU6IFBhcnQgQSBTY3JlZW5pbmcgRXhjbHVzaW9uIENyaXRlcmlhCgpIaSBCZW4sCgpIb3BlIHlvdSdyZSBoYXZpbmcgYSBnb29kIHdlZWsuCgpXZSBoYXZlIGEgcG90ZW50aWFsIGhlYWx0aHkgdm9sdW50ZWVyIGZvciBQYXJ0IEEgb2YgdGhlIEROTC0xMjMgc3R1ZHkgd2hvIGlzIGludGVyZXN0ZWQgaW4gc2NyZWVuaW5nLiBEdXJpbmcgdGhlIHByZS1zY3JlZW4gcmV2aWV3LCB3ZSBub3RlZCB0aGVpciBsaXZlciBmdW5jdGlvbiB0ZXN0cyAoTEZUcykgYXJlIHNsaWdodGx5IGFib3ZlIHRoZSB1cHBlciBsaW1pdCBvZiBub3JtYWwgKFVMTikuIFNwZWNpZmljYWxseSwgdGhlaXIgQUxUIGlzIDEuMnggVUxOLgoKVGhlIHByb3RvY29sIGV4Y2x1c2lvbiBjcml0ZXJpb24gIzUgc3RhdGVzICdDbGluaWNhbGx5IHNpZ25pZmljYW50IGFibm9ybWFsIGxhYm9yYXRvcnkgdmFsdWVzLCcgYnV0IGl0J3MgYSBiaXQgYW1iaWd1b3VzIGZvciB0aGlzIHNwZWNpZmljIGNhc2UuIENvdWxkIHlvdSBwbGVhc2UgcHJvdmlkZSBjbGFyaWZpY2F0aW9uIG9uIHRoZSBhY2NlcHRhYmxlIHJhbmdlIGZvciBMRlRzIGZvciBoZWFsdGh5IHZvbHVudGVlcnMgaW4gdGhpcyBwYXJ0IG9mIHRoZSBzdHVkeT8gV2Ugd2FudCB0byBlbnN1cmUgd2UgYXJlIGludGVycHJldGluZyB0aGlzIGNvcnJlY3RseSBiZWZvcmUgcHJvY2VlZGluZyB3aXRoIHRoZSBmb3JtYWwgc2NyZWVuaW5nIHZpc2l0LgoKVGhhbmtzIGZvciB5b3VyIGhlbHAuCgpCZXN0IHJlZ2FyZHMsCgpNYXJpYSBHYXJjaWEKQ2xpbmljYWwgUmVzZWFyY2ggQ29vcmRpbmF0b3IKV2VzdHdvb2QgQ2xpbmljYWwgUmVzZWFyY2ggQ2VudGVy"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 2377,
+      "raw": null
+    }
+  ]
+}

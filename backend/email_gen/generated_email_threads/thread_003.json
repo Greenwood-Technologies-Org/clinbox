@@ -1,0 +1,59 @@
+{
+  "emails": [
+    {
+      "from_address": "sarah.chen@oakwoodcrc.com",
+      "to_addresses": [
+        "ben.carter@synergycro.com"
+      ],
+      "cc_addresses": [
+        "emily.vance@oakwoodcrc.com"
+      ],
+      "subject": "[URGENT] Protocol Deviation - Study DNLI-123 - Site 456 - Subject 101-003",
+      "timestamp": "2024-05-21T14:30:00-05:00",
+      "body": "Hi Ben,\n\nI am writing to self-report a protocol deviation for subject 101-003, enrolled in Part A of the DNLI-123 study.\n\nThis morning, the participant missed their scheduled 4-hour post-dose PK blood draw. The participant had a family emergency and had to leave the site unexpectedly after the 2-hour draw was completed. All other procedures for the visit were completed as scheduled.\n\nWe have documented this event in the subject's source documents and are completing the Protocol Deviation form now. Please advise on any immediate actions required from our side and the next steps for reporting this to the sponsor.\n\nThank you,\n\nSarah Chen, CCRP\nStudy Coordinator\nOakwood Clinical Research Center",
+      "attachments": [],
+      "message_id": 95831,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "ben.carter@synergycro.com",
+      "to_addresses": [
+        "alex.johnson@denalitherapeutics.com",
+        "maria.garcia@denalitherapeutics.com"
+      ],
+      "cc_addresses": [
+        "sarah.chen@oakwoodcrc.com"
+      ],
+      "subject": "Fwd: [URGENT] Protocol Deviation - Study DNLI-123 - Site 456 - Subject 101-003",
+      "timestamp": "2024-05-21T16:05:00-05:00",
+      "body": "Hi Alex and Maria,\n\nPlease see the notification below from Site 456 regarding a missed PK sample for a Part A subject. This appears to be a significant deviation given the nature of the healthy volunteer cohort.\n\nSarah, thank you for the prompt notification. Please send over the completed PD form once it's finalized.\n\nAlex/Maria - Please let us know your thoughts on the potential impact and how you would like us to proceed with documentation and follow-up.\n\nBest regards,\n\nBen Carter\nClinical Research Associate\nSynergy CRO\n\n---------- Forwarded message ---------\nFrom: Sarah Chen <sarah.chen@oakwoodcrc.com>\nDate: Tue, May 21, 2024 at 2:30 PM\nSubject: [URGENT] Protocol Deviation - Study DNLI-123 - Site 456 - Subject 101-003\nTo: Ben Carter <ben.carter@synergycro.com>\nCc: Emily Vance <emily.vance@oakwoodcrc.com>\n\nHi Ben,\n\nI am writing to self-report a protocol deviation for subject 101-003, enrolled in Part A of the DNLI-123 study.\n\nThis morning, the participant missed their scheduled 4-hour post-dose PK blood draw. The participant had a family emergency and had to leave the site unexpectedly after the 2-hour draw was completed. All other procedures for the visit were completed as scheduled.\n\nWe have documented this event in the subject's source documents and are completing the Protocol Deviation form now. Please advise on any immediate actions required from our side and the next steps for reporting this to the sponsor.\n\nThank you,\n\nSarah Chen, CCRP\nStudy Coordinator\nOakwood Clinical Research Center",
+      "attachments": [],
+      "message_id": 95832,
+      "in_reply_to": null
+    },
+    {
+      "from_address": "maria.garcia@denalitherapeutics.com",
+      "to_addresses": [
+        "alex.johnson@denalitherapeutics.com",
+        "ben.carter@synergycro.com"
+      ],
+      "cc_addresses": [
+        "sarah.chen@oakwoodcrc.com"
+      ],
+      "subject": "Re: Fwd: [URGENT] Protocol Deviation - Study DNLI-123 - Site 456 - Subject 101-003",
+      "timestamp": "2024-05-22T09:45:00-05:00",
+      "body": "All,\n\nThank you for flagging this. A missed PK sample in the HV cohort is indeed a significant deviation and will require careful assessment.\n\nAlex, please take the lead on this. Can you please follow up with Sarah to ensure the deviation is documented thoroughly in the source and on the PD form? Once you receive the form, please review it and begin drafting an initial impact assessment for our internal clinical pharmacology team. We need to understand how this missing data point affects the overall analysis for this cohort.\n\nPlease let me know if you need any support.\n\nBest,\n\nMaria Garcia\nClinical Trial Manager\nDenali Therapeutics",
+      "attachments": [],
+      "message_id": 95833,
+      "in_reply_to": 95832
+    }
+  ],
+  "role_descriptions": [
+    "alex.johnson@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Research Associate",
+    "maria.garcia@denalitherapeutics.com: Denali Therapeutics (Sponsor), Clinical Trial Manager",
+    "ben.carter@synergycro.com: CRO, Clinical Research Associate",
+    "sarah.chen@oakwoodcrc.com: Site, Study Coordinator",
+    "emily.vance@oakwoodcrc.com: Site, Principal Investigator"
+  ],
+  "description": "A multi-person email chain involving you, the site's Study Coordinator, and your Clinical Trial Manager regarding a significant protocol deviation. The site self-reported that a participant in the healthy volunteer cohort (Part A) missed their post-dose PK blood draw. The discussion focuses on documenting the deviation and determining the impact on data analysis."
+}
