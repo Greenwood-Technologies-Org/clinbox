@@ -1,7 +1,8 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
+import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
 
 interface SelectedEmail {
@@ -16,6 +17,7 @@ interface SelectedEmail {
     quickActions?: string[];
   };
   tasks?: string[];
+  attachments?: Attachment[];
 }
 
 interface SupplementaryPanelProps {
@@ -205,6 +207,26 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
                   ))
                 ) : (
                   <p className="text-sm text-gray-400 py-2">No tasks</p>
+                )}
+              </div>
+            </div>
+            <div className="border-b border-gray-200"></div>
+
+            {/* Attachments */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Paperclip className="w-4 h-4" />
+                <h3 className="font-medium">Attachments</h3>
+              </div>
+              <div className="space-y-2">
+                {selectedEmail.attachments && selectedEmail.attachments.length > 0 ? (
+                  selectedEmail.attachments.map((attachment, index) => (
+                    <div key={index} className="py-2">
+                      <span className="text-sm text-gray-700">{attachment.filename}</span>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-sm text-gray-400 py-2">No attachments</p>
                 )}
               </div>
             </div>

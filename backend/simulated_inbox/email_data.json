@@ -8,7 +8,8 @@
     },
     "tasks": [
       "Review and update SAE management procedures with medical monitor"
-    ]
+    ],
+    "hasAttachments": true
   },
   "email_002.json": {
     "folder": "Important",
@@ -17,7 +18,8 @@
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": false
   },
   "email_003.json": {
     "folder": "Important",
@@ -26,7 +28,8 @@
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": true
   },
   "email_004.json": {
     "folder": "Important",
@@ -37,7 +40,8 @@
     },
     "tasks": [
       "Create dosing error prevention training document for site staff"
-    ]
+    ],
+    "hasAttachments": true
   },
   "email_005.json": {
     "folder": "Important",
@@ -46,7 +50,8 @@
       "title": "Investigational Drug Pharmacist",
       "organization": "Maplewood Clinical Research Center"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": true
   },
   "email_006.json": {
     "folder": "Important",
@@ -55,7 +60,8 @@
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": true
   },
   "email_007.json": {
     "folder": "Important",
@@ -64,7 +70,8 @@
       "title": "Clinical Research Coordinator",
       "organization": "Westwood Clinical Research Center"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": false
   },
   "email_008.json": {
     "folder": "Important",
@@ -75,7 +82,8 @@
     },
     "tasks": [
       "Develop FTD patient recruitment strategy guide for underperforming sites"
-    ]
+    ],
+    "hasAttachments": true
   },
   "email_009.json": {
     "folder": "Important",
@@ -84,7 +92,8 @@
       "title": "TMF Specialist",
       "organization": "Denali Therapeutics"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": false
   },
   "email_010.json": {
     "folder": "Important",
@@ -93,6 +102,7 @@
       "title": "Clinical Research Coordinator",
       "organization": "UCSF Medical Center"
     },
-    "tasks": []
+    "tasks": [],
+    "hasAttachments": false
   }
 }

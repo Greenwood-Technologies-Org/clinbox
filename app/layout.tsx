@@ -18,6 +18,11 @@ interface SelectedEmail {
     quickActions?: string[];
   };
   tasks?: string[];
+  hasAttachments?: boolean;
+  attachments?: Array<{
+    filename: string;
+    mimeType: string;
+  }>;
 }
 
 export default function RootLayout({

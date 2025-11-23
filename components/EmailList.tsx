@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, PenLine, Search } from 'lucide-react';
+import { Menu, PenLine, Search, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
 interface Email {
@@ -22,6 +22,7 @@ interface EmailData {
       organization: string;
     };
     tasks?: string[];
+    hasAttachments?: boolean;
   };
 }
 
@@ -40,10 +41,11 @@ interface EmailListProps {
   loading: boolean;
   activeGroup: string;
   onActiveGroupChange: (group: string) => void;
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
-  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
   onSetSelectedFilename: (filename: string | null) => void;
   onOpenEmail: (subject: string) => void;
+  loadThreadAttachments: (filename: string) => Promise<Array<{ filename: string; mimeType: string }>>;
 }
 
 export default function EmailList({ 
@@ -57,7 +59,8 @@ export default function EmailList({
   onSelectEmail,
   onEmailHover,
   onSetSelectedFilename,
-  onOpenEmail
+  onOpenEmail,
+  loadThreadAttachments
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
   const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
@@ -137,13 +140,16 @@ export default function EmailList({
           }
           
           // Set a new timeout for 0.1 seconds
-          const timeout = setTimeout(() => {
+          const timeout = setTimeout(async () => {
             if (email.filename && emailData[email.filename]?.sender) {
+              const attachments = await loadThreadAttachments(email.filename);
               onEmailHover({
                 filename: email.filename,
                 sender: emailData[email.filename].sender,
                 aiAnalysis: emailAIAnalysis[email.filename],
-                tasks: emailData[email.filename].tasks
+                tasks: emailData[email.filename].tasks,
+                hasAttachments: emailData[email.filename].hasAttachments,
+                attachments: attachments
               });
             }
           }, 100);
@@ -164,17 +170,21 @@ export default function EmailList({
             key={email.id}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={() => {
+            onClick={async () => {
               if (email.filename && emailData[email.filename]?.sender) {
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
                 const subject = subjectHeader?.value || 'No Subject';
+                
+                const attachments = await loadThreadAttachments(email.filename);
                 
                 onSetSelectedFilename(email.filename);
                 onSelectEmail({
                   filename: email.filename,
                   sender: emailData[email.filename].sender,
                   aiAnalysis: emailAIAnalysis[email.filename],
-                  tasks: emailData[email.filename].tasks
+                  tasks: emailData[email.filename].tasks,
+                  hasAttachments: emailData[email.filename].hasAttachments,
+                  attachments: attachments
                 });
                 onOpenEmail(subject);
               } else {
@@ -201,9 +211,12 @@ export default function EmailList({
                 </div>
               </div>
               
-              {/* Date - Fixed width */}
-              <div className="w-16 shrink-0 text-right">
-                <span className="text-sm text-gray-600">
+              {/* Attachment icon and Date - Fixed width */}
+              <div className="flex items-center gap-2 shrink-0 justify-end">
+                {email.filename && emailData[email.filename]?.hasAttachments && (
+                  <Paperclip className="w-4 h-4 text-gray-600" />
+                )}
+                <span className="text-sm text-gray-600 w-16 text-right">
                   {date}
                 </span>
               </div>

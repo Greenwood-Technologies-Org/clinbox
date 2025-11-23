@@ -65,3 +65,42 @@ export async function loadEmails(): Promise<ParsedEmail[]> {
     return [];
   }
 }
+
+export interface Attachment {
+  filename: string;
+  mimeType: string;
+}
+
+interface EmailPart {
+  mimeType: string;
+  filename?: string;
+}
+
+interface EmailPayload {
+  parts?: EmailPart[];
+}
+
+interface ThreadEmail {
+  payload: EmailPayload;
+}
+
+export function extractAttachmentsFromThread(threadEmails: ThreadEmail[]): Attachment[] {
+  const attachments: Attachment[] = [];
+  
+  threadEmails.forEach(email => {
+    if (email.payload.parts) {
+      email.payload.parts.forEach(part => {
+        if (part.filename && part.filename !== '' && 
+            part.mimeType !== 'text/plain' && 
+            part.mimeType !== 'text/html') {
+          attachments.push({
+            filename: part.filename,
+            mimeType: part.mimeType
+          });
+        }
+      });
+    }
+  });
+  
+  return attachments;
+}

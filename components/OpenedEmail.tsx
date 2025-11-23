@@ -2,6 +2,7 @@
 
 import { ArrowLeft, CircleCheck, Bell } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
+import { extractAttachmentsFromThread, type Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
 
 interface ThreadEmail {
@@ -23,9 +24,10 @@ interface OpenedEmailProps {
   subject: string;
   filename?: string;
   onBack: () => void;
+  onAttachmentsChange?: (attachments: Attachment[]) => void;
 }
 
-export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailProps) {
+export default function OpenedEmail({ subject, filename, onBack, onAttachmentsChange }: OpenedEmailProps) {
   const [threadEmails, setThreadEmails] = useState<ThreadEmail[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [expandedEmailIds, setExpandedEmailIds] = useState<Set<string>>(new Set());
@@ -44,6 +46,12 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
         
         if (emailData.threadEmails) {
           setThreadEmails(emailData.threadEmails);
+          
+          // Extract and pass attachments to parent
+          if (onAttachmentsChange) {
+            const attachments = extractAttachmentsFromThread(emailData.threadEmails);
+            onAttachmentsChange(attachments);
+          }
         }
       } catch (error) {
         console.error('Error loading thread emails:', error);

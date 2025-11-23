@@ -5,6 +5,7 @@ import { getIconProps } from '@/lib/icon-utils';
 import { useState, useEffect } from 'react';
 import EmailList from './EmailList';
 import OpenedEmail from './OpenedEmail';
+import type { Attachment } from '@/lib/email-utils';
 
 interface Email {
   id: string;
@@ -25,6 +26,7 @@ interface EmailData {
       organization: string;
     };
     tasks?: string[];
+    hasAttachments?: boolean;
   };
 }
 
@@ -38,7 +40,7 @@ interface EmailAIAnalysis {
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
 }
 
 export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
@@ -50,6 +52,24 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
   const [selectedEmailFilename, setSelectedEmailFilename] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'list' | 'opened'>('list');
   const [openedEmailSubject, setOpenedEmailSubject] = useState<string>('');
+  const [currentAttachments, setCurrentAttachments] = useState<Attachment[]>([]);
+
+  // Helper function to load thread emails and extract attachments
+  const loadThreadAttachments = async (filename: string): Promise<Attachment[]> => {
+    try {
+      const response = await fetch(`/api/emails/${filename}`);
+      const emailData = await response.json();
+      
+      if (emailData.threadEmails) {
+        const { extractAttachmentsFromThread } = await import('@/lib/email-utils');
+        return extractAttachmentsFromThread(emailData.threadEmails);
+      }
+      return [];
+    } catch (error) {
+      console.error('Error loading thread attachments:', error);
+      return [];
+    }
+  };
 
   useEffect(() => {
     const loadEmails = async () => {
@@ -90,12 +110,19 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
         if (filteredEmails.length > 0) {
           const firstEmail = filteredEmails[0];
           if (firstEmail.filename && emailDataJson[firstEmail.filename]?.sender) {
-            setSelectedEmailFilename(firstEmail.filename);
-            onSelectEmail({
-              filename: firstEmail.filename,
-              sender: emailDataJson[firstEmail.filename].sender,
-              aiAnalysis: aiAnalysisJson[firstEmail.filename],
-              tasks: emailDataJson[firstEmail.filename].tasks
+            const filename = firstEmail.filename;
+            setSelectedEmailFilename(filename);
+            
+            // Load thread emails to extract attachments
+            loadThreadAttachments(filename).then(attachments => {
+              onSelectEmail({
+                filename: filename,
+                sender: emailDataJson[filename].sender,
+                aiAnalysis: aiAnalysisJson[filename],
+                tasks: emailDataJson[filename].tasks,
+                hasAttachments: emailDataJson[filename].hasAttachments,
+                attachments: attachments
+              });
             });
           }
         }
@@ -136,12 +163,26 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
               setOpenedEmailSubject(subject);
               setViewMode('opened');
             }}
+            loadThreadAttachments={loadThreadAttachments}
           />
         ) : (
           <OpenedEmail 
             subject={openedEmailSubject}
             filename={selectedEmailFilename || undefined}
             onBack={() => setViewMode('list')}
+            onAttachmentsChange={(attachments) => {
+              setCurrentAttachments(attachments);
+              if (selectedEmailFilename && emailData[selectedEmailFilename]?.sender) {
+                onSelectEmail({
+                  filename: selectedEmailFilename,
+                  sender: emailData[selectedEmailFilename].sender,
+                  aiAnalysis: emailAIAnalysis[selectedEmailFilename],
+                  tasks: emailData[selectedEmailFilename].tasks,
+                  hasAttachments: emailData[selectedEmailFilename].hasAttachments,
+                  attachments: attachments
+                });
+              }
+            }}
           />
         )
       ) : (
