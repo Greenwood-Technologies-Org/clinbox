@@ -132,6 +132,10 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
               }
             }}
             onSetSelectedFilename={setSelectedEmailFilename}
+            onOpenEmail={(subject) => {
+              setOpenedEmailSubject(subject);
+              setViewMode('opened');
+            }}
           />
         ) : (
           <OpenedEmail subject={openedEmailSubject} />

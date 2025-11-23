@@ -43,6 +43,7 @@ interface EmailListProps {
   onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
   onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
   onSetSelectedFilename: (filename: string | null) => void;
+  onOpenEmail: (subject: string) => void;
 }
 
 export default function EmailList({ 
@@ -55,7 +56,8 @@ export default function EmailList({
   onActiveGroupChange,
   onSelectEmail,
   onEmailHover,
-  onSetSelectedFilename
+  onSetSelectedFilename,
+  onOpenEmail
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
   const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
@@ -164,6 +166,9 @@ export default function EmailList({
             onMouseLeave={handleMouseLeave}
             onClick={() => {
               if (email.filename && emailData[email.filename]?.sender) {
+                const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
+                const subject = subjectHeader?.value || 'No Subject';
+                
                 onSetSelectedFilename(email.filename);
                 onSelectEmail({
                   filename: email.filename,
@@ -171,6 +176,7 @@ export default function EmailList({
                   aiAnalysis: emailAIAnalysis[email.filename],
                   tasks: emailData[email.filename].tasks
                 });
+                onOpenEmail(subject);
               } else {
                 onSelectEmail(null);
               }
