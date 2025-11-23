@@ -140,6 +140,7 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
         ) : (
           <OpenedEmail 
             subject={openedEmailSubject}
+            filename={selectedEmailFilename || undefined}
             onBack={() => setViewMode('list')}
           />
         )
