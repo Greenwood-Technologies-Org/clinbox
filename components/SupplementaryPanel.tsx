@@ -25,6 +25,8 @@ interface SupplementaryPanelProps {
   children?: React.ReactNode;
   selectedEmail: SelectedEmail | null;
   isDocsView?: boolean;
+  showAllTasks?: boolean;
+  onToggleAllTasks?: () => void;
 }
 
 interface EmailData {
@@ -40,8 +42,13 @@ interface EmailData {
   };
 }
 
-export default function SupplementaryPanel({ children, selectedEmail, isDocsView = false }: SupplementaryPanelProps) {
-  const [showTasksPanel, setShowTasksPanel] = useState(false);
+export default function SupplementaryPanel({ 
+  children, 
+  selectedEmail, 
+  isDocsView = false,
+  showAllTasks = false,
+  onToggleAllTasks
+}: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
 
   useEffect(() => {
@@ -64,10 +71,10 @@ export default function SupplementaryPanel({ children, selectedEmail, isDocsView
       }
     };
 
-    if (showTasksPanel) {
+    if (showAllTasks) {
       loadAllTasks();
     }
-  }, [showTasksPanel]);
+  }, [showAllTasks]);
 
   const copyEmailToClipboard = (email: string) => {
     navigator.clipboard.writeText(email);
@@ -96,18 +103,10 @@ export default function SupplementaryPanel({ children, selectedEmail, isDocsView
     return mimeTypeMap[attachment.mimeType] || 'FILE';
   };
 
-  return (
-    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
-      {isDocsView ? (
-        <div className="py-3 px-4">
-          <div className="mb-6">
-            <h1 className="text-xl font-medium text-gray-900 mb-4">
-              Documents
-            </h1>
-            <div className="border-b border-gray-200"></div>
-          </div>
-        </div>
-      ) : showTasksPanel ? (
+  // Determine what content to show
+  const renderContent = () => {
+    if (showAllTasks) {
+      return (
         <div className="py-3 px-4">
           {/* Tasks Panel Header */}
           <div className="mb-6">
@@ -115,7 +114,7 @@ export default function SupplementaryPanel({ children, selectedEmail, isDocsView
               <h1 className="text-xl font-medium text-gray-900">
                 All Tasks
               </h1>
-              <button onClick={() => setShowTasksPanel(false)}>
+              <button onClick={onToggleAllTasks}>
                 <X {...getIconProps()} />
               </button>
             </div>
@@ -157,7 +156,24 @@ export default function SupplementaryPanel({ children, selectedEmail, isDocsView
             </div>
           </div>
         </div>
-      ) : selectedEmail?.sender ? (
+      );
+    }
+
+    if (isDocsView) {
+      return (
+        <div className="py-3 px-4">
+          <div className="mb-6">
+            <h1 className="text-xl font-medium text-gray-900 mb-4">
+              Documents
+            </h1>
+            <div className="border-b border-gray-200"></div>
+          </div>
+        </div>
+      );
+    }
+
+    if (selectedEmail?.sender) {
+      return (
         <div className="py-3 px-4">
           {/* Sender Information */}
           <div className="mb-6">
@@ -303,13 +319,19 @@ export default function SupplementaryPanel({ children, selectedEmail, isDocsView
             </div>
           </div>
         </div>
-      ) : (
-        children
-      )}
+      );
+    }
+
+    return children;
+  };
+
+  return (
+    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
+      {renderContent()}
       
       {/* Floating Action Buttons */}
       <div className="fixed bottom-3 right-3 flex gap-3">
-        <button onClick={() => setShowTasksPanel(!showTasksPanel)}>
+        <button onClick={onToggleAllTasks}>
           <ListTodo {...getIconProps()} />
         </button>
         <button>

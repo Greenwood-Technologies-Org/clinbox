@@ -33,6 +33,7 @@ export default function RootLayout({
 }>) {
   const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
+  const [showAllTasks, setShowAllTasks] = useState(false);
 
   return (
     <html lang="en">
@@ -49,7 +50,12 @@ export default function RootLayout({
               {children}
             </MainContent>
           )}
-          <SupplementaryPanel selectedEmail={selectedEmail} isDocsView={activeView === 'docs'} />
+          <SupplementaryPanel 
+            selectedEmail={selectedEmail} 
+            isDocsView={activeView === 'docs'}
+            showAllTasks={showAllTasks}
+            onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
+          />
         </div>
       </body>
     </html>
