@@ -255,11 +255,11 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                                 <Paperclip className="w-4 h-4" />
                                 <h4 className="text-sm font-medium">Attachments</h4>
                               </div>
-                              <div className="space-y-2">
+                              <div className="flex flex-wrap gap-2">
                                 {attachments.map((attachment, attachIndex) => (
                                   <div 
                                     key={attachIndex} 
-                                    className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
+                                    className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer w-64"
                                   >
                                     {/* Filename */}
                                     <div className="text-sm text-gray-900 font-medium mb-2 truncate">
