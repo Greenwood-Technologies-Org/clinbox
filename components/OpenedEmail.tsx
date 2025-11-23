@@ -135,16 +135,17 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
               }
               
               return (
-                <div key={email.id}>
+                <div key={email.id} className="group">
                   {isExpanded && (
-                    <div className="border-t border-gray-200" />
+                    <div className="mx-6 border-t border-gray-200" />
                   )}
                   
                   {!isExpanded ? (
                     <div
                       onClick={() => toggleEmail(email.id)}
-                      className="px-6 py-2 hover:bg-gray-100 cursor-pointer transition-colors min-w-0"
+                      className="px-6 py-2 cursor-pointer min-w-0 relative"
                     >
+                      <div className="mx-6 border-t border-gray-200 opacity-0 group-hover:opacity-100 absolute top-0 left-0 right-0" />
                       <div className="flex items-center gap-4 min-w-0">
                         {/* Sender Email - Fixed width */}
                         <div className="w-[20%] shrink-0">
@@ -167,18 +168,19 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
                           </span>
                         </div>
                       </div>
+                      <div className="mx-6 border-b border-gray-200 opacity-0 group-hover:opacity-100 absolute bottom-0 left-0 right-0" />
                     </div>
                   ) : (
                     <div
                       onClick={() => toggleEmail(email.id)}
-                      className="px-6 py-4 bg-gray-50 cursor-pointer"
+                      className="px-6 py-4 cursor-pointer"
                     >
                       {/* Header */}
                       <div className="flex items-center justify-between mb-4">
                         {/* Left: From to To */}
                         <div className="text-sm text-gray-700">
                           <span className="font-medium">{fromEmail}</span>
-                          <span className="mx-2">to</span>
+                          <span className="mx-1 font-medium">to</span>
                           <span className="font-medium">{toEmail}</span>
                         </div>
                         
@@ -196,7 +198,7 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
                   )}
 
                   {isExpanded && (
-                    <div className="border-b border-gray-200" />
+                    <div className="mx-6 border-b border-gray-200" />
                   )}
                 </div>
               );
