@@ -138,7 +138,10 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             }}
           />
         ) : (
-          <OpenedEmail subject={openedEmailSubject} />
+          <OpenedEmail 
+            subject={openedEmailSubject}
+            onBack={() => setViewMode('list')}
+          />
         )
       ) : (
         <div className="flex items-center justify-center h-full">
