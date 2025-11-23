@@ -1,54 +1,50 @@
 {
-  "id": "18c4d7c3a9e28b56",
-  "threadId": "18c4d7c3a9e28b56",
-  "labelIds": ["INBOX", "UNREAD", "CATEGORY_PERSONAL", "STARRED"],
-  "snippet": "Hey! Are we still on for coffee tomorrow at 3pm? I wanted to chat about the upcoming conference and maybe brainstorm some ideas for...",
-  "historyId": "2847289",
-  "internalDate": "1732204800000",
+  "id": "c4ca4238a0b92382",
+  "threadId": "c4ca4238a0b92382",
+  "labelIds": [
+    "INBOX",
+    "UNREAD",
+    "IMPORTANT"
+  ],
+  "snippet": "Dear Dr. Gomez and Brian, I hope this email finds you well. I am writing to follow up on the outstanding data queries for study DNLI-001. As of this m...",
+  "historyId": "1716305400",
+  "internalDate": "1716305400000",
   "payload": {
     "partId": "",
-    "mimeType": "multipart/mixed",
+    "mimeType": "multipart/alternative",
     "filename": "",
     "headers": [
       {
         "name": "Delivered-To",
-        "value": "you@example.com"
-      },
-      {
-        "name": "Received",
-        "value": "by 2002:a05:6402:45c1:b0:54d:7e23:9f1a with SMTP id bs1csp1234567qtb; Thu, 21 Nov 2024 06:20:00 -0800 (PST)"
+        "value": "alex.johnson@denalitx.com"
       },
       {
         "name": "Return-Path",
-        "value": "<alex.martinez@gmail.com>"
+        "value": "<alex.johnson@denalitherapeutics.com>"
       },
       {
         "name": "From",
-        "value": "Alex Martinez <alex.martinez@gmail.com>"
+        "value": "alex.johnson@denalitherapeutics.com"
       },
       {
         "name": "To",
-        "value": "you@example.com"
+        "value": "brian.neal@cvsresearch.org, dr.marta.gomez@cvsresearch.org"
+      },
+      {
+        "name": "Cc",
+        "value": "sandra.wong@denalitherapeutics.com"
       },
       {
         "name": "Subject",
-        "value": "Re: Coffee tomorrow?"
+        "value": "URGENT Follow-Up: Outstanding Data Queries for Study DNLI-001 at Site 305"
       },
       {
         "name": "Date",
-        "value": "Thu, 21 Nov 2024 06:20:00 -0800"
+        "value": "2024-05-21T11:30:00-04:00"
       },
       {
         "name": "Message-ID",
-        "value": "<CADe4F5g6H7i8J9k0L1m2N3o4P5q6R7s8T9u0V1w2X3y4Z5a6@mail.gmail.com>"
-      },
-      {
-        "name": "In-Reply-To",
-        "value": "<CABc3d4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Y@mail.gmail.com>"
-      },
-      {
-        "name": "References",
-        "value": "<CABc3d4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Y@mail.gmail.com> <CADe4F5g6H7i8J9k0L1m2N3o4P5q6R7s8T9u0V1w2X3y4Z5a6@mail.gmail.com>"
+        "value": "<1@mail.example.com>"
       },
       {
         "name": "MIME-Version",
@@ -56,96 +52,151 @@
       },
       {
         "name": "Content-Type",
-        "value": "multipart/mixed; boundary=\"000000000000f9e8d7c6b5a4\""
-      },
-      {
-        "name": "X-Mailer",
-        "value": "Apple Mail (2.3654.60.62.1)"
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
       }
     ],
     "body": {
-      "size": 0
+      "size": 861
     },
     "parts": [
       {
         "partId": "0",
-        "mimeType": "multipart/alternative",
+        "mimeType": "text/plain",
         "filename": "",
         "headers": [
           {
             "name": "Content-Type",
-            "value": "multipart/alternative; boundary=\"000000000000f9e8d7c6b5a3\""
+            "value": "text/plain; charset=\"UTF-8\""
           }
         ],
         "body": {
+          "size": 861,
+          "data": "RGVhciBEci4gR29tZXogYW5kIEJyaWFuLAoKSSBob3BlIHRoaXMgZW1haWwgZmluZHMgeW91IHdlbGwuCgpJIGFtIHdyaXRpbmcgdG8gZm9sbG93IHVwIG9uIHRoZSBvdXRzdGFuZGluZyBkYXRhIHF1ZXJpZXMgZm9yIHN0dWR5IEROTEktMDAxLiBBcyBvZiB0aGlzIG1vcm5pbmcsIHRoZXJlIGFyZSBvdmVyIDMwIHF1ZXJpZXMgdGhhdCBoYXZlIHJlbWFpbmVkIG9wZW4gZm9yIG1vcmUgdGhhbiAxNCBkYXlzLiBUaW1lbHkgcmVzb2x1dGlvbiBpcyBjcml0aWNhbCBhcyB3ZSBhcmUgYXBwcm9hY2hpbmcgdGhlIGRhdGFiYXNlIGxvY2sgZm9yIFBhcnQgQSwgYW5kIHRoZXNlIGRlbGF5cyBhcmUgcHV0dGluZyBvdXIgdGltZWxpbmUgYXQgcmlzay4KCkkgaGF2ZSBhdHRhY2hlZCBhIGRldGFpbGVkIGxpbmUgbGlzdGluZyBvZiB0aGUgb3V0c3RhbmRpbmcgcXVlcmllcyBmb3IgeW91ciBjb252ZW5pZW5jZS4gCgpDb3VsZCB5b3UgcGxlYXNlIHJldmlldyB0aGUgbGlzdCBhbmQgcHJvdmlkZSBhbiBlc3RpbWF0ZWQgdGltZWxpbmUgZm9yIHdoZW4geW91ciB0ZWFtIGV4cGVjdHMgdG8gaGF2ZSB0aGVzZSByZXNvbHZlZD8gUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBhcmUgZW5jb3VudGVyaW5nIGFueSBpc3N1ZXMgb3IgcmVxdWlyZSBzdXBwb3J0IGZyb20gb3VyIGVuZCB0byBhZGRyZXNzIHRoZXNlIGl0ZW1zLgoKVGhhbmsgeW91IGZvciB5b3VyIHByb21wdCBhdHRlbnRpb24gdG8gdGhpcyBpbXBvcnRhbnQgbWF0dGVyLgoKQmVzdCByZWdhcmRzLAoKQWxleCBKb2huc29uCkNsaW5pY2FsIFJlc2VhcmNoIEFzc29jaWF0ZQpEZW5hbGkgVGhlcmFwZXV0aWNzCmFsZXguam9obnNvbkBkZW5hbGl0aGVyYXBldXRpY3MuY29t"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx\""
+          }
+        ],
+        "body": {
+          "attachmentId": "1d3ef698bba3ce31",
           "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1861,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "c4ca4238a0b92382",
+      "threadId": "c4ca4238a0b92382",
+      "labelIds": [
+        "INBOX",
+        "UNREAD",
+        "IMPORTANT"
+      ],
+      "snippet": "Dear Dr. Gomez and Brian, I hope this email finds you well. I am writing to follow up on the outstanding data queries for study DNLI-001. As of this m...",
+      "historyId": "1716305400",
+      "internalDate": "1716305400000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<alex.johnson@denalitherapeutics.com>"
+          },
+          {
+            "name": "From",
+            "value": "alex.johnson@denalitherapeutics.com"
+          },
+          {
+            "name": "To",
+            "value": "brian.neal@cvsresearch.org, dr.marta.gomez@cvsresearch.org"
+          },
+          {
+            "name": "Cc",
+            "value": "sandra.wong@denalitherapeutics.com"
+          },
+          {
+            "name": "Subject",
+            "value": "URGENT Follow-Up: Outstanding Data Queries for Study DNLI-001 at Site 305"
+          },
+          {
+            "name": "Date",
+            "value": "2024-05-21T11:30:00-04:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 861
         },
         "parts": [
           {
-            "partId": "0.0",
+            "partId": "0",
             "mimeType": "text/plain",
             "filename": "",
             "headers": [
               {
                 "name": "Content-Type",
                 "value": "text/plain; charset=\"UTF-8\""
-              },
-              {
-                "name": "Content-Transfer-Encoding",
-                "value": "quoted-printable"
               }
             ],
             "body": {
-              "size": 567,
-              "data": "SGV5IQoKQXJlIHdlIHN0aWxsIG9uIGZvciBjb2ZmZWUgdG9tb3Jyb3cgYXQgM3BtPw=="
+              "size": 861,
+              "data": "RGVhciBEci4gR29tZXogYW5kIEJyaWFuLAoKSSBob3BlIHRoaXMgZW1haWwgZmluZHMgeW91IHdlbGwuCgpJIGFtIHdyaXRpbmcgdG8gZm9sbG93IHVwIG9uIHRoZSBvdXRzdGFuZGluZyBkYXRhIHF1ZXJpZXMgZm9yIHN0dWR5IEROTEktMDAxLiBBcyBvZiB0aGlzIG1vcm5pbmcsIHRoZXJlIGFyZSBvdmVyIDMwIHF1ZXJpZXMgdGhhdCBoYXZlIHJlbWFpbmVkIG9wZW4gZm9yIG1vcmUgdGhhbiAxNCBkYXlzLiBUaW1lbHkgcmVzb2x1dGlvbiBpcyBjcml0aWNhbCBhcyB3ZSBhcmUgYXBwcm9hY2hpbmcgdGhlIGRhdGFiYXNlIGxvY2sgZm9yIFBhcnQgQSwgYW5kIHRoZXNlIGRlbGF5cyBhcmUgcHV0dGluZyBvdXIgdGltZWxpbmUgYXQgcmlzay4KCkkgaGF2ZSBhdHRhY2hlZCBhIGRldGFpbGVkIGxpbmUgbGlzdGluZyBvZiB0aGUgb3V0c3RhbmRpbmcgcXVlcmllcyBmb3IgeW91ciBjb252ZW5pZW5jZS4gCgpDb3VsZCB5b3UgcGxlYXNlIHJldmlldyB0aGUgbGlzdCBhbmQgcHJvdmlkZSBhbiBlc3RpbWF0ZWQgdGltZWxpbmUgZm9yIHdoZW4geW91ciB0ZWFtIGV4cGVjdHMgdG8gaGF2ZSB0aGVzZSByZXNvbHZlZD8gUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBhcmUgZW5jb3VudGVyaW5nIGFueSBpc3N1ZXMgb3IgcmVxdWlyZSBzdXBwb3J0IGZyb20gb3VyIGVuZCB0byBhZGRyZXNzIHRoZXNlIGl0ZW1zLgoKVGhhbmsgeW91IGZvciB5b3VyIHByb21wdCBhdHRlbnRpb24gdG8gdGhpcyBpbXBvcnRhbnQgbWF0dGVyLgoKQmVzdCByZWdhcmRzLAoKQWxleCBKb2huc29uCkNsaW5pY2FsIFJlc2VhcmNoIEFzc29jaWF0ZQpEZW5hbGkgVGhlcmFwZXV0aWNzCmFsZXguam9obnNvbkBkZW5hbGl0aGVyYXBldXRpY3MuY29t"
             }
           },
           {
-            "partId": "0.1",
-            "mimeType": "text/html",
-            "filename": "",
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx",
             "headers": [
               {
                 "name": "Content-Type",
-                "value": "text/html; charset=\"UTF-8\""
+                "value": "application/pdf"
               },
               {
-                "name": "Content-Transfer-Encoding",
-                "value": "quoted-printable"
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-001_Site305_Outstanding_Queries_2024-05-21.xlsx\""
               }
             ],
             "body": {
-              "size": 1234,
-              "data": "PGRpdiBkaXI9Imx0ciI+SGV5ITxkaXY+PGJyPjwvZGl2PjxkaXY+QXJlIHdlIHN0aWxsIG9uIGZvcg=="
+              "attachmentId": "1d3ef698bba3ce31",
+              "size": 0
             }
           }
         ]
       },
-      {
-        "partId": "1",
-        "mimeType": "application/pdf",
-        "filename": "conference_schedule.pdf",
-        "headers": [
-          {
-            "name": "Content-Type",
-            "value": "application/pdf; name=\"conference_schedule.pdf\""
-          },
-          {
-            "name": "Content-Disposition",
-            "value": "attachment; filename=\"conference_schedule.pdf\""
-          },
-          {
-            "name": "Content-Transfer-Encoding",
-            "value": "base64"
-          }
-        ],
-        "body": {
-          "attachmentId": "ANGjdJ9xN4qL8yAB",
-          "size": 245678
-        }
-      }
-    ]
-  },
-  "sizeEstimate": 247479,
-  "raw": null
+      "sizeEstimate": 1861,
+      "raw": null
+    }
+  ]
 }

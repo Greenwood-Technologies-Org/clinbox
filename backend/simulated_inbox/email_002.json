@@ -1,50 +1,49 @@
 {
-  "id": "18c4e9b2c8f15a47",
-  "threadId": "18c4e8a1b7e04936",
-  "labelIds": ["INBOX", "CATEGORY_PROMOTIONS"],
-  "snippet": "Black Friday Early Access: 40% Off Everything! Your exclusive early access starts now. Don't miss out on our biggest sale of the year...",
-  "historyId": "2847421",
-  "internalDate": "1732219200000",
+  "id": "9d2682367c3935de",
+  "threadId": "9d2682367c3935de",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Hi Maria, Hope you are having a good week. I'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I ...",
+  "historyId": "1721057400",
+  "internalDate": "1721057400000",
   "payload": {
     "partId": "",
-    "mimeType": "multipart/related",
+    "mimeType": "multipart/alternative",
     "filename": "",
     "headers": [
       {
         "name": "Delivered-To",
-        "value": "you@example.com"
-      },
-      {
-        "name": "Received",
-        "value": "by 2002:a17:902:ea8d:b0:1e5:c3d2:4f67 with SMTP id g13csp2154873plg; Thu, 21 Nov 2024 10:20:00 -0800 (PST)"
+        "value": "alex.johnson@denalitx.com"
       },
       {
         "name": "Return-Path",
-        "value": "<newsletter@shop.retailstore.com>"
+        "value": "<alex.johnson@denalitx.com>"
       },
       {
         "name": "From",
-        "value": "RetailStore <newsletter@shop.retailstore.com>"
-      },
-      {
-        "name": "Reply-To",
-        "value": "support@retailstore.com"
+        "value": "alex.johnson@denalitx.com"
       },
       {
         "name": "To",
-        "value": "you@example.com"
+        "value": "m.garcia@summitclinical.com"
+      },
+      {
+        "name": "Cc",
+        "value": "d.chen@syneos.com"
       },
       {
         "name": "Subject",
-        "value": "🎉 Black Friday Early Access: 40% Off Everything!"
+        "value": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
       },
       {
         "name": "Date",
-        "value": "Thu, 21 Nov 2024 10:20:00 -0800"
+        "value": "2024-07-15T10:30:00-05:00"
       },
       {
         "name": "Message-ID",
-        "value": "<campaign-987654321@mail.retailstore.com>"
+        "value": "<1654@mail.example.com>"
       },
       {
         "name": "MIME-Version",
@@ -52,41 +51,95 @@
       },
       {
         "name": "Content-Type",
-        "value": "multipart/related; boundary=\"----=_Part_123456_789012345.1732219200000\""
-      },
-      {
-        "name": "X-Mailer",
-        "value": "Mailchimp/2.0"
-      },
-      {
-        "name": "List-Unsubscribe",
-        "value": "<mailto:unsubscribe@retailstore.com?subject=unsubscribe>, <https://retailstore.com/unsubscribe?id=abc123>"
-      },
-      {
-        "name": "Precedence",
-        "value": "bulk"
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
       }
     ],
     "body": {
-      "size": 0
+      "size": 469
     },
     "parts": [
       {
         "partId": "0",
-        "mimeType": "multipart/alternative",
+        "mimeType": "text/plain",
         "filename": "",
         "headers": [
           {
             "name": "Content-Type",
-            "value": "multipart/alternative; boundary=\"----=_Part_123457_789012346.1732219200000\""
+            "value": "text/plain; charset=\"UTF-8\""
           }
         ],
         "body": {
-          "size": 0
+          "size": 469,
+          "data": "SGkgTWFyaWEsCgpIb3BlIHlvdSBhcmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKSSdtIHdyaXRpbmcgdG8gc2NoZWR1bGUgdGhlIHVwY29taW5nIFEzIEludGVyaW0gTW9uaXRvcmluZyBWaXNpdCBmb3IgdGhlIEROTEktMTIzLTAxIHN0dWR5IGF0IHlvdXIgc2l0ZS4gSSB3b3VsZCBsaWtlIHRvIHByb3Bvc2UgdGhlIHdlZWsgb2YgQXVndXN0IDV0aCBvciB0aGUgd2VlayBvZiBBdWd1c3QgMTJ0aCBmb3IgdGhlIHZpc2l0LgoKUGxlYXNlIGxldCBtZSBrbm93IHdoaWNoIG9mIHRoZXNlIHdlZWtzIHdvcmtzIGJlc3QgZm9yIHlvdSBhbmQgRHIuIFJlZWQncyBhdmFpbGFiaWxpdHkuIE9uY2Ugd2UgaGF2ZSBhIHdlZWsgc2VsZWN0ZWQsIHdlIGNhbiBsb2NrIGluIHRoZSBzcGVjaWZpYyBkYXRlcy4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1469,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "9d2682367c3935de",
+      "threadId": "9d2682367c3935de",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Hi Maria, Hope you are having a good week. I'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I ...",
+      "historyId": "1721057400",
+      "internalDate": "1721057400000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<alex.johnson@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "m.garcia@summitclinical.com"
+          },
+          {
+            "name": "Cc",
+            "value": "d.chen@syneos.com"
+          },
+          {
+            "name": "Subject",
+            "value": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
+          },
+          {
+            "name": "Date",
+            "value": "2024-07-15T10:30:00-05:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1654@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 469
         },
         "parts": [
           {
-            "partId": "0.0",
+            "partId": "0",
             "mimeType": "text/plain",
             "filename": "",
             "headers": [
@@ -96,56 +149,101 @@
               }
             ],
             "body": {
-              "size": 1024,
-              "data": "QmxhY2sgRnJpZGF5IEVhcmx5IEFjY2VzczogNDAlIE9mZiBFdmVyeXRoaW5nIQ=="
-            }
-          },
-          {
-            "partId": "0.1",
-            "mimeType": "text/html",
-            "filename": "",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "text/html; charset=\"UTF-8\""
-              }
-            ],
-            "body": {
-              "size": 15678,
-              "data": "PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KPG1ldGEgY2hhcnNldD0iVVRGLTgiPg=="
+              "size": 469,
+              "data": "SGkgTWFyaWEsCgpIb3BlIHlvdSBhcmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKSSdtIHdyaXRpbmcgdG8gc2NoZWR1bGUgdGhlIHVwY29taW5nIFEzIEludGVyaW0gTW9uaXRvcmluZyBWaXNpdCBmb3IgdGhlIEROTEktMTIzLTAxIHN0dWR5IGF0IHlvdXIgc2l0ZS4gSSB3b3VsZCBsaWtlIHRvIHByb3Bvc2UgdGhlIHdlZWsgb2YgQXVndXN0IDV0aCBvciB0aGUgd2VlayBvZiBBdWd1c3QgMTJ0aCBmb3IgdGhlIHZpc2l0LgoKUGxlYXNlIGxldCBtZSBrbm93IHdoaWNoIG9mIHRoZXNlIHdlZWtzIHdvcmtzIGJlc3QgZm9yIHlvdSBhbmQgRHIuIFJlZWQncyBhdmFpbGFiaWxpdHkuIE9uY2Ugd2UgaGF2ZSBhIHdlZWsgc2VsZWN0ZWQsIHdlIGNhbiBsb2NrIGluIHRoZSBzcGVjaWZpYyBkYXRlcy4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
             }
           }
         ]
       },
-      {
-        "partId": "1",
-        "mimeType": "image/png",
-        "filename": "logo.png",
+      "sizeEstimate": 1469,
+      "raw": null
+    },
+    {
+      "id": "cc42acc8ce334185",
+      "threadId": "9d2682367c3935de",
+      "labelIds": [
+        "INBOX"
+      ],
+      "snippet": "Hi Alex, Thanks for reaching out. Unfortunately, Dr. Reed will be on vacation for the first three weeks of August, so the weeks of the 5th and 12th wi...",
+      "historyId": "1721159100",
+      "internalDate": "1721159100000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
         "headers": [
           {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<m.garcia@summitclinical.com>"
+          },
+          {
+            "name": "From",
+            "value": "m.garcia@summitclinical.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "d.chen@syneos.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Re: DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
+          },
+          {
+            "name": "Date",
+            "value": "2024-07-16T14:45:00-05:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1655@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
             "name": "Content-Type",
-            "value": "image/png; name=\"logo.png\""
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
           },
           {
-            "name": "Content-Disposition",
-            "value": "inline; filename=\"logo.png\""
+            "name": "In-Reply-To",
+            "value": "<1654@mail.example.com>"
           },
           {
-            "name": "Content-Transfer-Encoding",
-            "value": "base64"
-          },
-          {
-            "name": "Content-ID",
-            "value": "<logo@retailstore.com>"
+            "name": "References",
+            "value": "<1654@mail.example.com>"
           }
         ],
         "body": {
-          "attachmentId": "ANGjdJ8wM3pK7xYZ",
-          "size": 12456
-        }
-      }
-    ]
-  },
-  "sizeEstimate": 29158,
-  "raw": null
+          "size": 405
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 405,
+              "data": "SGkgQWxleCwKClRoYW5rcyBmb3IgcmVhY2hpbmcgb3V0LgoKVW5mb3J0dW5hdGVseSwgRHIuIFJlZWQgd2lsbCBiZSBvbiB2YWNhdGlvbiBmb3IgdGhlIGZpcnN0IHRocmVlIHdlZWtzIG9mIEF1Z3VzdCwgc28gdGhlIHdlZWtzIG9mIHRoZSA1dGggYW5kIDEydGggd2lsbCBub3Qgd29yayBmb3IgdXMuCgpXb3VsZCB0aGUgd2VlayBvZiBBdWd1c3QgMjZ0aCBiZSBhIHBvc3NpYmlsaXR5IGZvciB5b3U_IFdlIGhhdmUgZ29vZCBhdmFpbGFiaWxpdHkgb24gQXVndXN0IDI3LTI4LgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHRoYXQgd29ya3MgZm9yIHlvdXIgc2NoZWR1bGUuCgpUaGFuayB5b3UsCgpNYXJpYSBHYXJjaWEKQ2xpbmljYWwgUmVzZWFyY2ggQ29vcmRpbmF0b3IKU3VtbWl0IENsaW5pY2FsIFJlc2VhcmNo"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1405,
+      "raw": null
+    }
+  ]
 }

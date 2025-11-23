@@ -1,11 +1,82 @@
 {
   "email_001.json": {
-    "folder": "Important"
+    "folder": "Important",
+    "sender": {
+      "name": "Maria Garcia",
+      "title": "Clinical Research Coordinator",
+      "organization": "UCLA Department of Neurology"
+    }
   },
   "email_002.json": {
-    "folder": "Important"
+    "folder": "Important",
+    "sender": {
+      "name": "Alex Johnson",
+      "title": "Clinical Research Associate",
+      "organization": "Denali Therapeutics"
+    }
   },
   "email_003.json": {
-    "folder": "Important"
+    "folder": "Important",
+    "sender": {
+      "name": "Alex Johnson",
+      "title": "Clinical Research Associate",
+      "organization": "Denali Therapeutics"
+    }
+  },
+  "email_004.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Dr. Evelyn Reed",
+      "title": "Principal Investigator",
+      "organization": "Maplewood Clinical Research"
+    }
+  },
+  "email_005.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Dr. Sarah Chen",
+      "title": "Investigational Drug Pharmacist",
+      "organization": "Maplewood Clinical Research Center"
+    }
+  },
+  "email_006.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Alex Johnson",
+      "title": "Clinical Research Associate",
+      "organization": "Denali Therapeutics"
+    }
+  },
+  "email_007.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Maria Garcia",
+      "title": "Clinical Research Coordinator",
+      "organization": "Westwood Clinical Research Center"
+    }
+  },
+  "email_008.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Alex Johnson",
+      "title": "Clinical Research Associate",
+      "organization": "Denali Therapeutics"
+    }
+  },
+  "email_009.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Sarah Chen",
+      "title": "TMF Specialist",
+      "organization": "Denali Therapeutics"
+    }
+  },
+  "email_010.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Sarah Chen",
+      "title": "Clinical Research Coordinator",
+      "organization": "UCSF Medical Center"
+    }
   }
 }

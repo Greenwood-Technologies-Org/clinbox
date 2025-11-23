@@ -1,0 +1,202 @@
+{
+  "id": "670e8a43b246801c",
+  "threadId": "670e8a43b246801c",
+  "labelIds": [
+    "INBOX",
+    "UNREAD",
+    "IMPORTANT"
+  ],
+  "snippet": "Dear Alex, This email is to urgently inform you of a significant protocol deviation that occurred today at our site (102) for study DNLI-001. This mor...",
+  "historyId": "1715354100",
+  "internalDate": "1715354100000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<e.reed@maplewoodresearch.com>"
+      },
+      {
+        "name": "From",
+        "value": "e.reed@maplewoodresearch.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalithx.com"
+      },
+      {
+        "name": "Cc",
+        "value": "c.ruiz@maplewoodresearch.com, sarah.chen@synergycro.com"
+      },
+      {
+        "name": "Subject",
+        "value": "URGENT: Protocol Deviation Report - Dosing Error - Study DNLI-001 - Site 102"
+      },
+      {
+        "name": "Date",
+        "value": "2024-05-10T15:15:00Z"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<811@mail.example.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 1042
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 1042,
+          "data": "RGVhciBBbGV4LAoKVGhpcyBlbWFpbCBpcyB0byB1cmdlbnRseSBpbmZvcm0geW91IG9mIGEgc2lnbmlmaWNhbnQgcHJvdG9jb2wgZGV2aWF0aW9uIHRoYXQgb2NjdXJyZWQgdG9kYXkgYXQgb3VyIHNpdGUgKDEwMikgZm9yIHN0dWR5IEROTEktMDAxLgoKVGhpcyBtb3JuaW5nLCBwYXJ0aWNpcGFudCAxMDItMjAwNSwgZW5yb2xsZWQgaW4gUGFydCBCIChGVEQgY29ob3J0KSwgd2FzIGluYWR2ZXJ0ZW50bHkgYWRtaW5pc3RlcmVkIGEgZG91YmxlIGRvc2Ugb2YgdGhlIGludmVzdGlnYXRpb25hbCBwcm9kdWN0IGR1cmluZyB0aGVpciBzY2hlZHVsZWQgVmlzaXQgNSBpbmZ1c2lvbi4KClRoZSBlcnJvciB3YXMgaWRlbnRpZmllZCBieSB0aGUgaW5mdXNpb24gbnVyc2UgaW1tZWRpYXRlbHkgZm9sbG93aW5nIHRoZSBwcm9jZWR1cmUuIFRoZSBwYXJ0aWNpcGFudCBpcyBjdXJyZW50bHkgc3RhYmxlLCBhc3ltcHRvbWF0aWMsIGFuZCBpcyBiZWluZyBoZWxkIGZvciBhbiBleHRlbmRlZCA4LWhvdXIgb2JzZXJ2YXRpb24gcGVyaW9kIGFzIGEgcHJlY2F1dGlvbi4gQWxsIHZpdGFsIHNpZ25zIGFyZSBiZWluZyBtb25pdG9yZWQgY2xvc2VseSBhbmQgcmVtYWluIHdpdGhpbiBub3JtYWwgbGltaXRzLgoKV2UgaGF2ZSBkb2N1bWVudGVkIHRoZSBldmVudCBhbmQgY29tcGxldGVkIHRoZSBhdHRhY2hlZCBQcm90b2NvbCBEZXZpYXRpb24gZm9ybS4gV2UgcmVxdWlyZSBpbW1lZGlhdGUgZ3VpZGFuY2Ugb24gdGhlIG5lY2Vzc2FyeSBmb2xsb3ctdXAsIHNhZmV0eSBtb25pdG9yaW5nLCBhbmQgcmVwb3J0aW5nIHByb2NlZHVyZXMuIFBsZWFzZSBlc2NhbGF0ZSB0aGlzIHRvIHRoZSBzdHVkeSdzIE1lZGljYWwgTW9uaXRvciBhcyBzb29uIGFzIHBvc3NpYmxlIGZvciB0aGVpciBhc3Nlc3NtZW50IGFuZCByZWNvbW1lbmRhdGlvbnMuCgpXZSBhd2FpdCB5b3VyIHVyZ2VudCByZXNwb25zZS4KCkJlc3QgcmVnYXJkcywKCkRyLiBFdmVseW4gUmVlZApQcmluY2lwYWwgSW52ZXN0aWdhdG9yCk1hcGxld29vZCBDbGluaWNhbCBSZXNlYXJjaApTaXRlIDEwMg"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "PD_Form_102-2005_DoubleDose_10MAY2024.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"PD_Form_102-2005_DoubleDose_10MAY2024.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "466fadc30f6ed0c2",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 2042,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "670e8a43b246801c",
+      "threadId": "670e8a43b246801c",
+      "labelIds": [
+        "INBOX",
+        "UNREAD",
+        "IMPORTANT"
+      ],
+      "snippet": "Dear Alex, This email is to urgently inform you of a significant protocol deviation that occurred today at our site (102) for study DNLI-001. This mor...",
+      "historyId": "1715354100",
+      "internalDate": "1715354100000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<e.reed@maplewoodresearch.com>"
+          },
+          {
+            "name": "From",
+            "value": "e.reed@maplewoodresearch.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalithx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "c.ruiz@maplewoodresearch.com, sarah.chen@synergycro.com"
+          },
+          {
+            "name": "Subject",
+            "value": "URGENT: Protocol Deviation Report - Dosing Error - Study DNLI-001 - Site 102"
+          },
+          {
+            "name": "Date",
+            "value": "2024-05-10T15:15:00Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<811@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 1042
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 1042,
+              "data": "RGVhciBBbGV4LAoKVGhpcyBlbWFpbCBpcyB0byB1cmdlbnRseSBpbmZvcm0geW91IG9mIGEgc2lnbmlmaWNhbnQgcHJvdG9jb2wgZGV2aWF0aW9uIHRoYXQgb2NjdXJyZWQgdG9kYXkgYXQgb3VyIHNpdGUgKDEwMikgZm9yIHN0dWR5IEROTEktMDAxLgoKVGhpcyBtb3JuaW5nLCBwYXJ0aWNpcGFudCAxMDItMjAwNSwgZW5yb2xsZWQgaW4gUGFydCBCIChGVEQgY29ob3J0KSwgd2FzIGluYWR2ZXJ0ZW50bHkgYWRtaW5pc3RlcmVkIGEgZG91YmxlIGRvc2Ugb2YgdGhlIGludmVzdGlnYXRpb25hbCBwcm9kdWN0IGR1cmluZyB0aGVpciBzY2hlZHVsZWQgVmlzaXQgNSBpbmZ1c2lvbi4KClRoZSBlcnJvciB3YXMgaWRlbnRpZmllZCBieSB0aGUgaW5mdXNpb24gbnVyc2UgaW1tZWRpYXRlbHkgZm9sbG93aW5nIHRoZSBwcm9jZWR1cmUuIFRoZSBwYXJ0aWNpcGFudCBpcyBjdXJyZW50bHkgc3RhYmxlLCBhc3ltcHRvbWF0aWMsIGFuZCBpcyBiZWluZyBoZWxkIGZvciBhbiBleHRlbmRlZCA4LWhvdXIgb2JzZXJ2YXRpb24gcGVyaW9kIGFzIGEgcHJlY2F1dGlvbi4gQWxsIHZpdGFsIHNpZ25zIGFyZSBiZWluZyBtb25pdG9yZWQgY2xvc2VseSBhbmQgcmVtYWluIHdpdGhpbiBub3JtYWwgbGltaXRzLgoKV2UgaGF2ZSBkb2N1bWVudGVkIHRoZSBldmVudCBhbmQgY29tcGxldGVkIHRoZSBhdHRhY2hlZCBQcm90b2NvbCBEZXZpYXRpb24gZm9ybS4gV2UgcmVxdWlyZSBpbW1lZGlhdGUgZ3VpZGFuY2Ugb24gdGhlIG5lY2Vzc2FyeSBmb2xsb3ctdXAsIHNhZmV0eSBtb25pdG9yaW5nLCBhbmQgcmVwb3J0aW5nIHByb2NlZHVyZXMuIFBsZWFzZSBlc2NhbGF0ZSB0aGlzIHRvIHRoZSBzdHVkeSdzIE1lZGljYWwgTW9uaXRvciBhcyBzb29uIGFzIHBvc3NpYmxlIGZvciB0aGVpciBhc3Nlc3NtZW50IGFuZCByZWNvbW1lbmRhdGlvbnMuCgpXZSBhd2FpdCB5b3VyIHVyZ2VudCByZXNwb25zZS4KCkJlc3QgcmVnYXJkcywKCkRyLiBFdmVseW4gUmVlZApQcmluY2lwYWwgSW52ZXN0aWdhdG9yCk1hcGxld29vZCBDbGluaWNhbCBSZXNlYXJjaApTaXRlIDEwMg"
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "PD_Form_102-2005_DoubleDose_10MAY2024.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"PD_Form_102-2005_DoubleDose_10MAY2024.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "466fadc30f6ed0c2",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 2042,
+      "raw": null
+    }
+  ]
+}

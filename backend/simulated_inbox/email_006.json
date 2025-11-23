@@ -1,0 +1,268 @@
+{
+  "id": "e5eded351df7f56b",
+  "threadId": "e5eded351df7f56b",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Hi Sarah, I hope you are having a good week. I'm following up on the Monitoring Visit Report from our visit on October 25th. There are a couple of out...",
+  "historyId": "1699269300",
+  "internalDate": "1699269300000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<alex.johnson@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "sarah.miller@ucsfmed.org"
+      },
+      {
+        "name": "Cc",
+        "value": "pm_lead@ pinnaclecro.com, emily.vance@ucsfmed.org"
+      },
+      {
+        "name": "Subject",
+        "value": "Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102"
+      },
+      {
+        "name": "Date",
+        "value": "2023-11-06T11:15:00Z"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<16541@mail.example.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 706
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 706,
+          "data": "SGkgU2FyYWgsCgpJIGhvcGUgeW91IGFyZSBoYXZpbmcgYSBnb29kIHdlZWsuCgpJJ20gZm9sbG93aW5nIHVwIG9uIHRoZSBNb25pdG9yaW5nIFZpc2l0IFJlcG9ydCBmcm9tIG91ciB2aXNpdCBvbiBPY3RvYmVyIDI1dGguIFRoZXJlIGFyZSBhIGNvdXBsZSBvZiBvdXRzdGFuZGluZyBhY3Rpb24gaXRlbXMgdGhhdCB3ZSBuZWVkIHRvIGNsb3NlIG91dDoKCjEuICBVcGRhdGVkIERlbGVnYXRpb24gb2YgQXV0aG9yaXR5IExvZzogUGxlYXNlIHByb3ZpZGUgdGhlIHVwZGF0ZWQgbG9nIHJlZmxlY3RpbmcgdGhlIGFkZGl0aW9uIG9mIERyLiBKYW1lcyBQZXRlcnNvbiBhcyBhIG5ldyBTdWItSW52ZXN0aWdhdG9yLgoyLiAgVHJhaW5pbmcgQ29uZmlybWF0aW9uOiBQbGVhc2UgcHJvdmlkZSBkb2N1bWVudGF0aW9uIGNvbmZpcm1pbmcgdGhhdCBEci4gUGV0ZXJzb24gaGFzIGNvbXBsZXRlZCB0aGUgcmVxdWlyZWQgcHJvdG9jb2wgYW5kIEdDUCB0cmFpbmluZy4KClBsZWFzZSBsZXQgbWUga25vdyBpZiB5b3UgaGF2ZSBhbiBlc3RpbWF0ZWQgdGltZWxpbmUgZm9yIHdoZW4gdGhlc2UgaXRlbXMgY2FuIGJlIHByb3ZpZGVkLgoKVGhhbmtzIGZvciB5b3VyIGNvbnRpbnVlZCBoYXJkIHdvcmsgb24gdGhpcyBzdHVkeS4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1706,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "e5eded351df7f56b",
+      "threadId": "e5eded351df7f56b",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Hi Sarah, I hope you are having a good week. I'm following up on the Monitoring Visit Report from our visit on October 25th. There are a couple of out...",
+      "historyId": "1699269300",
+      "internalDate": "1699269300000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<alex.johnson@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "sarah.miller@ucsfmed.org"
+          },
+          {
+            "name": "Cc",
+            "value": "pm_lead@ pinnaclecro.com, emily.vance@ucsfmed.org"
+          },
+          {
+            "name": "Subject",
+            "value": "Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102"
+          },
+          {
+            "name": "Date",
+            "value": "2023-11-06T11:15:00Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<16541@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 706
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 706,
+              "data": "SGkgU2FyYWgsCgpJIGhvcGUgeW91IGFyZSBoYXZpbmcgYSBnb29kIHdlZWsuCgpJJ20gZm9sbG93aW5nIHVwIG9uIHRoZSBNb25pdG9yaW5nIFZpc2l0IFJlcG9ydCBmcm9tIG91ciB2aXNpdCBvbiBPY3RvYmVyIDI1dGguIFRoZXJlIGFyZSBhIGNvdXBsZSBvZiBvdXRzdGFuZGluZyBhY3Rpb24gaXRlbXMgdGhhdCB3ZSBuZWVkIHRvIGNsb3NlIG91dDoKCjEuICBVcGRhdGVkIERlbGVnYXRpb24gb2YgQXV0aG9yaXR5IExvZzogUGxlYXNlIHByb3ZpZGUgdGhlIHVwZGF0ZWQgbG9nIHJlZmxlY3RpbmcgdGhlIGFkZGl0aW9uIG9mIERyLiBKYW1lcyBQZXRlcnNvbiBhcyBhIG5ldyBTdWItSW52ZXN0aWdhdG9yLgoyLiAgVHJhaW5pbmcgQ29uZmlybWF0aW9uOiBQbGVhc2UgcHJvdmlkZSBkb2N1bWVudGF0aW9uIGNvbmZpcm1pbmcgdGhhdCBEci4gUGV0ZXJzb24gaGFzIGNvbXBsZXRlZCB0aGUgcmVxdWlyZWQgcHJvdG9jb2wgYW5kIEdDUCB0cmFpbmluZy4KClBsZWFzZSBsZXQgbWUga25vdyBpZiB5b3UgaGF2ZSBhbiBlc3RpbWF0ZWQgdGltZWxpbmUgZm9yIHdoZW4gdGhlc2UgaXRlbXMgY2FuIGJlIHByb3ZpZGVkLgoKVGhhbmtzIGZvciB5b3VyIGNvbnRpbnVlZCBoYXJkIHdvcmsgb24gdGhpcyBzdHVkeS4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1706,
+      "raw": null
+    },
+    {
+      "id": "eb51bae453607697",
+      "threadId": "e5eded351df7f56b",
+      "labelIds": [
+        "INBOX"
+      ],
+      "snippet": "Hi Alex, Thanks for the reminder. We have Dr. Peterson's training documentation ready, which I've attached to this email. I am still waiting for Dr. V...",
+      "historyId": "1699289122",
+      "internalDate": "1699289122000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<sarah.miller@ucsfmed.org>"
+          },
+          {
+            "name": "From",
+            "value": "sarah.miller@ucsfmed.org"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "pm_lead@pinnaclecro.com, emily.vance@ucsfmed.org"
+          },
+          {
+            "name": "Subject",
+            "value": "Re: Follow-up: Outstanding Action Items from MVR - Study DNLI-001 - Site 102"
+          },
+          {
+            "name": "Date",
+            "value": "2023-11-06T16:45:22Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<16542@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          },
+          {
+            "name": "In-Reply-To",
+            "value": "<16541@mail.example.com>"
+          },
+          {
+            "name": "References",
+            "value": "<16541@mail.example.com>"
+          }
+        ],
+        "body": {
+          "size": 452
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 452,
+              "data": "SGkgQWxleCwKClRoYW5rcyBmb3IgdGhlIHJlbWluZGVyLiAKCldlIGhhdmUgRHIuIFBldGVyc29uJ3MgdHJhaW5pbmcgZG9jdW1lbnRhdGlvbiByZWFkeSwgd2hpY2ggSSd2ZSBhdHRhY2hlZCB0byB0aGlzIGVtYWlsLiAKCkkgYW0gc3RpbGwgd2FpdGluZyBmb3IgRHIuIFZhbmNlIHRvIHNpZ24gdGhlIHVwZGF0ZWQgRGVsZWdhdGlvbiBvZiBBdXRob3JpdHkgTG9nLiBTaGUgaGFzIGJlZW4gaW4gYmFjay10by1iYWNrIHBhdGllbnQgdmlzaXRzIHRvZGF5IGJ1dCBJIGV4cGVjdCB0byBoYXZlIGl0IHNpZ25lZCBhbmQgc2VudCBvdmVyIHRvIHlvdSBieSBFT0QgdG9tb3Jyb3cuCgpJIHdpbGwgbGV0IHlvdSBrbm93IGlmIHRoZXJlIGFyZSBhbnkgZnVydGhlciBkZWxheXMuCgpCZXN0LAoKU2FyYWggTWlsbGVyCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVDU0YgTWVkaWNhbCBDZW50ZXI"
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "JPeterson_Training_Confirmation_DNLI-001.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"JPeterson_Training_Confirmation_DNLI-001.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "e47ecde7c15a58de",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1452,
+      "raw": null
+    }
+  ]
+}
