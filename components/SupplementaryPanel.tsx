@@ -12,6 +12,7 @@ interface SelectedEmail {
   };
   aiAnalysis?: {
     summary: string;
+    quickActions?: string[];
   };
 }
 
@@ -64,28 +65,23 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
                 </button>
               </div>
               <div className="space-y-2">
-                <div className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                  <span className="text-sm text-gray-700">Forward to Stewart Smith (Clinical Lead)</span>
-                  <div className="flex items-center gap-2">
-                    <button className="hover:text-green-600 text-gray-400 transition-colors">
-                      <CircleCheck className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-red-600 text-gray-400 transition-colors">
-                      <CircleX className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                  <span className="text-sm text-gray-700">Let Jane know you are following up</span>
-                  <div className="flex items-center gap-2">
-                    <button className="hover:text-green-600 text-gray-400 transition-colors">
-                      <CircleCheck className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-red-600 text-gray-400 transition-colors">
-                      <CircleX className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
+                {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
+                  selectedEmail.aiAnalysis.quickActions.map((action, index) => (
+                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                      <span className="text-sm text-gray-700">{action}</span>
+                      <div className="flex items-center gap-2">
+                        <button className="hover:text-green-600 text-gray-400 transition-colors">
+                          <CircleCheck className="w-4 h-4" />
+                        </button>
+                        <button className="hover:text-red-600 text-gray-400 transition-colors">
+                          <CircleX className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-sm text-gray-400 py-2">No quick actions available</p>
+                )}
               </div>
             </div>
             <div className="border-b border-gray-200"></div>

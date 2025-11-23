@@ -28,13 +28,14 @@ interface EmailData {
 interface EmailAIAnalysis {
   [key: string]: {
     summary: string;
+    quickActions?: string[];
   };
 }
 
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string } } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] } } | null) => void;
 }
 
 export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {

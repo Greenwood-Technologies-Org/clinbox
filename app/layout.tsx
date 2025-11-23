@@ -15,6 +15,7 @@ interface SelectedEmail {
   };
   aiAnalysis?: {
     summary: string;
+    quickActions?: string[];
   };
 }
 
