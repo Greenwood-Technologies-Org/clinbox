@@ -86,7 +86,7 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
         </button>
 
         {/* Middle: Subject */}
-        <h2 className="text-sm font-medium text-gray-900 truncate px-4">
+        <h2 className="font-medium text-gray-900 truncate px-4">
           {subject}
         </h2>
 
@@ -113,7 +113,7 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
           </div>
         ) : (
           <div>
-            {threadEmails.map((email) => {
+            {threadEmails.map((email, index) => {
               const fromHeader = email.payload.headers.find(h => h.name === 'From');
               const toHeader = email.payload.headers.find(h => h.name === 'To');
               const fromEmail = fromHeader?.value || 'Unknown';
@@ -123,7 +123,8 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
               const dateObj = new Date(parseInt(email.internalDate));
               const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
               
-              const isExpanded = expandedEmailIds.has(email.id);
+              const isLastMessage = index === threadEmails.length - 1;
+              const isExpanded = expandedEmailIds.has(email.id) || isLastMessage;
               
               // Get message body
               let messageBody = '';
@@ -172,8 +173,8 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
                     </div>
                   ) : (
                     <div
-                      onClick={() => toggleEmail(email.id)}
-                      className="px-6 py-4 cursor-pointer"
+                      onClick={() => !isLastMessage && toggleEmail(email.id)}
+                      className={`px-6 py-4 ${!isLastMessage ? 'cursor-pointer' : ''}`}
                     >
                       {/* Header */}
                       <div className="flex items-center justify-between mb-4">
@@ -197,7 +198,7 @@ export default function OpenedEmail({ subject, filename, onBack }: OpenedEmailPr
                     </div>
                   )}
 
-                  {isExpanded && (
+                  {isExpanded && !isLastMessage && (
                     <div className="mx-6 border-b border-gray-200" />
                   )}
                 </div>
