@@ -8,6 +8,7 @@ interface Email {
   id: string;
   snippet: string;
   internalDate: string;
+  filename?: string;
   payload: {
     headers: Array<{ name: string; value: string }>;
   };
@@ -16,17 +17,24 @@ interface Email {
 interface EmailData {
   [key: string]: {
     folder: string;
+    sender?: {
+      name: string;
+      title: string;
+      organization: string;
+    };
   };
 }
 
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string } } | null) => void;
 }
 
-export default function MainContent({ children, activeView }: MainContentProps) {
+export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
   const [activeGroup, setActiveGroup] = useState<string>('Important');
   const [emails, setEmails] = useState<Email[]>([]);
+  const [emailData, setEmailData] = useState<EmailData>({});
   const [loading, setLoading] = useState<boolean>(true);
   const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
 
@@ -36,13 +44,16 @@ export default function MainContent({ children, activeView }: MainContentProps) 
       try {
         // Load email data to get folder assignments
         const emailDataResponse = await fetch('/api/emails/email_data.json');
-        const emailData: EmailData = await emailDataResponse.json();
+        const emailDataJson: EmailData = await emailDataResponse.json();
+        setEmailData(emailDataJson);
 
         // Load all emails and filter by active group
-        const emailPromises = Object.keys(emailData).map(async (filename) => {
-          if (emailData[filename].folder === activeGroup) {
+        const emailPromises = Object.keys(emailDataJson).map(async (filename) => {
+          if (emailDataJson[filename].folder === activeGroup) {
             const response = await fetch(`/api/emails/${filename}`);
-            return response.json();
+            const emailContent = await response.json();
+            // Attach the filename to the email object so we can look up metadata later
+            return { ...emailContent, filename };
           }
           return null;
         });
@@ -122,13 +133,18 @@ export default function MainContent({ children, activeView }: MainContentProps) 
           ) : (
             <div>
               {emails.map((email) => {
-                const fromHeader = email.payload.headers.find(h => h.name === 'From');
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
                 
-                // Extract name from email format "Name <email@domain.com>"
-                const fromValue = fromHeader?.value || 'Unknown';
-                const nameMatch = fromValue.match(/^([^<]+)/);
-                const senderName = nameMatch ? nameMatch[1].trim() : fromValue;
+                // Use sender metadata if available, otherwise fall back to parsing From header
+                let senderName = 'Unknown';
+                if (email.filename && emailData[email.filename]?.sender) {
+                  senderName = emailData[email.filename].sender!.name;
+                } else {
+                  const fromHeader = email.payload.headers.find(h => h.name === 'From');
+                  const fromValue = fromHeader?.value || 'Unknown';
+                  const nameMatch = fromValue.match(/^([^<]+)/);
+                  senderName = nameMatch ? nameMatch[1].trim() : fromValue;
+                }
                 
                 const subject = subjectHeader?.value || 'No Subject';
                 const snippet = email.snippet || '';
@@ -138,11 +154,21 @@ export default function MainContent({ children, activeView }: MainContentProps) 
                 return (
                   <div
                     key={email.id}
+                    onClick={() => {
+                      if (email.filename && emailData[email.filename]?.sender) {
+                        onSelectEmail({
+                          filename: email.filename,
+                          sender: emailData[email.filename].sender
+                        });
+                      } else {
+                        onSelectEmail(null);
+                      }
+                    }}
                     className="px-6 py-2 hover:bg-gray-50 cursor-pointer transition-colors min-w-0"
                   >
                     <div className="flex items-center gap-4 min-w-0">
                       {/* Sender Name - Fixed 20% width */}
-                      <div className="w-[15%] shrink-0">
+                      <div className="w-[13%] shrink-0">
                         <span className="text-sm font-medium text-gray-900 truncate block">
                           {senderName}
                         </span>
@@ -152,7 +178,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
                       <div className="flex-1 min-w-0">
                         <div className="text-sm truncate">
                           <span className="text-gray-900 font-medium">{subject}</span>
-                          <span className="text-gray-500">	{snippet}</span>
+                          <span className="text-gray-500">  |  {snippet}</span>
                         </div>
                       </div>
                       
