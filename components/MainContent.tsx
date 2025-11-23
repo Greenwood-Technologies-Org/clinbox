@@ -45,6 +45,8 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
   const [emailData, setEmailData] = useState<EmailData>({});
   const [emailAIAnalysis, setEmailAIAnalysis] = useState<EmailAIAnalysis>({});
   const [loading, setLoading] = useState<boolean>(true);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [selectedEmailFilename, setSelectedEmailFilename] = useState<string | null>(null);
   const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
 
   useEffect(() => {
@@ -81,6 +83,20 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
         );
         
         setEmails(filteredEmails);
+        
+        // Select the first email by default
+        if (filteredEmails.length > 0) {
+          const firstEmail = filteredEmails[0];
+          if (firstEmail.filename && emailDataJson[firstEmail.filename]?.sender) {
+            setSelectedEmailFilename(firstEmail.filename);
+            onSelectEmail({
+              filename: firstEmail.filename,
+              sender: emailDataJson[firstEmail.filename].sender,
+              aiAnalysis: aiAnalysisJson[firstEmail.filename],
+              tasks: emailDataJson[firstEmail.filename].tasks
+            });
+          }
+        }
       } catch (error) {
         console.error('Error loading emails:', error);
         setEmails([]);
@@ -165,11 +181,44 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
                 const dateObj = new Date(parseInt(email.internalDate));
                 const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                 
+                const handleMouseEnter = () => {
+                  // Clear any existing timeout
+                  if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                  }
+                  
+                  // Set a new timeout for 0.5 seconds
+                  const timeout = setTimeout(() => {
+                    if (email.filename && emailData[email.filename]?.sender) {
+                      setSelectedEmailFilename(email.filename);
+                      onSelectEmail({
+                        filename: email.filename,
+                        sender: emailData[email.filename].sender,
+                        aiAnalysis: emailAIAnalysis[email.filename],
+                        tasks: emailData[email.filename].tasks
+                      });
+                    }
+                  }, 100);
+                  
+                  setHoverTimeout(timeout);
+                };
+                
+                const handleMouseLeave = () => {
+                  // Clear the timeout if the user leaves before 0.5 seconds
+                  if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                    setHoverTimeout(null);
+                  }
+                };
+                
                 return (
                   <div
                     key={email.id}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                     onClick={() => {
                       if (email.filename && emailData[email.filename]?.sender) {
+                        setSelectedEmailFilename(email.filename);
                         onSelectEmail({
                           filename: email.filename,
                           sender: emailData[email.filename].sender,
@@ -180,7 +229,9 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
                         onSelectEmail(null);
                       }
                     }}
-                    className="px-6 py-2 hover:bg-gray-50 cursor-pointer transition-colors min-w-0"
+                    className={`px-6 py-2 hover:bg-gray-100 cursor-pointer transition-colors min-w-0 ${
+                      email.filename === selectedEmailFilename ? 'bg-gray-100' : ''
+                    }`}
                   >
                     <div className="flex items-center gap-4 min-w-0">
                       {/* Sender Name - Fixed 20% width */}
