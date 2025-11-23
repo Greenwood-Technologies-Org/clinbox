@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import { useState, useEffect } from 'react';
 
@@ -69,9 +69,14 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
         <div className="py-3 px-4">
           {/* Tasks Panel Header */}
           <div className="mb-6">
-            <h1 className="text-xl font-medium text-gray-900 mb-4">
-              All Tasks
-            </h1>
+            <div className="flex items-center justify-between mb-4">
+              <h1 className="text-xl font-medium text-gray-900">
+                All Tasks
+              </h1>
+              <button onClick={() => setShowTasksPanel(false)}>
+                <X {...getIconProps()} />
+              </button>
+            </div>
             <div className="border-b border-gray-200"></div>
           </div>
 
