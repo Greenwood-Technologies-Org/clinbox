@@ -73,7 +73,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
     <div className="flex-[0.7] bg-white flex flex-col">
       {/* Navigation Bar - Only show for email view */}
       {activeView === 'email' && (
-        <div className="px-4 pt-3 pb-3 flex items-start justify-between shrink-0">
+        <div className="px-4 pt-4 pb-3 flex items-start justify-between shrink-0">
           {/* Left: Hamburger Icon */}
           <button>
             <Menu {...getIconProps()} />

@@ -10,7 +10,7 @@ interface SidebarProps {
 
 export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
   return (
-    <div className="w-9 bg-white border-r border-gray-200 flex flex-col items-center py-3">
+    <div className="w-9 bg-white border-r border-gray-200 flex flex-col items-center py-4">
       <div className="flex flex-col gap-2">
         <button 
           onClick={() => setActiveView('email')}
