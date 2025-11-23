@@ -17,6 +17,7 @@ interface SelectedEmail {
     summary: string;
     quickActions?: string[];
   };
+  tasks?: string[];
 }
 
 export default function RootLayout({

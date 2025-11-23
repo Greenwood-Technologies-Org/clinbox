@@ -22,6 +22,7 @@ interface EmailData {
       title: string;
       organization: string;
     };
+    tasks?: string[];
   };
 }
 
@@ -35,7 +36,7 @@ interface EmailAIAnalysis {
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] } } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[] } | null) => void;
 }
 
 export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
@@ -172,7 +173,8 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
                         onSelectEmail({
                           filename: email.filename,
                           sender: emailData[email.filename].sender,
-                          aiAnalysis: emailAIAnalysis[email.filename]
+                          aiAnalysis: emailAIAnalysis[email.filename],
+                          tasks: emailData[email.filename].tasks
                         });
                       } else {
                         onSelectEmail(null);

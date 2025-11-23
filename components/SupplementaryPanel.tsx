@@ -14,6 +14,7 @@ interface SelectedEmail {
     summary: string;
     quickActions?: string[];
   };
+  tasks?: string[];
 }
 
 interface SupplementaryPanelProps {
@@ -98,7 +99,23 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
                 </button>
               </div>
               <div className="space-y-2">
-                <p className="text-sm text-gray-400 py-2">No tasks</p>
+                {selectedEmail.tasks && selectedEmail.tasks.length > 0 ? (
+                  selectedEmail.tasks.map((task, index) => (
+                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                      <span className="text-sm text-gray-700">{task}</span>
+                      <div className="flex items-center gap-2">
+                        <button className="hover:text-green-600 text-gray-400 transition-colors">
+                          <CircleCheck className="w-4 h-4" />
+                        </button>
+                        <button className="hover:text-red-600 text-gray-400 transition-colors">
+                          <CircleX className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-sm text-gray-400 py-2">No tasks</p>
+                )}
               </div>
             </div>
           </div>
