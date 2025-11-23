@@ -70,7 +70,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
   }, [activeGroup, activeView]);
 
   return (
-    <div className="flex-1 md:max-w-[66%] lg:max-w-[69%] xl:max-w-[73%] bg-white flex flex-col">
+    <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
       {/* Navigation Bar - Only show for email view */}
       {activeView === 'email' && (
         <div className="px-4 pt-4 pb-6 flex items-start justify-between shrink-0">
