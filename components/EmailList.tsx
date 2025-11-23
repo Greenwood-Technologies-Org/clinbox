@@ -114,7 +114,7 @@ export default function EmailList({
           </div>
         ) : (
           <div>
-      {emails.map((email) => {
+      {emails.map((email, index) => {
         const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
         
         // Use sender metadata if available, otherwise fall back to parsing From header
@@ -176,7 +176,7 @@ export default function EmailList({
         
         return (
           <div
-            key={email.id}
+            key={email.filename || email.id || `email-${index}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={async () => {
