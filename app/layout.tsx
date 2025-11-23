@@ -26,6 +26,15 @@ interface SelectedEmail {
   }>;
 }
 
+interface SelectedDocument {
+  id: string;
+  name: string;
+  description: string;
+  modified: string;
+  version: string;
+  type: string;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,6 +42,7 @@ export default function RootLayout({
 }>) {
   const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
+  const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
   const [showChat, setShowChat] = useState(false);
 
@@ -42,7 +52,7 @@ export default function RootLayout({
         <div className="flex h-screen overflow-hidden">
           <Sidebar activeView={activeView} setActiveView={setActiveView} />
           {activeView === 'docs' ? (
-            <DocsPage />
+            <DocsPage onSelectDocument={setSelectedDocument} />
           ) : (
             <MainContent 
               activeView={activeView} 
@@ -53,6 +63,7 @@ export default function RootLayout({
           )}
           <SupplementaryPanel 
             selectedEmail={selectedEmail} 
+            selectedDocument={selectedDocument}
             isDocsView={activeView === 'docs'}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
