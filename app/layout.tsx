@@ -13,6 +13,9 @@ interface SelectedEmail {
     title: string;
     organization: string;
   };
+  aiAnalysis?: {
+    summary: string;
+  };
 }
 
 export default function RootLayout({

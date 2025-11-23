@@ -1,0 +1,32 @@
+{
+  "email_001.json": {
+    "summary": "Urgent SAE report for patient 101-005 hospitalized for pneumonia in DNLI-123 study, with CRO coordinating sponsor response and next steps."
+  },
+  "email_002.json": {
+    "summary": "Scheduling coordination for Q3 2024 Interim Monitoring Visit at Site 101, with site requesting alternative dates due to PI vacation."
+  },
+  "email_003.json": {
+    "summary": "Urgent follow-up on 30+ outstanding data queries for DNLI-001 study at Site 305 approaching database lock deadline."
+  },
+  "email_004.json": {
+    "summary": "Critical protocol deviation report for double-dose administration error at Site 102, requiring immediate medical monitor assessment and guidance."
+  },
+  "email_005.json": {
+    "summary": "Temperature excursion notification for investigational product refrigerator at Site 101, requiring sponsor guidance on product viability and quarantine procedures."
+  },
+  "email_006.json": {
+    "summary": "Follow-up on outstanding monitoring visit action items requiring updated delegation log and training documentation for new sub-investigator."
+  },
+  "email_007.json": {
+    "summary": "Protocol clarification query regarding acceptable liver function test ranges for healthy volunteer screening in DNL-123 Part A study."
+  },
+  "email_008.json": {
+    "summary": "Proactive recruitment support outreach for FTD cohort enrollment challenges, offering sponsor assistance and scheduling call to discuss strategies."
+  },
+  "email_009.json": {
+    "summary": "Missing IRB approval letter for Protocol Amendment 4 in eTMF causing delay in periodic Trial Master File review milestone."
+  },
+  "email_010.json": {
+    "summary": "Site query about Open-Label Extension visit schedule and procedures for participant 101-005 approaching Week 25 visit and interested in continuing study."
+  }
+}

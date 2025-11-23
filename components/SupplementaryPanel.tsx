@@ -1,7 +1,6 @@
 'use client';
 
 import { Sparkle } from 'lucide-react';
-import { getIconProps } from '@/lib/icon-utils';
 
 interface SelectedEmail {
   filename?: string;
@@ -9,6 +8,9 @@ interface SelectedEmail {
     name: string;
     title: string;
     organization: string;
+  };
+  aiAnalysis?: {
+    summary: string;
   };
 }
 
@@ -21,7 +23,7 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
   return (
     <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto">
       {selectedEmail?.sender ? (
-        <div className="py-3 px-6">
+        <div className="py-3 px-4">
           {/* Sender Information */}
           <div className="mb-6">
             <h1 className="text-xl font-medium text-gray-900 mb-2">
@@ -44,13 +46,15 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
                 <Sparkle className="w-4 h-4" />
                 <h3 className="font-medium">Summary</h3>
               </div>
-              <p className="text-sm text-gray-600">AI Summary here</p>
+              <p className="text-sm text-gray-600">
+                {selectedEmail.aiAnalysis?.summary || 'No summary available'}
+              </p>
             </div>
 
             {/* Quick Actions */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Sparkle className="w-4 h-" />
+                <Sparkle className="w-4 h-4" />
                 <h3 className="font-medium">Quick Actions</h3>
               </div>
               <p className="text-sm text-gray-600">AI Quick Actions here</p>

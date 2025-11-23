@@ -25,16 +25,23 @@ interface EmailData {
   };
 }
 
+interface EmailAIAnalysis {
+  [key: string]: {
+    summary: string;
+  };
+}
+
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string } } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string }; aiAnalysis?: { summary: string } } | null) => void;
 }
 
 export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
   const [activeGroup, setActiveGroup] = useState<string>('Important');
   const [emails, setEmails] = useState<Email[]>([]);
   const [emailData, setEmailData] = useState<EmailData>({});
+  const [emailAIAnalysis, setEmailAIAnalysis] = useState<EmailAIAnalysis>({});
   const [loading, setLoading] = useState<boolean>(true);
   const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
 
@@ -46,6 +53,11 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
         const emailDataResponse = await fetch('/api/emails/email_data.json');
         const emailDataJson: EmailData = await emailDataResponse.json();
         setEmailData(emailDataJson);
+
+        // Load AI analysis data
+        const aiAnalysisResponse = await fetch('/api/emails/email_ai_analysis.json');
+        const aiAnalysisJson: EmailAIAnalysis = await aiAnalysisResponse.json();
+        setEmailAIAnalysis(aiAnalysisJson);
 
         // Load all emails and filter by active group
         const emailPromises = Object.keys(emailDataJson).map(async (filename) => {
@@ -158,7 +170,8 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
                       if (email.filename && emailData[email.filename]?.sender) {
                         onSelectEmail({
                           filename: email.filename,
-                          sender: emailData[email.filename].sender
+                          sender: emailData[email.filename].sender,
+                          aiAnalysis: emailAIAnalysis[email.filename]
                         });
                       } else {
                         onSelectEmail(null);
