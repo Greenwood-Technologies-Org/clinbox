@@ -5,7 +5,10 @@
       "name": "Maria Garcia",
       "title": "Clinical Research Coordinator",
       "organization": "UCLA Department of Neurology"
-    }
+    },
+    "tasks": [
+      "Review and update SAE management procedures with medical monitor"
+    ]
   },
   "email_002.json": {
     "folder": "Important",
@@ -13,7 +16,8 @@
       "name": "Alex Johnson",
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
-    }
+    },
+    "tasks": []
   },
   "email_003.json": {
     "folder": "Important",
@@ -21,7 +25,8 @@
       "name": "Alex Johnson",
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
-    }
+    },
+    "tasks": []
   },
   "email_004.json": {
     "folder": "Important",
@@ -29,7 +34,10 @@
       "name": "Dr. Evelyn Reed",
       "title": "Principal Investigator",
       "organization": "Maplewood Clinical Research"
-    }
+    },
+    "tasks": [
+      "Create dosing error prevention training document for site staff"
+    ]
   },
   "email_005.json": {
     "folder": "Important",
@@ -37,7 +45,8 @@
       "name": "Dr. Sarah Chen",
       "title": "Investigational Drug Pharmacist",
       "organization": "Maplewood Clinical Research Center"
-    }
+    },
+    "tasks": []
   },
   "email_006.json": {
     "folder": "Important",
@@ -45,7 +54,8 @@
       "name": "Alex Johnson",
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
-    }
+    },
+    "tasks": []
   },
   "email_007.json": {
     "folder": "Important",
@@ -53,7 +63,8 @@
       "name": "Maria Garcia",
       "title": "Clinical Research Coordinator",
       "organization": "Westwood Clinical Research Center"
-    }
+    },
+    "tasks": []
   },
   "email_008.json": {
     "folder": "Important",
@@ -61,7 +72,10 @@
       "name": "Alex Johnson",
       "title": "Clinical Research Associate",
       "organization": "Denali Therapeutics"
-    }
+    },
+    "tasks": [
+      "Develop FTD patient recruitment strategy guide for underperforming sites"
+    ]
   },
   "email_009.json": {
     "folder": "Important",
@@ -69,7 +83,8 @@
       "name": "Sarah Chen",
       "title": "TMF Specialist",
       "organization": "Denali Therapeutics"
-    }
+    },
+    "tasks": []
   },
   "email_010.json": {
     "folder": "Important",
@@ -77,6 +92,7 @@
       "name": "Sarah Chen",
       "title": "Clinical Research Coordinator",
       "organization": "UCSF Medical Center"
-    }
+    },
+    "tasks": []
   }
 }

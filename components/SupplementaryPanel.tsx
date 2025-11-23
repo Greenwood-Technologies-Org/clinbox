@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
 interface SelectedEmail {
@@ -80,11 +80,27 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
                     </div>
                   ))
                 ) : (
-                  <p className="text-sm text-gray-400 py-2">No quick actions available</p>
+                  <p className="text-sm text-gray-400 py-2">No quick actions</p>
                 )}
               </div>
             </div>
             <div className="border-b border-gray-200"></div>
+
+            {/* Tasks */}
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <ListTodo className="w-4 h-4" />
+                  <h3 className="font-medium">Tasks</h3>
+                </div>
+                <button>
+                  <CirclePlus {...getIconProps()} />
+                </button>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm text-gray-400 py-2">No tasks</p>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
