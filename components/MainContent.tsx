@@ -73,7 +73,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
     <div className="flex-1 max-w-[65%] bg-white flex flex-col">
       {/* Navigation Bar - Only show for email view */}
       {activeView === 'email' && (
-        <div className="px-4 pt-4 pb-3 flex items-start justify-between shrink-0">
+        <div className="px-4 pt-4 pb-6 flex items-start justify-between shrink-0">
           {/* Left: Hamburger Icon */}
           <button>
             <Menu {...getIconProps()} />
@@ -120,7 +120,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
               <p className="text-gray-400">No {activeGroup} Emails</p>
             </div>
           ) : (
-            <div className="divide-y divide-gray-100">
+            <div>
               {emails.map((email) => {
                 const fromHeader = email.payload.headers.find(h => h.name === 'From');
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
@@ -131,19 +131,37 @@ export default function MainContent({ children, activeView }: MainContentProps) 
                 const senderName = nameMatch ? nameMatch[1].trim() : fromValue;
                 
                 const subject = subjectHeader?.value || 'No Subject';
+                const snippet = email.snippet || '';
+                const dateObj = new Date(parseInt(email.internalDate));
+                const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                 
                 return (
                   <div
                     key={email.id}
-                    className="px-6 py-4 hover:bg-gray-50 cursor-pointer transition-colors min-w-0"
+                    className="px-6 py-2 hover:bg-gray-50 cursor-pointer transition-colors min-w-0"
                   >
                     <div className="flex items-center gap-4 min-w-0">
-                      <span className="text-sm font-medium text-gray-900 truncate w-48 shrink-0">
-                        {senderName}
-                      </span>
-                      <span className="text-sm text-gray-600 truncate min-w-0 shrink">
-                        {subject}
-                      </span>
+                      {/* Sender Name - Fixed 20% width */}
+                      <div className="w-[15%] shrink-0">
+                        <span className="text-sm font-medium text-gray-900 truncate block">
+                          {senderName}
+                        </span>
+                      </div>
+                      
+                      {/* Subject and Preview - Flexible width */}
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm truncate">
+                          <span className="text-gray-900 font-medium">{subject}</span>
+                          <span className="text-gray-500">	{snippet}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Date - Fixed width */}
+                      <div className="w-16 shrink-0 text-right">
+                        <span className="text-sm text-gray-600">
+                          {date}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 );
