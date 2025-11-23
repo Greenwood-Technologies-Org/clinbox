@@ -27,6 +27,8 @@ interface SupplementaryPanelProps {
   isDocsView?: boolean;
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
+  showChat?: boolean;
+  onToggleChat?: () => void;
 }
 
 interface EmailData {
@@ -47,7 +49,9 @@ export default function SupplementaryPanel({
   selectedEmail, 
   isDocsView = false,
   showAllTasks = false,
-  onToggleAllTasks
+  onToggleAllTasks,
+  showChat = false,
+  onToggleChat
 }: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
 
@@ -105,6 +109,25 @@ export default function SupplementaryPanel({
 
   // Determine what content to show
   const renderContent = () => {
+    if (showChat) {
+      return (
+        <div className="py-3 px-4">
+          {/* Chat Panel Header */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <h1 className="text-xl font-medium text-gray-900">
+                Chat
+              </h1>
+              <button onClick={onToggleChat}>
+                <X {...getIconProps()} />
+              </button>
+            </div>
+            <div className="border-b border-gray-200"></div>
+          </div>
+        </div>
+      );
+    }
+
     if (showAllTasks) {
       return (
         <div className="py-3 px-4">
@@ -334,7 +357,7 @@ export default function SupplementaryPanel({
         <button onClick={onToggleAllTasks}>
           <ListTodo {...getIconProps()} />
         </button>
-        <button>
+        <button onClick={onToggleChat}>
           <Sparkle {...getIconProps()} />
         </button>
       </div>

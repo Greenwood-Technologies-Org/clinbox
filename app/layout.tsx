@@ -34,6 +34,7 @@ export default function RootLayout({
   const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
+  const [showChat, setShowChat] = useState(false);
 
   return (
     <html lang="en">
@@ -55,6 +56,8 @@ export default function RootLayout({
             isDocsView={activeView === 'docs'}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
+            showChat={showChat}
+            onToggleChat={() => setShowChat(!showChat)}
           />
         </div>
       </body>
