@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, CircleCheck, Bell } from 'lucide-react';
+import { ArrowLeft, CircleCheck, Bell, Download, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import { extractAttachmentsFromThread, type Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -13,6 +13,7 @@ interface ThreadEmail {
     headers: Array<{ name: string; value: string }>;
     parts?: Array<{
       mimeType: string;
+      filename?: string;
       body: {
         data?: string;
       };
@@ -82,6 +83,46 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
     } catch (e) {
       return '';
     }
+  };
+
+  const getFileType = (filename: string, mimeType: string): string => {
+    // Try to get extension from filename first
+    const filenameParts = filename.split('.');
+    if (filenameParts.length > 1) {
+      return filenameParts[filenameParts.length - 1].toUpperCase();
+    }
+    
+    // Fallback to mime type mapping
+    const mimeTypeMap: { [key: string]: string } = {
+      'application/pdf': 'PDF',
+      'application/msword': 'DOC',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'DOCX',
+      'application/vnd.ms-excel': 'XLS',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'XLSX',
+      'application/zip': 'ZIP',
+      'image/png': 'PNG',
+      'image/jpeg': 'JPG',
+      'text/plain': 'TXT',
+    };
+    
+    return mimeTypeMap[mimeType] || 'FILE';
+  };
+
+  const getEmailAttachments = (email: ThreadEmail) => {
+    const attachments: Array<{ filename: string; mimeType: string }> = [];
+    if (email.payload.parts) {
+      email.payload.parts.forEach(part => {
+        if (part.filename && part.filename !== '' && 
+            part.mimeType !== 'text/plain' && 
+            part.mimeType !== 'text/html') {
+          attachments.push({
+            filename: part.filename,
+            mimeType: part.mimeType
+          });
+        }
+      });
+    }
+    return attachments;
   };
 
   return (
@@ -203,6 +244,45 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                       <div className="text-sm text-gray-900 whitespace-pre-wrap">
                         {messageBody || snippet}
                       </div>
+                      
+                      {/* Attachments */}
+                      {(() => {
+                        const attachments = getEmailAttachments(email);
+                        if (attachments.length > 0) {
+                          return (
+                            <div className="mt-4">
+                              <div className="flex items-center gap-2 mb-3">
+                                <Paperclip className="w-4 h-4" />
+                                <h4 className="text-sm font-medium">Attachments</h4>
+                              </div>
+                              <div className="space-y-2">
+                                {attachments.map((attachment, attachIndex) => (
+                                  <div 
+                                    key={attachIndex} 
+                                    className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
+                                  >
+                                    {/* Filename */}
+                                    <div className="text-sm text-gray-900 font-medium mb-2 truncate">
+                                      {attachment.filename}
+                                    </div>
+                                    
+                                    {/* File type tag and download icon */}
+                                    <div className="flex items-center justify-between">
+                                      <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
+                                        {getFileType(attachment.filename, attachment.mimeType)}
+                                      </span>
+                                      <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                                        <Download className="w-4 h-4" />
+                                      </button>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })()}
                     </div>
                   )}
 
