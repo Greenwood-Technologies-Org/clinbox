@@ -259,7 +259,8 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                                 {attachments.map((attachment, attachIndex) => (
                                   <div 
                                     key={attachIndex} 
-                                    className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer w-64"
+                                    className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors w-64"
+                                    onClick={(e) => e.stopPropagation()}
                                   >
                                     {/* Filename */}
                                     <div className="text-sm text-gray-900 font-medium mb-2 truncate">
@@ -271,7 +272,13 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                                       <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
                                         {getFileType(attachment.filename, attachment.mimeType)}
                                       </span>
-                                      <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                                      <button 
+                                        className="text-gray-600 hover:text-gray-900 transition-colors"
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          // Download functionality can be added here later
+                                        }}
+                                      >
                                         <Download className="w-4 h-4" />
                                       </button>
                                     </div>
