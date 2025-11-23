@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -65,6 +65,30 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
       loadAllTasks();
     }
   }, [showTasksPanel]);
+
+  const getFileType = (attachment: Attachment): string => {
+    // Try to get extension from filename first
+    const filenameParts = attachment.filename.split('.');
+    if (filenameParts.length > 1) {
+      return filenameParts[filenameParts.length - 1].toUpperCase();
+    }
+    
+    // Fallback to mime type mapping
+    const mimeTypeMap: { [key: string]: string } = {
+      'application/pdf': 'PDF',
+      'application/msword': 'DOC',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'DOCX',
+      'application/vnd.ms-excel': 'XLS',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'XLSX',
+      'application/zip': 'ZIP',
+      'image/png': 'PNG',
+      'image/jpeg': 'JPG',
+      'text/plain': 'TXT',
+    };
+    
+    return mimeTypeMap[attachment.mimeType] || 'FILE';
+  };
+
   return (
     <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
       {showTasksPanel ? (
@@ -221,8 +245,24 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
               <div className="space-y-2">
                 {selectedEmail.attachments && selectedEmail.attachments.length > 0 ? (
                   selectedEmail.attachments.map((attachment, index) => (
-                    <div key={index} className="py-2">
-                      <span className="text-sm text-gray-700">{attachment.filename}</span>
+                    <div 
+                      key={index} 
+                      className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
+                    >
+                      {/* Filename */}
+                      <div className="text-sm text-gray-900 font-medium mb-2 truncate">
+                        {attachment.filename}
+                      </div>
+                      
+                      {/* File type tag and download icon */}
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
+                          {getFileType(attachment)}
+                        </span>
+                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                          <Download className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
                   ))
                 ) : (
