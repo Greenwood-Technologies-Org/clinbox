@@ -1,6 +1,7 @@
 'use client';
 
-import { Sparkle } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus } from 'lucide-react';
+import { getIconProps } from '@/lib/icon-utils';
 
 interface SelectedEmail {
   filename?: string;
@@ -53,11 +54,39 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
 
             {/* Quick Actions */}
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkle className="w-4 h-4" />
-                <h3 className="font-medium">Quick Actions</h3>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <Sparkle className="w-4 h-4" />
+                  <h3 className="font-medium">Quick Actions</h3>
+                </div>
+                <button>
+                  <CirclePlus {...getIconProps()} />
+                </button>
               </div>
-              <p className="text-sm text-gray-600">AI Quick Actions here</p>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                  <span className="text-sm text-gray-700">Forward to Stewart Smith (Clinical Lead)</span>
+                  <div className="flex items-center gap-2">
+                    <button className="hover:text-green-600 text-gray-400 transition-colors">
+                      <CircleCheck className="w-4 h-4" />
+                    </button>
+                    <button className="hover:text-red-600 text-gray-400 transition-colors">
+                      <CircleX className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                  <span className="text-sm text-gray-700">Let Jane know you are following up</span>
+                  <div className="flex items-center gap-2">
+                    <button className="hover:text-green-600 text-gray-400 transition-colors">
+                      <CircleCheck className="w-4 h-4" />
+                    </button>
+                    <button className="hover:text-red-600 text-gray-400 transition-colors">
+                      <CircleX className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="border-b border-gray-200"></div>
           </div>
