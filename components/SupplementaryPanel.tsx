@@ -22,8 +22,9 @@ interface SelectedEmail {
 }
 
 interface SupplementaryPanelProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   selectedEmail: SelectedEmail | null;
+  isDocsView?: boolean;
 }
 
 interface EmailData {
@@ -39,7 +40,7 @@ interface EmailData {
   };
 }
 
-export default function SupplementaryPanel({ children, selectedEmail }: SupplementaryPanelProps) {
+export default function SupplementaryPanel({ children, selectedEmail, isDocsView = false }: SupplementaryPanelProps) {
   const [showTasksPanel, setShowTasksPanel] = useState(false);
   const [allTasks, setAllTasks] = useState<string[]>([]);
 
@@ -97,7 +98,16 @@ export default function SupplementaryPanel({ children, selectedEmail }: Suppleme
 
   return (
     <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
-      {showTasksPanel ? (
+      {isDocsView ? (
+        <div className="py-3 px-4">
+          <div className="mb-6">
+            <h1 className="text-xl font-medium text-gray-900 mb-4">
+              Documents
+            </h1>
+            <div className="border-b border-gray-200"></div>
+          </div>
+        </div>
+      ) : showTasksPanel ? (
         <div className="py-3 px-4">
           {/* Tasks Panel Header */}
           <div className="mb-6">

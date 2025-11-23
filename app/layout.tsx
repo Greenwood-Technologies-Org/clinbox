@@ -4,6 +4,7 @@ import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import MainContent from "@/components/MainContent";
 import SupplementaryPanel from "@/components/SupplementaryPanel";
+import DocsPage from "@/components/DocsPage";
 import { useState } from "react";
 
 interface SelectedEmail {
@@ -30,7 +31,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [activeView, setActiveView] = useState<'email' | 'calendar'>('email');
+  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
 
   return (
@@ -38,17 +39,17 @@ export default function RootLayout({
       <body className="antialiased bg-white text-foreground">
         <div className="flex h-screen overflow-hidden">
           <Sidebar activeView={activeView} setActiveView={setActiveView} />
-          <MainContent 
-            activeView={activeView} 
-            onSelectEmail={setSelectedEmail}
-          >
-            {children}
-          </MainContent>
-          <SupplementaryPanel selectedEmail={selectedEmail}>
-            <div className="flex items-center justify-center h-full">
-              <p className="text-muted">Supp Info</p>
-            </div>
-          </SupplementaryPanel>
+          {activeView === 'docs' ? (
+            <DocsPage />
+          ) : (
+            <MainContent 
+              activeView={activeView} 
+              onSelectEmail={setSelectedEmail}
+            >
+              {children}
+            </MainContent>
+          )}
+          <SupplementaryPanel selectedEmail={selectedEmail} isDocsView={activeView === 'docs'} />
         </div>
       </body>
     </html>
