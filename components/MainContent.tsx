@@ -70,7 +70,7 @@ export default function MainContent({ children, activeView }: MainContentProps) 
   }, [activeGroup, activeView]);
 
   return (
-    <div className="flex-1 bg-white flex flex-col">
+    <div className="flex-1 max-w-[65%] bg-white flex flex-col">
       {/* Navigation Bar - Only show for email view */}
       {activeView === 'email' && (
         <div className="px-4 pt-4 pb-3 flex items-start justify-between shrink-0">
@@ -120,35 +120,29 @@ export default function MainContent({ children, activeView }: MainContentProps) 
               <p className="text-gray-400">No {activeGroup} Emails</p>
             </div>
           ) : (
-            <div>
+            <div className="divide-y divide-gray-100">
               {emails.map((email) => {
                 const fromHeader = email.payload.headers.find(h => h.name === 'From');
                 const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
                 
-                const from = fromHeader?.value || 'Unknown';
+                // Extract name from email format "Name <email@domain.com>"
+                const fromValue = fromHeader?.value || 'Unknown';
+                const nameMatch = fromValue.match(/^([^<]+)/);
+                const senderName = nameMatch ? nameMatch[1].trim() : fromValue;
+                
                 const subject = subjectHeader?.value || 'No Subject';
-                const dateObj = new Date(parseInt(email.internalDate));
-                const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
                 
                 return (
                   <div
                     key={email.id}
-                    className="px-6 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
+                    className="px-6 py-4 hover:bg-gray-50 cursor-pointer transition-colors min-w-0"
                   >
-                    <div className="flex items-center text-sm">
-                      {/* Sender - 20% width */}
-                      <span className="w-30 font-medium text-gray-900 truncate pr-4">
-                        {from.replace(/<.*>/, '').trim()}
+                    <div className="flex items-center gap-4 min-w-0">
+                      <span className="text-sm font-medium text-gray-900 truncate w-48 shrink-0">
+                        {senderName}
                       </span>
-                      
-                      {/* Subject/Snippet - flexible width */}
-                      <span className="flex-1 text-gray-700 truncate px-2">
+                      <span className="text-sm text-gray-600 truncate min-w-0 shrink">
                         {subject}
-                      </span>
-                      
-                      {/* Date - fixed width */}
-                      <span className="w-20 text-gray-500 text-right shrink-0 pl-4">
-                        {date}
                       </span>
                     </div>
                   </div>

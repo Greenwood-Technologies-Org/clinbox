@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-white text-foreground">
-        <div className="flex h-screen">
+        <div className="flex h-screen overflow-hidden">
           <Sidebar activeView={activeView} setActiveView={setActiveView} />
           <MainContent activeView={activeView}>{children}</MainContent>
           <SupplementaryPanel>
