@@ -52,7 +52,7 @@ interface WorkflowEvent {
 
 interface MainContentProps {
   children: React.ReactNode;
-  activeView: 'email' | 'calendar' | 'workflows' | 'workflowslist';
+  activeView: 'email' | 'calendar' | 'workflows';
   onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
   onSelectWorkflow?: (workflow: { id: string; workflowId: string; workflowName: string; eventDescription: string; date: string; status: string } | null) => void;
 }
@@ -224,7 +224,7 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
       }
     };
 
-    if (activeView === 'workflowslist') {
+    if (activeView === 'workflows') {
       loadWorkflows();
     }
   }, [activeView, activeWorkflowFilter]);
@@ -305,7 +305,7 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
         )
       ) : activeView === 'calendar' ? (
         <Calendar />
-      ) : activeView === 'workflowslist' ? (
+      ) : activeView === 'workflows' ? (
         workflowViewMode === 'list' ? (
           <WorkflowsList
             workflows={workflows}

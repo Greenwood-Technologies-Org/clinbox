@@ -49,7 +49,7 @@ interface SupplementaryPanelProps {
     date: string;
     status: string;
   } | null;
-  activeView?: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist';
+  activeView?: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowsettings';
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
   showChat?: boolean;
@@ -211,7 +211,7 @@ export default function SupplementaryPanel({
       );
     }
 
-    if (activeView === 'workflowslist') {
+    if (activeView === 'workflows') {
       return (
         <div className="py-3 px-4">
           {selectedWorkflowEvent && (
@@ -262,7 +262,7 @@ export default function SupplementaryPanel({
       );
     }
 
-    if (activeView === 'workflows') {
+    if (activeView === 'workflowsettings') {
       return (
         <div className="py-3 px-4">
           {selectedWorkflow && (
