@@ -469,7 +469,7 @@ export default function SupplementaryPanel({
   };
 
   return (
-    <div className="flex-1 bg-white border-l border-gray-200 relative flex flex-col">
+    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
       {renderContent()}
       
       {/* Floating Action Buttons */}
