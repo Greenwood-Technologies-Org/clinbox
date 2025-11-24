@@ -1,4 +1,4 @@
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 import { createUIMessageStream, createUIMessageStreamResponse, convertToCoreMessages } from 'ai';
 import { streamText } from 'ai';
 import { NextRequest } from 'next/server';
@@ -38,9 +38,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.OPENAI_API_KEY) {
+    if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
       return new Response(
-        JSON.stringify({ error: 'OPENAI_API_KEY is not configured' }),
+        JSON.stringify({ error: 'GOOGLE_GENERATIVE_AI_API_KEY is not configured' }),
         { 
           status: 500,
           headers: { 'Content-Type': 'application/json' }
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
     console.log('Core messages for streamText:', JSON.stringify(coreMessages, null, 2));
 
     const result = streamText({
-      model: openai('gpt-4o-mini'),
+      model: google('gemini-2.5-flash'),
       messages: coreMessages,
     });
 
