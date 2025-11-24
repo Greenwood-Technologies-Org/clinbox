@@ -56,7 +56,7 @@ interface MainContentProps {
 }
 
 export default function MainContent({ children, activeView, onSelectEmail, onSelectWorkflow }: MainContentProps) {
-  const [activeGroup, setActiveGroup] = useState<string>('Important');
+  const [activeGroup, setActiveGroup] = useState<string>('Critical');
   const [emails, setEmails] = useState<Email[]>([]);
   const [emailData, setEmailData] = useState<EmailData>({});
   const [emailAIAnalysis, setEmailAIAnalysis] = useState<EmailAIAnalysis>({});

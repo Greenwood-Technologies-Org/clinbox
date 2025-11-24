@@ -40,7 +40,7 @@
     "hasAttachments": false
   },
   "email_005.json": {
-    "folder": "Urgent",
+    "folder": "Critical",
     "sender": {
       "name": "Rachel Kim",
       "title": "Program Manager",

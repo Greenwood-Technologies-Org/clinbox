@@ -36,7 +36,7 @@
       },
       {
         "name": "Subject",
-        "value": "URGENT: Investigational Product Shortage - Site 203 - Patient Visit Scheduled Before Resupply"
+        "value": "Patient Visit Scheduled Before Resupply"
       },
       {
         "name": "Date",
@@ -117,7 +117,7 @@
           },
           {
             "name": "Subject",
-            "value": "URGENT: Investigational Product Shortage - Site 203 - Patient Visit Scheduled Before Resupply"
+            "value": "Patient Visit Scheduled Before Resupply"
           },
           {
             "name": "Date",
