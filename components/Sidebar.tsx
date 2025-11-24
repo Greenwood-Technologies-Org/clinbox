@@ -19,12 +19,6 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           <Mail {...getIconProps(activeView === 'email')} />
         </button>
         <button 
-          onClick={() => setActiveView('workflows')}
-          className="hover:bg-gray-50 rounded-lg transition-colors"
-        >
-          <TrendingUpDown {...getIconProps(activeView === 'workflows')} />
-        </button>
-        <button 
           onClick={() => setActiveView('calendar')}
           className="hover:bg-gray-50 rounded-lg transition-colors"
         >
@@ -39,7 +33,7 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           onClick={() => setActiveView('workflowsettings')}
           className="hover:bg-gray-50 rounded-lg transition-colors"
         >
-          <Workflow {...getIconProps(activeView === 'workflowsettings')} />
+          <TrendingUpDown {...getIconProps(activeView === 'workflowsettings')} />
         </button>
         <button 
           onClick={() => setActiveView('docs')}

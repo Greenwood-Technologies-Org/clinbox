@@ -1,0 +1,202 @@
+{
+  "id": "4d7c3e8f2a9b1d56",
+  "threadId": "4d7c3e8f2a9b1d56",
+  "labelIds": [
+    "INBOX",
+    "UNREAD",
+    "IMPORTANT"
+  ],
+  "snippet": "Dear Denali Study Team, This is an urgent notification regarding a Serious Adverse Event (SAE) reported for patient 307-024 enrolled in the DNLI-789 Ph...",
+  "historyId": "1732441200",
+  "internalDate": "1732441200000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<jennifer.martinez@ucsf.edu>"
+      },
+      {
+        "name": "From",
+        "value": "jennifer.martinez@ucsf.edu"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com, study.DNLI-789@denalitx.com"
+      },
+      {
+        "name": "Cc",
+        "value": "dr.robert.kim@ucsf.edu, safety@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "SAE Report for DNLI-789"
+      },
+      {
+        "name": "Date",
+        "value": "2024-11-24T10:10:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732441200@ucsf.edu>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 387
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 387,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpQYXRpZW50IDMwNy0wMjQgaGFzIGV4cGVyaWVuY2VkIGEgU2VyaW91cyBBZHZlcnNlIEV2ZW50IGluIFN0dWR5IEROTEktNzg5LiBGb2xsb3ctdXAgaW5mb3JtYXRpb24gd2lsbCBiZSBwcm92aWRlZCBhcyBpdCBiZWNvbWVzIGF2YWlsYWJsZS4gRHIuIFJvYmVydCBLaW0gKFByaW5jaXBhbCBJbnZlc3RpZ2F0b3IpIGlzIGF3YWl0aW5nIGZ1cnRoZXIgZ3VpZGFuY2Ugb24gbmV4dCBzdGVwcy4KClBsZWFzZSBmaW5kIHRoZSBhdHRhY2hlZCBTQUUgcmVwb3J0IGZvcm0uCgpCZXN0IHJlZ2FyZHMsCgpKZW5uaWZlciBNYXJ0aW5leiwgUlNOCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVDU0YgRGVwYXJ0bWVudCBvZiBOZXVyb2xvZ3kKU2l0ZSAzMDcKamVubmlmZXIubWFydGluZXpAdWNzZi5lZHUKKDQxNSkgNTU1LTAyODk"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "SAE_Report_DNLI-789_307-024_Initial.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"SAE_Report_DNLI-789_307-024_Initial.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "7e5d3a8c1f9b2e4d",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1892,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "4d7c3e8f2a9b1d56",
+      "threadId": "4d7c3e8f2a9b1d56",
+      "labelIds": [
+        "INBOX",
+        "UNREAD",
+        "IMPORTANT"
+      ],
+      "snippet": "Dear Alex Johnson, Patient 307-024 has experienced a Serious Adverse Event in Study DNLI-789. Follow-up information will be provided as it becomes avai...",
+      "historyId": "1732441200",
+      "internalDate": "1732441200000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<jennifer.martinez@ucsf.edu>"
+          },
+          {
+            "name": "From",
+            "value": "jennifer.martinez@ucsf.edu"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com, study.DNLI-789@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "dr.robert.kim@ucsf.edu, safety@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "SAE Report for DNLI-789"
+          },
+          {
+            "name": "Date",
+            "value": "2024-11-24T10:10:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732441200@ucsf.edu>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 387
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 387,
+              "data": "RGVhciBBbGV4IEpvaG5zb24sCgpQYXRpZW50IDMwNy0wMjQgaGFzIGV4cGVyaWVuY2VkIGEgU2VyaW91cyBBZHZlcnNlIEV2ZW50IGluIFN0dWR5IEROTEktNzg5LiBGb2xsb3ctdXAgaW5mb3JtYXRpb24gd2lsbCBiZSBwcm92aWRlZCBhcyBpdCBiZWNvbWVzIGF2YWlsYWJsZS4gRHIuIFJvYmVydCBLaW0gKFByaW5jaXBhbCBJbnZlc3RpZ2F0b3IpIGlzIGF3YWl0aW5nIGZ1cnRoZXIgZ3VpZGFuY2Ugb24gbmV4dCBzdGVwcy4KClBsZWFzZSBmaW5kIHRoZSBhdHRhY2hlZCBTQUUgcmVwb3J0IGZvcm0uCgpCZXN0IHJlZ2FyZHMsCgpKZW5uaWZlciBNYXJ0aW5leiwgUlNOCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVDU0YgRGVwYXJ0bWVudCBvZiBOZXVyb2xvZ3kKU2l0ZSAzMDcKamVubmlmZXIubWFydGluZXpAdWNzZi5lZHUKKDQxNSkgNTU1LTAyODk"
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "SAE_Report_DNLI-789_307-024_Initial.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"SAE_Report_DNLI-789_307-024_Initial.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "7e5d3a8c1f9b2e4d",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1387,
+      "raw": null
+    }
+  ]
+}

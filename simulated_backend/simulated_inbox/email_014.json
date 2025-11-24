@@ -1,0 +1,192 @@
+{
+  "id": "meeting001",
+  "threadId": "meeting001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex, Attached are the notes from yesterday's DNLI-456 study team meeting. Key topics discussed included enrollment progress, upcoming milestones, and risk mitigation strategies.",
+  "historyId": "1732435209",
+  "internalDate": "1732435209000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<rachel.kim@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "rachel.kim@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Team Meeting Notes"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T11:00:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435209@denalitx.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 180
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 180,
+          "data": "RGVhciBBbGV4LAoKQXR0YWNoZWQgYXJlIHRoZSBub3RlcyBmcm9tIHllc3RlcmRheSdzIEROTEktNDU2IHN0dWR5IHRlYW0gbWVldGluZy4gS2V5IHRvcGljcyBkaXNjdXNzZWQgaW5jbHVkZWQgZW5yb2xsbWVudCBwcm9ncmVzcywgdXBjb21pbmcgbWlsZXN0b25lcywgYW5kIHJpc2sgbWl0aWdhdGlvbiBzdHJhdGVnaWVzLgoKUHJlYXNlIHJldmlldyB0aGUgYWN0aW9uIGl0ZW1zIGFzc2lnbmVkIHRvIHlvdSBhbmQgY29uZmlybSBjb21wbGV0aW9uIGJ5IHRoZSBlbmQgb2YgdGhlIHdlZWsuCgpCZXN0IHJlZ2FyZHMsClJhY2hlbCBLaW0KUHJvZ3JhbSBNYW5hZ2VyCkRlbmFsaSBUaGVyYXBldXRpY3M="
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-456_Team_Meeting_Notes.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-456_Team_Meeting_Notes.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "1o2p3q4r5s6t7u",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 800,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "meeting001",
+      "threadId": "meeting001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Alex, Here are the notes from yesterday's team meeting. Please review action items.",
+      "historyId": "1732435209",
+      "internalDate": "1732435209000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<rachel.kim@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "rachel.kim@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Team Meeting Notes"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T11:00:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435209@denalitx.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 90
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 90,
+              "data": "QWxleCwgSGVyZSBhcmUgdGhlIG5vdGVzIGZyb20geWVzdGVyZGF5J3MgdGVhbSBtZWV0aW5nLiBQbGVhc2UgcmV2aWV3IGFjdGlvbiBpdGVtcy4KClJlZ2FyZHMsClJhY2hlbCBLaW0="
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-456_Team_Meeting_Notes.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-456_Team_Meeting_Notes.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "1o2p3q4r5s6t7u",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 800,
+      "raw": null
+    }
+  ]
+}

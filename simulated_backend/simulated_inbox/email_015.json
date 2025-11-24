@@ -1,0 +1,122 @@
+{
+  "id": "news001",
+  "threadId": "news001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex Johnson, Explore our latest newsletter featuring emerging trends in clinical trials, including advancements in AI-driven data analysis and decentralized trial designs.",
+  "historyId": "1732435210",
+  "internalDate": "1732435210000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<newsletter@pharmapubs.com>"
+      },
+      {
+        "name": "From",
+        "value": "newsletter@pharmapubs.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Latest in Clinical Research News"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T11:15:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435210@pharmapubs.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 150,
+      "data": "RGVhciBBbGV4IEpvaG5zb24sCgpFeHBsb3JlIG91ciBsYXRlc3QgbmV3c2xldHRlciBmZWF0dXJpbmcgZW1lcmdpbmcgdHJlbmRzIGluIGNsaW5pY2FsIHRyaWFscywgaW5jbHVkaW5nIGFkdmFuY2VtZW50cyBpbiBBSS1kcml2ZW4gZGF0YSBhbmFseXNpcyBhbmQgZGVjZW50cmFsaXplZCB0cmlhbCBkZXNpZ25zLiBTdGF5IGluZm9ybWVkIG9uIHRoZSBsYXRlc3QgZGV2ZWxvcG1lbnRzIGluIHBoYXJtYWNldXRpY2FscyBhbmQgY2xpbmljYWwgcmVzZWFyY2guCgpWaXNpdCBvdXIgd2Vic2l0ZSB0byByZWFkIHRoZSBmdWxsIGlzc3VlLgoKQmVzdCByZWdhcmRzLApQaGFybWEgUHVibGljYXRpb25z"
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "news001",
+      "threadId": "news001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Read our newsletter on emerging trends in clinical trials.",
+      "historyId": "1732435210",
+      "internalDate": "1732435210000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<newsletter@pharmapubs.com>"
+          },
+          {
+            "name": "From",
+            "value": "newsletter@pharmapubs.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Latest in Clinical Research News"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T11:15:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435210@pharmapubs.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 50,
+      "data": "UmVhZCBvdXIgbmV3c2xldHRlciBvbiBlbWVyZ2luZyB0cmVuZHMgaW4gY2xpbmljYWwgdHJpYWxzLg=="
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null
+    }
+  ]
+}

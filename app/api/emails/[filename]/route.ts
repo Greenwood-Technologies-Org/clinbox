@@ -8,7 +8,7 @@ export async function GET(
 ) {
   try {
     const { filename } = await params;
-    const filePath = join(process.cwd(), 'backend', 'simulated_inbox', filename);
+    const filePath = join(process.cwd(), 'simulated_backend', 'simulated_inbox', filename);
     const fileContent = await readFile(filePath, 'utf-8');
     const emailData = JSON.parse(fileContent);
     

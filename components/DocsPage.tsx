@@ -33,7 +33,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
   useEffect(() => {
     const loadDocuments = async () => {
       try {
-        const response = await fetch('/api/emails/docs_info.json');
+        const response = await fetch('/api/docs');
         const data = await response.json();
         setDocuments(data);
         if (data.length > 0) {

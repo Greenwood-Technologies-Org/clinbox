@@ -1,0 +1,122 @@
+{
+  "id": "edc002",
+  "threadId": "edc002",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Notification: The data query for patient 203-005 in the DNLI-456 study has been successfully resolved in the Medidata EDC system. The query was related to missing laboratory values, which have now been entered.",
+  "historyId": "1732435207",
+  "internalDate": "1732435207000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<notifications@medidata.com>"
+      },
+      {
+        "name": "From",
+        "value": "notifications@medidata.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Query Resolved for Patient 203-005"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T10:30:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435207@medidata.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 220,
+      "data": "Tm90aWZpY2F0aW9uOiBUaGUgZGF0YSBxdWVyeSBmb3IgcGF0aWVudCAyMDMtMDA1IGluIHRoZSBETkxJLTQ1NiBzdHVkeSBoYXMgYmVlbiBzdWNjZXNzZnVsbHkgcmVzb2x2ZWQgaW4gdGhlIE1lZGlkYXRhIEVEQyBzeXN0ZW0uIFRoZSBxdWVyeSB3YXMgcmVsYXRlZCB0byBtaXNzaW5nIGxhYm9yYXRvcnkgdmFsdWVzLCB3aGljaCBoYXZlIG5vdyBiZWVuIGVudGVyZWQuCgpTdHVkeTogRE5MSS00NTYKU2l0ZTogMjAzIChTdGFuZm9yZCBNZWRpY2FsIENlbnRlcikKVmlzaXQ6IFdlZWsgOCBGb2xsb3ctVXAKCk5vIGZ1cnRoZXIgYWN0aW9uIGlzIHJlcXVpcmVkLgoKUmVnYXJkcywKTWVkaWRhdGEgRURDIHN5c3RlbQ=="
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "edc002",
+      "threadId": "edc002",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Notification: The data query for patient 203-005 in the DNLI-456 study has been successfully resolved in the Medidata EDC system. The query was related to missing laboratory values, which have now been entered.",
+      "historyId": "1732435207",
+      "internalDate": "1732435207000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<notifications@medidata.com>"
+          },
+          {
+            "name": "From",
+            "value": "notifications@medidata.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Query Resolved for Patient 203-005"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T10:30:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435207@medidata.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 220,
+          "data": "Tm90aWZpY2F0aW9uOiBUaGUgZGF0YSBxdWVyeSBmb3IgcGF0aWVudCAyMDMtMDA1IGluIHRoZSBETkxJLTQ1NiBzdHVkeSBoYXMgYmVlbiBzdWNjZXNzZnVsbHkgcmVzb2x2ZWQgaW4gdGhlIE1lZGlkYXRhIEVEQyBzeXN0ZW0uIFRoZSBxdWVyeSB3YXMgcmVsYXRlZCB0byBtaXNzaW5nIGxhYm9yYXRvcnkgdmFsdWVzLCB3aGljaCBoYXZlIG5vdyBiZWVuIGVudGVyZWQuCgpTdHVkeTogRE5MSS00NTYKU2l0ZTogMjAzIChTdGFuZm9yZCBNZWRpY2FsIENlbnRlcikKVmlzaXQ6IFdlZWsgOCBGb2xsb3ctVXAKCk5vIGZ1cnRoZXIgYWN0aW9uIGlzIHJlcXVpcmVkLgoKUmVnYXJkcywKTWVkaWRhdGEgRURDIHN5c3RlbQ=="
+        }
+      },
+      "sizeEstimate": 400,
+      "raw": null
+    }
+  ]
+}

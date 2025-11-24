@@ -66,7 +66,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   useEffect(() => {
     const loadWorkflows = async () => {
       try {
-        const response = await fetch('/api/emails/workflow_settings.json');
+        const response = await fetch('/api/workflow-settings');
         const data = await response.json();
         setWorkflows(data);
         if (data.length > 0) {

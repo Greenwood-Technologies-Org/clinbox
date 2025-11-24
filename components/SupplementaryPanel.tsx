@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download, Copy } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download, Copy, TrendingUpDown } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -16,7 +16,12 @@ interface SelectedEmail {
   };
   aiAnalysis?: {
     summary: string;
-    quickActions?: string[];
+    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
+    workflow?: {
+      workflowId: string;
+      status: string;
+      steps?: Array<{ name: string; result: string; reasoning: string }>;
+    };
   };
   tasks?: string[];
   attachments?: Attachment[];
@@ -91,6 +96,30 @@ export default function SupplementaryPanel({
   isWorkflowBuilder
 }: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
+  const [workflowName, setWorkflowName] = useState<string | null>(null);
+  const [showWorkflowModal, setShowWorkflowModal] = useState(false);
+  const [showQuickActionModal, setShowQuickActionModal] = useState(false);
+  const [selectedQuickActionEmails, setSelectedQuickActionEmails] = useState<Array<{ to: string; subject: string; body: string; references: string[] }> | null>(null);
+
+  useEffect(() => {
+    const loadWorkflowName = async () => {
+      if (selectedEmail?.aiAnalysis?.workflow?.workflowId) {
+        try {
+          const response = await fetch('/api/workflow-settings');
+          const workflows = await response.json();
+          const workflow = workflows.find((w: any) => w.id === selectedEmail.aiAnalysis?.workflow?.workflowId);
+          setWorkflowName(workflow?.name || null);
+        } catch (error) {
+          console.error('Error loading workflow:', error);
+          setWorkflowName(null);
+        }
+      } else {
+        setWorkflowName(null);
+      }
+    };
+
+    loadWorkflowName();
+  }, [selectedEmail?.aiAnalysis?.workflow?.workflowId]);
 
   useEffect(() => {
     const loadAllTasks = async () => {
@@ -344,11 +373,11 @@ export default function SupplementaryPanel({
               </div>
             )}
             {!selectedEmail.sender.email && <div className="mb-4"></div>}
-            <div className="border-b border-gray-200"></div>
           </div>
 
           {/* AI Section */}
           <div className="space-y-6">
+            <div className="border-b border-gray-200"></div>
             {/* AI Summary */}
             <div>
               <div className="flex items-center gap-2 mb-2">
@@ -360,106 +389,158 @@ export default function SupplementaryPanel({
               </p>
             </div>
 
-            {/* Quick Actions */}
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <Sparkle className="w-4 h-4" />
-                  <h3 className="font-medium">Quick Actions</h3>
+            {!selectedEmail.aiAnalysis?.workflow?.workflowId && (
+              <>
+                {/* Quick Actions */}
+                <div className="border-b border-gray-200"></div>
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <Sparkle className="w-4 h-4" />
+                      <h3 className="font-medium">Quick Actions</h3>
+                    </div>
+                    <button>
+                      <CirclePlus {...getIconProps()} />
+                    </button>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
+                      selectedEmail.aiAnalysis.quickActions.map((action, index) => {
+                        const actionText = typeof action === 'string' ? action : action.action;
+                        const actionEmails = typeof action === 'object' && action.emails ? action.emails : null;
+                        return (
+                          <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                            <span className="text-sm text-gray-700">{actionText}</span>
+                            <div className="flex items-center gap-2">
+                              <button 
+                                onClick={() => {
+                                  if (actionEmails) {
+                                    setSelectedQuickActionEmails(actionEmails);
+                                    setShowQuickActionModal(true);
+                                  }
+                                }}
+                                className="hover:text-green-600 text-gray-400 transition-colors"
+                              >
+                                <CircleCheck className="w-4 h-4" />
+                              </button>
+                              <button className="hover:text-red-600 text-gray-400 transition-colors">
+                                <CircleX className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </div>
+                        );
+                      })
+                    ) : (
+                      <p className="text-sm text-gray-400 py-2">No quick actions</p>
+                    )}
+                  </div>
                 </div>
-                <button>
-                  <CirclePlus {...getIconProps()} />
-                </button>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
-                  selectedEmail.aiAnalysis.quickActions.map((action, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                      <span className="text-sm text-gray-700">{action}</span>
-                      <div className="flex items-center gap-2">
-                        <button className="hover:text-green-600 text-gray-400 transition-colors">
+
+                {/* Tasks */}
+                <div className="border-b border-gray-200"></div>
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <ListTodo className="w-4 h-4" />
+                      <h3 className="font-medium">Tasks</h3>
+                    </div>
+                    <button>
+                      <CirclePlus {...getIconProps()} />
+                    </button>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.tasks && selectedEmail.tasks.length > 0 ? (
+                      selectedEmail.tasks.map((task, index) => (
+                        <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                          <span className="text-sm text-gray-700">{task}</span>
+                          <div className="flex items-center gap-2">
+                            <button className="hover:text-green-600 text-gray-400 transition-colors">
+                              <CircleCheck className="w-4 h-4" />
+                            </button>
+                            <button className="hover:text-red-600 text-gray-400 transition-colors">
+                              <CircleX className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-sm text-gray-400 py-2">No tasks</p>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+            {workflowName && (
+              <>
+                <div className="border-b border-gray-200"></div>
+                {/* Workflow */}
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <TrendingUpDown className="w-4 h-4" />
+                    <h3 className="font-medium">Workflow</h3>
+                  </div>
+                  <div className="text-sm text-gray-700">
+                    <div className="font-medium mb-2">{workflowName}</div>
+                    <div className="flex items-center justify-between">
+                      <span className={`text-xs font-medium px-2 py-1 rounded uppercase ${
+                        selectedEmail.aiAnalysis?.workflow?.status === 'completed' 
+                          ? 'bg-gray-200 text-green-700'
+                          : selectedEmail.aiAnalysis?.workflow?.status === 'needs approval'
+                          ? 'bg-gray-200 text-red-700'
+                          : 'bg-gray-200 text-gray-600'
+                      }`}>
+                        {selectedEmail.aiAnalysis?.workflow?.status || 'unknown'}
+                      </span>
+                      {selectedEmail.aiAnalysis?.workflow?.status === 'needs approval' && (
+                        <button 
+                          className="text-gray-400 hover:text-green-600 transition-colors"
+                          title="Approve workflow"
+                          onClick={() => setShowWorkflowModal(true)}
+                        >
                           <CircleCheck className="w-4 h-4" />
                         </button>
-                        <button className="hover:text-red-600 text-gray-400 transition-colors">
-                          <CircleX className="w-4 h-4" />
-                        </button>
-                      </div>
+                      )}
                     </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No quick actions</p>
-                )}
-              </div>
-            </div>
-            <div className="border-b border-gray-200"></div>
-
-            {/* Tasks */}
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <ListTodo className="w-4 h-4" />
-                  <h3 className="font-medium">Tasks</h3>
+                  </div>
                 </div>
-                <button>
-                  <CirclePlus {...getIconProps()} />
-                </button>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.tasks && selectedEmail.tasks.length > 0 ? (
-                  selectedEmail.tasks.map((task, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                      <span className="text-sm text-gray-700">{task}</span>
-                      <div className="flex items-center gap-2">
-                        <button className="hover:text-green-600 text-gray-400 transition-colors">
-                          <CircleCheck className="w-4 h-4" />
-                        </button>
-                        <button className="hover:text-red-600 text-gray-400 transition-colors">
-                          <CircleX className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No tasks</p>
-                )}
-              </div>
-            </div>
-            <div className="border-b border-gray-200"></div>
+              </>
+            )}
+            {selectedEmail.attachments && selectedEmail.attachments.length > 0 && (
+              <>
+                <div className="border-b border-gray-200"></div>
 
-            {/* Attachments */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Paperclip className="w-4 h-4" />
-                <h3 className="font-medium">Attachments</h3>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.attachments && selectedEmail.attachments.length > 0 ? (
-                  selectedEmail.attachments.map((attachment, index) => (
-                    <div 
-                      key={index} 
-                      className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
-                    >
-                      {/* Filename */}
-                      <div className="text-sm text-gray-900 font-medium mb-2 truncate">
-                        {attachment.filename}
+                {/* Attachments */}
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Paperclip className="w-4 h-4" />
+                    <h3 className="font-medium">Attachments</h3>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.attachments.map((attachment, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
+                      >
+                        {/* Filename */}
+                        <div className="text-sm text-gray-900 font-medium mb-2 truncate">
+                          {attachment.filename}
+                        </div>
+                        
+                        {/* File type tag and download icon */}
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
+                            {getFileType(attachment)}
+                          </span>
+                          <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                            <Download className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
-                      
-                      {/* File type tag and download icon */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
-                          {getFileType(attachment)}
-                        </span>
-                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                          <Download className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No attachments</p>
-                )}
-              </div>
-            </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       );
@@ -481,6 +562,98 @@ export default function SupplementaryPanel({
           <button onClick={onToggleChat}>
             <Sparkle {...getIconProps()} />
           </button>
+        </div>
+      )}
+
+      {/* Workflow Approval Modal */}
+      {showWorkflowModal && selectedEmail?.aiAnalysis?.workflow?.steps && (
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-2xl h-96 mx-4 flex flex-col">
+            <h2 className="text-xl font-semibold text-center mb-4">{workflowName}</h2>
+            <div className="border-b border-gray-200 mb-6"></div>
+            <div className="space-y-6 flex-1 flex flex-col justify-center px-8">
+              {selectedEmail.aiAnalysis.workflow.steps.map((step, index) => (
+                <div key={index} className="text-base">
+                  <div className="font-medium mb-1">{index + 1}. {step.name}</div>
+                  <div className="text-green-600 text-sm mb-1">✓ {step.result}</div>
+                  <div className="text-gray-600 text-sm">{step.reasoning}</div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between">
+              <button 
+                onClick={() => setShowWorkflowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleX className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => setShowWorkflowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleCheck className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Action Email Modal */}
+      {showQuickActionModal && selectedQuickActionEmails && (
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-4xl h-[800px] mx-4 flex flex-col">
+            <h2 className="text-xl font-semibold text-center mb-4">Email Drafts</h2>
+            <div className="border-b border-gray-200 mb-6"></div>
+            <div className="space-y-6 flex-1 overflow-y-auto px-4">
+              {selectedQuickActionEmails.map((email, index) => (
+                <div key={index}>
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <div className="font-medium mb-2">To: {email.to}</div>
+                    <div className="font-medium mb-2">Subject: {email.subject}</div>
+                    <div className="text-sm text-gray-700 mb-2">{email.body}</div>
+                  </div>
+                  {email.references && email.references.length > 0 && (
+                    <div className="text-sm text-gray-600 mt-2">
+                      <div className="font-medium mb-1">References:</div>
+                      <ul className="list-disc list-inside">
+                        {email.references.map((ref, refIndex) => (
+                          <li key={refIndex}>{ref}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="flex justify-between mt-4">
+                    <button 
+                      onClick={() => setShowQuickActionModal(false)}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                    >
+                      <CircleX className="w-5 h-5" />
+                    </button>
+                    <button 
+                      onClick={() => setShowQuickActionModal(false)}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                    >
+                      <CircleCheck className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between mt-4">
+              <button 
+                onClick={() => setShowQuickActionModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleX className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => setShowQuickActionModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleCheck className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

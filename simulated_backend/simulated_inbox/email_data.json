@@ -1,0 +1,156 @@
+{
+  "email_001.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Dupliplex Imaging Services",
+      "title": "Central Imaging Lab",
+      "organization": "Dupliplex Imaging"
+    },
+    "tasks": [],
+    "hasAttachments": true
+  },
+  "email_002.json": {
+    "folder": "Critical",
+    "sender": {
+      "name": "Jennifer Martinez",
+      "title": "Clinical Research Coordinator",
+      "organization": "UCSF Department of Neurology"
+    },
+    "tasks": [],
+    "hasAttachments": true
+  },
+  "email_003.json": {
+    "folder": "Urgent",
+    "sender": {
+      "name": "Michael Torres",
+      "title": "Clinical Research Coordinator",
+      "organization": "Stanford Medical Center"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_004.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [
+      "Resolve data entry backlog at Site 105 (Mayo)",
+      "Resolve data entry backlog at Site 209 (Hopkins)",
+      "Resolve data entry backlog at Site 312 (Cleveland)"
+    ],
+    "hasAttachments": false
+  },
+  "email_005.json": {
+    "folder": "Critical",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_006.json": {
+    "folder": "IRB",
+    "sender": {
+      "name": "IRB Office",
+      "title": "Institutional Review Board",
+      "organization": "UCSF"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_007.json": {
+    "folder": "IRB",
+    "sender": {
+      "name": "IRB Office",
+      "title": "Institutional Review Board",
+      "organization": "Stanford"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_008.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "EDC System",
+      "title": "Electronic Data Capture",
+      "organization": "Medidata"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_009.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Site Coordinator",
+      "title": "Clinical Research Coordinator",
+      "organization": "Mayo Clinic"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_010.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [],
+    "hasAttachments": true
+  },
+  "email_011.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Vendor Support",
+      "title": "Training Coordinator",
+      "organization": "Clinical Trials Institute"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_012.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "EDC System",
+      "title": "Electronic Data Capture",
+      "organization": "Medidata"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_013.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Site Staff",
+      "title": "Research Assistant",
+      "organization": "Cleveland Clinic"
+    },
+    "tasks": [],
+    "hasAttachments": true
+  },
+  "email_014.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [],
+    "hasAttachments": true
+  },
+  "email_015.json": {
+    "folder": "Other",
+    "sender": {
+      "name": "Pharma News",
+      "title": "Newsletter Editor",
+      "organization": "Pharma Publications"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  }
+}

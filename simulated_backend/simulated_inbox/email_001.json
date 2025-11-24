@@ -1,0 +1,202 @@
+{
+  "id": "18a72f3c8e9d4b21",
+  "threadId": "18a72f3c8e9d4b21",
+  "labelIds": [
+    "INBOX",
+    "UNREAD",
+    "IMPORTANT"
+  ],
+  "snippet": "Dear Denali Therapeutics Study Team, Please find attached the brain MRI volumetric analysis results for patient 203-012 from the DNLI-456 Phase 2b stud...",
+  "historyId": "1732435200",
+  "internalDate": "1732435200000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<results@dupliplex-imaging.com>"
+      },
+      {
+        "name": "From",
+        "value": "results@dupliplex-imaging.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com, study.DNLI-456@denalitx.com"
+      },
+      {
+        "name": "Cc",
+        "value": "imaging-qa@dupliplex-imaging.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Dupliplex Imaging Results - DNLI-456"
+      },
+      {
+        "name": "Date",
+        "value": "2024-11-24T08:30:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435200@dupliplex-imaging.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 312
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 312,
+          "data": "UGxlYXNlIGZpbmQgYXR0YWNoZWQgdGhlIGJyYWluIE1SSSB2b2x1bWV0cmljIGFuYWx5c2lzIHJlc3VsdHMgZm9yIHBhdGllbnQgMjAzLTAxMiBmcm9tIHRoZSBETkxJLTQ1NiBQaGFzZSAyYiBzdHVkeS4KClNjYW4gRGF0ZTogTm92ZW1iZXIgMjEsIDIwMjQKU3R1ZHkgVmlzaXQ6IFdlZWsgMjQgRm9sbG93LVVwClNpdGU6IDIwMyAtIFN0YW5mb3JkIE1lZGljYWwgQ2VudGVyCgpCZXN0IHJlZ2FyZHMsCgpEdXBsaXBsZXggSW1hZ2luZyBTZXJ2aWNlcwpDZW50cmFsIEltYWdpbmcgTGFiCnJlc3VsdHNAZHVwbGlwbGV4LWltYWdpbmcuY29tCis1NjcgKDU1NSkgMDEyMy00NTY3"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "8f9a2c5e7b3d1f4c",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1687,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "18a72f3c8e9d4b21",
+      "threadId": "18a72f3c8e9d4b21",
+      "labelIds": [
+        "INBOX",
+        "UNREAD",
+        "IMPORTANT"
+      ],
+      "snippet": "Please find attached the brain MRI volumetric analysis results for patient 203-012 from the DNLI-456 Phase 2b study. Scan Date: November 21, 2024 Stu...",
+      "historyId": "1732435200",
+      "internalDate": "1732435200000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<results@dupliplex-imaging.com>"
+          },
+          {
+            "name": "From",
+            "value": "results@dupliplex-imaging.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com, study.DNLI-456@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "imaging-qa@dupliplex-imaging.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Dupliplex Imaging Results - DNLI-456"
+          },
+          {
+            "name": "Date",
+            "value": "2024-11-24T08:30:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435200@dupliplex-imaging.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 312
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 312,
+              "data": "UGxlYXNlIGZpbmQgYXR0YWNoZWQgdGhlIGJyYWluIE1SSSB2b2x1bWV0cmljIGFuYWx5c2lzIHJlc3VsdHMgZm9yIHBhdGllbnQgMjAzLTAxMiBmcm9tIHRoZSBETkxJLTQ1NiBQaGFzZSAyYiBzdHVkeS4KClNjYW4gRGF0ZTogTm92ZW1iZXIgMjEsIDIwMjQKU3R1ZHkgVmlzaXQ6IFdlZWsgMjQgRm9sbG93LVVwClNpdGU6IDIwMyAtIFN0YW5mb3JkIE1lZGljYWwgQ2VudGVyCgpCZXN0IHJlZ2FyZHMsCgpEdXBsaXBsZXggSW1hZ2luZyBTZXJ2aWNlcwpDZW50cmFsIEltYWdpbmcgTGFiCnJlc3VsdHNAZHVwbGlwbGV4LWltYWdpbmcuY29tCis1NjcgKDU1NSkgMDEyMy00NTY3"
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "8f9a2c5e7b3d1f4c",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1312,
+      "raw": null
+    }
+  ]
+}

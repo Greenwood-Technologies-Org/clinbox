@@ -1,0 +1,122 @@
+{
+  "id": "webinar001",
+  "threadId": "webinar001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex Johnson, We invite you to join our upcoming free webinar on \"Best Practices in Clinical Data Management for Phase 2 Trials.\" This session will cover data quality assurance, EDC system optimization, and compliance with regulatory standards.",
+  "historyId": "1732435206",
+  "internalDate": "1732435206000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<training@clinicaltrialsinstitute.org>"
+      },
+      {
+        "name": "From",
+        "value": "training@clinicaltrialsinstitute.org"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Upcoming Clinical Research Training Webinar"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T10:15:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435206@clinicaltrialsinstitute.org>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 300,
+      "data": "RGVhciBBbGV4IEpvaG5zb24sCgpXZSBpbnZpdGUgeW91IHRvIGpvaW4gb3VyIHVwY29taW5nIGZyZWUgd2ViaW5hciBvbiAiQmVzdCBQcmFjdGljZXMgaW4gQ2xpbmljYWwgRGF0YSBNYW5hZ2VtZW50IGZvciBQaGFzZSAyIFRyaWFscy4iIFRoaXMgc2Vzc2lvbiB3aWxsIGNvdmVyIGRhdGEgcXVhbGl0eSBhc3N1cmFuY2UsIEVEQyBzeXN0ZW0gb3B0aW1pemF0aW9uLCBhbmQgY29tcGxpYW5jZSB3aXRoIHJlZ3VsYXRvcnkgc3RhbmRhcmRzLgoKRGF0ZTogRGVjZW1iZXIgNSwgMjAyNQpUaW1lOiAyOjAwIFBNIC0gMzowMCBQTSBQU1QKUGxhdGZvcm06IFpvb20KCnRvIHJlZ2lzdGVyLCBwbGVhc2UgdmlzaXQgb3VyIHdlYnNpdGUgb3IgcmVwbHkgdG8gdGhpcyBlbWFpbC4KCldlIGxvb2sgZm9yd2FyZCB0byB5b3VyIHBhcnRpY2lwYXRpb24uCgpCZXN0IHJlZ2FyZHMsClRyYWluaW5nIENvb3JkaW5hdG9yCkNsaW5pY2FsIFRyaWFscyBJbnN0aXR1dGU="
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "webinar001",
+      "threadId": "webinar001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex Johnson, We invite you to join our upcoming free webinar on \"Best Practices in Clinical Data Management for Phase 2 Trials.\" This session will cover data quality assurance, EDC system optimization, and compliance with regulatory standards.",
+      "historyId": "1732435206",
+      "internalDate": "1732435206000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<training@clinicaltrialsinstitute.org>"
+          },
+          {
+            "name": "From",
+            "value": "training@clinicaltrialsinstitute.org"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Upcoming Clinical Research Training Webinar"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T10:15:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435206@clinicaltrialsinstitute.org>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 300,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpXZSBpbnZpdGUgeW91IHRvIGpvaW4gb3VyIHVwY29taW5nIGZyZWUgd2ViaW5hciBvbiAiQmVzdCBQcmFjdGljZXMgaW4gQ2xpbmljYWwgRGF0YSBNYW5hZ2VtZW50IGZvciBQaGFzZSAyIFRyaWFscy4iIFRoaXMgc2Vzc2lvbiB3aWxsIGNvdmVyIGRhdGEgcXVhbGl0eSBhc3N1cmFuY2UsIEVEQyBzeXN0ZW0gb3B0aW1pemF0aW9uLCBhbmQgY29tcGxpYW5jZSB3aXRoIHJlZ3VsYXRvcnkgc3RhbmRhcmRzLgoKRGF0ZTogRGVjZW1iZXIgNSwgMjAyNQpUaW1lOiAyOjAwIFBNIC0gMzowMCBQTSBQU1QKUGxhdGZvcm06IFpvb20KCnRvIHJlZ2lzdGVyLCBwbGVhc2UgdmlzaXQgb3VyIHdlYnNpdGUgb3IgcmVwbHkgdG8gdGhpcyBlbWFpbC4KCldlIGxvb2sgZm9yd2FyZCB0byB5b3VyIHBhcnRpY2lwYXRpb24uCgpCZXN0IHJlZ2FyZHMsClRyYWluaW5nIENvb3JkaW5hdG9yCkNsaW5pY2FsIFRyaWFscyBJbnN0aXR1dGU="
+        }
+      },
+      "sizeEstimate": 400,
+      "raw": null
+    }
+  ]
+}

@@ -29,7 +29,7 @@ interface EmailData {
 interface EmailAIAnalysis {
   [key: string]: {
     summary: string;
-    quickActions?: string[];
+    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
   };
 }
 
@@ -41,8 +41,8 @@ interface EmailListProps {
   loading: boolean;
   activeGroup: string;
   onActiveGroupChange: (group: string) => void;
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
-  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
   onSetSelectedFilename: (filename: string | null) => void;
   onOpenEmail: (subject: string) => void;
   loadThreadAttachments: (filename: string) => Promise<Array<{ filename: string; mimeType: string }>>;
@@ -63,7 +63,7 @@ export default function EmailList({
   loadThreadAttachments
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
-  const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
+  const groups = ['Critical', 'Urgent', 'Important', 'IRB', 'Other'];
 
   return (
     <>
