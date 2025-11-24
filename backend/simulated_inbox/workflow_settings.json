@@ -23,5 +23,30 @@
         "approval": "No"
       }
     ]
+  },
+  {
+    "id": "workflow_002",
+    "name": "SAE Auto-Forward to Medical Director",
+    "description": "Automatically forwards serious adverse events to medical director and sends acknowledgment to reporting site",
+    "modified": "2024-11-24",
+    "approval": "No",
+    "actions": [
+      {
+        "actionNumber": 1,
+        "action": "Send Site Acknowledgment",
+        "input": "Email",
+        "output": "Email",
+        "description": "Thank site for SAE report and confirm follow-up is in progress",
+        "approval": "No"
+      },
+      {
+        "actionNumber": 2,
+        "action": "Urgent Notification to Medical Director",
+        "input": "Email",
+        "output": "Email",
+        "description": "Forward SAE details to Jim Collins (Medical Director) for urgent review",
+        "approval": "No"
+      }
+    ]
   }
 ]
