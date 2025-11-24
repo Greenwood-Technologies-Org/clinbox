@@ -36,7 +36,11 @@
       "title": "Program Manager",
       "organization": "Denali Therapeutics"
     },
-    "tasks": [],
+    "tasks": [
+      "Resolve data entry backlog at Site 105 (Mayo)",
+      "Resolve data entry backlog at Site 209 (Hopkins)",
+      "Resolve data entry backlog at Site 312 (Cleveland)"
+    ],
     "hasAttachments": false
   },
   "email_005.json": {

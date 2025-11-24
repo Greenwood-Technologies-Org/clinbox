@@ -9,14 +9,24 @@
   },
   "email_003.json": {
     "summary": "Site 203 reports low investigational product inventory with only 2 vials remaining before patient 203-018's visit on December 2nd, but resupply shipment not arriving until December 5th, requesting expedited delivery or guidance on rescheduling.",
-    "quickActions": []
+    "quickActions": [
+      "Check with IP team about expedited resupply options",
+      "Reschedule patient 203-018 visit to after December 5th",
+      "Check with PM and site 205 about inter-site IP transfer"
+    ]
   },
   "email_004.json": {
     "summary": "Three sites are significantly behind on data entry ahead of January 15, 2025 database lock: Site 105 (Mayo) with 3 visits, Site 209 (Hopkins) with 5 visits, and Site 312 (Cleveland) with 4 visits, requiring follow-up to ensure timely completion.",
-    "quickActions": []
+    "quickActions": [
+      "Follow up with Site 105 (Mayo) on pending data entry",
+      "Follow up with Site 209 (Hopkins) on pending data entry",
+      "Follow up with Site 312 (Cleveland) on pending data entry"
+    ]
   },
   "email_005.json": {
     "summary": "Critical data quality issues at Site 307 including 23 unresolved queries (8 critical), missing source documentation for 5 patient visits, and 7 case report forms requiring corrections, with resolution needed by December 10, 2024 to avoid delaying database lock.",
-    "quickActions": []
+    "quickActions": [
+      "Schedule call with Site 307 CRC to address data issues"
+    ]
   }
 }
