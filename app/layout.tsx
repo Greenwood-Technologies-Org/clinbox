@@ -66,6 +66,7 @@ export default function RootLayout({
   const [selectedWorkflowEvent, setSelectedWorkflowEvent] = useState<SelectedWorkflowEvent | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [isWorkflowBuilder, setIsWorkflowBuilder] = useState(false);
 
   return (
     <html lang="en">
@@ -75,7 +76,10 @@ export default function RootLayout({
           {activeView === 'docs' ? (
             <DocsPage onSelectDocument={setSelectedDocument} />
           ) : activeView === 'workflowsettings' ? (
-            <WorkflowSettings onSelectWorkflow={setSelectedWorkflow} />
+            <WorkflowSettings 
+              onSelectWorkflow={setSelectedWorkflow} 
+              onBuilderModeChange={setIsWorkflowBuilder}
+            />
           ) : (
             <MainContent 
               activeView={activeView} 
@@ -95,6 +99,7 @@ export default function RootLayout({
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
             showChat={showChat}
             onToggleChat={() => setShowChat(!showChat)}
+            isWorkflowBuilder={isWorkflowBuilder}
           />
         </div>
       </body>

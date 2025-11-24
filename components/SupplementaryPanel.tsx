@@ -54,6 +54,7 @@ interface SupplementaryPanelProps {
   onToggleAllTasks?: () => void;
   showChat?: boolean;
   onToggleChat?: () => void;
+  isWorkflowBuilder?: boolean;
 }
 
 interface EmailData {
@@ -79,7 +80,8 @@ export default function SupplementaryPanel({
   showAllTasks = false,
   onToggleAllTasks,
   showChat = false,
-  onToggleChat
+  onToggleChat,
+  isWorkflowBuilder
 }: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
 
@@ -233,6 +235,13 @@ export default function SupplementaryPanel({
     }
 
     if (activeView === 'workflowsettings') {
+      if (isWorkflowBuilder) {
+        return (
+          <div className="py-3 px-4">
+            <h2 className="text-lg font-semibold mb-4">New Workflow</h2>
+          </div>
+        );
+      }
       return (
         <div className="py-3 px-4">
           {selectedWorkflow && (

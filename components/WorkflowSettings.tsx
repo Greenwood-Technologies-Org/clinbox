@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CirclePlus, CircleMinus } from 'lucide-react';
+import { CirclePlus, CircleMinus, ArrowLeft, Check } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
 interface Workflow {
@@ -15,12 +15,16 @@ interface Workflow {
 
 interface WorkflowSettingsProps {
   onSelectWorkflow: (workflow: Workflow | null) => void;
+  onBuilderModeChange?: (isBuilderMode: boolean) => void;
 }
 
-export default function WorkflowSettings({ onSelectWorkflow }: WorkflowSettingsProps) {
+export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange }: WorkflowSettingsProps) {
   const [workflows, setWorkflows] = useState<Workflow[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedWorkflow, setSelectedWorkflow] = useState<Workflow | null>(null);
+  const [showBuilder, setShowBuilder] = useState(false);
+  const [workflowName, setWorkflowName] = useState('');
+  const [isEditingName, setIsEditingName] = useState(false);
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
@@ -59,6 +63,70 @@ export default function WorkflowSettings({ onSelectWorkflow }: WorkflowSettingsP
     onSelectWorkflow(workflow);
   };
 
+  const handleAddWorkflow = () => {
+    setShowBuilder(true);
+    onBuilderModeChange?.(true);
+  };
+
+  const handleBackToSettings = () => {
+    setShowBuilder(false);
+    setWorkflowName('');
+    setIsEditingName(false);
+    onBuilderModeChange?.(false);
+  };
+
+  const handleSaveWorkflow = () => {
+    // For now, just go back to settings
+    handleBackToSettings();
+  };
+
+  if (showBuilder) {
+    return (
+      <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-3">
+          <button onClick={handleBackToSettings} className="hover:bg-gray-100 p-1 rounded">
+            <ArrowLeft {...getIconProps()} />
+          </button>
+          
+          {isEditingName ? (
+            <input
+              type="text"
+              value={workflowName}
+              onChange={(e) => setWorkflowName(e.target.value)}
+              onBlur={() => setIsEditingName(false)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  setIsEditingName(false);
+                }
+              }}
+              className="text-lg font-medium text-gray-900 text-center outline-none border-b-2 border-blue-500 px-2"
+              autoFocus
+            />
+          ) : (
+            <button
+              onClick={() => setIsEditingName(true)}
+              className={`text-lg font-medium px-2 py-1 rounded hover:bg-gray-100 ${
+                workflowName ? 'text-gray-900' : 'text-gray-400'
+              }`}
+            >
+              {workflowName || 'Name'}
+            </button>
+          )}
+          
+          <button onClick={handleSaveWorkflow} className="hover:bg-gray-100 p-1 rounded">
+            <Check {...getIconProps()} />
+          </button>
+        </div>
+
+        {/* Builder Content */}
+        <div className="flex-1 flex items-center justify-center">
+          <p className="text-2xl font-medium text-gray-900">Workflow Builder</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
       <div className="flex-1 overflow-y-auto">
@@ -80,7 +148,7 @@ export default function WorkflowSettings({ onSelectWorkflow }: WorkflowSettingsP
                   Modified
                 </th>
                 <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
-                  <button>
+                  <button onClick={handleAddWorkflow}>
                     <CirclePlus {...getIconProps()} />
                   </button>
                 </th>
