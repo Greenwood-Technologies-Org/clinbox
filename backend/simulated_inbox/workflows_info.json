@@ -4,7 +4,6 @@
     "name": "Patient Enrollment Automation",
     "description": "Automatically schedules screening visits, sends consent forms, and creates patient records when potential participants respond to recruitment outreach",
     "modified": "2024-11-20",
-    "version": "2.1",
     "requiresApproval": "No",
     "integrations": ["Calendly", "DocuSign", "REDCap"]
   },
@@ -13,7 +12,6 @@
     "name": "SAE Alert & Reporting",
     "description": "Monitors incoming emails for serious adverse event keywords, flags urgent cases, and initiates regulatory reporting workflow with pre-filled templates",
     "modified": "2024-11-18",
-    "version": "3.0",
     "requiresApproval": "Yes",
     "integrations": ["MedWatch", "Slack", "CTMS"]
   },
@@ -22,7 +20,6 @@
     "name": "Invoice Processing & Payment",
     "description": "Extracts line items from site invoices, validates against budget, routes for approval, and initiates payment processing",
     "modified": "2024-10-25",
-    "version": "1.5",
     "requiresApproval": "Yes",
     "integrations": ["QuickBooks", "DocuSign", "Oracle"]
   },
@@ -31,7 +28,6 @@
     "name": "IRB Submission Tracker",
     "description": "Monitors IRB submission deadlines, compiles required documents, and sends automated reminders for continuing reviews and amendments",
     "modified": "2024-11-15",
-    "version": "2.3",
     "requiresApproval": "No",
     "integrations": ["iRIS", "Asana", "Google Drive"]
   },
@@ -40,7 +36,6 @@
     "name": "Site Monitoring Visit Scheduler",
     "description": "Coordinates CRA availability with site calendars, sends visit confirmation packets, and generates pre-visit checklists automatically",
     "modified": "2024-11-10",
-    "version": "1.8",
     "requiresApproval": "No",
     "integrations": ["Calendly", "Zoom", "CTMS"]
   },
@@ -49,7 +44,6 @@
     "name": "Protocol Deviation Workflow",
     "description": "Logs protocol deviations, assesses severity, assigns corrective actions, and tracks resolution with automated follow-up reminders",
     "modified": "2024-10-30",
-    "version": "2.0",
     "requiresApproval": "Yes",
     "integrations": ["CTMS", "Slack", "Jira"]
   },
@@ -58,7 +52,6 @@
     "name": "Patient Stipend Processing",
     "description": "Calculates patient compensation based on completed visits, generates payment requests, and tracks disbursement status",
     "modified": "2024-11-05",
-    "version": "1.3",
     "requiresApproval": "Yes",
     "integrations": ["QuickBooks", "REDCap", "Tango Card"]
   },
@@ -67,7 +60,6 @@
     "name": "CRF Query Resolution",
     "description": "Routes data queries to appropriate site staff, tracks response times, and escalates overdue queries with automated reminders",
     "modified": "2024-11-12",
-    "version": "2.5",
     "requiresApproval": "No",
     "integrations": ["Medidata Rave", "Slack", "CTMS"]
   },
@@ -76,7 +68,6 @@
     "name": "Laboratory Results Distribution",
     "description": "Receives lab results from central lab, flags abnormal values, notifies PIs, and updates EDC with required documentation",
     "modified": "2024-10-20",
-    "version": "1.7",
     "requiresApproval": "No",
     "integrations": ["Quest Diagnostics", "REDCap", "Email"]
   },
@@ -85,7 +76,6 @@
     "name": "Sponsor Report Generation",
     "description": "Compiles enrollment metrics, safety data, and milestone achievements into monthly sponsor reports with automated distribution",
     "modified": "2024-11-08",
-    "version": "3.2",
     "requiresApproval": "Yes",
     "integrations": ["CTMS", "Tableau", "PowerPoint"]
   }

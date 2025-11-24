@@ -36,6 +36,15 @@ interface SelectedDocument {
   type: string;
 }
 
+interface SelectedWorkflow {
+  id: string;
+  name: string;
+  description: string;
+  modified: string;
+  requiresApproval: string;
+  integrations: string[];
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +53,7 @@ export default function RootLayout({
   const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs' | 'workflows'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
+  const [selectedWorkflow, setSelectedWorkflow] = useState<SelectedWorkflow | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
   const [showChat, setShowChat] = useState(false);
 
@@ -55,7 +65,7 @@ export default function RootLayout({
           {activeView === 'docs' ? (
             <DocsPage onSelectDocument={setSelectedDocument} />
           ) : activeView === 'workflows' ? (
-            <WorkflowsPage />
+            <WorkflowsPage onSelectWorkflow={setSelectedWorkflow} />
           ) : (
             <MainContent 
               activeView={activeView} 
@@ -67,6 +77,7 @@ export default function RootLayout({
           <SupplementaryPanel 
             selectedEmail={selectedEmail} 
             selectedDocument={selectedDocument}
+            selectedWorkflow={selectedWorkflow}
             activeView={activeView}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}

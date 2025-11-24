@@ -33,6 +33,14 @@ interface SupplementaryPanelProps {
     version: string;
     type: string;
   } | null;
+  selectedWorkflow?: {
+    id: string;
+    name: string;
+    description: string;
+    modified: string;
+    requiresApproval: string;
+    integrations: string[];
+  } | null;
   activeView?: 'email' | 'calendar' | 'docs' | 'workflows';
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
@@ -57,6 +65,7 @@ export default function SupplementaryPanel({
   children, 
   selectedEmail, 
   selectedDocument,
+  selectedWorkflow,
   activeView,
   showAllTasks = false,
   onToggleAllTasks,
@@ -195,8 +204,35 @@ export default function SupplementaryPanel({
 
     if (activeView === 'workflows') {
       return (
-        <div className="py-3 px-4 flex items-center justify-center h-full">
-          <p className="text-gray-600 text-lg">Workflows</p>
+        <div className="py-3 px-4">
+          {selectedWorkflow && (
+            <div>
+              <button className="w-full px-4 py-2 mb-4 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors">
+                Edit
+              </button>
+              <div className="border-b border-gray-200 mb-4"></div>
+              <div className="mb-4">
+                <h3 className="font-medium mb-2">Description</h3>
+                <p className="text-sm text-gray-600">
+                  {selectedWorkflow.description}
+                </p>
+              </div>
+              <div className="border-b border-gray-200 mb-4"></div>
+              <div>
+                <h3 className="font-medium mb-2">Integrations</h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedWorkflow.integrations.map((integration, index) => (
+                    <span 
+                      key={index}
+                      className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-700"
+                    >
+                      {integration}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       );
     }
@@ -209,6 +245,7 @@ export default function SupplementaryPanel({
               <button className="w-full px-4 py-2 mb-4 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition-colors">
                 Update
               </button>
+              <div className="border-b border-gray-200 mb-4"></div>
               <h3 className="font-medium mb-2">Description</h3>
               <p className="text-sm text-gray-600">
                 {selectedDocument.description}
