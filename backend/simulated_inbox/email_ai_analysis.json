@@ -1,11 +1,24 @@
 {
   "email_001.json": {
     "summary": "MRI volumetric analysis results for patient 203-012 in DNLI-456 Phase 2b study show Week 24 brain scan data ready for review with automated measurements and quality assurance report.",
-    "quickActions": []
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_001",
+      "status": "needs approval",
+      "steps": [
+        "Read email",
+        "Check values for abnormalities",
+        "Log results in EDC"
+      ]
+    }
   },
   "email_002.json": {
     "summary": "Serious Adverse Event notification for patient 307-024 in study DNLI-789, requiring medical director review and guidance on whether hospitalization and treatment modifications are needed.",
-    "quickActions": []
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_002",
+      "status": "completed"
+    }
   },
   "email_003.json": {
     "summary": "Site 203 reports low investigational product inventory with only 2 vials remaining before patient 203-018's visit on December 2nd, but resupply shipment not arriving until December 5th, requesting expedited delivery or guidance on rescheduling.",

@@ -20,6 +20,7 @@ interface SelectedEmail {
     workflow?: {
       workflowId: string;
       status: string;
+      steps?: string[];
     };
   };
   tasks?: string[];
@@ -96,6 +97,7 @@ export default function SupplementaryPanel({
 }: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
   const [workflowName, setWorkflowName] = useState<string | null>(null);
+  const [showWorkflowModal, setShowWorkflowModal] = useState(false);
 
   useEffect(() => {
     const loadWorkflowName = async () => {
@@ -479,6 +481,7 @@ export default function SupplementaryPanel({
                         <button 
                           className="text-gray-400 hover:text-green-600 transition-colors"
                           title="Approve workflow"
+                          onClick={() => setShowWorkflowModal(true)}
                         >
                           <CircleCheck className="w-4 h-4" />
                         </button>
@@ -545,6 +548,37 @@ export default function SupplementaryPanel({
           <button onClick={onToggleChat}>
             <Sparkle {...getIconProps()} />
           </button>
+        </div>
+      )}
+
+      {/* Workflow Approval Modal */}
+      {showWorkflowModal && selectedEmail?.aiAnalysis?.workflow?.steps && (
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-2xl h-96 mx-4 flex flex-col">
+            <h2 className="text-lg font-semibold text-center mb-4">{workflowName}</h2>
+            <div className="border-b border-gray-200 mb-6"></div>
+            <ul className="space-y-2 flex-1 flex flex-col items-center justify-center">
+              {selectedEmail.aiAnalysis.workflow.steps.map((step, index) => (
+                <li key={index} className="text-sm text-gray-700">
+                  {index + 1}. {step}
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-between">
+              <button 
+                onClick={() => setShowWorkflowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleX className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => setShowWorkflowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleCheck className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

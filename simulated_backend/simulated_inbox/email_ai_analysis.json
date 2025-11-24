@@ -4,7 +4,12 @@
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_001",
-      "status": "needs approval"
+      "status": "needs approval",
+      "steps": [
+        "Reading email",
+        "Checking values for abnormalities",
+        "Logging results in EDC"
+      ]
     }
   },
   "email_002.json": {
