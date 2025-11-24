@@ -98,6 +98,8 @@ export default function SupplementaryPanel({
   const [allTasks, setAllTasks] = useState<string[]>([]);
   const [workflowName, setWorkflowName] = useState<string | null>(null);
   const [showWorkflowModal, setShowWorkflowModal] = useState(false);
+  const [showQuickActionModal, setShowQuickActionModal] = useState(false);
+  const [selectedQuickActionEmails, setSelectedQuickActionEmails] = useState<Array<{ to: string; subject: string; body: string; references: string[] }> | null>(null);
 
   useEffect(() => {
     const loadWorkflowName = async () => {
@@ -405,11 +407,20 @@ export default function SupplementaryPanel({
                     {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
                       selectedEmail.aiAnalysis.quickActions.map((action, index) => {
                         const actionText = typeof action === 'string' ? action : action.action;
+                        const actionEmails = typeof action === 'object' && action.emails ? action.emails : null;
                         return (
                           <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
                             <span className="text-sm text-gray-700">{actionText}</span>
                             <div className="flex items-center gap-2">
-                              <button className="hover:text-green-600 text-gray-400 transition-colors">
+                              <button 
+                                onClick={() => {
+                                  if (actionEmails) {
+                                    setSelectedQuickActionEmails(actionEmails);
+                                    setShowQuickActionModal(true);
+                                  }
+                                }}
+                                className="hover:text-green-600 text-gray-400 transition-colors"
+                              >
                                 <CircleCheck className="w-4 h-4" />
                               </button>
                               <button className="hover:text-red-600 text-gray-400 transition-colors">
@@ -578,6 +589,65 @@ export default function SupplementaryPanel({
               </button>
               <button 
                 onClick={() => setShowWorkflowModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleCheck className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Quick Action Email Modal */}
+      {showQuickActionModal && selectedQuickActionEmails && (
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-4xl h-[800px] mx-4 flex flex-col">
+            <h2 className="text-xl font-semibold text-center mb-4">Email Drafts</h2>
+            <div className="border-b border-gray-200 mb-6"></div>
+            <div className="space-y-6 flex-1 overflow-y-auto px-4">
+              {selectedQuickActionEmails.map((email, index) => (
+                <div key={index}>
+                  <div className="border border-gray-200 rounded-lg p-4">
+                    <div className="font-medium mb-2">To: {email.to}</div>
+                    <div className="font-medium mb-2">Subject: {email.subject}</div>
+                    <div className="text-sm text-gray-700 mb-2">{email.body}</div>
+                  </div>
+                  {email.references && email.references.length > 0 && (
+                    <div className="text-sm text-gray-600 mt-2">
+                      <div className="font-medium mb-1">References:</div>
+                      <ul className="list-disc list-inside">
+                        {email.references.map((ref, refIndex) => (
+                          <li key={refIndex}>{ref}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="flex justify-between mt-4">
+                    <button 
+                      onClick={() => setShowQuickActionModal(false)}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                    >
+                      <CircleX className="w-5 h-5" />
+                    </button>
+                    <button 
+                      onClick={() => setShowQuickActionModal(false)}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                    >
+                      <CircleCheck className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between mt-4">
+              <button 
+                onClick={() => setShowQuickActionModal(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <CircleX className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => setShowQuickActionModal(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors"
               >
                 <CircleCheck className="w-5 h-5" />
