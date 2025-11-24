@@ -6,22 +6,17 @@
       "title": "Central Imaging Lab",
       "organization": "Dupliplex Imaging"
     },
-    "tasks": [
-      "Review brain scan results and determine next steps"
-    ],
+    "tasks": [],
     "hasAttachments": true
   },
   "email_002.json": {
-    "folder": "Important",
+    "folder": "Critical",
     "sender": {
       "name": "Jennifer Martinez",
       "title": "Clinical Research Coordinator",
       "organization": "UCSF Department of Neurology"
     },
-    "tasks": [
-      "Send acknowledgment to UCSF site confirming receipt of SAE report",
-      "Forward SAE report urgently to Jim Collins (Medical Director)"
-    ],
+    "tasks": [],
     "hasAttachments": true
   }
 }

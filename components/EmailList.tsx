@@ -63,7 +63,7 @@ export default function EmailList({
   loadThreadAttachments
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
-  const groups = ['Important', 'Critical', 'Urgent', 'IRB', 'Other'];
+  const groups = ['Critical', 'Urgent', 'Important', 'IRB', 'Other'];
 
   return (
     <>

@@ -36,7 +36,7 @@
       },
       {
         "name": "Subject",
-        "value": "URGENT: Serious Adverse Event Report - Study DNLI-789 - Patient 307-024"
+        "value": "SAE Report for DNLI-789"
       },
       {
         "name": "Date",
@@ -136,7 +136,7 @@
           },
           {
             "name": "Subject",
-            "value": "URGENT: Serious Adverse Event Report - Study DNLI-789 - Patient 307-024"
+            "value": "SAE Report for DNLI-789"
           },
           {
             "name": "Date",

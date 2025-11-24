@@ -1,18 +1,10 @@
 {
   "email_001.json": {
     "summary": "Brain MRI volumetric analysis results from Dupliplex Imaging for patient 203-012 in DNLI-456 Phase 2b study, Week 24 follow-up scan at Stanford Medical Center.",
-    "quickActions": [
-      "Review detailed volumetric analysis report",
-      "Forward to PI if abnormal findings detected",
-      "Log results in EDC system"
-    ]
+    "quickActions": []
   },
   "email_002.json": {
     "summary": "Urgent SAE report from UCSF Site 307: Patient 307-024 experienced a Serious Adverse Event in Study DNLI-789. Dr. Robert Kim awaiting further guidance on next steps.",
-    "quickActions": [
-      "Send acknowledgment to Jennifer Martinez at UCSF confirming receipt",
-      "Forward urgently to Jim Collins (Medical Director) for review",
-      "Review attached SAE report form for completeness"
-    ]
+    "quickActions": []
   }
 }
