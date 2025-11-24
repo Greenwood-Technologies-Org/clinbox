@@ -1,7 +1,5 @@
 'use client';
 
-import { Menu, PenLine, Search } from 'lucide-react';
-import { getIconProps } from '@/lib/icon-utils';
 import { useState, useEffect } from 'react';
 import EmailList from './EmailList';
 import OpenedEmail from './OpenedEmail';
@@ -282,6 +280,66 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
             subject={openedEmailSubject}
             filename={selectedEmailFilename || undefined}
             onBack={() => setViewMode('list')}
+            onNavigateUp={() => {
+              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
+              if (currentIndex > 0) {
+                const prevEmail = emails[currentIndex - 1];
+                if (prevEmail.filename && emailData[prevEmail.filename]?.sender) {
+                  const subjectHeader = prevEmail.payload.headers.find(h => h.name === 'Subject');
+                  const subject = subjectHeader?.value || 'No Subject';
+                  setSelectedEmailFilename(prevEmail.filename);
+                  setOpenedEmailSubject(subject);
+                  
+                  Promise.all([
+                    loadThreadAttachments(prevEmail.filename),
+                    loadSenderEmail(prevEmail.filename)
+                  ]).then(([attachments, senderEmail]) => {
+                    onSelectEmail({
+                      filename: prevEmail.filename,
+                      sender: {
+                        ...emailData[prevEmail.filename!].sender!,
+                        email: senderEmail
+                      },
+                      aiAnalysis: emailAIAnalysis[prevEmail.filename!],
+                      tasks: emailData[prevEmail.filename!].tasks,
+                      hasAttachments: emailData[prevEmail.filename!].hasAttachments,
+                      attachments: attachments
+                    });
+                  });
+                }
+              }
+            }}
+            onNavigateDown={() => {
+              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
+              if (currentIndex < emails.length - 1) {
+                const nextEmail = emails[currentIndex + 1];
+                if (nextEmail.filename && emailData[nextEmail.filename]?.sender) {
+                  const subjectHeader = nextEmail.payload.headers.find(h => h.name === 'Subject');
+                  const subject = subjectHeader?.value || 'No Subject';
+                  setSelectedEmailFilename(nextEmail.filename);
+                  setOpenedEmailSubject(subject);
+                  
+                  Promise.all([
+                    loadThreadAttachments(nextEmail.filename),
+                    loadSenderEmail(nextEmail.filename)
+                  ]).then(([attachments, senderEmail]) => {
+                    onSelectEmail({
+                      filename: nextEmail.filename,
+                      sender: {
+                        ...emailData[nextEmail.filename!].sender!,
+                        email: senderEmail
+                      },
+                      aiAnalysis: emailAIAnalysis[nextEmail.filename!],
+                      tasks: emailData[nextEmail.filename!].tasks,
+                      hasAttachments: emailData[nextEmail.filename!].hasAttachments,
+                      attachments: attachments
+                    });
+                  });
+                }
+              }
+            }}
+            canNavigateUp={emails.findIndex(e => e.filename === selectedEmailFilename) > 0}
+            canNavigateDown={emails.findIndex(e => e.filename === selectedEmailFilename) < emails.length - 1}
             onAttachmentsChange={(attachments) => {
               setCurrentAttachments(attachments);
               if (selectedEmailFilename && emailData[selectedEmailFilename]?.sender) {
