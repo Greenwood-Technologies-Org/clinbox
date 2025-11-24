@@ -13,6 +13,15 @@ interface Workflow {
   integrations: string[];
 }
 
+interface WorkflowAction {
+  id: string;
+  action: string;
+  input: string;
+  output: string;
+  description: string;
+  approval: string;
+}
+
 interface WorkflowSettingsProps {
   onSelectWorkflow: (workflow: Workflow | null) => void;
   onBuilderModeChange?: (isBuilderMode: boolean) => void;
@@ -25,12 +34,22 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const [showBuilder, setShowBuilder] = useState(false);
   const [workflowName, setWorkflowName] = useState('');
   const [isEditingName, setIsEditingName] = useState(false);
+  const [actions, setActions] = useState<WorkflowAction[]>([]);
+  const [selectedAction, setSelectedAction] = useState<WorkflowAction | null>(null);
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
     name: 55,
     requiresApproval: 25,
     modified: 20
+  };
+
+  const actionColumnWidths = {
+    action: 15,
+    input: 20,
+    output: 20,
+    description: 30,
+    approval: 15
   };
 
   useEffect(() => {
@@ -61,6 +80,10 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const handleWorkflowSelect = (workflow: Workflow) => {
     setSelectedWorkflow(workflow);
     onSelectWorkflow(workflow);
+  };
+
+  const handleActionSelect = (action: WorkflowAction) => {
+    setSelectedAction(action);
   };
 
   const handleAddWorkflow = () => {
@@ -120,8 +143,78 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
         </div>
 
         {/* Builder Content */}
-        <div className="flex-1 flex items-center justify-center">
-          <p className="text-2xl font-medium text-gray-900">Workflow Builder</p>
+        <div className="flex-1 overflow-y-auto">
+          <table className="w-full table-fixed">
+            <thead className="bg-white sticky top-0">
+              <tr>
+                <th style={{ width: `${actionColumnWidths.action}%` }} className="pl-6 pr-3 py-3 text-left text-sm font-semibold text-black">
+                  Action
+                </th>
+                <th style={{ width: `${actionColumnWidths.input}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                  Input
+                </th>
+                <th style={{ width: `${actionColumnWidths.output}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                  Output
+                </th>
+                <th style={{ width: `${actionColumnWidths.description}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                  Description
+                </th>
+                <th style={{ width: `${actionColumnWidths.approval}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                  Approval
+                </th>
+                <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
+                  <button>
+                    <CirclePlus {...getIconProps()} />
+                  </button>
+                </th>
+              </tr>
+              <tr>
+                <th colSpan={6} className="px-0 py-0">
+                  <div className="mx-6 border-b border-gray-200"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white">
+              {actions.length === 0 ? (
+                <tr>
+                  <td colSpan={6} className="text-center py-12 text-gray-400">
+                    No actions added yet. Click the + icon to add an action.
+                  </td>
+                </tr>
+              ) : (
+                actions.map((action) => (
+                  <tr 
+                    key={action.id} 
+                    className={`cursor-pointer transition-colors ${
+                      selectedAction?.id === action.id ? 'bg-gray-100' : 'hover:bg-gray-100'
+                    }`}
+                    onMouseEnter={() => handleActionSelect(action)}
+                  >
+                    <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
+                      {action.action}
+                    </td>
+                    <td className="px-3 py-4 text-sm text-gray-600 truncate">
+                      {action.input}
+                    </td>
+                    <td className="px-3 py-4 text-sm text-gray-600 truncate">
+                      {action.output}
+                    </td>
+                    <td className="px-3 py-4 text-sm text-gray-600 truncate">
+                      {action.description}
+                    </td>
+                    <td className="px-3 py-4 text-sm text-gray-600 truncate">
+                      {action.approval}
+                    </td>
+                    <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
+                      <button>
+                        <CircleMinus {...getIconProps()} />
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     );
