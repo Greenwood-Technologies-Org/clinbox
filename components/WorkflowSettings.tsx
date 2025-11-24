@@ -34,6 +34,8 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const [showBuilder, setShowBuilder] = useState(false);
   const [workflowName, setWorkflowName] = useState('');
   const [isEditingName, setIsEditingName] = useState(false);
+  const [workflowDescription, setWorkflowDescription] = useState('');
+  const [isEditingDescription, setIsEditingDescription] = useState(false);
   const [actions, setActions] = useState<WorkflowAction[]>([]);
   const [selectedAction, setSelectedAction] = useState<WorkflowAction | null>(null);
   const [editingField, setEditingField] = useState<{ actionId: string; field: keyof WorkflowAction } | null>(null);
@@ -122,11 +124,58 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
     setShowBuilder(false);
     setWorkflowName('');
     setIsEditingName(false);
+    setWorkflowDescription('');
+    setIsEditingDescription(false);
     onBuilderModeChange?.(false);
   };
 
   const handleSaveWorkflow = () => {
-    // For now, just go back to settings
+    // Validate required fields
+    if (!workflowName.trim()) {
+      alert('Missing: Workflow name is required');
+      return;
+    }
+
+    if (actions.length === 0) {
+      alert('Missing: At least one action is required');
+      return;
+    }
+
+    // Validate each action
+    for (let i = 0; i < actions.length; i++) {
+      const action = actions[i];
+      const missingFields = [];
+
+      if (!action.action.trim()) missingFields.push('Action name');
+      if (!action.input) missingFields.push('Input');
+      if (!action.output) missingFields.push('Output');
+      if (!action.description.trim()) missingFields.push('Description');
+      if (!action.approval) missingFields.push('Approval');
+
+      if (missingFields.length > 0) {
+        alert(`Missing in Action ${i + 1}: ${missingFields.join(', ')}`);
+        return;
+      }
+    }
+
+    // Create new workflow
+    const newWorkflow: Workflow = {
+      id: `workflow_${Date.now()}`,
+      name: workflowName,
+      description: workflowDescription || '',
+      modified: new Date().toISOString().split('T')[0],
+      approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No',
+      integrations: []
+    };
+
+    // Add to workflows list
+    setWorkflows([...workflows, newWorkflow]);
+    
+    // Select the new workflow
+    setSelectedWorkflow(newWorkflow);
+    onSelectWorkflow(newWorkflow);
+
+    // Go back to settings
     handleBackToSettings();
   };
 
@@ -204,7 +253,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
             <tbody className="bg-white">
               {actions.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="text-center py-12 text-gray-400">
+                  <td colSpan={6} className="text-center py-4 text-gray-400">
                     No actions added yet. Click the + icon to add an action.
                   </td>
                 </tr>
@@ -320,6 +369,35 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
               )}
             </tbody>
           </table>
+          
+          {/* Divider */}
+          <div className="px-0 py-0">
+            <div className="mx-6 border-b border-gray-200"></div>
+          </div>
+          
+          {/* Description Section */}
+          <div className="px-6 py-4">
+            {isEditingDescription ? (
+              <textarea
+                value={workflowDescription}
+                onChange={(e) => setWorkflowDescription(e.target.value)}
+                onBlur={() => setIsEditingDescription(false)}
+                className="w-full outline-none text-sm text-gray-900 resize-none"
+                placeholder="Description"
+                rows={3}
+                autoFocus
+              />
+            ) : (
+              <button
+                onClick={() => setIsEditingDescription(true)}
+                className={`w-full text-left text-sm ${
+                  workflowDescription ? 'text-gray-900' : 'text-gray-400'
+                }`}
+              >
+                {workflowDescription || 'Description'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     );
