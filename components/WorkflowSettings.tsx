@@ -13,11 +13,11 @@ interface Workflow {
   integrations: string[];
 }
 
-interface WorkflowsPageProps {
+interface WorkflowSettingsProps {
   onSelectWorkflow: (workflow: Workflow | null) => void;
 }
 
-export default function WorkflowsPage({ onSelectWorkflow }: WorkflowsPageProps) {
+export default function WorkflowSettings({ onSelectWorkflow }: WorkflowSettingsProps) {
   const [workflows, setWorkflows] = useState<Workflow[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedWorkflow, setSelectedWorkflow] = useState<Workflow | null>(null);
@@ -32,7 +32,7 @@ export default function WorkflowsPage({ onSelectWorkflow }: WorkflowsPageProps) 
   useEffect(() => {
     const loadWorkflows = async () => {
       try {
-        const response = await fetch('/api/emails/workflows_info.json');
+        const response = await fetch('/api/emails/workflow_settings.json');
         const data = await response.json();
         setWorkflows(data);
         if (data.length > 0) {

@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import MainContent from "@/components/MainContent";
 import SupplementaryPanel from "@/components/SupplementaryPanel";
 import DocsPage from "@/components/DocsPage";
-import WorkflowsPage from "@/components/WorkflowsPage";
+import WorkflowSettings from "@/components/WorkflowSettings";
 import { useState } from "react";
 
 interface SelectedEmail {
@@ -65,7 +65,7 @@ export default function RootLayout({
           {activeView === 'docs' ? (
             <DocsPage onSelectDocument={setSelectedDocument} />
           ) : activeView === 'workflows' ? (
-            <WorkflowsPage onSelectWorkflow={setSelectedWorkflow} />
+            <WorkflowSettings onSelectWorkflow={setSelectedWorkflow} />
           ) : (
             <MainContent 
               activeView={activeView} 
