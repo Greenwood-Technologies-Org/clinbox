@@ -344,11 +344,11 @@ export default function SupplementaryPanel({
               </div>
             )}
             {!selectedEmail.sender.email && <div className="mb-4"></div>}
-            <div className="border-b border-gray-200"></div>
           </div>
 
           {/* AI Section */}
           <div className="space-y-6">
+            <div className="border-b border-gray-200"></div>
             {/* AI Summary */}
             <div>
               <div className="flex items-center gap-2 mb-2">
@@ -360,106 +360,107 @@ export default function SupplementaryPanel({
               </p>
             </div>
 
-            {/* Quick Actions */}
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <Sparkle className="w-4 h-4" />
-                  <h3 className="font-medium">Quick Actions</h3>
+            {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 && (
+              <>
+                <div className="border-b border-gray-200"></div>
+                {/* Quick Actions */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <Sparkle className="w-4 h-4" />
+                      <h3 className="font-medium">Quick Actions</h3>
+                    </div>
+                    <button>
+                      <CirclePlus {...getIconProps()} />
+                    </button>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.aiAnalysis.quickActions.map((action, index) => (
+                      <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                        <span className="text-sm text-gray-700">{action}</span>
+                        <div className="flex items-center gap-2">
+                          <button className="hover:text-green-600 text-gray-400 transition-colors">
+                            <CircleCheck className="w-4 h-4" />
+                          </button>
+                          <button className="hover:text-red-600 text-gray-400 transition-colors">
+                            <CircleX className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <button>
-                  <CirclePlus {...getIconProps()} />
-                </button>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
-                  selectedEmail.aiAnalysis.quickActions.map((action, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                      <span className="text-sm text-gray-700">{action}</span>
-                      <div className="flex items-center gap-2">
-                        <button className="hover:text-green-600 text-gray-400 transition-colors">
-                          <CircleCheck className="w-4 h-4" />
-                        </button>
-                        <button className="hover:text-red-600 text-gray-400 transition-colors">
-                          <CircleX className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No quick actions</p>
-                )}
-              </div>
-            </div>
-            <div className="border-b border-gray-200"></div>
+              </>
+            )}
 
-            {/* Tasks */}
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <ListTodo className="w-4 h-4" />
-                  <h3 className="font-medium">Tasks</h3>
+            {selectedEmail.tasks && selectedEmail.tasks.length > 0 && (
+              <>
+                <div className="border-b border-gray-200"></div>
+                {/* Tasks */}
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <ListTodo className="w-4 h-4" />
+                      <h3 className="font-medium">Tasks</h3>
+                    </div>
+                    <button>
+                      <CirclePlus {...getIconProps()} />
+                    </button>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.tasks.map((task, index) => (
+                      <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                        <span className="text-sm text-gray-700">{task}</span>
+                        <div className="flex items-center gap-2">
+                          <button className="hover:text-green-600 text-gray-400 transition-colors">
+                            <CircleCheck className="w-4 h-4" />
+                          </button>
+                          <button className="hover:text-red-600 text-gray-400 transition-colors">
+                            <CircleX className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <button>
-                  <CirclePlus {...getIconProps()} />
-                </button>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.tasks && selectedEmail.tasks.length > 0 ? (
-                  selectedEmail.tasks.map((task, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                      <span className="text-sm text-gray-700">{task}</span>
-                      <div className="flex items-center gap-2">
-                        <button className="hover:text-green-600 text-gray-400 transition-colors">
-                          <CircleCheck className="w-4 h-4" />
-                        </button>
-                        <button className="hover:text-red-600 text-gray-400 transition-colors">
-                          <CircleX className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No tasks</p>
-                )}
-              </div>
-            </div>
-            <div className="border-b border-gray-200"></div>
+              </>
+            )}
+            {selectedEmail.attachments && selectedEmail.attachments.length > 0 && (
+              <>
+                <div className="border-b border-gray-200"></div>
 
-            {/* Attachments */}
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Paperclip className="w-4 h-4" />
-                <h3 className="font-medium">Attachments</h3>
-              </div>
-              <div className="space-y-2">
-                {selectedEmail.attachments && selectedEmail.attachments.length > 0 ? (
-                  selectedEmail.attachments.map((attachment, index) => (
-                    <div 
-                      key={index} 
-                      className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
-                    >
-                      {/* Filename */}
-                      <div className="text-sm text-gray-900 font-medium mb-2 truncate">
-                        {attachment.filename}
+                {/* Attachments */}
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Paperclip className="w-4 h-4" />
+                    <h3 className="font-medium">Attachments</h3>
+                  </div>
+                  <div className="space-y-2">
+                    {selectedEmail.attachments.map((attachment, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-gray-100 rounded-lg p-3 hover:bg-gray-200 transition-colors cursor-pointer"
+                      >
+                        {/* Filename */}
+                        <div className="text-sm text-gray-900 font-medium mb-2 truncate">
+                          {attachment.filename}
+                        </div>
+                        
+                        {/* File type tag and download icon */}
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
+                            {getFileType(attachment)}
+                          </span>
+                          <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                            <Download className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
-                      
-                      {/* File type tag and download icon */}
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-600 bg-white px-2 py-1 rounded">
-                          {getFileType(attachment)}
-                        </span>
-                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                          <Download className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-sm text-gray-400 py-2">No attachments</p>
-                )}
-              </div>
-            </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       );
