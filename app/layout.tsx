@@ -50,7 +50,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs' | 'workflows'>('email');
+  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
   const [selectedWorkflow, setSelectedWorkflow] = useState<SelectedWorkflow | null>(null);

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import EmailList from './EmailList';
 import OpenedEmail from './OpenedEmail';
 import Calendar from './Calendar';
+import WorkflowsList from './WorkflowsList';
 import type { Attachment } from '@/lib/email-utils';
 
 interface Email {
@@ -40,7 +41,7 @@ interface EmailAIAnalysis {
 
 interface MainContentProps {
   children: React.ReactNode;
-  activeView: 'email' | 'calendar';
+  activeView: 'email' | 'calendar' | 'workflows' | 'workflowslist';
   onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
 }
 
@@ -215,9 +216,11 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             }}
           />
         )
-      ) : (
+      ) : activeView === 'calendar' ? (
         <Calendar />
-      )}
+      ) : activeView === 'workflowslist' ? (
+        <WorkflowsList />
+      ) : null}
     </div>
   );
 }

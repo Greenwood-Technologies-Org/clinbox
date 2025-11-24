@@ -41,7 +41,7 @@ interface SupplementaryPanelProps {
     requiresApproval: string;
     integrations: string[];
   } | null;
-  activeView?: 'email' | 'calendar' | 'docs' | 'workflows';
+  activeView?: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist';
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
   showChat?: boolean;

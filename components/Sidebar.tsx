@@ -4,8 +4,8 @@ import { Mail, Calendar, TrendingUpDown, FileText, Settings, HelpCircle } from '
 import { getIconProps } from '@/lib/icon-utils';
 
 interface SidebarProps {
-  activeView: 'email' | 'calendar' | 'docs' | 'workflows';
-  setActiveView: (view: 'email' | 'calendar' | 'docs' | 'workflows') => void;
+  activeView: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist';
+  setActiveView: (view: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist') => void;
 }
 
 export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
@@ -19,6 +19,12 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
           <Mail {...getIconProps(activeView === 'email')} />
         </button>
         <button 
+          onClick={() => setActiveView('workflowslist')}
+          className="hover:bg-gray-50 rounded-lg transition-colors"
+        >
+          <TrendingUpDown {...getIconProps(activeView === 'workflowslist')} />
+        </button>
+        <button 
           onClick={() => setActiveView('calendar')}
           className="hover:bg-gray-50 rounded-lg transition-colors"
         >
@@ -29,12 +35,6 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
       <div className="flex-1" />
       
       <div className="flex flex-col gap-3">
-        <button 
-          onClick={() => setActiveView('workflows')}
-          className="hover:bg-gray-50 rounded-lg transition-colors"
-        >
-          <TrendingUpDown {...getIconProps(activeView === 'workflows')} />
-        </button>
         <button 
           onClick={() => setActiveView('docs')}
           className="hover:bg-gray-50 rounded-lg transition-colors"
