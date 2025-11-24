@@ -53,6 +53,18 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   };
 
+  const getFileTypeColor = (type: string) => {
+    const typeMap: Record<string, string> = {
+      'pdf': 'text-red-600',
+      'pptx': 'text-yellow-600',
+      'xlsx': 'text-green-600',
+      'docx': 'text-blue-600',
+      'txt': 'text-gray-600',
+      'csv': 'text-green-600'
+    };
+    return typeMap[type.toLowerCase()] || 'text-gray-800';
+  };
+
   return (
     <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
       <div className="flex-1 overflow-y-auto">
@@ -105,7 +117,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                     {doc.version}
                   </td>
                   <td className="px-3 py-4 text-sm truncate">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 uppercase">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 ${getFileTypeColor(doc.type)} uppercase`}>
                       {doc.type}
                     </span>
                   </td>
