@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, CircleCheck, Bell, Download, Paperclip } from 'lucide-react';
+import { ArrowLeft, ArrowUp, ArrowDown, CircleCheck, Bell, Download, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import { extractAttachmentsFromThread, type Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -26,9 +26,13 @@ interface OpenedEmailProps {
   filename?: string;
   onBack: () => void;
   onAttachmentsChange?: (attachments: Attachment[]) => void;
+  onNavigateUp?: () => void;
+  onNavigateDown?: () => void;
+  canNavigateUp?: boolean;
+  canNavigateDown?: boolean;
 }
 
-export default function OpenedEmail({ subject, filename, onBack, onAttachmentsChange }: OpenedEmailProps) {
+export default function OpenedEmail({ subject, filename, onBack, onAttachmentsChange, onNavigateUp, onNavigateDown, canNavigateUp = false, canNavigateDown = false }: OpenedEmailProps) {
   const [threadEmails, setThreadEmails] = useState<ThreadEmail[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [expandedEmailIds, setExpandedEmailIds] = useState<Set<string>>(new Set());
@@ -129,10 +133,26 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="px-4 pt-4 pb-6 flex items-center justify-between shrink-0">
-        {/* Left: Back Arrow */}
-        <button onClick={onBack}>
-          <ArrowLeft {...getIconProps()} />
-        </button>
+        {/* Left: Back Arrow and Navigation */}
+        <div className="flex items-center gap-3">
+          <button onClick={onBack}>
+            <ArrowLeft {...getIconProps()} />
+          </button>
+          <button 
+            onClick={onNavigateUp}
+            disabled={!canNavigateUp}
+            className={!canNavigateUp ? 'opacity-30 cursor-not-allowed' : ''}
+          >
+            <ArrowUp {...getIconProps()} />
+          </button>
+          <button 
+            onClick={onNavigateDown}
+            disabled={!canNavigateDown}
+            className={!canNavigateDown ? 'opacity-30 cursor-not-allowed' : ''}
+          >
+            <ArrowDown {...getIconProps()} />
+          </button>
+        </div>
 
         {/* Middle: Subject */}
         <h2 className="font-medium text-gray-900 truncate px-4">
@@ -142,10 +162,10 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
         {/* Right: Icons */}
         <div className="flex items-center gap-3">
           <button>
-            <CircleCheck {...getIconProps()} />
+            <Bell {...getIconProps()} />
           </button>
           <button>
-            <Bell {...getIconProps()} />
+            <CircleCheck {...getIconProps()} />
           </button>
         </div>
       </div>

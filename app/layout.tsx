@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import MainContent from "@/components/MainContent";
 import SupplementaryPanel from "@/components/SupplementaryPanel";
 import DocsPage from "@/components/DocsPage";
+import WorkflowSettings from "@/components/WorkflowSettings";
 import { useState } from "react";
 
 interface SelectedEmail {
@@ -35,16 +36,44 @@ interface SelectedDocument {
   type: string;
 }
 
+interface SelectedWorkflow {
+  id: string;
+  name: string;
+  description: string;
+  modified: string;
+  approval: string;
+  actions?: Array<{
+    actionNumber: number;
+    action: string;
+    input: string;
+    output: string;
+    description: string;
+    approval: string;
+  }>;
+}
+
+interface SelectedWorkflowEvent {
+  id: string;
+  workflowId: string;
+  workflowName: string;
+  eventDescription: string;
+  date: string;
+  status: string;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
+  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs' | 'workflows' | 'workflowsettings'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
+  const [selectedWorkflow, setSelectedWorkflow] = useState<SelectedWorkflow | null>(null);
+  const [selectedWorkflowEvent, setSelectedWorkflowEvent] = useState<SelectedWorkflowEvent | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
   const [showChat, setShowChat] = useState(false);
+  const [isWorkflowBuilder, setIsWorkflowBuilder] = useState(false);
 
   return (
     <html lang="en">
@@ -53,10 +82,16 @@ export default function RootLayout({
           <Sidebar activeView={activeView} setActiveView={setActiveView} />
           {activeView === 'docs' ? (
             <DocsPage onSelectDocument={setSelectedDocument} />
+          ) : activeView === 'workflowsettings' ? (
+            <WorkflowSettings 
+              onSelectWorkflow={setSelectedWorkflow} 
+              onBuilderModeChange={setIsWorkflowBuilder}
+            />
           ) : (
             <MainContent 
               activeView={activeView} 
               onSelectEmail={setSelectedEmail}
+              onSelectWorkflow={setSelectedWorkflowEvent}
             >
               {children}
             </MainContent>
@@ -64,11 +99,14 @@ export default function RootLayout({
           <SupplementaryPanel 
             selectedEmail={selectedEmail} 
             selectedDocument={selectedDocument}
-            isDocsView={activeView === 'docs'}
+            selectedWorkflow={selectedWorkflow}
+            selectedWorkflowEvent={selectedWorkflowEvent}
+            activeView={activeView}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
             showChat={showChat}
             onToggleChat={() => setShowChat(!showChat)}
+            isWorkflowBuilder={isWorkflowBuilder}
           />
         </div>
       </body>

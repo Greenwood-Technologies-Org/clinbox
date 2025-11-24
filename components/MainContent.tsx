@@ -1,10 +1,11 @@
 'use client';
 
-import { Menu, PenLine, Search } from 'lucide-react';
-import { getIconProps } from '@/lib/icon-utils';
 import { useState, useEffect } from 'react';
 import EmailList from './EmailList';
 import OpenedEmail from './OpenedEmail';
+import Calendar from './Calendar';
+import WorkflowsList from './WorkflowsList';
+import OpenedWorkflow from './OpenedWorkflow';
 import type { Attachment } from '@/lib/email-utils';
 
 interface Email {
@@ -37,13 +38,24 @@ interface EmailAIAnalysis {
   };
 }
 
-interface MainContentProps {
-  children: React.ReactNode;
-  activeView: 'email' | 'calendar';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
+interface WorkflowEvent {
+  id: string;
+  workflowId: string;
+  workflowName: string;
+  eventDescription: string;
+  date: string;
+  status: string;
+  triggerEmail: string | null;
 }
 
-export default function MainContent({ children, activeView, onSelectEmail }: MainContentProps) {
+interface MainContentProps {
+  children: React.ReactNode;
+  activeView: 'email' | 'calendar' | 'workflows';
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
+  onSelectWorkflow?: (workflow: { id: string; workflowId: string; workflowName: string; eventDescription: string; date: string; status: string } | null) => void;
+}
+
+export default function MainContent({ children, activeView, onSelectEmail, onSelectWorkflow }: MainContentProps) {
   const [activeGroup, setActiveGroup] = useState<string>('Important');
   const [emails, setEmails] = useState<Email[]>([]);
   const [emailData, setEmailData] = useState<EmailData>({});
@@ -53,6 +65,15 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
   const [viewMode, setViewMode] = useState<'list' | 'opened'>('list');
   const [openedEmailSubject, setOpenedEmailSubject] = useState<string>('');
   const [currentAttachments, setCurrentAttachments] = useState<Attachment[]>([]);
+
+  // Workflow state
+  const [workflows, setWorkflows] = useState<WorkflowEvent[]>([]);
+  const [allWorkflows, setAllWorkflows] = useState<WorkflowEvent[]>([]);
+  const [workflowsLoading, setWorkflowsLoading] = useState<boolean>(true);
+  const [selectedWorkflowEventId, setSelectedWorkflowEventId] = useState<string | null>(null);
+  const [workflowViewMode, setWorkflowViewMode] = useState<'list' | 'opened'>('list');
+  const [openedWorkflowName, setOpenedWorkflowName] = useState<string>('');
+  const [activeWorkflowFilter, setActiveWorkflowFilter] = useState<string>('All');
 
   // Helper function to load thread emails and extract attachments
   const loadThreadAttachments = async (filename: string): Promise<Attachment[]> => {
@@ -162,6 +183,72 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
     }
   }, [activeGroup, activeView]);
 
+  useEffect(() => {
+    const loadWorkflows = async () => {
+      setWorkflowsLoading(true);
+      try {
+        const response = await fetch('/api/emails/workflows.json');
+        const workflowsData: WorkflowEvent[] = await response.json();
+        setAllWorkflows(workflowsData);
+        
+        // Apply filter
+        const filteredWorkflows = filterWorkflows(workflowsData, activeWorkflowFilter);
+        
+        // Sort by date (most recent first)
+        filteredWorkflows.sort((a, b) => 
+          new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+        
+        setWorkflows(filteredWorkflows);
+        
+        // Select the first workflow by default
+        if (filteredWorkflows.length > 0 && onSelectWorkflow) {
+          const firstWorkflow = filteredWorkflows[0];
+          setSelectedWorkflowEventId(firstWorkflow.id);
+          onSelectWorkflow({
+            id: firstWorkflow.id,
+            workflowId: firstWorkflow.workflowId,
+            workflowName: firstWorkflow.workflowName,
+            eventDescription: firstWorkflow.eventDescription,
+            date: firstWorkflow.date,
+            status: firstWorkflow.status
+          });
+        }
+      } catch (error) {
+        console.error('Error loading workflows:', error);
+        setWorkflows([]);
+      } finally {
+        setWorkflowsLoading(false);
+      }
+    };
+
+    if (activeView === 'workflows') {
+      loadWorkflows();
+    }
+  }, [activeView, activeWorkflowFilter]);
+
+  const filterWorkflows = (workflowsData: WorkflowEvent[], filter: string): WorkflowEvent[] => {
+    if (filter === 'All') return workflowsData;
+    
+    const statusMap: { [key: string]: string[] } = {
+      'Pending': ['pending_approval'],
+      'In Progress': ['in_progress'],
+      'Completed': ['completed']
+    };
+    
+    const targetStatuses = statusMap[filter] || [];
+    return workflowsData.filter(wf => targetStatuses.includes(wf.status));
+  };
+
+  const handleWorkflowFilterChange = (filter: string) => {
+    setActiveWorkflowFilter(filter);
+    const filteredWorkflows = filterWorkflows(allWorkflows, filter);
+    filteredWorkflows.sort((a, b) => 
+      new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+    setWorkflows(filteredWorkflows);
+  };
+
   return (
     <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
       {activeView === 'email' ? (
@@ -193,6 +280,66 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             subject={openedEmailSubject}
             filename={selectedEmailFilename || undefined}
             onBack={() => setViewMode('list')}
+            onNavigateUp={() => {
+              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
+              if (currentIndex > 0) {
+                const prevEmail = emails[currentIndex - 1];
+                if (prevEmail.filename && emailData[prevEmail.filename]?.sender) {
+                  const subjectHeader = prevEmail.payload.headers.find(h => h.name === 'Subject');
+                  const subject = subjectHeader?.value || 'No Subject';
+                  setSelectedEmailFilename(prevEmail.filename);
+                  setOpenedEmailSubject(subject);
+                  
+                  Promise.all([
+                    loadThreadAttachments(prevEmail.filename),
+                    loadSenderEmail(prevEmail.filename)
+                  ]).then(([attachments, senderEmail]) => {
+                    onSelectEmail({
+                      filename: prevEmail.filename,
+                      sender: {
+                        ...emailData[prevEmail.filename!].sender!,
+                        email: senderEmail
+                      },
+                      aiAnalysis: emailAIAnalysis[prevEmail.filename!],
+                      tasks: emailData[prevEmail.filename!].tasks,
+                      hasAttachments: emailData[prevEmail.filename!].hasAttachments,
+                      attachments: attachments
+                    });
+                  });
+                }
+              }
+            }}
+            onNavigateDown={() => {
+              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
+              if (currentIndex < emails.length - 1) {
+                const nextEmail = emails[currentIndex + 1];
+                if (nextEmail.filename && emailData[nextEmail.filename]?.sender) {
+                  const subjectHeader = nextEmail.payload.headers.find(h => h.name === 'Subject');
+                  const subject = subjectHeader?.value || 'No Subject';
+                  setSelectedEmailFilename(nextEmail.filename);
+                  setOpenedEmailSubject(subject);
+                  
+                  Promise.all([
+                    loadThreadAttachments(nextEmail.filename),
+                    loadSenderEmail(nextEmail.filename)
+                  ]).then(([attachments, senderEmail]) => {
+                    onSelectEmail({
+                      filename: nextEmail.filename,
+                      sender: {
+                        ...emailData[nextEmail.filename!].sender!,
+                        email: senderEmail
+                      },
+                      aiAnalysis: emailAIAnalysis[nextEmail.filename!],
+                      tasks: emailData[nextEmail.filename!].tasks,
+                      hasAttachments: emailData[nextEmail.filename!].hasAttachments,
+                      attachments: attachments
+                    });
+                  });
+                }
+              }
+            }}
+            canNavigateUp={emails.findIndex(e => e.filename === selectedEmailFilename) > 0}
+            canNavigateDown={emails.findIndex(e => e.filename === selectedEmailFilename) < emails.length - 1}
             onAttachmentsChange={(attachments) => {
               setCurrentAttachments(attachments);
               if (selectedEmailFilename && emailData[selectedEmailFilename]?.sender) {
@@ -214,11 +361,41 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
             }}
           />
         )
-      ) : (
-        <div className="flex items-center justify-center h-full">
-          <h1 className="text-gray-400">Calendar</h1>
-        </div>
-      )}
+      ) : activeView === 'calendar' ? (
+        <Calendar />
+      ) : activeView === 'workflows' ? (
+        workflowViewMode === 'list' ? (
+          <WorkflowsList
+            workflows={workflows}
+            selectedWorkflowEventId={selectedWorkflowEventId}
+            loading={workflowsLoading}
+            activeFilter={activeWorkflowFilter}
+            onActiveFilterChange={handleWorkflowFilterChange}
+            onSelectWorkflow={(workflow) => {
+              if (onSelectWorkflow) {
+                onSelectWorkflow(workflow);
+              }
+            }}
+            onWorkflowHover={(workflow) => {
+              if (workflow && onSelectWorkflow) {
+                setSelectedWorkflowEventId(workflow.id);
+                onSelectWorkflow(workflow);
+              }
+            }}
+            onSetSelectedEventId={setSelectedWorkflowEventId}
+            onOpenWorkflow={(workflowName) => {
+              setOpenedWorkflowName(workflowName);
+              setWorkflowViewMode('opened');
+            }}
+          />
+        ) : (
+          <OpenedWorkflow 
+            workflowName={openedWorkflowName}
+            eventId={selectedWorkflowEventId || undefined}
+            onBack={() => setWorkflowViewMode('list')}
+          />
+        )
+      ) : null}
     </div>
   );
 }

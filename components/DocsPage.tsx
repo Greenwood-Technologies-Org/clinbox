@@ -20,14 +20,14 @@ interface DocsPageProps {
 export default function DocsPage({ onSelectDocument }: DocsPageProps) {
   const [documents, setDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
 
-  // Define column widths (must total 100%)
+  // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
-    name: 45,
-    modified: 18,
-    version: 13,
-    type: 14,
-    action: 10
+    name: 56,
+    modified: 20,
+    version: 10,
+    type: 14
   };
 
   useEffect(() => {
@@ -37,6 +37,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
         const data = await response.json();
         setDocuments(data);
         if (data.length > 0) {
+          setSelectedDoc(data[0]);
           onSelectDocument(data[0]);
         }
       } catch (error) {
@@ -54,6 +55,23 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   };
 
+  const getFileTypeColor = (type: string) => {
+    const typeMap: Record<string, string> = {
+      'pdf': 'text-red-600',
+      'pptx': 'text-yellow-600',
+      'xlsx': 'text-green-600',
+      'docx': 'text-blue-600',
+      'txt': 'text-gray-600',
+      'csv': 'text-green-600'
+    };
+    return typeMap[type.toLowerCase()] || 'text-gray-800';
+  };
+
+  const handleDocSelect = (doc: Document) => {
+    setSelectedDoc(doc);
+    onSelectDocument(doc);
+  };
+
   return (
     <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
       <div className="flex-1 overflow-y-auto">
@@ -65,7 +83,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
           <table className="w-full table-fixed">
             <thead className="bg-white sticky top-0">
               <tr>
-                <th style={{ width: `${columnWidths.name}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                <th style={{ width: `${columnWidths.name}%` }} className="pl-6 pr-3 py-3 text-left text-sm font-semibold text-black">
                   Name
                 </th>
                 <th style={{ width: `${columnWidths.modified}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
@@ -77,7 +95,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                 <th style={{ width: `${columnWidths.type}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
                   Type
                 </th>
-                <th style={{ width: `${columnWidths.action}%` }} className="px-3 py-3 text-right">
+                <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
                   <button>
                     <CirclePlus {...getIconProps()} />
                   </button>
@@ -93,10 +111,12 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
               {documents.map((doc) => (
                 <tr 
                   key={doc.id} 
-                  className="hover:bg-gray-50 cursor-pointer transition-colors"
-                  onMouseEnter={() => onSelectDocument(doc)}
+                  className={`cursor-pointer transition-colors ${
+                    selectedDoc?.id === doc.id ? 'bg-gray-100' : 'hover:bg-gray-100'
+                  }`}
+                  onMouseEnter={() => handleDocSelect(doc)}
                 >
-                  <td className="px-3 py-4 text-sm font-medium text-gray-900 truncate">
+                  <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
                     {doc.name}
                   </td>
                   <td className="px-3 py-4 text-sm text-gray-600 truncate">
@@ -106,11 +126,11 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                     {doc.version}
                   </td>
                   <td className="px-3 py-4 text-sm truncate">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800 uppercase">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-gray-100 ${getFileTypeColor(doc.type)} uppercase`}>
                       {doc.type}
                     </span>
                   </td>
-                  <td className="px-3 py-4 text-right">
+                  <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
                     <button>
                       <CircleMinus {...getIconProps()} />
                     </button>
