@@ -20,7 +20,7 @@
         "input": "Email",
         "output": "EDC",
         "description": "Check if values are normal, if so log results in EDC",
-        "approval": "No"
+        "approval": "Yes"
       }
     ]
   },

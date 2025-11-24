@@ -244,8 +244,11 @@ export default function SupplementaryPanel({
     if (activeView === 'workflowsettings') {
       if (isWorkflowBuilder) {
         return (
-          <div className="py-3 px-4">
-            <h2 className="text-lg font-semibold mb-4">New Workflow</h2>
+          <div>
+            <div className="flex items-center justify-center py-3 px-4">
+              <h2 className="text-base font-semibold text-gray-900">Workflow Builder</h2>
+            </div>
+            <div className="border-b border-gray-200"></div>
           </div>
         );
       }
