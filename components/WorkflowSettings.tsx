@@ -11,6 +11,14 @@ interface Workflow {
   modified: string;
   approval: string;
   integrations: string[];
+  actions?: Array<{
+    actionNumber: number;
+    action: string;
+    input: string;
+    output: string;
+    description: string;
+    approval: string;
+  }>;
 }
 
 interface WorkflowAction {
@@ -39,6 +47,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const [actions, setActions] = useState<WorkflowAction[]>([]);
   const [selectedAction, setSelectedAction] = useState<WorkflowAction | null>(null);
   const [editingField, setEditingField] = useState<{ actionId: string; field: keyof WorkflowAction } | null>(null);
+  const [editingWorkflowId, setEditingWorkflowId] = useState<string | null>(null);
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
@@ -117,7 +126,47 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
 
   const handleAddWorkflow = () => {
     setShowBuilder(true);
+    setEditingWorkflowId(null);
+    setActions([]);
+    setWorkflowName('');
+    setWorkflowDescription('');
     onBuilderModeChange?.(true);
+  };
+
+  const handleEditWorkflow = (workflow: Workflow) => {
+    setShowBuilder(true);
+    setEditingWorkflowId(workflow.id);
+    setWorkflowName(workflow.name);
+    setWorkflowDescription(workflow.description);
+    // Load actions from workflow if they exist
+    if (workflow.actions && workflow.actions.length > 0) {
+      const loadedActions: WorkflowAction[] = workflow.actions.map((a, index) => ({
+        id: `action-${Date.now()}-${index}`,
+        action: a.action,
+        input: a.input,
+        output: a.output,
+        description: a.description,
+        approval: a.approval
+      }));
+      setActions(loadedActions);
+    } else {
+      setActions([]);
+    }
+    onBuilderModeChange?.(true);
+  };
+
+  const handleDeleteWorkflow = (workflowId: string) => {
+    if (confirm('Are you sure you want to delete this workflow?')) {
+      const updatedWorkflows = workflows.filter(w => w.id !== workflowId);
+      setWorkflows(updatedWorkflows);
+      
+      // Clear selection if deleted workflow was selected
+      if (selectedWorkflow?.id === workflowId) {
+        const newSelection = updatedWorkflows.length > 0 ? updatedWorkflows[0] : null;
+        setSelectedWorkflow(newSelection);
+        onSelectWorkflow(newSelection);
+      }
+    }
   };
 
   const handleBackToSettings = () => {
@@ -126,6 +175,8 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
     setIsEditingName(false);
     setWorkflowDescription('');
     setIsEditingDescription(false);
+    setEditingWorkflowId(null);
+    setActions([]);
     onBuilderModeChange?.(false);
   };
 
@@ -158,22 +209,43 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
       }
     }
 
-    // Create new workflow
-    const newWorkflow: Workflow = {
-      id: `workflow_${Date.now()}`,
-      name: workflowName,
-      description: workflowDescription || '',
-      modified: new Date().toISOString().split('T')[0],
-      approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No',
-      integrations: []
-    };
+    if (editingWorkflowId) {
+      // Update existing workflow
+      const updatedWorkflows = workflows.map(w => 
+        w.id === editingWorkflowId ? {
+          ...w,
+          name: workflowName,
+          description: workflowDescription || '',
+          modified: new Date().toISOString().split('T')[0],
+          approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No'
+        } : w
+      );
+      setWorkflows(updatedWorkflows);
+      
+      const updatedWorkflow = updatedWorkflows.find(w => w.id === editingWorkflowId);
+      if (updatedWorkflow) {
+        setSelectedWorkflow(updatedWorkflow);
+        onSelectWorkflow(updatedWorkflow);
+      }
+    } else {
+      // Create new workflow
+      const newWorkflow: Workflow = {
+        id: `workflow_${Date.now()}`,
+        name: workflowName,
+        description: workflowDescription || '',
+        modified: new Date().toISOString().split('T')[0],
+        approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No',
+        integrations: []
+      };
 
-    // Add to workflows list
-    setWorkflows([...workflows, newWorkflow]);
-    
-    // Select the new workflow
-    setSelectedWorkflow(newWorkflow);
-    onSelectWorkflow(newWorkflow);
+      // Add to workflows list
+      const updatedWorkflows = [...workflows, newWorkflow];
+      setWorkflows(updatedWorkflows);
+      
+      // Select the new workflow
+      setSelectedWorkflow(newWorkflow);
+      onSelectWorkflow(newWorkflow);
+    }
 
     // Go back to settings
     handleBackToSettings();
@@ -443,6 +515,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                     selectedWorkflow?.id === workflow.id ? 'bg-gray-100' : 'hover:bg-gray-100'
                   }`}
                   onMouseEnter={() => handleWorkflowSelect(workflow)}
+                  onClick={() => handleEditWorkflow(workflow)}
                 >
                   <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
                     {workflow.name}
@@ -454,7 +527,12 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                     {formatDate(workflow.modified)}
                   </td>
                   <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
-                    <button>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteWorkflow(workflow.id);
+                      }}
+                    >
                       <CircleMinus {...getIconProps()} />
                     </button>
                   </td>
