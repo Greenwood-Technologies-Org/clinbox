@@ -1,13 +1,14 @@
 {
-  "id": "9d2682367c3935de",
-  "threadId": "9d2682367c3935de",
+  "id": "4d7c3e8f2a9b1d56",
+  "threadId": "4d7c3e8f2a9b1d56",
   "labelIds": [
     "INBOX",
-    "UNREAD"
+    "UNREAD",
+    "IMPORTANT"
   ],
-  "snippet": "Hi Maria, Hope you are having a good week. I'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I ...",
-  "historyId": "1721057400",
-  "internalDate": "1721057400000",
+  "snippet": "Dear Denali Study Team, This is an urgent notification regarding a Serious Adverse Event (SAE) reported for patient 307-024 enrolled in the DNLI-789 Ph...",
+  "historyId": "1732441200",
+  "internalDate": "1732441200000",
   "payload": {
     "partId": "",
     "mimeType": "multipart/alternative",
@@ -19,31 +20,31 @@
       },
       {
         "name": "Return-Path",
-        "value": "<alex.johnson@denalitx.com>"
+        "value": "<jennifer.martinez@ucsf.edu>"
       },
       {
         "name": "From",
-        "value": "alex.johnson@denalitx.com"
+        "value": "jennifer.martinez@ucsf.edu"
       },
       {
         "name": "To",
-        "value": "m.garcia@summitclinical.com"
+        "value": "alex.johnson@denalitx.com, study.DNLI-789@denalitx.com"
       },
       {
         "name": "Cc",
-        "value": "d.chen@syneos.com"
+        "value": "dr.robert.kim@ucsf.edu, safety@denalitx.com"
       },
       {
         "name": "Subject",
-        "value": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
+        "value": "URGENT: Serious Adverse Event Report - Study DNLI-789 - Patient 307-024"
       },
       {
         "name": "Date",
-        "value": "2024-07-15T10:30:00-05:00"
+        "value": "2024-11-24T10:10:00-08:00"
       },
       {
         "name": "Message-ID",
-        "value": "<1654@mail.example.com>"
+        "value": "<1732441200@ucsf.edu>"
       },
       {
         "name": "MIME-Version",
@@ -55,7 +56,7 @@
       }
     ],
     "body": {
-      "size": 469
+      "size": 387
     },
     "parts": [
       {
@@ -69,25 +70,45 @@
           }
         ],
         "body": {
-          "size": 469,
-          "data": "SGkgTWFyaWEsCgpIb3BlIHlvdSBhcmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKSSdtIHdyaXRpbmcgdG8gc2NoZWR1bGUgdGhlIHVwY29taW5nIFEzIEludGVyaW0gTW9uaXRvcmluZyBWaXNpdCBmb3IgdGhlIEROTEktMTIzLTAxIHN0dWR5IGF0IHlvdXIgc2l0ZS4gSSB3b3VsZCBsaWtlIHRvIHByb3Bvc2UgdGhlIHdlZWsgb2YgQXVndXN0IDV0aCBvciB0aGUgd2VlayBvZiBBdWd1c3QgMTJ0aCBmb3IgdGhlIHZpc2l0LgoKUGxlYXNlIGxldCBtZSBrbm93IHdoaWNoIG9mIHRoZXNlIHdlZWtzIHdvcmtzIGJlc3QgZm9yIHlvdSBhbmQgRHIuIFJlZWQncyBhdmFpbGFiaWxpdHkuIE9uY2Ugd2UgaGF2ZSBhIHdlZWsgc2VsZWN0ZWQsIHdlIGNhbiBsb2NrIGluIHRoZSBzcGVjaWZpYyBkYXRlcy4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
+          "size": 387,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpQYXRpZW50IDMwNy0wMjQgaGFzIGV4cGVyaWVuY2VkIGEgU2VyaW91cyBBZHZlcnNlIEV2ZW50IGluIFN0dWR5IEROTEktNzg5LiBGb2xsb3ctdXAgaW5mb3JtYXRpb24gd2lsbCBiZSBwcm92aWRlZCBhcyBpdCBiZWNvbWVzIGF2YWlsYWJsZS4gRHIuIFJvYmVydCBLaW0gKFByaW5jaXBhbCBJbnZlc3RpZ2F0b3IpIGlzIGF3YWl0aW5nIGZ1cnRoZXIgZ3VpZGFuY2Ugb24gbmV4dCBzdGVwcy4KClBsZWFzZSBmaW5kIHRoZSBhdHRhY2hlZCBTQUUgcmVwb3J0IGZvcm0uCgpCZXN0IHJlZ2FyZHMsCgpKZW5uaWZlciBNYXJ0aW5leiwgUlNOCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVDU0YgRGVwYXJ0bWVudCBvZiBOZXVyb2xvZ3kKU2l0ZSAzMDcKamVubmlmZXIubWFydGluZXpAdWNzZi5lZHUKKDQxNSkgNTU1LTAyODk"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "SAE_Report_DNLI-789_307-024_Initial.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"SAE_Report_DNLI-789_307-024_Initial.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "7e5d3a8c1f9b2e4d",
+          "size": 0
         }
       }
     ]
   },
-  "sizeEstimate": 1469,
+  "sizeEstimate": 1892,
   "raw": null,
   "threadEmails": [
     {
-      "id": "9d2682367c3935de",
-      "threadId": "9d2682367c3935de",
+      "id": "4d7c3e8f2a9b1d56",
+      "threadId": "4d7c3e8f2a9b1d56",
       "labelIds": [
         "INBOX",
-        "UNREAD"
+        "UNREAD",
+        "IMPORTANT"
       ],
-      "snippet": "Hi Maria, Hope you are having a good week. I'm writing to schedule the upcoming Q3 Interim Monitoring Visit for the DNLI-123-01 study at your site. I ...",
-      "historyId": "1721057400",
-      "internalDate": "1721057400000",
+      "snippet": "Dear Alex Johnson, Patient 307-024 has experienced a Serious Adverse Event in Study DNLI-789. Follow-up information will be provided as it becomes avai...",
+      "historyId": "1732441200",
+      "internalDate": "1732441200000",
       "payload": {
         "partId": "",
         "mimeType": "multipart/alternative",
@@ -99,31 +120,31 @@
           },
           {
             "name": "Return-Path",
-            "value": "<alex.johnson@denalitx.com>"
+            "value": "<jennifer.martinez@ucsf.edu>"
           },
           {
             "name": "From",
-            "value": "alex.johnson@denalitx.com"
+            "value": "jennifer.martinez@ucsf.edu"
           },
           {
             "name": "To",
-            "value": "m.garcia@summitclinical.com"
+            "value": "alex.johnson@denalitx.com, study.DNLI-789@denalitx.com"
           },
           {
             "name": "Cc",
-            "value": "d.chen@syneos.com"
+            "value": "dr.robert.kim@ucsf.edu, safety@denalitx.com"
           },
           {
             "name": "Subject",
-            "value": "DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
+            "value": "URGENT: Serious Adverse Event Report - Study DNLI-789 - Patient 307-024"
           },
           {
             "name": "Date",
-            "value": "2024-07-15T10:30:00-05:00"
+            "value": "2024-11-24T10:10:00-08:00"
           },
           {
             "name": "Message-ID",
-            "value": "<1654@mail.example.com>"
+            "value": "<1732441200@ucsf.edu>"
           },
           {
             "name": "MIME-Version",
@@ -135,7 +156,7 @@
           }
         ],
         "body": {
-          "size": 469
+          "size": 387
         },
         "parts": [
           {
@@ -149,100 +170,32 @@
               }
             ],
             "body": {
-              "size": 469,
-              "data": "SGkgTWFyaWEsCgpIb3BlIHlvdSBhcmUgaGF2aW5nIGEgZ29vZCB3ZWVrLgoKSSdtIHdyaXRpbmcgdG8gc2NoZWR1bGUgdGhlIHVwY29taW5nIFEzIEludGVyaW0gTW9uaXRvcmluZyBWaXNpdCBmb3IgdGhlIEROTEktMTIzLTAxIHN0dWR5IGF0IHlvdXIgc2l0ZS4gSSB3b3VsZCBsaWtlIHRvIHByb3Bvc2UgdGhlIHdlZWsgb2YgQXVndXN0IDV0aCBvciB0aGUgd2VlayBvZiBBdWd1c3QgMTJ0aCBmb3IgdGhlIHZpc2l0LgoKUGxlYXNlIGxldCBtZSBrbm93IHdoaWNoIG9mIHRoZXNlIHdlZWtzIHdvcmtzIGJlc3QgZm9yIHlvdSBhbmQgRHIuIFJlZWQncyBhdmFpbGFiaWxpdHkuIE9uY2Ugd2UgaGF2ZSBhIHdlZWsgc2VsZWN0ZWQsIHdlIGNhbiBsb2NrIGluIHRoZSBzcGVjaWZpYyBkYXRlcy4KCkJlc3QgcmVnYXJkcywKCkFsZXggSm9obnNvbgpDbGluaWNhbCBSZXNlYXJjaCBBc3NvY2lhdGUKRGVuYWxpIFRoZXJhcGV1dGljcw"
+              "size": 387,
+              "data": "RGVhciBBbGV4IEpvaG5zb24sCgpQYXRpZW50IDMwNy0wMjQgaGFzIGV4cGVyaWVuY2VkIGEgU2VyaW91cyBBZHZlcnNlIEV2ZW50IGluIFN0dWR5IEROTEktNzg5LiBGb2xsb3ctdXAgaW5mb3JtYXRpb24gd2lsbCBiZSBwcm92aWRlZCBhcyBpdCBiZWNvbWVzIGF2YWlsYWJsZS4gRHIuIFJvYmVydCBLaW0gKFByaW5jaXBhbCBJbnZlc3RpZ2F0b3IpIGlzIGF3YWl0aW5nIGZ1cnRoZXIgZ3VpZGFuY2Ugb24gbmV4dCBzdGVwcy4KClBsZWFzZSBmaW5kIHRoZSBhdHRhY2hlZCBTQUUgcmVwb3J0IGZvcm0uCgpCZXN0IHJlZ2FyZHMsCgpKZW5uaWZlciBNYXJ0aW5leiwgUlNOCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVDU0YgRGVwYXJ0bWVudCBvZiBOZXVyb2xvZ3kKU2l0ZSAzMDcKamVubmlmZXIubWFydGluZXpAdWNzZi5lZHUKKDQxNSkgNTU1LTAyODk"
             }
-          }
-        ]
-      },
-      "sizeEstimate": 1469,
-      "raw": null
-    },
-    {
-      "id": "cc42acc8ce334185",
-      "threadId": "9d2682367c3935de",
-      "labelIds": [
-        "INBOX"
-      ],
-      "snippet": "Hi Alex, Thanks for reaching out. Unfortunately, Dr. Reed will be on vacation for the first three weeks of August, so the weeks of the 5th and 12th wi...",
-      "historyId": "1721159100",
-      "internalDate": "1721159100000",
-      "payload": {
-        "partId": "",
-        "mimeType": "multipart/alternative",
-        "filename": "",
-        "headers": [
-          {
-            "name": "Delivered-To",
-            "value": "alex.johnson@denalitx.com"
           },
           {
-            "name": "Return-Path",
-            "value": "<m.garcia@summitclinical.com>"
-          },
-          {
-            "name": "From",
-            "value": "m.garcia@summitclinical.com"
-          },
-          {
-            "name": "To",
-            "value": "alex.johnson@denalitx.com"
-          },
-          {
-            "name": "Cc",
-            "value": "d.chen@syneos.com"
-          },
-          {
-            "name": "Subject",
-            "value": "Re: DNLI-123-01: Scheduling Q3 2024 Interim Monitoring Visit (IMV) - Site 101"
-          },
-          {
-            "name": "Date",
-            "value": "2024-07-16T14:45:00-05:00"
-          },
-          {
-            "name": "Message-ID",
-            "value": "<1655@mail.example.com>"
-          },
-          {
-            "name": "MIME-Version",
-            "value": "1.0"
-          },
-          {
-            "name": "Content-Type",
-            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
-          },
-          {
-            "name": "In-Reply-To",
-            "value": "<1654@mail.example.com>"
-          },
-          {
-            "name": "References",
-            "value": "<1654@mail.example.com>"
-          }
-        ],
-        "body": {
-          "size": 405
-        },
-        "parts": [
-          {
-            "partId": "0",
-            "mimeType": "text/plain",
-            "filename": "",
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "SAE_Report_DNLI-789_307-024_Initial.pdf",
             "headers": [
               {
                 "name": "Content-Type",
-                "value": "text/plain; charset=\"UTF-8\""
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"SAE_Report_DNLI-789_307-024_Initial.pdf\""
               }
             ],
             "body": {
-              "size": 405,
-              "data": "SGkgQWxleCwKClRoYW5rcyBmb3IgcmVhY2hpbmcgb3V0LgoKVW5mb3J0dW5hdGVseSwgRHIuIFJlZWQgd2lsbCBiZSBvbiB2YWNhdGlvbiBmb3IgdGhlIGZpcnN0IHRocmVlIHdlZWtzIG9mIEF1Z3VzdCwgc28gdGhlIHdlZWtzIG9mIHRoZSA1dGggYW5kIDEydGggd2lsbCBub3Qgd29yayBmb3IgdXMuCgpXb3VsZCB0aGUgd2VlayBvZiBBdWd1c3QgMjZ0aCBiZSBhIHBvc3NpYmlsaXR5IGZvciB5b3U_IFdlIGhhdmUgZ29vZCBhdmFpbGFiaWxpdHkgb24gQXVndXN0IDI3LTI4LgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHRoYXQgd29ya3MgZm9yIHlvdXIgc2NoZWR1bGUuCgpUaGFuayB5b3UsCgpNYXJpYSBHYXJjaWEKQ2xpbmljYWwgUmVzZWFyY2ggQ29vcmRpbmF0b3IKU3VtbWl0IENsaW5pY2FsIFJlc2VhcmNo"
+              "attachmentId": "7e5d3a8c1f9b2e4d",
+              "size": 0
             }
           }
         ]
       },
-      "sizeEstimate": 1405,
+      "sizeEstimate": 1387,
       "raw": null
     }
   ]

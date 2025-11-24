@@ -1,14 +1,14 @@
 {
-  "id": "39871d214db95e65",
-  "threadId": "39871d214db95e65",
+  "id": "18a72f3c8e9d4b21",
+  "threadId": "18a72f3c8e9d4b21",
   "labelIds": [
     "INBOX",
     "UNREAD",
     "IMPORTANT"
   ],
-  "snippet": "Dear Study Team, Please see the attached Serious Adverse Event (SAE) form for patient 101-005 enrolled in Part B of the DNLI-123 study. The patient wa...",
-  "historyId": "1698077730",
-  "internalDate": "1698077730000",
+  "snippet": "Dear Denali Therapeutics Study Team, Please find attached the brain MRI volumetric analysis results for patient 203-012 from the DNLI-456 Phase 2b stud...",
+  "historyId": "1732435200",
+  "internalDate": "1732435200000",
   "payload": {
     "partId": "",
     "mimeType": "multipart/alternative",
@@ -20,31 +20,31 @@
       },
       {
         "name": "Return-Path",
-        "value": "<maria.garcia@med.ucla.edu>"
+        "value": "<results@dupliplex-imaging.com>"
       },
       {
         "name": "From",
-        "value": "maria.garcia@med.ucla.edu"
+        "value": "results@dupliplex-imaging.com"
       },
       {
         "name": "To",
-        "value": "alex.johnson@denalitx.com, study.DNLI-123@cro-syneos.com"
+        "value": "alex.johnson@denalitx.com, study.DNLI-456@denalitx.com"
       },
       {
         "name": "Cc",
-        "value": "robert.chen@med.ucla.edu, sarah.lee@cro-syneos.com"
+        "value": "imaging-qa@dupliplex-imaging.com"
       },
       {
         "name": "Subject",
-        "value": "URGENT: New SAE Report - Study DNLI-123 - Site 101 (UCLA) - Patient 101-005"
+        "value": "Dupliplex Imaging Results - Study DNLI-456 - Patient 203-012"
       },
       {
         "name": "Date",
-        "value": "2023-10-23T09:15:30-07:00"
+        "value": "2024-11-24T08:30:00-08:00"
       },
       {
         "name": "Message-ID",
-        "value": "<1671819300@mail.example.com>"
+        "value": "<1732435200@dupliplex-imaging.com>"
       },
       {
         "name": "MIME-Version",
@@ -56,7 +56,7 @@
       }
     ],
     "body": {
-      "size": 399
+      "size": 312
     },
     "parts": [
       {
@@ -70,14 +70,14 @@
           }
         ],
         "body": {
-          "size": 399,
-          "data": "RGVhciBTdHVkeSBUZWFtLAoKUGxlYXNlIHNlZSB0aGUgYXR0YWNoZWQgU2VyaW91cyBBZHZlcnNlIEV2ZW50IChTQUUpIGZvcm0gZm9yIHBhdGllbnQgMTAxLTAwNSBlbnJvbGxlZCBpbiBQYXJ0IEIgb2YgdGhlIEROTEktMTIzIHN0dWR5LgoKVGhlIHBhdGllbnQgd2FzIGhvc3BpdGFsaXplZCB5ZXN0ZXJkYXkgZXZlbmluZyBmb3IgcG5ldW1vbmlhLgoKUGxlYXNlIGNvbmZpcm0gcmVjZWlwdCBvZiB0aGlzIHJlcG9ydCBhbmQgbGV0IHVzIGtub3cgdGhlIG5leHQgc3RlcHMuCgpCZXN0IHJlZ2FyZHMsCgpNYXJpYSBHYXJjaWEKQ2xpbmljYWwgUmVzZWFyY2ggQ29vcmRpbmF0b3IKVUNMQSBEZXBhcnRtZW50IG9mIE5ldXJvbG9neQooMzEwKSA1NTUtMTIzNAptYXJpYS5nYXJjaWFAbWVkLnVjbGEuZWR1"
+          "size": 312,
+          "data": "UGxlYXNlIGZpbmQgYXR0YWNoZWQgdGhlIGJyYWluIE1SSSB2b2x1bWV0cmljIGFuYWx5c2lzIHJlc3VsdHMgZm9yIHBhdGllbnQgMjAzLTAxMiBmcm9tIHRoZSBETkxJLTQ1NiBQaGFzZSAyYiBzdHVkeS4KClNjYW4gRGF0ZTogTm92ZW1iZXIgMjEsIDIwMjQKU3R1ZHkgVmlzaXQ6IFdlZWsgMjQgRm9sbG93LVVwClNpdGU6IDIwMyAtIFN0YW5mb3JkIE1lZGljYWwgQ2VudGVyCgpCZXN0IHJlZ2FyZHMsCgpEdXBsaXBsZXggSW1hZ2luZyBTZXJ2aWNlcwpDZW50cmFsIEltYWdpbmcgTGFiCnJlc3VsdHNAZHVwbGlwbGV4LWltYWdpbmcuY29tCis1NjcgKDU1NSkgMDEyMy00NTY3"
         }
       },
       {
         "partId": "1",
         "mimeType": "application/pdf",
-        "filename": "SAE_Report_DNLI-123_101-005_Initial.pdf",
+        "filename": "DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf",
         "headers": [
           {
             "name": "Content-Type",
@@ -85,30 +85,30 @@
           },
           {
             "name": "Content-Disposition",
-            "value": "attachment; filename=\"SAE_Report_DNLI-123_101-005_Initial.pdf\""
+            "value": "attachment; filename=\"DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf\""
           }
         ],
         "body": {
-          "attachmentId": "2f7808e9a7bb985c",
+          "attachmentId": "8f9a2c5e7b3d1f4c",
           "size": 0
         }
       }
     ]
   },
-  "sizeEstimate": 1399,
+  "sizeEstimate": 1687,
   "raw": null,
   "threadEmails": [
     {
-      "id": "39871d214db95e65",
-      "threadId": "39871d214db95e65",
+      "id": "18a72f3c8e9d4b21",
+      "threadId": "18a72f3c8e9d4b21",
       "labelIds": [
         "INBOX",
         "UNREAD",
         "IMPORTANT"
       ],
-      "snippet": "Dear Study Team, Please see the attached Serious Adverse Event (SAE) form for patient 101-005 enrolled in Part B of the DNLI-123 study. The patient wa...",
-      "historyId": "1698077730",
-      "internalDate": "1698077730000",
+      "snippet": "Please find attached the brain MRI volumetric analysis results for patient 203-012 from the DNLI-456 Phase 2b study. Scan Date: November 21, 2024 Stu...",
+      "historyId": "1732435200",
+      "internalDate": "1732435200000",
       "payload": {
         "partId": "",
         "mimeType": "multipart/alternative",
@@ -120,31 +120,31 @@
           },
           {
             "name": "Return-Path",
-            "value": "<maria.garcia@med.ucla.edu>"
+            "value": "<results@dupliplex-imaging.com>"
           },
           {
             "name": "From",
-            "value": "maria.garcia@med.ucla.edu"
+            "value": "results@dupliplex-imaging.com"
           },
           {
             "name": "To",
-            "value": "alex.johnson@denalitx.com, study.DNLI-123@cro-syneos.com"
+            "value": "alex.johnson@denalitx.com, study.DNLI-456@denalitx.com"
           },
           {
             "name": "Cc",
-            "value": "robert.chen@med.ucla.edu, sarah.lee@cro-syneos.com"
+            "value": "imaging-qa@dupliplex-imaging.com"
           },
           {
             "name": "Subject",
-            "value": "URGENT: New SAE Report - Study DNLI-123 - Site 101 (UCLA) - Patient 101-005"
+            "value": "Dupliplex Imaging Results - Study DNLI-456 - Patient 203-012"
           },
           {
             "name": "Date",
-            "value": "2023-10-23T09:15:30-07:00"
+            "value": "2024-11-24T08:30:00-08:00"
           },
           {
             "name": "Message-ID",
-            "value": "<1671819300@mail.example.com>"
+            "value": "<1732435200@dupliplex-imaging.com>"
           },
           {
             "name": "MIME-Version",
@@ -156,7 +156,7 @@
           }
         ],
         "body": {
-          "size": 399
+          "size": 312
         },
         "parts": [
           {
@@ -170,14 +170,14 @@
               }
             ],
             "body": {
-              "size": 399,
-              "data": "RGVhciBTdHVkeSBUZWFtLAoKUGxlYXNlIHNlZSB0aGUgYXR0YWNoZWQgU2VyaW91cyBBZHZlcnNlIEV2ZW50IChTQUUpIGZvcm0gZm9yIHBhdGllbnQgMTAxLTAwNSBlbnJvbGxlZCBpbiBQYXJ0IEIgb2YgdGhlIEROTEktMTIzIHN0dWR5LgoKVGhlIHBhdGllbnQgd2FzIGhvc3BpdGFsaXplZCB5ZXN0ZXJkYXkgZXZlbmluZyBmb3IgcG5ldW1vbmlhLgoKUGxlYXNlIGNvbmZpcm0gcmVjZWlwdCBvZiB0aGlzIHJlcG9ydCBhbmQgbGV0IHVzIGtub3cgdGhlIG5leHQgc3RlcHMuCgpCZXN0IHJlZ2FyZHMsCgpNYXJpYSBHYXJjaWEKQ2xpbmljYWwgUmVzZWFyY2ggQ29vcmRpbmF0b3IKVUNMQSBEZXBhcnRtZW50IG9mIE5ldXJvbG9neQooMzEwKSA1NTUtMTIzNAptYXJpYS5nYXJjaWFAbWVkLnVjbGEuZWR1"
+              "size": 312,
+              "data": "UGxlYXNlIGZpbmQgYXR0YWNoZWQgdGhlIGJyYWluIE1SSSB2b2x1bWV0cmljIGFuYWx5c2lzIHJlc3VsdHMgZm9yIHBhdGllbnQgMjAzLTAxMiBmcm9tIHRoZSBETkxJLTQ1NiBQaGFzZSAyYiBzdHVkeS4KClNjYW4gRGF0ZTogTm92ZW1iZXIgMjEsIDIwMjQKU3R1ZHkgVmlzaXQ6IFdlZWsgMjQgRm9sbG93LVVwClNpdGU6IDIwMyAtIFN0YW5mb3JkIE1lZGljYWwgQ2VudGVyCgpCZXN0IHJlZ2FyZHMsCgpEdXBsaXBsZXggSW1hZ2luZyBTZXJ2aWNlcwpDZW50cmFsIEltYWdpbmcgTGFiCnJlc3VsdHNAZHVwbGlwbGV4LWltYWdpbmcuY29tCis1NjcgKDU1NSkgMDEyMy00NTY3"
             }
           },
           {
             "partId": "1",
             "mimeType": "application/pdf",
-            "filename": "SAE_Report_DNLI-123_101-005_Initial.pdf",
+            "filename": "DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf",
             "headers": [
               {
                 "name": "Content-Type",
@@ -185,105 +185,17 @@
               },
               {
                 "name": "Content-Disposition",
-                "value": "attachment; filename=\"SAE_Report_DNLI-123_101-005_Initial.pdf\""
+                "value": "attachment; filename=\"DNLI-456_203-012_Week24_MRI_VolumetricAnalysis.pdf\""
               }
             ],
             "body": {
-              "attachmentId": "2f7808e9a7bb985c",
+              "attachmentId": "8f9a2c5e7b3d1f4c",
               "size": 0
             }
           }
         ]
       },
-      "sizeEstimate": 1399,
-      "raw": null
-    },
-    {
-      "id": "309b30860d842868",
-      "threadId": "39871d214db95e65",
-      "labelIds": [
-        "INBOX",
-        "IMPORTANT"
-      ],
-      "snippet": "Hi Maria, Thank you for the prompt notification and for sending the initial SAE report. We have received it. Alex, can you please take the lead on thi...",
-      "historyId": "1698079510",
-      "internalDate": "1698079510000",
-      "payload": {
-        "partId": "",
-        "mimeType": "multipart/alternative",
-        "filename": "",
-        "headers": [
-          {
-            "name": "Delivered-To",
-            "value": "alex.johnson@denalitx.com"
-          },
-          {
-            "name": "Return-Path",
-            "value": "<sarah.lee@cro-syneos.com>"
-          },
-          {
-            "name": "From",
-            "value": "sarah.lee@cro-syneos.com"
-          },
-          {
-            "name": "To",
-            "value": "maria.garcia@med.ucla.edu"
-          },
-          {
-            "name": "Cc",
-            "value": "alex.johnson@denalitx.com, robert.chen@med.ucla.edu, safety@denalitx.com"
-          },
-          {
-            "name": "Subject",
-            "value": "Re: URGENT: New SAE Report - Study DNLI-123 - Site 101 (UCLA) - Patient 101-005"
-          },
-          {
-            "name": "Date",
-            "value": "2023-10-23T09:45:10-07:00"
-          },
-          {
-            "name": "Message-ID",
-            "value": "<1671819301@mail.example.com>"
-          },
-          {
-            "name": "MIME-Version",
-            "value": "1.0"
-          },
-          {
-            "name": "Content-Type",
-            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
-          },
-          {
-            "name": "In-Reply-To",
-            "value": "<1671819300@mail.example.com>"
-          },
-          {
-            "name": "References",
-            "value": "<1671819300@mail.example.com>"
-          }
-        ],
-        "body": {
-          "size": 474
-        },
-        "parts": [
-          {
-            "partId": "0",
-            "mimeType": "text/plain",
-            "filename": "",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "text/plain; charset=\"UTF-8\""
-              }
-            ],
-            "body": {
-              "size": 474,
-              "data": "SGkgTWFyaWEsCgpUaGFuayB5b3UgZm9yIHRoZSBwcm9tcHQgbm90aWZpY2F0aW9uIGFuZCBmb3Igc2VuZGluZyB0aGUgaW5pdGlhbCBTQUUgcmVwb3J0LiBXZSBoYXZlIHJlY2VpdmVkIGl0LgoKQWxleCwgY2FuIHlvdSBwbGVhc2UgdGFrZSB0aGUgbGVhZCBvbiB0aGlzIGZyb20gdGhlIHNwb25zb3Igc2lkZT8gUGxlYXNlIGFja25vd2xlZGdlIHRoZSByZXBvcnQgd2l0aCB0aGUgc2l0ZSwgcmVxdWVzdCB0aGUgbmVjZXNzYXJ5IHNvdXJjZSBkb2N1bWVudHMsIGFuZCBjb25maXJtIHRoZSAyNC1ob3VyIHJlcG9ydGluZyB0aW1lbGluZSBoYXMgYmVlbiBtZXQgd2l0aCB0aGUgRGVuYWxpIHNhZmV0eSB0ZWFtIChjYydkKS4KCk1hcmlhLCBBbGV4IHdpbGwgYmUgaW4gdG91Y2ggd2l0aCB5b3Ugc2hvcnRseSByZWdhcmRpbmcgdGhlIG5leHQgc3RlcHMuCgpCZXN0LAoKU2FyYWggTGVlClByb2plY3QgTWFuYWdlcgpTeW5lb3MgSGVhbHRo"
-            }
-          }
-        ]
-      },
-      "sizeEstimate": 1474,
+      "sizeEstimate": 1312,
       "raw": null
     }
   ]
