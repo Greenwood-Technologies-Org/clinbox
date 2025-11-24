@@ -460,7 +460,26 @@ export default function SupplementaryPanel({
                     <h3 className="font-medium">Workflow</h3>
                   </div>
                   <div className="text-sm text-gray-700">
-                    {workflowName}
+                    <div className="font-medium mb-2">{workflowName}</div>
+                    <div className="flex items-center justify-between">
+                      <span className={`text-xs font-medium px-2 py-1 rounded uppercase ${
+                        selectedEmail.aiAnalysis?.workflow?.status === 'completed' 
+                          ? 'bg-gray-200 text-green-700'
+                          : selectedEmail.aiAnalysis?.workflow?.status === 'needs approval'
+                          ? 'bg-gray-200 text-red-700'
+                          : 'bg-gray-200 text-gray-600'
+                      }`}>
+                        {selectedEmail.aiAnalysis?.workflow?.status || 'unknown'}
+                      </span>
+                      {selectedEmail.aiAnalysis?.workflow?.status === 'needs approval' && (
+                        <button 
+                          className="text-gray-400 hover:text-green-600 transition-colors"
+                          title="Approve workflow"
+                        >
+                          <CircleCheck className="w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </>

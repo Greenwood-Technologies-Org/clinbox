@@ -4,7 +4,7 @@
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_001",
-      "status": "completed"
+      "status": "needs approval"
     }
   },
   "email_002.json": {
@@ -12,7 +12,7 @@
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_002",
-      "status": "needs approval"
+      "status": "completed"
     }
   },
   "email_003.json": {
