@@ -1,0 +1,122 @@
+{
+  "id": "irb002",
+  "threadId": "irb002",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Alex Johnson, This is a reminder that the Institutional Review Board (IRB) approval for the DNLI-456 clinical trial at Stanford University is set to expire on February 24, 2026.",
+  "historyId": "1732435202",
+  "internalDate": "1732435202000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<irb@stanford.edu>"
+      },
+      {
+        "name": "From",
+        "value": "irb@stanford.edu"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "IRB Renewal Reminder for DNLI-456"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T09:15:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435202@stanford.edu>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 320,
+      "data": "QWxleCBKb2huc29uLAoKVGhpcyBpcyBhIHJlbWluZGVyIHRoYXQgdGhlIEluc3RpdHV0aW9uYWwgUmV2aWV3IEJvYXJkIChJUkIpIGFwcHJvdmFsIGZvciB0aGUgRE5MSS00NTYgY2xpbmljYWwgdHJpYWwgYXQgU3RhbmZvcmQgVW5pdmVyc2l0eSBpcyBzZXQgdG8gZXhwaXJlIG9uIEZlYnJ1YXJ5IDI0LCAyMDI2LiBUbyBlbnN1cmUgY29udGludWl0eSBvZiB0aGUgc3R1ZHksIHBsZWFzZSBwcmVwYXJlIGFuZCBzdWJtaXQgdGhlIHJlbmV3YWwgZG9jdW1lbnRzIGF0IGxlYXN0IDMwIGRheXMgcHJpb3IgdG8gdGhlIGV4cGlyYXRpb24gZGF0ZS4KClRoZSByZW5ld2FsIHBhY2thZ2Ugc2hvdWxkIGluY2x1ZGUgdXBkYXRlZCBzdHVkeSBwcm9ncmVzcywgc2FmZXR5IHJlcG9ydHMsIGFuZCBhbnkgcHJvdG9jb2wgbW9kaWZpY2F0aW9ucy4KClBsZWFzZSBjb250YWN0IHRoZSBJUkIgb2ZmaWNlIGlmIHlvdSBuZWVkIGFzc2lzdGFuY2Ugd2l0aCB0aGUgc3VibWlzc2lvbiBwcm9jZXNzLgoKQmVzdCByZWdhcmRzLApJUmIgT2ZmaWNlClN0YW5mb3JkIFVuaXZlcnNpdHk="
+    }
+  },
+  "sizeEstimate": 500,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "irb002",
+      "threadId": "irb002",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Alex Johnson, This is a reminder that the Institutional Review Board (IRB) approval for the DNLI-456 clinical trial at Stanford University is set to expire on February 24, 2026.",
+      "historyId": "1732435202",
+      "internalDate": "1732435202000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<irb@stanford.edu>"
+          },
+          {
+            "name": "From",
+            "value": "irb@stanford.edu"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "IRB Renewal Reminder for DNLI-456"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T09:15:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435202@stanford.edu>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 320,
+          "data": "QWxleCBKb2huc29uLAoKVGhpcyBpcyBhIHJlbWluZGVyIHRoYXQgdGhlIEluc3RpdHV0aW9uYWwgUmV2aWV3IEJvYXJkIChJUkIpIGFwcHJvdmFsIGZvciB0aGUgRE5MSS00NTYgY2xpbmljYWwgdHJpYWwgYXQgU3RhbmZvcmQgVW5pdmVyc2l0eSBpcyBzZXQgdG8gZXhwaXJlIG9uIEZlYnJ1YXJ5IDI0LCAyMDI2LiBUbyBlbnN1cmUgY29udGludWl0eSBvZiB0aGUgc3R1ZHksIHBsZWFzZSBwcmVwYXJlIGFuZCBzdWJtaXQgdGhlIHJlbmV3YWwgZG9jdW1lbnRzIGF0IGxlYXN0IDMwIGRheXMgcHJpb3IgdG8gdGhlIGV4cGlyYXRpb24gZGF0ZS4KClRoZSByZW5ld2FsIHBhY2thZ2Ugc2hvdWxkIGluY2x1ZGUgdXBkYXRlZCBzdHVkeSBwcm9ncmVzcywgc2FmZXR5IHJlcG9ydHMsIGFuZCBhbnkgcHJvdG9jb2wgbW9kaWZpY2F0aW9ucy4KClBsZWFzZSBjb250YWN0IHRoZSBJUkIgb2ZmaWNlIGlmIHlvdSBuZWVkIGFzc2lzdGFuY2Ugd2l0aCB0aGUgc3VibWlzc2lvbiBwcm9jZXNzLgoKQmVzdCByZWdhcmRzLApJUmIgT2ZmaWNlClN0YW5mb3JkIFVuaXZlcnNpdHk="
+        }
+      },
+      "sizeEstimate": 500,
+      "raw": null
+    }
+  ]
+}

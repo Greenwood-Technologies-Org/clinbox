@@ -1,0 +1,122 @@
+{
+  "id": "irb001",
+  "threadId": "irb001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex Johnson, We are pleased to inform you that the Institutional Review Board (IRB) at the University of California, San Francisco (UCSF) has reviewed and approved the protocol amendment for the DNLI-456 clinical trial.",
+  "historyId": "1732435201",
+  "internalDate": "1732435201000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<irb@ucsf.edu>"
+      },
+      {
+        "name": "From",
+        "value": "irb@ucsf.edu"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "IRB Approval Update for DNLI-456"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T09:00:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435201@ucsf.edu>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 350,
+      "data": "RGVhciBBbGV4IEpvaG5zb24sCgpXZSBhcmUgcGxlYXNlZCB0byBpbmZvcm0geW91IHRoYXQgdGhlIEluc3RpdHV0aW9uYWwgUmV2aWV3IEJvYXJkIChJUkIpIGF0IHRoZSBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIFNhbiBGcmFuY2lzY28gKFVDU0YpIGhhcyByZXZpZXdlZCBhbmQgYXBwcm92ZWQgdGhlIHByb3RvY29sIGFtZW5kbWVudCBmb3IgdGhlIEROTEktNDU2IGNsaW5pY2FsIHRyaWFsLiBUaGlzIGFtZW5kbWVudCBpbmNsdWRlcyB1cGRhdGVzIHRvIHRoZSBpbmNsdXNpb24gY3JpdGVyaWEgYW5kIHN0dWR5IHByb2NlZHVyZXMuCgpZb3UgbWF5IG5vdyBwcm9jZWVkIHdpdGggaW1wbGVtZW50YXRpb24gb2YgdGhlIGFwcHJvdmVkIGNoYW5nZXMgYWNyb3NzIGFsbCBwYXJ0aWNpcGF0aW5nIHNpdGVzLiBQbGVhc2UgZW5zdXJlIHRoYXQgYWxsIHNpdGUgcGVyc29ubmVsIGFyZSBub3RpZmllZCBhbmQgdHJhaW5lZCBhY2NvcmRpbmdseS4KCklmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMsIHBsZWFzZSBjb250YWN0IHRoZSBJUkIgb2ZmaWNlIGF0IGlyYkB1Y3NmLmVkdS4KCkJlc3QgcmVnYXJkcywKCUVCIE9mZmljZQpVQ1NG"
+    }
+  },
+  "sizeEstimate": 500,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "irb001",
+      "threadId": "irb001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex Johnson, We are pleased to inform you that the Institutional Review Board (IRB) at the University of California, San Francisco (UCSF) has reviewed and approved the protocol amendment for the DNLI-456 clinical trial.",
+      "historyId": "1732435201",
+      "internalDate": "1732435201000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<irb@ucsf.edu>"
+          },
+          {
+            "name": "From",
+            "value": "irb@ucsf.edu"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "IRB Approval Update for DNLI-456"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T09:00:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435201@ucsf.edu>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 350,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpXZSBhcmUgcGxlYXNlZCB0byBpbmZvcm0geW91IHRoYXQgdGhlIEluc3RpdHV0aW9uYWwgUmV2aWV3IEJvYXJkIChJUkIpIGF0IHRoZSBVbml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIFNhbiBGcmFuY2lzY28gKFVDU0YpIGhhcyByZXZpZXdlZCBhbmQgYXBwcm92ZWQgdGhlIHByb3RvY29sIGFtZW5kbWVudCBmb3IgdGhlIEROTEktNDU2IGNsaW5pY2FsIHRyaWFsLiBUaGlzIGFtZW5kbWVudCBpbmNsdWRlcyB1cGRhdGVzIHRvIHRoZSBpbmNsdXNpb24gY3JpdGVyaWEgYW5kIHN0dWR5IHByb2NlZHVyZXMuCgpZb3UgbWF5IG5vdyBwcm9jZWVkIHdpdGggaW1wbGVtZW50YXRpb24gb2YgdGhlIGFwcHJvdmVkIGNoYW5nZXMgYWNyb3NzIGFsbCBwYXJ0aWNpcGF0aW5nIHNpdGVzLiBQbGVhc2UgZW5zdXJlIHRoYXQgYWxsIHNpdGUgcGVyc29ubmVsIGFyZSBub3RpZmllZCBhbmQgdHJhaW5lZCBhY2NvcmRpbmdseS4KCklmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMsIHBsZWFzZSBjb250YWN0IHRoZSBJUkIgb2ZmaWNlIGF0IGlyYkB1Y3NmLmVkdS4KCkJlc3QgcmVnYXJkcywKCUVCIE9mZmljZQpVQ1NG"
+        }
+      },
+      "sizeEstimate": 500,
+      "raw": null
+    }
+  ]
+}

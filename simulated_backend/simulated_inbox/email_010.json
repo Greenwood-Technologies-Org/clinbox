@@ -1,0 +1,192 @@
+{
+  "id": "status001",
+  "threadId": "status001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex, Attached is the weekly status report for the DNLI-456 clinical trial. The report includes enrollment updates, data entry progress, and site performance metrics.",
+  "historyId": "1732435205",
+  "internalDate": "1732435205000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<rachel.kim@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "rachel.kim@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Weekly Status Update"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T10:00:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435205@denalitx.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 200
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 200,
+          "data": "RGVhciBBbGV4LAoKQXR0YWNoZWQgaXMgdGhlIHdlZWtseSBzdGF0dXMgcmVwb3J0IGZvciB0aGUgRE5MSS00NTYgY2xpbmljYWwgdHJpYWwuIFRoZSByZXBvcnQgaW5jbHVkZXMgZW5yb2xsbWVudCB1cGRhdGVzLCBkYXRhIGVudHJ5IHByb2dyZXNzLCBhbmQgc2l0ZSBwZXJmb3JtYW5jZSBtZXRyaWNzLiBObyBtYWpvciBpc3N1ZXMgdG8gcmVwb3J0IHRoaXMgd2VlaysgYWxsIHNpdGVzIGFyZSBvbiB0cmFjayB3aXRoIHRoZWlyIHJlY3J1aXRtZW50IGdvYWxzLgoKUHJlYXNlIHJldmlldyB0aGUgYXR0YWNoZWQgZG9jdW1lbnQgYW5kIGxldCBtZSBrbm93IGlmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMuCgpCZXN0IHJlZ2FyZHMsClJhY2hlbCBLaW0KUHJvZ3JhbSBNYW5hZ2VyCkRlbmFsaSBUaGVyYXBldXRpY3M="
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-456_Weekly_Status_Report.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-456_Weekly_Status_Report.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "9g0b4d8f2a5c7e1",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 800,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "status001",
+      "threadId": "status001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex, Attached is the weekly status report for the DNLI-456 clinical trial. The report includes enrollment updates, data entry progress, and site performance metrics.",
+      "historyId": "1732435205",
+      "internalDate": "1732435205000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<rachel.kim@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "rachel.kim@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Weekly Status Update"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T10:00:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435205@denalitx.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 200
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 200,
+              "data": "RGVhciBBbGV4LAoKQXR0YWNoZWQgaXMgdGhlIHdlZWtseSBzdGF0dXMgcmVwb3J0IGZvciB0aGUgRE5MSS00NTYgY2xpbmljYWwgdHJpYWwuIFRoZSByZXBvcnQgaW5jbHVkZXMgZW5yb2xsbWVudCB1cGRhdGVzLCBkYXRhIGVudHJ5IHByb2dyZXNzLCBhbmQgc2l0ZSBwZXJmb3JtYW5jZSBtZXRyaWNzLiBObyBtYWpvciBpc3N1ZXMgdG8gcmVwb3J0IHRoaXMgd2VlaysgYWxsIHNpdGVzIGFyZSBvbiB0cmFjayB3aXRoIHRoZWlyIHJlY3J1aXRtZW50IGdvYWxzLgoKUHJlYXNlIHJldmlldyB0aGUgYXR0YWNoZWQgZG9jdW1lbnQgYW5kIGxldCBtZSBrbm93IGlmIHlvdSBoYXZlIGFueSBxdWVzdGlvbnMuCgpCZXN0IHJlZ2FyZHMsClJhY2hlbCBLaW0KUHJvZ3JhbSBNYW5hZ2VyCkRlbmFsaSBUaGVyYXBldXRpY3M="
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-456_Weekly_Status_Report.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-456_Weekly_Status_Report.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "9g0b4d8f2a5c7e1",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 800,
+      "raw": null
+    }
+  ]
+}

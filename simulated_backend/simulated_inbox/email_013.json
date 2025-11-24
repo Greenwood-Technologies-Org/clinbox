@@ -1,0 +1,192 @@
+{
+  "id": "deviation001",
+  "threadId": "deviation001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex Johnson, A minor protocol deviation has been reported at Site 312 (Cleveland Clinic) in the DNLI-456 study. The deviation occurred on November 22, 2025, during the Week 16 Follow-Up visit for patient 312-007.",
+  "historyId": "1732435208",
+  "internalDate": "1732435208000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<staff@clevelandclinic.org>"
+      },
+      {
+        "name": "From",
+        "value": "staff@clevelandclinic.org"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Protocol Deviation Reported"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T10:45:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435208@clevelandclinic.org>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 250
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 250,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpBIG1pbm9yIHByb3RvY29sIGRldmlhdGlvbiBoYXMgYmVlbiByZXBvcnRlZCBhdCBTaXRlIDMxMiAoQ2xldmVsYW5kIENsaW5pYykgaW4gdGhlIEROTEktNDU2IHN0dWR5LiBUaGUgZGV2aWF0aW9uIG9jY3VycmVkIG9uIE5vdmVtYmVyIDIyLCAyMDI1LCBkdXJpbmcgdGhlIFdlZWsgMTYgRm9sbG93LVVwIHZpc2l0IGZvciBwYXRpZW50IDMxMi0wMDcuIFRoZSBpc3N1ZSBpbnZvbHZlZCBhIHNsaWdodCBkZWxheSBpbiB0aGUgYWRtaW5pc3RyYXRpb24gb2YgdGhlIHN0dWR5IGRydWcgZHVlIHRvIHNjaGVkdWxpbmcgY29uZmxpY3RzLCBidXQgdGhlIHBhdGllbnQgcmVjZWl2ZWQgdGhlIGRvc2Ugd2l0aGluIHRoZSBhY2NlcHRhYmxlIHdpbmRvdy4KClRoZSBkZXZpYXRpb24gaGFzIGJlZW4gZG9jdW1lbnRlZCBhbmQgcmVwb3J0ZWQgdG8gdGhlIHNwb25zb3IgYXMgcmVxdWlyZWQuIERldGFpbHMgYXJlIGF0dGFjaGVkIGluIHRoZSBwcm90b2NvbCBkZXZpYXRpb24gcmVwb3J0LgoKUHJlYXNlIHJldmlldyBhbmQgY29uZmlybSByZWNlaXB0LgoKQmVzdCByZWdhcmRzLApSZXNlYXJjaCBBc3Npc3RhbnQKQ2xldmVsYW5kIENsaW5pYw=="
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-456_Protocol_Deviation_Report.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-456_Protocol_Deviation_Report.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "0h1i2j3k4l5m6n",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 800,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "deviation001",
+      "threadId": "deviation001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex Johnson, A minor protocol deviation has been reported at Site 312 (Cleveland Clinic) in the DNLI-456 study. The deviation occurred on November 22, 2025, during the Week 16 Follow-Up visit for patient 312-007.",
+      "historyId": "1732435208",
+      "internalDate": "1732435208000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<staff@clevelandclinic.org>"
+          },
+          {
+            "name": "From",
+            "value": "staff@clevelandclinic.org"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Protocol Deviation Reported"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T10:45:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435208@clevelandclinic.org>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 250
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 250,
+              "data": "RGVhciBBbGV4IEpvaG5zb24sCgpBIG1pbm9yIHByb3RvY29sIGRldmlhdGlvbiBoYXMgYmVlbiByZXBvcnRlZCBhdCBTaXRlIDMxMiAoQ2xldmVsYW5kIENsaW5pYykgaW4gdGhlIEROTEktNDU2IHN0dWR5LiBUaGUgZGV2aWF0aW9uIG9jY3VycmVkIG9uIE5vdmVtYmVyIDIyLCAyMDI1LCBkdXJpbmcgdGhlIFdlZWsgMTYgRm9sbG93LVVwIHZpc2l0IGZvciBwYXRpZW50IDMxMi0wMDcuIFRoZSBpc3N1ZSBpbnZvbHZlZCBhIHNsaWdodCBkZWxheSBpbiB0aGUgYWRtaW5pc3RyYXRpb24gb2YgdGhlIHN0dWR5IGRydWcgZHVlIHRvIHNjaGVkdWxpbmcgY29uZmxpY3RzLCBidXQgdGhlIHBhdGllbnQgcmVjZWl2ZWQgdGhlIGRvc2Ugd2l0aGluIHRoZSBhY2NlcHRhYmxlIHdpbmRvdy4KClRoZSBkZXZpYXRpb24gaGFzIGJlZW4gZG9jdW1lbnRlZCBhbmQgcmVwb3J0ZWQgdG8gdGhlIHNwb25zb3IgYXMgcmVxdWlyZWQuIERldGFpbHMgYXJlIGF0dGFjaGVkIGluIHRoZSBwcm90b2NvbCBkZXZpYXRpb24gcmVwb3J0LgoKUHJlYXNlIHJldmlldyBhbmQgY29uZmlybSByZWNlaXB0LgoKQmVzdCByZWdhcmRzLApSZXNlYXJjaCBBc3Npc3RhbnQKQ2xldmVsYW5kIENsaW5pYw=="
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-456_Protocol_Deviation_Report.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-456_Protocol_Deviation_Report.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "0h1i2j3k4l5m6n",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 800,
+      "raw": null
+    }
+  ]
+}

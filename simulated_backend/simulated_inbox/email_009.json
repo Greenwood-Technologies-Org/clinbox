@@ -1,0 +1,122 @@
+{
+  "id": "portal001",
+  "threadId": "portal001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex Johnson, The patient pre-screening portal for the DNLI-456 study at Mayo Clinic has been updated with revised eligibility criteria.",
+  "historyId": "1732435204",
+  "internalDate": "1732435204000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<coordinator@mayo.edu>"
+      },
+      {
+        "name": "From",
+        "value": "coordinator@mayo.edu"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Patient Pre-Screen Portal Updated for DNLI-456"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T09:45:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435204@mayo.edu>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 280,
+      "data": "RGVhciBBbGV4IEpvaG5zb24sCgpUaGUgcGF0aWVudCBwcmUtc2NyZWVuaW5nIHBvcnRhbCBmb3IgdGhlIEROTEktNDU2IHN0dWR5IGF0IE1heW8gQ2xpbmljIGhhcyBiZWVuIHVwZGF0ZWQgd2l0aCByZXZpc2VkIGVsaWdpYmlsaXR5IGNyaXRlcmlhLiBUaGUgY2hhbmdlcyBpbmNsdWRlIHVwZGF0ZWQgYWdlIHJhbmdlcyBhbmQgYWRkaXRpb25hbCBleGNsdXNpb24gY3JpdGVyaWEgcmVsYXRlZCB0byBjb25jb21pdGFudCBtZWRpY2F0aW9ucy4KClBsZWFzZSBlbnN1cmUgdGhhdCBhbGwgc2l0ZSBzdGFmZiBhcmUgaW5mb3JtZWQgb2YgdGhlc2UgY2hhbmdlcyBhbmQgdGhhdCBzY3JlZW5pbmcgcHJvY2VkdXJlcyBhcmUgYWRqdXN0ZWQgYWNjb3JkaW5nbHkuCgpJZiB5b3UgaGF2ZSBhbnkgcXVlc3Rpb25zLCBjb250YWN0IHRoZSBzaXRlIGNvb3JkaW5hdG9yLgoKQmVzdCByZWdhcmRzLApTaXRlIENvb3JkaW5hdG9yCk1heW8gQ2xpbmlj"
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "portal001",
+      "threadId": "portal001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex Johnson, The patient pre-screening portal for the DNLI-456 study at Mayo Clinic has been updated with revised eligibility criteria.",
+      "historyId": "1732435204",
+      "internalDate": "1732435204000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<coordinator@mayo.edu>"
+          },
+          {
+            "name": "From",
+            "value": "coordinator@mayo.edu"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Patient Pre-Screen Portal Updated for DNLI-456"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T09:45:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435204@mayo.edu>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 280,
+          "data": "RGVhciBBbGV4IEpvaG5zb24sCgpUaGUgcGF0aWVudCBwcmUtc2NyZWVuaW5nIHBvcnRhbCBmb3IgdGhlIEROTEktNDU2IHN0dWR5IGF0IE1heW8gQ2xpbmljIGhhcyBiZWVuIHVwZGF0ZWQgd2l0aCByZXZpc2VkIGVsaWdpYmlsaXR5IGNyaXRlcmlhLiBUaGUgY2hhbmdlcyBpbmNsdWRlIHVwZGF0ZWQgYWdlIHJhbmdlcyBhbmQgYWRkaXRpb25hbCBleGNsdXNpb24gY3JpdGVyaWEgcmVsYXRlZCB0byBjb25jb21pdGFudCBtZWRpY2F0aW9ucy4KClBsZWFzZSBlbnN1cmUgdGhhdCBhbGwgc2l0ZSBzdGFmZiBhcmUgaW5mb3JtZWQgb2YgdGhlc2UgY2hhbmdlcyBhbmQgdGhhdCBzY3JlZW5pbmcgcHJvY2VkdXJlcyBhcmUgYWRqdXN0ZWQgYWNjb3JkaW5nbHkuCgpJZiB5b3UgaGF2ZSBhbnkgcXVlc3Rpb25zLCBjb250YWN0IHRoZSBzaXRlIGNvb3JkaW5hdG9yLgoKQmVzdCByZWdhcmRzLApTaXRlIENvb3JkaW5hdG9yCk1heW8gQ2xpbmlj"
+        }
+      },
+      "sizeEstimate": 400,
+      "raw": null
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "edc001",
+  "threadId": "edc001",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Notification: Data entry for patient 105-003 in the DNLI-456 study has been completed in the Medidata EDC system. All required fields have been populated, and no data queries were generated.",
+  "historyId": "1732435203",
+  "internalDate": "1732435203000",
+  "payload": {
+    "partId": "",
+    "mimeType": "text/plain",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<notifications@medidata.com>"
+      },
+      {
+        "name": "From",
+        "value": "notifications@medidata.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Data Entry Completed for Patient 105-003"
+      },
+      {
+        "name": "Date",
+        "value": "2025-11-24T09:30:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732435203@medidata.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"UTF-8\""
+      }
+    ],
+    "body": {
+      "size": 250,
+      "data": "Tm90aWZpY2F0aW9uOiBEYXRhIGVudHJ5IGZvciBwYXRpZW50IDEwNS0wMDMgaW4gdGhlIEROTEktNDU2IHN0dWR5IGhhcyBiZWVuIGNvbXBsZXRlZCBpbiB0aGUgTWVkaWRhdGEgRURDIHN5c3RlbS4gQWxsIHJlcXVpcmVkIGZpZWxkcyBoYXZlIGJlZW4gcG9wdWxhdGVkLCBhbmQgbm8gZGF0YSBxdWVyaWVzIHdlcmUgZ2VuZXJhdGVkIGR1cmluZyB0aGUgdmFsaWRhdGlvbiBwcm9jZXNzLgoKU3R1ZHk6IEROTEktNDU2ClNpdGU6IDEwNSAobWF5byBDbGluaWMpClZpc2l0OiBXZWVrIDEyIEZvbGxvdy1VcAoKUHJlYXNlIHJldmlldyB0aGUgZW50ZXJlZCBkYXRhIGZvciBhY2N1cmFjeS4KClJlZ2FyZHMsCk1lZGlkYXRhIEVEQyBTeXN0ZW0="
+    }
+  },
+  "sizeEstimate": 400,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "edc001",
+      "threadId": "edc001",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Notification: Data entry for patient 105-003 in the DNLI-456 study has been completed in the Medidata EDC system. All required fields have been populated, and no data queries were generated.",
+      "historyId": "1732435203",
+      "internalDate": "1732435203000",
+      "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<notifications@medidata.com>"
+          },
+          {
+            "name": "From",
+            "value": "notifications@medidata.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Data Entry Completed for Patient 105-003"
+          },
+          {
+            "name": "Date",
+            "value": "2025-11-24T09:30:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732435203@medidata.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 250,
+          "data": "Tm90aWZpY2F0aW9uOiBEYXRhIGVudHJ5IGZvciBwYXRpZW50IDEwNS0wMDMgaW4gdGhlIEROTEktNDU2IHN0dWR5IGhhcyBiZWVuIGNvbXBsZXRlZCBpbiB0aGUgTWVkaWRhdGEgRURDIHN5c3RlbS4gQWxsIHJlcXVpcmVkIGZpZWxkcyBoYXZlIGJlZW4gcG9wdWxhdGVkLCBhbmQgbm8gZGF0YSBxdWVyaWVzIHdlcmUgZ2VuZXJhdGVkIGR1cmluZyB0aGUgdmFsaWRhdGlvbiBwcm9jZXNzLgoKU3R1ZHk6IEROTEktNDU2ClNpdGU6IDEwNSAobWF5byBDbGluaWMpClZpc2l0OiBXZWVrIDEyIEZvbGxvdy1VcAoKUHJlYXNlIHJldmlldyB0aGUgZW50ZXJlZCBkYXRhIGZvciBhY2N1cmFjeS4KClJlZ2FyZHMsCk1lZGlkYXRhIEVEQyBTeXN0ZW0="
+        }
+      },
+      "sizeEstimate": 400,
+      "raw": null
+    }
+  ]
+}
