@@ -42,7 +42,14 @@ interface SelectedWorkflow {
   description: string;
   modified: string;
   approval: string;
-  integrations: string[];
+  actions?: Array<{
+    actionNumber: number;
+    action: string;
+    input: string;
+    output: string;
+    description: string;
+    approval: string;
+  }>;
 }
 
 interface SelectedWorkflowEvent {

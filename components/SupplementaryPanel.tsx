@@ -39,7 +39,14 @@ interface SupplementaryPanelProps {
     description: string;
     modified: string;
     approval: string;
-    integrations: string[];
+    actions?: Array<{
+      actionNumber: number;
+      action: string;
+      input: string;
+      output: string;
+      description: string;
+      approval: string;
+    }>;
   } | null;
   selectedWorkflowEvent?: {
     id: string;
@@ -260,14 +267,24 @@ export default function SupplementaryPanel({
               <div>
                 <h3 className="font-medium mb-2">Integrations</h3>
                 <div className="flex flex-wrap gap-2">
-                  {selectedWorkflow.integrations.map((integration, index) => (
-                    <span 
-                      key={index}
-                      className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-700"
-                    >
-                      {integration}
-                    </span>
-                  ))}
+                  {(() => {
+                    // Derive integrations from actions
+                    const integrations = new Set<string>();
+                    if (selectedWorkflow.actions) {
+                      selectedWorkflow.actions.forEach(action => {
+                        if (action.input) integrations.add(action.input);
+                        if (action.output) integrations.add(action.output);
+                      });
+                    }
+                    return Array.from(integrations).map((integration, index) => (
+                      <span 
+                        key={index}
+                        className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-700"
+                      >
+                        {integration}
+                      </span>
+                    ));
+                  })()}
                 </div>
               </div>
             </div>

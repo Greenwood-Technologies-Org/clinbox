@@ -10,7 +10,6 @@ interface Workflow {
   description: string;
   modified: string;
   approval: string;
-  integrations: string[];
   actions?: Array<{
     actionNumber: number;
     action: string;
@@ -234,8 +233,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
         name: workflowName,
         description: workflowDescription || '',
         modified: new Date().toISOString().split('T')[0],
-        approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No',
-        integrations: []
+        approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No'
       };
 
       // Add to workflows list
@@ -374,6 +372,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                       >
                         <option value="" disabled>Input</option>
                         <option value="Email" className="text-gray-900">Email</option>
+                        <option value="EDC" className="text-gray-900">EDC</option>
                         <option value="CTMS" className="text-gray-900">CTMS</option>
                         <option value="QuickBooks" className="text-gray-900">QuickBooks</option>
                       </select>
@@ -388,6 +387,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                       >
                         <option value="" disabled>Output</option>
                         <option value="Email" className="text-gray-900">Email</option>
+                        <option value="EDC" className="text-gray-900">EDC</option>
                         <option value="CTMS" className="text-gray-900">CTMS</option>
                         <option value="QuickBooks" className="text-gray-900">QuickBooks</option>
                       </select>

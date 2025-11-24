@@ -5,7 +5,6 @@
     "description": "Processes brain scan results from Dupliplex vendor, notifies PI of abnormal values, and logs normal results in EDC automatically",
     "modified": "2024-11-24",
     "approval": "Yes",
-    "integrations": ["Email", "EDC"],
     "actions": [
       {
         "actionNumber": 1,
