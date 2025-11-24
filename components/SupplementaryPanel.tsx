@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download, Copy } from 'lucide-react';
+import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip, Download, Copy, TrendingUpDown } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
@@ -17,6 +17,10 @@ interface SelectedEmail {
   aiAnalysis?: {
     summary: string;
     quickActions?: string[];
+    workflow?: {
+      workflowId: string;
+      status: string;
+    };
   };
   tasks?: string[];
   attachments?: Attachment[];
@@ -91,6 +95,27 @@ export default function SupplementaryPanel({
   isWorkflowBuilder
 }: SupplementaryPanelProps) {
   const [allTasks, setAllTasks] = useState<string[]>([]);
+  const [workflowName, setWorkflowName] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadWorkflowName = async () => {
+      if (selectedEmail?.aiAnalysis?.workflow?.workflowId) {
+        try {
+          const response = await fetch('/api/workflow-settings');
+          const workflows = await response.json();
+          const workflow = workflows.find((w: any) => w.id === selectedEmail.aiAnalysis?.workflow?.workflowId);
+          setWorkflowName(workflow?.name || null);
+        } catch (error) {
+          console.error('Error loading workflow:', error);
+          setWorkflowName(null);
+        }
+      } else {
+        setWorkflowName(null);
+      }
+    };
+
+    loadWorkflowName();
+  }, [selectedEmail?.aiAnalysis?.workflow?.workflowId]);
 
   useEffect(() => {
     const loadAllTasks = async () => {
@@ -421,6 +446,21 @@ export default function SupplementaryPanel({
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </>
+            )}
+            {workflowName && (
+              <>
+                <div className="border-b border-gray-200"></div>
+                {/* Workflow */}
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <TrendingUpDown className="w-4 h-4" />
+                    <h3 className="font-medium">Workflow</h3>
+                  </div>
+                  <div className="text-sm text-gray-700">
+                    {workflowName}
                   </div>
                 </div>
               </>
