@@ -4,6 +4,7 @@ import { Sparkle, CircleCheck, CircleX, CirclePlus, ListTodo, Mail, X, Paperclip
 import { getIconProps } from '@/lib/icon-utils';
 import type { Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
+import ChatPanel from './ChatPanel';
 
 interface SelectedEmail {
   filename?: string;
@@ -120,10 +121,10 @@ export default function SupplementaryPanel({
   const renderContent = () => {
     if (showChat) {
       return (
-        <div className="py-3 px-4">
+        <div className="flex flex-col h-full">
           {/* Chat Panel Header */}
-          <div className="mb-6">
-            <div className="flex items-center justify-between mb-4">
+          <div className="py-3 px-4 border-b border-gray-200">
+            <div className="flex items-center justify-between">
               <h1 className="text-xl font-medium text-gray-900">
                 Chat
               </h1>
@@ -131,8 +132,9 @@ export default function SupplementaryPanel({
                 <X {...getIconProps()} />
               </button>
             </div>
-            <div className="border-b border-gray-200"></div>
           </div>
+          {/* Chat Panel Content */}
+          <ChatPanel onClose={onToggleChat} />
         </div>
       );
     }
@@ -363,18 +365,20 @@ export default function SupplementaryPanel({
   };
 
   return (
-    <div className="flex-1 bg-white border-l border-gray-200 overflow-y-auto relative">
+    <div className="flex-1 bg-white border-l border-gray-200 relative flex flex-col">
       {renderContent()}
       
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-3 right-3 flex gap-3">
-        <button onClick={onToggleAllTasks}>
-          <ListTodo {...getIconProps()} />
-        </button>
-        <button onClick={onToggleChat}>
-          <Sparkle {...getIconProps()} />
-        </button>
-      </div>
+      {!showChat && (
+        <div className="fixed bottom-3 right-3 flex gap-3">
+          <button onClick={onToggleAllTasks}>
+            <ListTodo {...getIconProps()} />
+          </button>
+          <button onClick={onToggleChat}>
+            <Sparkle {...getIconProps()} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

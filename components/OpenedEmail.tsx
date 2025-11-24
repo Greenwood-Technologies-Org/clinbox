@@ -185,7 +185,7 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
               }
               
               return (
-                <div key={email.id} className="group">
+                <div key={`${email.id}-${index}`} className="group">
                   {isExpanded && (
                     <div className="mx-6 border-t border-gray-200" />
                   )}
