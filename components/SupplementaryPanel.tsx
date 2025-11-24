@@ -41,6 +41,14 @@ interface SupplementaryPanelProps {
     requiresApproval: string;
     integrations: string[];
   } | null;
+  selectedWorkflowEvent?: {
+    id: string;
+    workflowId: string;
+    workflowName: string;
+    eventDescription: string;
+    date: string;
+    status: string;
+  } | null;
   activeView?: 'email' | 'calendar' | 'docs' | 'workflows' | 'workflowslist';
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
@@ -66,6 +74,7 @@ export default function SupplementaryPanel({
   selectedEmail, 
   selectedDocument,
   selectedWorkflow,
+  selectedWorkflowEvent,
   activeView,
   showAllTasks = false,
   onToggleAllTasks,
@@ -198,6 +207,57 @@ export default function SupplementaryPanel({
               )}
             </div>
           </div>
+        </div>
+      );
+    }
+
+    if (activeView === 'workflowslist') {
+      return (
+        <div className="py-3 px-4">
+          {selectedWorkflowEvent && (
+            <div>
+              <h1 className="text-xl font-medium text-gray-900 mb-2">
+                {selectedWorkflowEvent.workflowName}
+              </h1>
+              <div className="mb-4">
+                <span className={`inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium ${
+                  selectedWorkflowEvent.status === 'completed' ? 'bg-green-100 text-green-700' :
+                  selectedWorkflowEvent.status === 'pending_approval' ? 'bg-yellow-100 text-yellow-700' :
+                  selectedWorkflowEvent.status === 'in_progress' ? 'bg-blue-100 text-blue-700' :
+                  'bg-gray-100 text-gray-700'
+                }`}>
+                  {selectedWorkflowEvent.status.replace('_', ' ').toUpperCase()}
+                </span>
+              </div>
+              <div className="border-b border-gray-200 mb-4"></div>
+              <div className="mb-4">
+                <h3 className="font-medium mb-2">Event Description</h3>
+                <p className="text-sm text-gray-600">
+                  {selectedWorkflowEvent.eventDescription}
+                </p>
+              </div>
+              <div className="border-b border-gray-200 mb-4"></div>
+              <div className="mb-4">
+                <h3 className="font-medium mb-2">Event Date</h3>
+                <p className="text-sm text-gray-600">
+                  {new Date(selectedWorkflowEvent.date).toLocaleString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    year: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit'
+                  })}
+                </p>
+              </div>
+              <div className="border-b border-gray-200 mb-4"></div>
+              <div>
+                <h3 className="font-medium mb-2">Workflow ID</h3>
+                <p className="text-sm text-gray-600 font-mono">
+                  {selectedWorkflowEvent.workflowId}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       );
     }

@@ -45,6 +45,15 @@ interface SelectedWorkflow {
   integrations: string[];
 }
 
+interface SelectedWorkflowEvent {
+  id: string;
+  workflowId: string;
+  workflowName: string;
+  eventDescription: string;
+  date: string;
+  status: string;
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +63,7 @@ export default function RootLayout({
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
   const [selectedWorkflow, setSelectedWorkflow] = useState<SelectedWorkflow | null>(null);
+  const [selectedWorkflowEvent, setSelectedWorkflowEvent] = useState<SelectedWorkflowEvent | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
   const [showChat, setShowChat] = useState(false);
 
@@ -70,6 +80,7 @@ export default function RootLayout({
             <MainContent 
               activeView={activeView} 
               onSelectEmail={setSelectedEmail}
+              onSelectWorkflow={setSelectedWorkflowEvent}
             >
               {children}
             </MainContent>
@@ -78,6 +89,7 @@ export default function RootLayout({
             selectedEmail={selectedEmail} 
             selectedDocument={selectedDocument}
             selectedWorkflow={selectedWorkflow}
+            selectedWorkflowEvent={selectedWorkflowEvent}
             activeView={activeView}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}

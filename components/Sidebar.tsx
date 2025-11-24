@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Calendar, TrendingUpDown, FileText, Settings, HelpCircle } from 'lucide-react';
+import { Mail, Calendar, TrendingUpDown, Workflow, FileText, Settings, HelpCircle } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
 interface SidebarProps {

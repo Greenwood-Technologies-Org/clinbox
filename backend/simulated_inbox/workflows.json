@@ -1,0 +1,137 @@
+[
+  {
+    "id": "wf_event_001",
+    "workflowId": "workflow_001",
+    "workflowName": "Patient Enrollment Automation",
+    "eventDescription": "Max Stevens responded to recruitment outreach expressing interest in the Phase 3 diabetes trial. Automated screening visit scheduled for Dec 2, consent forms sent via DocuSign, and preliminary patient record created in REDCap.",
+    "date": "2024-11-23T14:30:00Z",
+    "status": "completed",
+    "triggerEmail": "email_003.json"
+  },
+  {
+    "id": "wf_event_002",
+    "workflowId": "workflow_002",
+    "workflowName": "SAE Alert & Reporting",
+    "eventDescription": "Serious adverse event detected in patient ID 2847. System flagged severe allergic reaction keywords from site coordinator email. MedWatch pre-filled template generated and routed to Dr. Sarah Chen for immediate review and submission.",
+    "date": "2024-11-23T09:15:00Z",
+    "status": "pending_approval",
+    "triggerEmail": "email_001.json"
+  },
+  {
+    "id": "wf_event_003",
+    "workflowId": "workflow_003",
+    "workflowName": "Invoice Processing & Payment",
+    "eventDescription": "Stanford Medical Center submitted Q4 site invoice totaling $47,320. Line items validated against approved budget. Invoice routed to Jennifer Martinez for approval. Payment processing will initiate upon approval.",
+    "date": "2024-11-22T16:45:00Z",
+    "status": "pending_approval",
+    "triggerEmail": "email_004.json"
+  },
+  {
+    "id": "wf_event_004",
+    "workflowId": "workflow_001",
+    "workflowName": "Patient Enrollment Automation",
+    "eventDescription": "Rachel Kim contacted study coordinator about participating in cardiovascular research study. Screening appointment auto-scheduled for Nov 29 at 10:00 AM, consent documents sent, and patient information form forwarded via secure portal.",
+    "date": "2024-11-22T11:20:00Z",
+    "status": "completed",
+    "triggerEmail": "email_007.json"
+  },
+  {
+    "id": "wf_event_005",
+    "workflowId": "workflow_004",
+    "workflowName": "IRB Submission Tracker",
+    "eventDescription": "Continuing review deadline approaching for Protocol XRT-2024-089 on December 15. System compiled required documents including updated consent forms, AE reports, and enrollment data. Reminder sent to Principal Investigator with submission checklist.",
+    "date": "2024-11-21T08:00:00Z",
+    "status": "in_progress",
+    "triggerEmail": null
+  },
+  {
+    "id": "wf_event_006",
+    "workflowId": "workflow_005",
+    "workflowName": "Site Monitoring Visit Scheduler",
+    "eventDescription": "CRA Jessica Torres confirmed availability for routine monitoring visit at Boston General Hospital. Visit scheduled for December 5-6, confirmation packet sent to site coordinator including agenda, document request list, and Zoom link for remote team members.",
+    "date": "2024-11-20T13:30:00Z",
+    "status": "completed",
+    "triggerEmail": "email_005.json"
+  },
+  {
+    "id": "wf_event_007",
+    "workflowId": "workflow_008",
+    "workflowName": "CRF Query Resolution",
+    "eventDescription": "Data query generated for Patient 3291 regarding missing vital signs on Visit 4. Query automatically routed to Site Coordinator Amanda White with 5-day response deadline. System will escalate to PI if no response received within timeframe.",
+    "date": "2024-11-20T10:15:00Z",
+    "status": "in_progress",
+    "triggerEmail": null
+  },
+  {
+    "id": "wf_event_008",
+    "workflowId": "workflow_006",
+    "workflowName": "Protocol Deviation Workflow",
+    "eventDescription": "Protocol deviation reported for Patient 2156: medication administered 3 hours outside protocol-specified window. Deviation logged, severity assessed as minor, corrective action plan assigned to site staff. Follow-up documentation due November 27.",
+    "date": "2024-11-19T15:45:00Z",
+    "status": "in_progress",
+    "triggerEmail": "email_006.json"
+  },
+  {
+    "id": "wf_event_009",
+    "workflowId": "workflow_009",
+    "workflowName": "Laboratory Results Distribution",
+    "eventDescription": "Central lab results received for 12 patients from Quest Diagnostics. Two abnormal liver function tests flagged and immediately notified to respective PIs. All results uploaded to REDCap and marked for source document verification.",
+    "date": "2024-11-19T07:30:00Z",
+    "status": "completed",
+    "triggerEmail": null
+  },
+  {
+    "id": "wf_event_010",
+    "workflowId": "workflow_007",
+    "workflowName": "Patient Stipend Processing",
+    "eventDescription": "Stipend payment requested for Patient 3847 who completed all 6 study visits. Total compensation calculated at $850. Payment request generated and routed to finance team for processing via Tango Card virtual gift card.",
+    "date": "2024-11-18T14:00:00Z",
+    "status": "pending_approval",
+    "triggerEmail": "email_009.json"
+  },
+  {
+    "id": "wf_event_011",
+    "workflowId": "workflow_010",
+    "workflowName": "Sponsor Report Generation",
+    "eventDescription": "Monthly sponsor report compiled for October 2024. Report includes enrollment metrics (67 patients enrolled, 89% of target), 3 SAEs reported and resolved, and milestone achievement of completing 6-month follow-up for Cohort A. Report distributed to Sponsor and archived.",
+    "date": "2024-11-18T09:00:00Z",
+    "status": "completed",
+    "triggerEmail": null
+  },
+  {
+    "id": "wf_event_012",
+    "workflowId": "workflow_001",
+    "workflowName": "Patient Enrollment Automation",
+    "eventDescription": "David Park expressed interest in oncology trial participation through online referral form. Initial screening call scheduled for November 28, eligibility questionnaire sent, and preliminary record established in patient database pending screening outcome.",
+    "date": "2024-11-17T16:20:00Z",
+    "status": "completed",
+    "triggerEmail": "email_010.json"
+  },
+  {
+    "id": "wf_event_013",
+    "workflowId": "workflow_003",
+    "workflowName": "Invoice Processing & Payment",
+    "eventDescription": "Mayo Clinic submitted site initiation visit invoice for $12,500. Budget validation completed successfully. Invoice approved by Jennifer Martinez and payment initiated through Oracle system. Expected payment processing within 3-5 business days.",
+    "date": "2024-11-17T11:45:00Z",
+    "status": "completed",
+    "triggerEmail": "email_008.json"
+  },
+  {
+    "id": "wf_event_014",
+    "workflowId": "workflow_002",
+    "workflowName": "SAE Alert & Reporting",
+    "eventDescription": "Potential SAE identified: Patient 1923 hospitalized for chest pain evaluation. Automated alert sent to medical monitor and PI. Event assessed as unrelated to study drug. Documentation package prepared for regulatory reporting within 24-hour requirement.",
+    "date": "2024-11-16T18:30:00Z",
+    "status": "completed",
+    "triggerEmail": "email_002.json"
+  },
+  {
+    "id": "wf_event_015",
+    "workflowId": "workflow_008",
+    "workflowName": "CRF Query Resolution",
+    "eventDescription": "Outstanding query for Patient 2674 regarding inconsistent medication dates has been resolved. Site coordinator provided clarification and supporting source documentation. EDC updated and query closed. No further action required.",
+    "date": "2024-11-16T10:00:00Z",
+    "status": "completed",
+    "triggerEmail": null
+  }
+]
