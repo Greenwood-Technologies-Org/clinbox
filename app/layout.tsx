@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import MainContent from "@/components/MainContent";
 import SupplementaryPanel from "@/components/SupplementaryPanel";
 import DocsPage from "@/components/DocsPage";
+import WorkflowsPage from "@/components/WorkflowsPage";
 import { useState } from "react";
 
 interface SelectedEmail {
@@ -40,7 +41,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs'>('email');
+  const [activeView, setActiveView] = useState<'email' | 'calendar' | 'docs' | 'workflows'>('email');
   const [selectedEmail, setSelectedEmail] = useState<SelectedEmail | null>(null);
   const [selectedDocument, setSelectedDocument] = useState<SelectedDocument | null>(null);
   const [showAllTasks, setShowAllTasks] = useState(false);
@@ -53,6 +54,8 @@ export default function RootLayout({
           <Sidebar activeView={activeView} setActiveView={setActiveView} />
           {activeView === 'docs' ? (
             <DocsPage onSelectDocument={setSelectedDocument} />
+          ) : activeView === 'workflows' ? (
+            <WorkflowsPage />
           ) : (
             <MainContent 
               activeView={activeView} 
@@ -64,7 +67,7 @@ export default function RootLayout({
           <SupplementaryPanel 
             selectedEmail={selectedEmail} 
             selectedDocument={selectedDocument}
-            isDocsView={activeView === 'docs'}
+            activeView={activeView}
             showAllTasks={showAllTasks}
             onToggleAllTasks={() => setShowAllTasks(!showAllTasks)}
             showChat={showChat}

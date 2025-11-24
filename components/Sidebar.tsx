@@ -4,8 +4,8 @@ import { Mail, Calendar, TrendingUpDown, FileText, Settings, HelpCircle } from '
 import { getIconProps } from '@/lib/icon-utils';
 
 interface SidebarProps {
-  activeView: 'email' | 'calendar' | 'docs';
-  setActiveView: (view: 'email' | 'calendar' | 'docs') => void;
+  activeView: 'email' | 'calendar' | 'docs' | 'workflows';
+  setActiveView: (view: 'email' | 'calendar' | 'docs' | 'workflows') => void;
 }
 
 export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
@@ -29,8 +29,11 @@ export default function Sidebar({ activeView, setActiveView }: SidebarProps) {
       <div className="flex-1" />
       
       <div className="flex flex-col gap-3">
-        <button className="hover:bg-gray-50 rounded-lg transition-colors">
-          <TrendingUpDown {...getIconProps()} />
+        <button 
+          onClick={() => setActiveView('workflows')}
+          className="hover:bg-gray-50 rounded-lg transition-colors"
+        >
+          <TrendingUpDown {...getIconProps(activeView === 'workflows')} />
         </button>
         <button 
           onClick={() => setActiveView('docs')}

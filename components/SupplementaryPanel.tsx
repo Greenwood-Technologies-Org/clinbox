@@ -33,7 +33,7 @@ interface SupplementaryPanelProps {
     version: string;
     type: string;
   } | null;
-  isDocsView?: boolean;
+  activeView?: 'email' | 'calendar' | 'docs' | 'workflows';
   showAllTasks?: boolean;
   onToggleAllTasks?: () => void;
   showChat?: boolean;
@@ -57,7 +57,7 @@ export default function SupplementaryPanel({
   children, 
   selectedEmail, 
   selectedDocument,
-  isDocsView = false,
+  activeView,
   showAllTasks = false,
   onToggleAllTasks,
   showChat = false,
@@ -193,7 +193,15 @@ export default function SupplementaryPanel({
       );
     }
 
-    if (isDocsView) {
+    if (activeView === 'workflows') {
+      return (
+        <div className="py-3 px-4 flex items-center justify-center h-full">
+          <p className="text-gray-600 text-lg">Workflows</p>
+        </div>
+      );
+    }
+
+    if (activeView === 'docs') {
       return (
         <div className="py-3 px-4">
           {selectedDocument && (
