@@ -5,6 +5,7 @@ import { getIconProps } from '@/lib/icon-utils';
 import { useState, useEffect } from 'react';
 import EmailList from './EmailList';
 import OpenedEmail from './OpenedEmail';
+import Calendar from './Calendar';
 import type { Attachment } from '@/lib/email-utils';
 
 interface Email {
@@ -215,9 +216,7 @@ export default function MainContent({ children, activeView, onSelectEmail }: Mai
           />
         )
       ) : (
-        <div className="flex items-center justify-center h-full">
-          <h1 className="text-gray-400">Calendar</h1>
-        </div>
+        <Calendar />
       )}
     </div>
   );
