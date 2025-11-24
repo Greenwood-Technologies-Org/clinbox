@@ -187,7 +187,7 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
     const loadWorkflows = async () => {
       setWorkflowsLoading(true);
       try {
-        const response = await fetch('/api/emails/workflows.json');
+        const response = await fetch('/api/workflows');
         const workflowsData: WorkflowEvent[] = await response.json();
         setAllWorkflows(workflowsData);
         

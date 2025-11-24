@@ -1,0 +1,164 @@
+{
+  "id": "c4ca4238a0b92382",
+  "threadId": "c4ca4238a0b92382",
+  "labelIds": [
+    "INBOX",
+    "UNREAD",
+    "IMPORTANT"
+  ],
+  "snippet": "Hi Alex, Hope you are well. During a routine QC of the Trial Master File for study DNLI-CNS-002, I was unable to locate the IRB approval letter for th...",
+  "historyId": "1699281000",
+  "internalDate": "1699281000000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<sarah.chen@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "sarah.chen@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Cc",
+        "value": "tmf.queries@denalitx.com, david.lee@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "URGENT: Missing Document in eTMF for Study DNLI-CNS-002 - IRB Approval"
+      },
+      {
+        "name": "Date",
+        "value": "2023-11-06T14:30:00Z"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1@mail.example.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 648
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 648,
+          "data": "SGkgQWxleCwKCkhvcGUgeW91IGFyZSB3ZWxsLgoKRHVyaW5nIGEgcm91dGluZSBRQyBvZiB0aGUgVHJpYWwgTWFzdGVyIEZpbGUgZm9yIHN0dWR5IEROTEktQ05TLTAwMiwgSSB3YXMgdW5hYmxlIHRvIGxvY2F0ZSB0aGUgSVJCIGFwcHJvdmFsIGxldHRlciBmb3IgdGhlIHJlY2VudGx5IHN1Ym1pdHRlZCBQcm90b2NvbCBBbWVuZG1lbnQgNCAoZGF0ZWQgMjAyMy0xMC0xNSkgZm9yIG91ciBjZW50cmFsIHNpdGUsIFN1bW1pdCBOZXVyb3NjaWVuY2VzIChTaXRlIDEwMSkuCgpDb3VsZCB5b3UgcGxlYXNlIGludmVzdGlnYXRlIHRoaXM_IElmIHlvdSBoYXZlIHRoZSBkb2N1bWVudCwgcGxlYXNlIHVwbG9hZCBpdCB0byB0aGUgY29ycmVjdCBwbGFjZWhvbGRlciBpbiB0aGUgZVRNRiBhcyBzb29uIGFzIHBvc3NpYmxlLiBJZiB0aGUgc2l0ZSBoYXMgbm90IHlldCBwcm92aWRlZCBpdCwgY291bGQgeW91IGZvbGxvdyB1cCB3aXRoIHRoZW0_CgpUaGlzIGlzIGN1cnJlbnRseSBob2xkaW5nIHVwIG91ciBwZXJpb2RpYyBUTUYgcmV2aWV3IG1pbGVzdG9uZS4KClRoYW5rcyBmb3IgeW91ciBoZWxwLgoKQmVzdCByZWdhcmRzLAoKU2FyYWggQ2hlbgpUTUYgU3BlY2lhbGlzdApEZW5hbGkgVGhlcmFwZXV0aWNzCnNhcmFoLmNoZW5AZGVuYWxpdHguY29t"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1648,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "c4ca4238a0b92382",
+      "threadId": "c4ca4238a0b92382",
+      "labelIds": [
+        "INBOX",
+        "UNREAD",
+        "IMPORTANT"
+      ],
+      "snippet": "Hi Alex, Hope you are well. During a routine QC of the Trial Master File for study DNLI-CNS-002, I was unable to locate the IRB approval letter for th...",
+      "historyId": "1699281000",
+      "internalDate": "1699281000000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<sarah.chen@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "sarah.chen@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "tmf.queries@denalitx.com, david.lee@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "URGENT: Missing Document in eTMF for Study DNLI-CNS-002 - IRB Approval"
+          },
+          {
+            "name": "Date",
+            "value": "2023-11-06T14:30:00Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 648
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 648,
+              "data": "SGkgQWxleCwKCkhvcGUgeW91IGFyZSB3ZWxsLgoKRHVyaW5nIGEgcm91dGluZSBRQyBvZiB0aGUgVHJpYWwgTWFzdGVyIEZpbGUgZm9yIHN0dWR5IEROTEktQ05TLTAwMiwgSSB3YXMgdW5hYmxlIHRvIGxvY2F0ZSB0aGUgSVJCIGFwcHJvdmFsIGxldHRlciBmb3IgdGhlIHJlY2VudGx5IHN1Ym1pdHRlZCBQcm90b2NvbCBBbWVuZG1lbnQgNCAoZGF0ZWQgMjAyMy0xMC0xNSkgZm9yIG91ciBjZW50cmFsIHNpdGUsIFN1bW1pdCBOZXVyb3NjaWVuY2VzIChTaXRlIDEwMSkuCgpDb3VsZCB5b3UgcGxlYXNlIGludmVzdGlnYXRlIHRoaXM_IElmIHlvdSBoYXZlIHRoZSBkb2N1bWVudCwgcGxlYXNlIHVwbG9hZCBpdCB0byB0aGUgY29ycmVjdCBwbGFjZWhvbGRlciBpbiB0aGUgZVRNRiBhcyBzb29uIGFzIHBvc3NpYmxlLiBJZiB0aGUgc2l0ZSBoYXMgbm90IHlldCBwcm92aWRlZCBpdCwgY291bGQgeW91IGZvbGxvdyB1cCB3aXRoIHRoZW0_CgpUaGlzIGlzIGN1cnJlbnRseSBob2xkaW5nIHVwIG91ciBwZXJpb2RpYyBUTUYgcmV2aWV3IG1pbGVzdG9uZS4KClRoYW5rcyBmb3IgeW91ciBoZWxwLgoKQmVzdCByZWdhcmRzLAoKU2FyYWggQ2hlbgpUTUYgU3BlY2lhbGlzdApEZW5hbGkgVGhlcmFwZXV0aWNzCnNhcmFoLmNoZW5AZGVuYWxpdHguY29t"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1648,
+      "raw": null
+    }
+  ]
+}

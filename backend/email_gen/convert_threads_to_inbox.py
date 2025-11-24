@@ -132,7 +132,7 @@ def main():
     input_dir = (
         "/Users/roshankern/Desktop/Github/clinbox/backend/email_gen/generated_email_threads_2"
     )
-    output_dir = "/Users/roshankern/Desktop/Github/clinbox/backend/simulated_inbox"
+    output_dir = "/Users/roshankern/Desktop/Github/clinbox/simulated_backend/simulated_inbox"
 
     # Process each thread file
     email_data = {}

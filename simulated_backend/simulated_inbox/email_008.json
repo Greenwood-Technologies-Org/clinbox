@@ -1,0 +1,325 @@
+{
+  "id": "ef841a28f7f9c4b9",
+  "threadId": "ef841a28f7f9c4b9",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Sarah, I hope this email finds you well. I'm reaching out today for a proactive check-in regarding recruitment for the FTD cohort (Part B) of the...",
+  "historyId": "1716201000",
+  "internalDate": "1716201000000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<alex.johnson@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "s.chen@universityhealth.org"
+      },
+      {
+        "name": "Cc",
+        "value": "d.roberts@universityhealth.org, lisa.wong@syneos.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123"
+      },
+      {
+        "name": "Date",
+        "value": "2024-05-20T10:30:00Z"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1716201000@mail.example.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 1036
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 1036,
+          "data": "RGVhciBTYXJhaCwKCkkgaG9wZSB0aGlzIGVtYWlsIGZpbmRzIHlvdSB3ZWxsLgoKSSdtIHJlYWNoaW5nIG91dCB0b2RheSBmb3IgYSBwcm9hY3RpdmUgY2hlY2staW4gcmVnYXJkaW5nIHJlY3J1aXRtZW50IGZvciB0aGUgRlREIGNvaG9ydCAoUGFydCBCKSBvZiB0aGUgRE5MSS0wMDEgc3R1ZHkgYXQgVW5pdmVyc2l0eSBIZWFsdGggQ2VudGVyLiBJbiByZXZpZXdpbmcgdGhlIHJlY2VudCBzY3JlZW5pbmcgbG9ncywgSSBub3RlZCB0aGF0IHlvdXIgc2l0ZSBoYXMgbm90IHlldCBzY3JlZW5lZCBhbnkgcGF0aWVudHMgZm9yIHRoaXMgc3BlY2lmaWMgY29ob3J0LgoKV2UgdW5kZXJzdGFuZCB0aGF0IHJlY3J1aXRpbmcgZm9yIHNwZWNpZmljIHBhdGllbnQgcG9wdWxhdGlvbnMgY2FuIHByZXNlbnQgdW5pcXVlIGNoYWxsZW5nZXMuIE91ciB0ZWFtIGF0IERlbmFsaSBpcyBoZXJlIHRvIHN1cHBvcnQgeW91IGluIGFueSB3YXkgd2UgY2FuLiBXZSdkIGJlIGhhcHB5IHRvIHNjaGVkdWxlIGEgYnJpZWYgY2FsbCB0byBkaXNjdXNzIHlvdXIgc2l0ZSdzIGN1cnJlbnQgcHJlLXNjcmVlbmluZyBhbmQgcmVjcnVpdG1lbnQgc3RyYXRlZ2llcy4gV2UgY2FuIGFsc28gZXhwbG9yZSBpZiBhbnkgYWRkaXRpb25hbCByZXNvdXJjZXMgbWlnaHQgYmUgaGVscGZ1bC4KClRvIHRoYXQgZW5kLCBJJ3ZlIGF0dGFjaGVkIG91ciBsYXRlc3QgYXBwcm92ZWQgcGF0aWVudCByZWNydWl0bWVudCBmbHllciBhbmQgYW4gdXBkYXRlZCBGQVEgZG9jdW1lbnQgZm9yIHNpdGVzLCB3aGljaCB5b3UgbWF5IGZpbmQgdXNlZnVsLgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBhbmQgRHIuIFJvYmVydHMgd291bGQgYmUgYXZhaWxhYmxlIGZvciBhIDE1LTIwIG1pbnV0ZSBjYWxsIHNvbWV0aW1lIG5leHQgd2VlayB0byBicmFpbnN0b3JtIHBvdGVudGlhbCBzb2x1dGlvbnMuCgpCZXN0IHJlZ2FyZHMsCgpBbGV4IEpvaG5zb24KQ2xpbmljYWwgUmVzZWFyY2ggQXNzb2NpYXRlCkRlbmFsaSBUaGVyYXBldXRpY3MKYWxleC5qb2huc29uQGRlbmFsaXR4LmNvbQ"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "df955bd76c437093",
+          "size": 0
+        }
+      },
+      {
+        "partId": "2",
+        "mimeType": "application/pdf",
+        "filename": "DNLI-001_FAQ_for_Sites_v2.1.pdf",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "name": "Content-Disposition",
+            "value": "attachment; filename=\"DNLI-001_FAQ_for_Sites_v2.1.pdf\""
+          }
+        ],
+        "body": {
+          "attachmentId": "a37bf40d588bdd2a",
+          "size": 0
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 2036,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "ef841a28f7f9c4b9",
+      "threadId": "ef841a28f7f9c4b9",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Sarah, I hope this email finds you well. I'm reaching out today for a proactive check-in regarding recruitment for the FTD cohort (Part B) of the...",
+      "historyId": "1716201000",
+      "internalDate": "1716201000000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<alex.johnson@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "s.chen@universityhealth.org"
+          },
+          {
+            "name": "Cc",
+            "value": "d.roberts@universityhealth.org, lisa.wong@syneos.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123"
+          },
+          {
+            "name": "Date",
+            "value": "2024-05-20T10:30:00Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1716201000@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 1036
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 1036,
+              "data": "RGVhciBTYXJhaCwKCkkgaG9wZSB0aGlzIGVtYWlsIGZpbmRzIHlvdSB3ZWxsLgoKSSdtIHJlYWNoaW5nIG91dCB0b2RheSBmb3IgYSBwcm9hY3RpdmUgY2hlY2staW4gcmVnYXJkaW5nIHJlY3J1aXRtZW50IGZvciB0aGUgRlREIGNvaG9ydCAoUGFydCBCKSBvZiB0aGUgRE5MSS0wMDEgc3R1ZHkgYXQgVW5pdmVyc2l0eSBIZWFsdGggQ2VudGVyLiBJbiByZXZpZXdpbmcgdGhlIHJlY2VudCBzY3JlZW5pbmcgbG9ncywgSSBub3RlZCB0aGF0IHlvdXIgc2l0ZSBoYXMgbm90IHlldCBzY3JlZW5lZCBhbnkgcGF0aWVudHMgZm9yIHRoaXMgc3BlY2lmaWMgY29ob3J0LgoKV2UgdW5kZXJzdGFuZCB0aGF0IHJlY3J1aXRpbmcgZm9yIHNwZWNpZmljIHBhdGllbnQgcG9wdWxhdGlvbnMgY2FuIHByZXNlbnQgdW5pcXVlIGNoYWxsZW5nZXMuIE91ciB0ZWFtIGF0IERlbmFsaSBpcyBoZXJlIHRvIHN1cHBvcnQgeW91IGluIGFueSB3YXkgd2UgY2FuLiBXZSdkIGJlIGhhcHB5IHRvIHNjaGVkdWxlIGEgYnJpZWYgY2FsbCB0byBkaXNjdXNzIHlvdXIgc2l0ZSdzIGN1cnJlbnQgcHJlLXNjcmVlbmluZyBhbmQgcmVjcnVpdG1lbnQgc3RyYXRlZ2llcy4gV2UgY2FuIGFsc28gZXhwbG9yZSBpZiBhbnkgYWRkaXRpb25hbCByZXNvdXJjZXMgbWlnaHQgYmUgaGVscGZ1bC4KClRvIHRoYXQgZW5kLCBJJ3ZlIGF0dGFjaGVkIG91ciBsYXRlc3QgYXBwcm92ZWQgcGF0aWVudCByZWNydWl0bWVudCBmbHllciBhbmQgYW4gdXBkYXRlZCBGQVEgZG9jdW1lbnQgZm9yIHNpdGVzLCB3aGljaCB5b3UgbWF5IGZpbmQgdXNlZnVsLgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBhbmQgRHIuIFJvYmVydHMgd291bGQgYmUgYXZhaWxhYmxlIGZvciBhIDE1LTIwIG1pbnV0ZSBjYWxsIHNvbWV0aW1lIG5leHQgd2VlayB0byBicmFpbnN0b3JtIHBvdGVudGlhbCBzb2x1dGlvbnMuCgpCZXN0IHJlZ2FyZHMsCgpBbGV4IEpvaG5zb24KQ2xpbmljYWwgUmVzZWFyY2ggQXNzb2NpYXRlCkRlbmFsaSBUaGVyYXBldXRpY3MKYWxleC5qb2huc29uQGRlbmFsaXR4LmNvbQ"
+            }
+          },
+          {
+            "partId": "1",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-001_Patient_Recruitment_Flyer_v3.0.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "df955bd76c437093",
+              "size": 0
+            }
+          },
+          {
+            "partId": "2",
+            "mimeType": "application/pdf",
+            "filename": "DNLI-001_FAQ_for_Sites_v2.1.pdf",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/pdf"
+              },
+              {
+                "name": "Content-Disposition",
+                "value": "attachment; filename=\"DNLI-001_FAQ_for_Sites_v2.1.pdf\""
+              }
+            ],
+            "body": {
+              "attachmentId": "a37bf40d588bdd2a",
+              "size": 0
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 2036,
+      "raw": null
+    },
+    {
+      "id": "d265fc7c9db17b13",
+      "threadId": "ef841a28f7f9c4b9",
+      "labelIds": [
+        "INBOX"
+      ],
+      "snippet": "Hi Alex, Thank you for reaching out and for the attached materials. We appreciate the proactive support. You are correct, we have been facing some cha...",
+      "historyId": "1716300900",
+      "internalDate": "1716300900000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<s.chen@universityhealth.org>"
+          },
+          {
+            "name": "From",
+            "value": "s.chen@universityhealth.org"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "d.roberts@universityhealth.org, lisa.wong@syneos.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Re: Proactive Check-in: Recruitment for FTD Cohort (Part B) - Study DNLI-001 - Site 123"
+          },
+          {
+            "name": "Date",
+            "value": "2024-05-21T14:15:00Z"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1716300900@mail.example.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          },
+          {
+            "name": "In-Reply-To",
+            "value": "<1716201000@mail.example.com>"
+          },
+          {
+            "name": "References",
+            "value": "<1716201000@mail.example.com>"
+          }
+        ],
+        "body": {
+          "size": 530
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 530,
+              "data": "SGkgQWxleCwKClRoYW5rIHlvdSBmb3IgcmVhY2hpbmcgb3V0IGFuZCBmb3IgdGhlIGF0dGFjaGVkIG1hdGVyaWFscy4gV2UgYXBwcmVjaWF0ZSB0aGUgcHJvYWN0aXZlIHN1cHBvcnQuCgpZb3UgYXJlIGNvcnJlY3QsIHdlIGhhdmUgYmVlbiBmYWNpbmcgc29tZSBjaGFsbGVuZ2VzIGlkZW50aWZ5aW5nIHBvdGVudGlhbCBjYW5kaWRhdGVzIGZvciB0aGUgRlREIGNvaG9ydC4gQSBjYWxsIHRvIGRpc2N1c3Mgb3VyIHN0cmF0ZWd5IHdvdWxkIGJlIHZlcnkgaGVscGZ1bC4KCkRyLiBSb2JlcnRzIGFuZCBJIGFyZSBnZW5lcmFsbHkgYXZhaWxhYmxlIG5leHQgVHVlc2RheSBvciBUaHVyc2RheSBhZnRlcm5vb24uIFBsZWFzZSBsZXQgdXMga25vdyB3aGF0IHRpbWUgd29ya3MgYmVzdCBmb3IgeW91IHRvIHNlbmQgYSBtZWV0aW5nIGludml0YXRpb24uCgpUaGFuayB5b3UsCgpTYXJhaCBDaGVuCkNsaW5pY2FsIFJlc2VhcmNoIENvb3JkaW5hdG9yClVuaXZlcnNpdHkgSGVhbHRoIENlbnRlcgpzLmNoZW5AdW5pdmVyc2l0eWhlYWx0aC5vcmc"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1530,
+      "raw": null
+    }
+  ]
+}
