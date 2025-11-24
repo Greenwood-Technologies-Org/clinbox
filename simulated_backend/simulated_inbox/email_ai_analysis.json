@@ -8,10 +8,12 @@
       "steps": [
         {
           "name": "Checking values for abnormalities",
+          "result": "No abnormalities",
           "reasoning": "Hippocampal volume of 3,847 mm³ is within protocol specifications (3,200-4,500 mm³). Cortical thickness measurements show no significant atrophy. Quality assurance review indicates clean imaging with no artifacts."
         },
         {
           "name": "Logging results in EDC",
+          "result": "Completed",
           "reasoning": "Opened patient 203-012 in Medidata Rave, navigated to Week 24 MRI form. Entered hippocampal volume of 3,847 mm³ and cortical thickness of 2.4 mm. Updated QA status to 'Approved' with analyst assessment."
         }
       ]

@@ -20,7 +20,7 @@ interface SelectedEmail {
     workflow?: {
       workflowId: string;
       status: string;
-      steps?: Array<{ name: string; reasoning: string }>;
+      steps?: Array<{ name: string; result: string; reasoning: string }>;
     };
   };
   tasks?: string[];
@@ -555,16 +555,17 @@ export default function SupplementaryPanel({
       {showWorkflowModal && selectedEmail?.aiAnalysis?.workflow?.steps && (
         <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-2xl h-96 mx-4 flex flex-col">
-            <h2 className="text-lg font-semibold text-center mb-4">{workflowName}</h2>
+            <h2 className="text-xl font-semibold text-center mb-4">{workflowName}</h2>
             <div className="border-b border-gray-200 mb-6"></div>
-            <ul className="space-y-4 flex-1 flex flex-col items-center justify-center">
+            <div className="space-y-6 flex-1 flex flex-col justify-center px-8">
               {selectedEmail.aiAnalysis.workflow.steps.map((step, index) => (
-                <li key={index} className="text-sm text-gray-700">
+                <div key={index} className="text-base">
                   <div className="font-medium mb-1">{index + 1}. {step.name}</div>
-                  <div className="text-gray-600 text-xs">{step.reasoning}</div>
-                </li>
+                  <div className="text-green-600 text-sm mb-1">✓ {step.result}</div>
+                  <div className="text-gray-600 text-sm">{step.reasoning}</div>
+                </div>
               ))}
-            </ul>
+            </div>
             <div className="flex justify-between">
               <button 
                 onClick={() => setShowWorkflowModal(false)}
