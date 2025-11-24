@@ -18,5 +18,35 @@
     },
     "tasks": [],
     "hasAttachments": true
+  },
+  "email_003.json": {
+    "folder": "Urgent",
+    "sender": {
+      "name": "Michael Torres",
+      "title": "Clinical Research Coordinator",
+      "organization": "Stanford Medical Center"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_004.json": {
+    "folder": "Important",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [],
+    "hasAttachments": false
+  },
+  "email_005.json": {
+    "folder": "Urgent",
+    "sender": {
+      "name": "Rachel Kim",
+      "title": "Program Manager",
+      "organization": "Denali Therapeutics"
+    },
+    "tasks": [],
+    "hasAttachments": false
   }
 }

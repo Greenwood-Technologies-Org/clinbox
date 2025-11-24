@@ -1,0 +1,162 @@
+{
+  "id": "9a3f5e7b2c8d1e46",
+  "threadId": "9a3f5e7b2c8d1e46",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Dear Alex, Please see below the list of sites that are currently behind on data entry for patient visits. These sites require follow-up to ensure tim...",
+  "historyId": "1732452000",
+  "internalDate": "1732452000000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<rachel.kim@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "rachel.kim@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Cc",
+        "value": "clinical.ops@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Data Entry Follow-Up Required - DNLI-456 Study Sites"
+      },
+      {
+        "name": "Date",
+        "value": "2024-11-24T13:10:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732452000@denalitx.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 298
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 298,
+          "data": "RGVhciBBbGV4LAoKUGxlYXNlIHNlZSBiZWxvdyB0aGUgbGlzdCBvZiBzaXRlcyB0aGF0IGFyZSBjdXJyZW50bHkgYmVoaW5kIG9uIGRhdGEgZW50cnkgZm9yIHBhdGllbnQgdmlzaXRzLiBUaGVzZSBzaXRlcyByZXF1aXJlIGZvbGxvdy11cCB0byBlbnN1cmUgdGltZWx5IGRhdGEgZW50cnkgYW5kIGRhdGFiYXNlIGNvbXBsZXRpb24uCgpTaXRlcyBCZWhpbmQgb24gRGF0YSBFbnRyeToKCjEuIFNpdGUgMTA1IC0gTWF5byBDbGluaWMKICAgLSBPdXRzdGFuZGluZyBWaXNpdHM6IDMgcGF0aWVudCB2aXNpdHMgZnJvbSBOb3ZlbWJlciAxMi0xOCwgMjAyNAogICAtIENvbnRhY3Q6IERyLiBMaW5kYSBDaGVuICgtIGxpbmRhLmNoZW5AbWF5by5lZHUpCgoyLiBTaXRlIDIwOSAtIEpvaG5zIEhvcGtpbnMgTWVkaWNpbmUKICAgLSBPdXRzdGFuZGluZyBWaXNpdHM6IDUgcGF0aWVudCB2aXNpdHMgZnJvbSBOb3ZlbWJlciA4LTE1LCAyMDI0CiAgIC0gQ29udGFjdDogVGltb3RoeSBQYXRlbCAoLSB0aW1vdGh5LnBhdGVsQGpobWkuZWR1KQoKMy4gU2l0ZSAzMTIgLSBDbGV2ZWxhbmQgQ2xpbmljCiAgIC0gT3V0c3RhbmRpbmcgVmlzaXRzOiA0IHBhdGllbnQgdmlzaXRzIGZyb20gTm92ZW1iZXIgMTAtMjAsIDIwMjQKICAgLSBDb250YWN0OiBTYXJhaCBXaWxzb24gKHNhcmFoLndpbHNvbkBjY2Yub3JnKQoKUGxlYXNlIGNvbnRhY3QgdGhlc2Ugc2l0ZXMgdG8gcmVtaW5kIHRoZW0gb2YgdGhlIGRhdGEgZW50cnkgdGltZWxpbmVzIHBlciBwcm90b2NvbC4gRGF0YWJhc2UgbG9jayBpcyBzY2hlZHVsZWQgZm9yIEphbnVhcnkgMTUsIDIwMjUuCgpCZXN0IHJlZ2FyZHMsCgpSYWNoZWwgS2ltClByb2dyYW0gTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCnJhY2hlbC5raW1AZGVuYWxpdHguY29tCig2NTApIDU1NS04OTAx"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1298,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "9a3f5e7b2c8d1e46",
+      "threadId": "9a3f5e7b2c8d1e46",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "Dear Alex, Please see below the list of sites that are currently behind on data entry for patient visits. These sites require follow-up to ensure tim...",
+      "historyId": "1732452000",
+      "internalDate": "1732452000000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<rachel.kim@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "rachel.kim@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Cc",
+            "value": "clinical.ops@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Data Entry Follow-Up Required - DNLI-456 Study Sites"
+          },
+          {
+            "name": "Date",
+            "value": "2024-11-24T13:10:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732452000@denalitx.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 298
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 298,
+              "data": "RGVhciBBbGV4LAoKUGxlYXNlIHNlZSBiZWxvdyB0aGUgbGlzdCBvZiBzaXRlcyB0aGF0IGFyZSBjdXJyZW50bHkgYmVoaW5kIG9uIGRhdGEgZW50cnkgZm9yIHBhdGllbnQgdmlzaXRzLiBUaGVzZSBzaXRlcyByZXF1aXJlIGZvbGxvdy11cCB0byBlbnN1cmUgdGltZWx5IGRhdGEgZW50cnkgYW5kIGRhdGFiYXNlIGNvbXBsZXRpb24uCgpTaXRlcyBCZWhpbmQgb24gRGF0YSBFbnRyeToKCjEuIFNpdGUgMTA1IC0gTWF5byBDbGluaWMKICAgLSBPdXRzdGFuZGluZyBWaXNpdHM6IDMgcGF0aWVudCB2aXNpdHMgZnJvbSBOb3ZlbWJlciAxMi0xOCwgMjAyNAogICAtIENvbnRhY3Q6IERyLiBMaW5kYSBDaGVuICgtIGxpbmRhLmNoZW5AbWF5by5lZHUpCgoyLiBTaXRlIDIwOSAtIEpvaG5zIEhvcGtpbnMgTWVkaWNpbmUKICAgLSBPdXRzdGFuZGluZyBWaXNpdHM6IDUgcGF0aWVudCB2aXNpdHMgZnJvbSBOb3ZlbWJlciA4LTE1LCAyMDI0CiAgIC0gQ29udGFjdDogVGltb3RoeSBQYXRlbCAoLSB0aW1vdGh5LnBhdGVsQGpobWkuZWR1KQoKMy4gU2l0ZSAzMTIgLSBDbGV2ZWxhbmQgQ2xpbmljCiAgIC0gT3V0c3RhbmRpbmcgVmlzaXRzOiA0IHBhdGllbnQgdmlzaXRzIGZyb20gTm92ZW1iZXIgMTAtMjAsIDIwMjQKICAgLSBDb250YWN0OiBTYXJhaCBXaWxzb24gKHNhcmFoLndpbHNvbkBjY2Yub3JnKQoKUGxlYXNlIGNvbnRhY3QgdGhlc2Ugc2l0ZXMgdG8gcmVtaW5kIHRoZW0gb2YgdGhlIGRhdGEgZW50cnkgdGltZWxpbmVzIHBlciBwcm90b2NvbC4gRGF0YWJhc2UgbG9jayBpcyBzY2hlZHVsZWQgZm9yIEphbnVhcnkgMTUsIDIwMjUuCgpCZXN0IHJlZ2FyZHMsCgpSYWNoZWwgS2ltClByb2dyYW0gTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCnJhY2hlbC5raW1AZGVuYWxpdHguY29tCig2NTApIDU1NS04OTAx"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1298,
+      "raw": null
+    }
+  ]
+}

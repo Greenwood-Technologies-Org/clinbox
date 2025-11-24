@@ -1,0 +1,154 @@
+{
+  "id": "5e8b3c9f1a7d2e64",
+  "threadId": "5e8b3c9f1a7d2e64",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "---------- Forwarded message --------- From: Marcus Chen <marcus.chen@denalitx.com> Date: Sun, Nov 24, 2024 at 11:45 AM Subject: Critical Data Issue...",
+  "historyId": "1732455600",
+  "internalDate": "1732455600000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "filename": "",
+    "headers": [
+      {
+        "name": "Delivered-To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Return-Path",
+        "value": "<rachel.kim@denalitx.com>"
+      },
+      {
+        "name": "From",
+        "value": "rachel.kim@denalitx.com"
+      },
+      {
+        "name": "To",
+        "value": "alex.johnson@denalitx.com"
+      },
+      {
+        "name": "Subject",
+        "value": "Fwd: Critical Data Issues - Site 307 - DNLI-456 Study"
+      },
+      {
+        "name": "Date",
+        "value": "2024-11-24T14:10:00-08:00"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<1732455600@denalitx.com>"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+      }
+    ],
+    "body": {
+      "size": 445
+    },
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=\"UTF-8\""
+          }
+        ],
+        "body": {
+          "size": 445,
+          "data": "QWxleCwKClBsZWFzZSBzZWUgTWFyY3VzJ3MgZW1haWwgYmVsb3cgcmVnYXJkaW5nIGNyaXRpY2FsIGRhdGEgaXNzdWVzIGF0IFNpdGUgMzA3LiBDYW4geW91IGZvbGxvdyB1cCB3aXRoIHRoZSBzaXRlIGFzIHNvb24gYXMgcG9zc2libGU_CgpUaGFua3MsCgpSYWNoZWwgS2ltClByb2dyYW0gTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCgotLS0tLS0tLS0tIEZvcndhcmRlZCBtZXNzYWdlIC0tLS0tLS0tLQpGcm9tOiBNYXJjdXMgQ2hlbiA8bWFyY3VzLmNoZW5AZGVuYWxpdHguY29tPgpEYXRlOiBTdW4sIE5vdiAyNCwgMjAyNCBhdCAxMTo0NSBBTQPTU3ViamVjdDogQ3JpdGljYWwgRGF0YSBJc3N1ZXMgLSBTaXRlIDMwNyAtIEROTEktNDU2IFN0dWR5ClRvOiBSYWNoZWwgS2ltIDxyYWNoZWwua2ltQGRlbmFsaXR4LmNvbT4KQ2M6IERhdGEgTWFuYWdlbWVudCA8ZGF0YS5tZ210QGRlbmFsaXR4LmNvbT4KCkRlYXIgUmFjaGVsLAoKSSBhbSB3cml0aW5nIHRvIGFsZXJ0IHlvdSB0byBzZXZlcmFsIGNyaXRpY2FsIGRhdGEgcXVhbGl0eSBpc3N1ZXMgYXQgU2l0ZSAzMDcgKFVDU0YpIHRoYXQgcmVxdWlyZSBpbW1lZGlhdGUgYXR0ZW50aW9uIHByaW9yIHRvIGRhdGFiYXNlIGxvY2suCgpPdXRzdGFuZGluZyBJc3N1ZXM6CgoxLiBPcGVuIFF1ZXJpZXM6IDIzIHVucmVzb2x2ZWQgZGF0YSBxdWVyaWVzICg4IG1hcmtlZCBhcyBjcml0aWNhbCkKICAgLSA2IHF1ZXJpZXMgb3BlbiA-IDMwIGRheXMKICAgLSBQcmltYXJpbHkgcmVsYXRlZCB0byBtaXNzaW5nIGxhYiBkYXRhIGFuZCBpbmNvbnNpc3RlbnQgYWR2ZXJzZSBldmVudCBkYXRlcwoKMi4gTWlzc2luZyBTb3VyY2UgRG9jdW1lbnRhdGlvbjoKICAgLSA1IHBhdGllbnQgdmlzaXRzIGxhY2tpbmcgc291cmNlIGRvY3VtZW50IHZlcmlmaWNhdGlvbgogICAtIFJlcXVpcmVkIGZvciBzaXRlIG1vbml0b3JpbmcgdmlzaXQgY2xvc2VvdXQKCjMuIEVEQyBDb21wbGlhbmNlOgogICAtIDcgQ1JGcyByZXF1aXJpbmcgY29ycmVjdGlvbnMgYmVmb3JlIGRhdGEgbG9jawogICAtIFBhdGllbnQgMzA3LTAyNCBoYXMgMyBpbmNvbXBsZXRlIGZvcm1zIGZyb20gV2VlayAxMiB2aXNpdAoKVGhlc2UgaXNzdWVzIG11c3QgYmUgcmVzb2x2ZWQgYnkgRGVjZW1iZXIgMTAsIDIwMjQgdG8gbWVldCBvdXIgZGF0YWJhc2UgbG9jayB0aW1lbGluZS4gU2l0ZSAzMDcgaGFzIGJlZW4gbm90aWZpZWQgbXVsdGlwbGUgdGltZXMgYnV0IHJlc3BvbnNlIGhhcyBiZWVuIGRlbGF5ZWQuCgpSZWNvbW1lbmRlZCBBY3Rpb246CkNSQSBmb2xsb3ctdXAgd2l0aCBzaXRlIGNvb3JkaW5hdG9yIEplbm5pZmVyIE1hcnRpbmV6IHRvIGVzdGFibGlzaCBhIHJlc29sdXRpb24gcGxhbiB3aXRoIHNwZWNpZmljIGRlYWRsaW5lcyBmb3IgZWFjaCBvdXRzdGFuZGluZyBpdGVtLgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBuZWVkIGFkZGl0aW9uYWwgZGV0YWlscyBvciBhIGRldGFpbGVkIHF1ZXJ5IHJlcG9ydC4KCkJlc3QgcmVnYXJkcywKCk1hcmN1cyBDaGVuCkRhdGEgTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCm1hcmN1cy5jaGVuQGRlbmFsaXR4LmNvbQooNjUwKSA1NTUtNzgxMg"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 1445,
+  "raw": null,
+  "threadEmails": [
+    {
+      "id": "5e8b3c9f1a7d2e64",
+      "threadId": "5e8b3c9f1a7d2e64",
+      "labelIds": [
+        "INBOX",
+        "UNREAD"
+      ],
+      "snippet": "---------- Forwarded message --------- From: Marcus Chen <marcus.chen@denalitx.com> Date: Sun, Nov 24, 2024 at 11:45 AM Subject: Critical Data Issue...",
+      "historyId": "1732455600",
+      "internalDate": "1732455600000",
+      "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+          {
+            "name": "Delivered-To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Return-Path",
+            "value": "<rachel.kim@denalitx.com>"
+          },
+          {
+            "name": "From",
+            "value": "rachel.kim@denalitx.com"
+          },
+          {
+            "name": "To",
+            "value": "alex.johnson@denalitx.com"
+          },
+          {
+            "name": "Subject",
+            "value": "Fwd: Critical Data Issues - Site 307 - DNLI-456 Study"
+          },
+          {
+            "name": "Date",
+            "value": "2024-11-24T14:10:00-08:00"
+          },
+          {
+            "name": "Message-ID",
+            "value": "<1732455600@denalitx.com>"
+          },
+          {
+            "name": "MIME-Version",
+            "value": "1.0"
+          },
+          {
+            "name": "Content-Type",
+            "value": "multipart/alternative; boundary=\"000000000000a1b2c3d4e5f6\""
+          }
+        ],
+        "body": {
+          "size": 445
+        },
+        "parts": [
+          {
+            "partId": "0",
+            "mimeType": "text/plain",
+            "filename": "",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"UTF-8\""
+              }
+            ],
+            "body": {
+              "size": 445,
+              "data": "QWxleCwKClBsZWFzZSBzZWUgTWFyY3VzJ3MgZW1haWwgYmVsb3cgcmVnYXJkaW5nIGNyaXRpY2FsIGRhdGEgaXNzdWVzIGF0IFNpdGUgMzA3LiBDYW4geW91IGZvbGxvdyB1cCB3aXRoIHRoZSBzaXRlIGFzIHNvb24gYXMgcG9zc2libGU_CgpUaGFua3MsCgpSYWNoZWwgS2ltClByb2dyYW0gTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCgotLS0tLS0tLS0tIEZvcndhcmRlZCBtZXNzYWdlIC0tLS0tLS0tLQpGcm9tOiBNYXJjdXMgQ2hlbiA8bWFyY3VzLmNoZW5AZGVuYWxpdHguY29tPgpEYXRlOiBTdW4sIE5vdiAyNCwgMjAyNCBhdCAxMTo0NSBBTQPTU3ViamVjdDogQ3JpdGljYWwgRGF0YSBJc3N1ZXMgLSBTaXRlIDMwNyAtIEROTEktNDU2IFN0dWR5ClRvOiBSYWNoZWwgS2ltIDxyYWNoZWwua2ltQGRlbmFsaXR4LmNvbT4KQ2M6IERhdGEgTWFuYWdlbWVudCA8ZGF0YS5tZ210QGRlbmFsaXR4LmNvbT4KCkRlYXIgUmFjaGVsLAoKSSBhbSB3cml0aW5nIHRvIGFsZXJ0IHlvdSB0byBzZXZlcmFsIGNyaXRpY2FsIGRhdGEgcXVhbGl0eSBpc3N1ZXMgYXQgU2l0ZSAzMDcgKFVDU0YpIHRoYXQgcmVxdWlyZSBpbW1lZGlhdGUgYXR0ZW50aW9uIHByaW9yIHRvIGRhdGFiYXNlIGxvY2suCgpPdXRzdGFuZGluZyBJc3N1ZXM6CgoxLiBPcGVuIFF1ZXJpZXM6IDIzIHVucmVzb2x2ZWQgZGF0YSBxdWVyaWVzICg4IG1hcmtlZCBhcyBjcml0aWNhbCkKICAgLSA2IHF1ZXJpZXMgb3BlbiA-IDMwIGRheXMKICAgLSBQcmltYXJpbHkgcmVsYXRlZCB0byBtaXNzaW5nIGxhYiBkYXRhIGFuZCBpbmNvbnNpc3RlbnQgYWR2ZXJzZSBldmVudCBkYXRlcwoKMi4gTWlzc2luZyBTb3VyY2UgRG9jdW1lbnRhdGlvbjoKICAgLSA1IHBhdGllbnQgdmlzaXRzIGxhY2tpbmcgc291cmNlIGRvY3VtZW50IHZlcmlmaWNhdGlvbgogICAtIFJlcXVpcmVkIGZvciBzaXRlIG1vbml0b3JpbmcgdmlzaXQgY2xvc2VvdXQKCjMuIEVEQyBDb21wbGlhbmNlOgogICAtIDcgQ1JGcyByZXF1aXJpbmcgY29ycmVjdGlvbnMgYmVmb3JlIGRhdGEgbG9jawogICAtIFBhdGllbnQgMzA3LTAyNCBoYXMgMyBpbmNvbXBsZXRlIGZvcm1zIGZyb20gV2VlayAxMiB2aXNpdAoKVGhlc2UgaXNzdWVzIG11c3QgYmUgcmVzb2x2ZWQgYnkgRGVjZW1iZXIgMTAsIDIwMjQgdG8gbWVldCBvdXIgZGF0YWJhc2UgbG9jayB0aW1lbGluZS4gU2l0ZSAzMDcgaGFzIGJlZW4gbm90aWZpZWQgbXVsdGlwbGUgdGltZXMgYnV0IHJlc3BvbnNlIGhhcyBiZWVuIGRlbGF5ZWQuCgpSZWNvbW1lbmRlZCBBY3Rpb246CkNSQSBmb2xsb3ctdXAgd2l0aCBzaXRlIGNvb3JkaW5hdG9yIEplbm5pZmVyIE1hcnRpbmV6IHRvIGVzdGFibGlzaCBhIHJlc29sdXRpb24gcGxhbiB3aXRoIHNwZWNpZmljIGRlYWRsaW5lcyBmb3IgZWFjaCBvdXRzdGFuZGluZyBpdGVtLgoKUGxlYXNlIGxldCBtZSBrbm93IGlmIHlvdSBuZWVkIGFkZGl0aW9uYWwgZGV0YWlscyBvciBhIGRldGFpbGVkIHF1ZXJ5IHJlcG9ydC4KCkJlc3QgcmVnYXJkcywKCk1hcmN1cyBDaGVuCkRhdGEgTWFuYWdlcgpEZW5hbGkgVGhlcmFwZXV0aWNzCm1hcmN1cy5jaGVuQGRlbmFsaXR4LmNvbQooNjUwKSA1NTUtNzgxMg"
+            }
+          }
+        ]
+      },
+      "sizeEstimate": 1445,
+      "raw": null
+    }
+  ]
+}
