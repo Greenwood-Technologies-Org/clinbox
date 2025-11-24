@@ -21,13 +21,12 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
   const [documents, setDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Define column widths (must total 100%)
+  // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
-    name: 45,
-    modified: 18,
-    version: 13,
-    type: 14,
-    action: 10
+    name: 56,
+    modified: 20,
+    version: 10,
+    type: 14
   };
 
   useEffect(() => {
@@ -65,7 +64,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
           <table className="w-full table-fixed">
             <thead className="bg-white sticky top-0">
               <tr>
-                <th style={{ width: `${columnWidths.name}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                <th style={{ width: `${columnWidths.name}%` }} className="pl-6 pr-3 py-3 text-left text-sm font-semibold text-black">
                   Name
                 </th>
                 <th style={{ width: `${columnWidths.modified}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
@@ -77,7 +76,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                 <th style={{ width: `${columnWidths.type}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
                   Type
                 </th>
-                <th style={{ width: `${columnWidths.action}%` }} className="px-3 py-3 text-right">
+                <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
                   <button>
                     <CirclePlus {...getIconProps()} />
                   </button>
@@ -96,7 +95,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                   className="hover:bg-gray-50 cursor-pointer transition-colors"
                   onMouseEnter={() => onSelectDocument(doc)}
                 >
-                  <td className="px-3 py-4 text-sm font-medium text-gray-900 truncate">
+                  <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
                     {doc.name}
                   </td>
                   <td className="px-3 py-4 text-sm text-gray-600 truncate">
@@ -110,7 +109,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
                       {doc.type}
                     </span>
                   </td>
-                  <td className="px-3 py-4 text-right">
+                  <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
                     <button>
                       <CircleMinus {...getIconProps()} />
                     </button>
