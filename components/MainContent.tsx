@@ -34,7 +34,7 @@ interface EmailData {
 interface EmailAIAnalysis {
   [key: string]: {
     summary: string;
-    quickActions?: string[];
+    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
   };
 }
 
@@ -51,7 +51,7 @@ interface WorkflowEvent {
 interface MainContentProps {
   children: React.ReactNode;
   activeView: 'email' | 'calendar' | 'workflows';
-  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: string[] }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
+  onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
   onSelectWorkflow?: (workflow: { id: string; workflowId: string; workflowName: string; eventDescription: string; date: string; status: string } | null) => void;
 }
 

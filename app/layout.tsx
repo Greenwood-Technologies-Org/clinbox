@@ -17,7 +17,7 @@ interface SelectedEmail {
   };
   aiAnalysis?: {
     summary: string;
-    quickActions?: string[];
+    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
   };
   tasks?: string[];
   hasAttachments?: boolean;

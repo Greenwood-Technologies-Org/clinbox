@@ -16,7 +16,7 @@ interface SelectedEmail {
   };
   aiAnalysis?: {
     summary: string;
-    quickActions?: string[];
+    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
     workflow?: {
       workflowId: string;
       status: string;
@@ -403,19 +403,22 @@ export default function SupplementaryPanel({
                   </div>
                   <div className="space-y-2">
                     {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
-                      selectedEmail.aiAnalysis.quickActions.map((action, index) => (
-                        <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                          <span className="text-sm text-gray-700">{action}</span>
-                          <div className="flex items-center gap-2">
-                            <button className="hover:text-green-600 text-gray-400 transition-colors">
-                              <CircleCheck className="w-4 h-4" />
-                            </button>
-                            <button className="hover:text-red-600 text-gray-400 transition-colors">
-                              <CircleX className="w-4 h-4" />
-                            </button>
+                      selectedEmail.aiAnalysis.quickActions.map((action, index) => {
+                        const actionText = typeof action === 'string' ? action : action.action;
+                        return (
+                          <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                            <span className="text-sm text-gray-700">{actionText}</span>
+                            <div className="flex items-center gap-2">
+                              <button className="hover:text-green-600 text-gray-400 transition-colors">
+                                <CircleCheck className="w-4 h-4" />
+                              </button>
+                              <button className="hover:text-red-600 text-gray-400 transition-colors">
+                                <CircleX className="w-4 h-4" />
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      ))
+                        );
+                      })
                     ) : (
                       <p className="text-sm text-gray-400 py-2">No quick actions</p>
                     )}
