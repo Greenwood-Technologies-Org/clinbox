@@ -20,6 +20,7 @@ interface DocsPageProps {
 export default function DocsPage({ onSelectDocument }: DocsPageProps) {
   const [documents, setDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
@@ -36,6 +37,7 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
         const data = await response.json();
         setDocuments(data);
         if (data.length > 0) {
+          setSelectedDoc(data[0]);
           onSelectDocument(data[0]);
         }
       } catch (error) {
@@ -63,6 +65,11 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
       'csv': 'text-green-600'
     };
     return typeMap[type.toLowerCase()] || 'text-gray-800';
+  };
+
+  const handleDocSelect = (doc: Document) => {
+    setSelectedDoc(doc);
+    onSelectDocument(doc);
   };
 
   return (
@@ -104,8 +111,10 @@ export default function DocsPage({ onSelectDocument }: DocsPageProps) {
               {documents.map((doc) => (
                 <tr 
                   key={doc.id} 
-                  className="hover:bg-gray-50 cursor-pointer transition-colors"
-                  onMouseEnter={() => onSelectDocument(doc)}
+                  className={`cursor-pointer transition-colors ${
+                    selectedDoc?.id === doc.id ? 'bg-gray-100' : 'hover:bg-gray-100'
+                  }`}
+                  onMouseEnter={() => handleDocSelect(doc)}
                 >
                   <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
                     {doc.name}
