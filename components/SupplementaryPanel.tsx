@@ -385,10 +385,10 @@ export default function SupplementaryPanel({
               </p>
             </div>
 
-            {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 && (
+            {!selectedEmail.aiAnalysis?.workflow?.workflowId && (
               <>
-                <div className="border-b border-gray-200"></div>
                 {/* Quick Actions */}
+                <div className="border-b border-gray-200"></div>
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
@@ -400,28 +400,28 @@ export default function SupplementaryPanel({
                     </button>
                   </div>
                   <div className="space-y-2">
-                    {selectedEmail.aiAnalysis.quickActions.map((action, index) => (
-                      <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                        <span className="text-sm text-gray-700">{action}</span>
-                        <div className="flex items-center gap-2">
-                          <button className="hover:text-green-600 text-gray-400 transition-colors">
-                            <CircleCheck className="w-4 h-4" />
-                          </button>
-                          <button className="hover:text-red-600 text-gray-400 transition-colors">
-                            <CircleX className="w-4 h-4" />
-                          </button>
+                    {selectedEmail.aiAnalysis?.quickActions && selectedEmail.aiAnalysis.quickActions.length > 0 ? (
+                      selectedEmail.aiAnalysis.quickActions.map((action, index) => (
+                        <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                          <span className="text-sm text-gray-700">{action}</span>
+                          <div className="flex items-center gap-2">
+                            <button className="hover:text-green-600 text-gray-400 transition-colors">
+                              <CircleCheck className="w-4 h-4" />
+                            </button>
+                            <button className="hover:text-red-600 text-gray-400 transition-colors">
+                              <CircleX className="w-4 h-4" />
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))
+                    ) : (
+                      <p className="text-sm text-gray-400 py-2">No quick actions</p>
+                    )}
                   </div>
                 </div>
-              </>
-            )}
 
-            {selectedEmail.tasks && selectedEmail.tasks.length > 0 && (
-              <>
-                <div className="border-b border-gray-200"></div>
                 {/* Tasks */}
+                <div className="border-b border-gray-200"></div>
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
@@ -433,19 +433,23 @@ export default function SupplementaryPanel({
                     </button>
                   </div>
                   <div className="space-y-2">
-                    {selectedEmail.tasks.map((task, index) => (
-                      <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
-                        <span className="text-sm text-gray-700">{task}</span>
-                        <div className="flex items-center gap-2">
-                          <button className="hover:text-green-600 text-gray-400 transition-colors">
-                            <CircleCheck className="w-4 h-4" />
-                          </button>
-                          <button className="hover:text-red-600 text-gray-400 transition-colors">
-                            <CircleX className="w-4 h-4" />
-                          </button>
+                    {selectedEmail.tasks && selectedEmail.tasks.length > 0 ? (
+                      selectedEmail.tasks.map((task, index) => (
+                        <div key={index} className="flex items-center justify-between py-2 hover:bg-gray-50 rounded transition-colors">
+                          <span className="text-sm text-gray-700">{task}</span>
+                          <div className="flex items-center gap-2">
+                            <button className="hover:text-green-600 text-gray-400 transition-colors">
+                              <CircleCheck className="w-4 h-4" />
+                            </button>
+                            <button className="hover:text-red-600 text-gray-400 transition-colors">
+                              <CircleX className="w-4 h-4" />
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))
+                    ) : (
+                      <p className="text-sm text-gray-400 py-2">No tasks</p>
+                    )}
                   </div>
                 </div>
               </>
