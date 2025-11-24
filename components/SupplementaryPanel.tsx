@@ -38,7 +38,7 @@ interface SupplementaryPanelProps {
     name: string;
     description: string;
     modified: string;
-    requiresApproval: string;
+    approval: string;
     integrations: string[];
   } | null;
   selectedWorkflowEvent?: {

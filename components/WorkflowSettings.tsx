@@ -9,7 +9,7 @@ interface Workflow {
   name: string;
   description: string;
   modified: string;
-  requiresApproval: string;
+  approval: string;
   integrations: string[];
 }
 
@@ -36,20 +36,21 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const [isEditingName, setIsEditingName] = useState(false);
   const [actions, setActions] = useState<WorkflowAction[]>([]);
   const [selectedAction, setSelectedAction] = useState<WorkflowAction | null>(null);
+  const [editingField, setEditingField] = useState<{ actionId: string; field: keyof WorkflowAction } | null>(null);
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
     name: 55,
-    requiresApproval: 25,
+    approval: 25,
     modified: 20
   };
 
   const actionColumnWidths = {
-    action: 15,
-    input: 20,
-    output: 20,
-    description: 30,
-    approval: 15
+    action: 20,
+    input: 12,
+    output: 12,
+    description: 46,
+    approval: 10
   };
 
   useEffect(() => {
@@ -84,6 +85,32 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
 
   const handleActionSelect = (action: WorkflowAction) => {
     setSelectedAction(action);
+  };
+
+  const handleAddAction = () => {
+    const newAction: WorkflowAction = {
+      id: `action-${Date.now()}`,
+      action: '',
+      input: '',
+      output: '',
+      description: '',
+      approval: ''
+    };
+    setActions([...actions, newAction]);
+    setSelectedAction(newAction);
+  };
+
+  const handleUpdateAction = (actionId: string, field: keyof WorkflowAction, value: string) => {
+    setActions(actions.map(action => 
+      action.id === actionId ? { ...action, [field]: value } : action
+    ));
+  };
+
+  const handleRemoveAction = (actionId: string) => {
+    setActions(actions.filter(action => action.id !== actionId));
+    if (selectedAction?.id === actionId) {
+      setSelectedAction(null);
+    }
   };
 
   const handleAddWorkflow = () => {
@@ -163,7 +190,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                   Approval
                 </th>
                 <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
-                  <button>
+                  <button onClick={handleAddAction}>
                     <CirclePlus {...getIconProps()} />
                   </button>
                 </th>
@@ -190,23 +217,101 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                     }`}
                     onMouseEnter={() => handleActionSelect(action)}
                   >
-                    <td className="pl-6 pr-3 py-4 text-sm font-medium text-gray-900 truncate">
-                      {action.action}
+                    <td className="pl-6 pr-3 py-4 text-sm text-gray-900 truncate">
+                      {editingField?.actionId === action.id && editingField?.field === 'action' ? (
+                        <input
+                          type="text"
+                          value={action.action}
+                          onChange={(e) => handleUpdateAction(action.id, 'action', e.target.value)}
+                          onBlur={() => setEditingField(null)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              setEditingField(null);
+                            }
+                          }}
+                          className="w-full outline-none bg-transparent"
+                          autoFocus
+                        />
+                      ) : (
+                        <button
+                          onClick={() => setEditingField({ actionId: action.id, field: 'action' })}
+                          className={`w-full text-left ${
+                            action.action ? 'text-gray-900' : 'text-gray-400'
+                          }`}
+                        >
+                          {action.action || 'Action'}
+                        </button>
+                      )}
                     </td>
                     <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                      {action.input}
+                      <select
+                        value={action.input}
+                        onChange={(e) => handleUpdateAction(action.id, 'input', e.target.value)}
+                        className={`w-full outline-none bg-transparent cursor-pointer ${
+                          action.input ? 'text-gray-900' : 'text-gray-400'
+                        }`}
+                      >
+                        <option value="" disabled>Input</option>
+                        <option value="Email" className="text-gray-900">Email</option>
+                        <option value="CTMS" className="text-gray-900">CTMS</option>
+                        <option value="QuickBooks" className="text-gray-900">QuickBooks</option>
+                      </select>
                     </td>
                     <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                      {action.output}
+                      <select
+                        value={action.output}
+                        onChange={(e) => handleUpdateAction(action.id, 'output', e.target.value)}
+                        className={`w-full outline-none bg-transparent cursor-pointer ${
+                          action.output ? 'text-gray-900' : 'text-gray-400'
+                        }`}
+                      >
+                        <option value="" disabled>Output</option>
+                        <option value="Email" className="text-gray-900">Email</option>
+                        <option value="CTMS" className="text-gray-900">CTMS</option>
+                        <option value="QuickBooks" className="text-gray-900">QuickBooks</option>
+                      </select>
                     </td>
                     <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                      {action.description}
+                      {editingField?.actionId === action.id && editingField?.field === 'description' ? (
+                        <input
+                          type="text"
+                          value={action.description}
+                          onChange={(e) => handleUpdateAction(action.id, 'description', e.target.value)}
+                          onBlur={() => setEditingField(null)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              setEditingField(null);
+                            }
+                          }}
+                          className="w-full outline-none bg-transparent"
+                          autoFocus
+                        />
+                      ) : (
+                        <button
+                          onClick={() => setEditingField({ actionId: action.id, field: 'description' })}
+                          className={`w-full text-left ${
+                            action.description ? 'text-gray-600' : 'text-gray-400'
+                          }`}
+                        >
+                          {action.description || 'Description'}
+                        </button>
+                      )}
                     </td>
                     <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                      {action.approval}
+                      <select
+                        value={action.approval}
+                        onChange={(e) => handleUpdateAction(action.id, 'approval', e.target.value)}
+                        className={`w-full outline-none bg-transparent cursor-pointer ${
+                          action.approval ? 'text-gray-900' : 'text-gray-400'
+                        }`}
+                      >
+                        <option value="" disabled>Approval</option>
+                        <option value="Yes" className="text-gray-900">Yes</option>
+                        <option value="No" className="text-gray-900">No</option>
+                      </select>
                     </td>
                     <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
-                      <button>
+                      <button onClick={() => handleRemoveAction(action.id)}>
                         <CircleMinus {...getIconProps()} />
                       </button>
                     </td>
@@ -234,8 +339,8 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                 <th style={{ width: `${columnWidths.name}%` }} className="pl-6 pr-3 py-3 text-left text-sm font-semibold text-black">
                   Name
                 </th>
-                <th style={{ width: `${columnWidths.requiresApproval}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
-                  Requires Approval
+                <th style={{ width: `${columnWidths.approval}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
+                  Approval
                 </th>
                 <th style={{ width: `${columnWidths.modified}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
                   Modified
@@ -265,7 +370,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                     {workflow.name}
                   </td>
                   <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                    {workflow.requiresApproval}
+                    {workflow.approval}
                   </td>
                   <td className="px-3 py-4 text-sm text-gray-600 truncate">
                     {formatDate(workflow.modified)}

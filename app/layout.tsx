@@ -41,7 +41,7 @@ interface SelectedWorkflow {
   name: string;
   description: string;
   modified: string;
-  requiresApproval: string;
+  approval: string;
   integrations: string[];
 }
 

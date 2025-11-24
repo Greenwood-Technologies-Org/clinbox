@@ -1,82 +1,28 @@
 [
   {
     "id": "workflow_001",
-    "name": "Patient Enrollment Automation",
-    "description": "Automatically schedules screening visits, sends consent forms, and creates patient records when potential participants respond to recruitment outreach",
-    "modified": "2024-11-20",
-    "requiresApproval": "No",
-    "integrations": ["Calendly", "DocuSign", "REDCap"]
-  },
-  {
-    "id": "workflow_002",
-    "name": "SAE Alert & Reporting",
-    "description": "Monitors incoming emails for serious adverse event keywords, flags urgent cases, and initiates regulatory reporting workflow with pre-filled templates",
-    "modified": "2024-11-18",
-    "requiresApproval": "Yes",
-    "integrations": ["MedWatch", "Slack", "CTMS"]
-  },
-  {
-    "id": "workflow_003",
-    "name": "Invoice Processing & Payment",
-    "description": "Extracts line items from site invoices, validates against budget, routes for approval, and initiates payment processing",
-    "modified": "2024-10-25",
-    "requiresApproval": "Yes",
-    "integrations": ["QuickBooks", "DocuSign", "Oracle"]
-  },
-  {
-    "id": "workflow_004",
-    "name": "IRB Submission Tracker",
-    "description": "Monitors IRB submission deadlines, compiles required documents, and sends automated reminders for continuing reviews and amendments",
-    "modified": "2024-11-15",
-    "requiresApproval": "No",
-    "integrations": ["iRIS", "Asana", "Google Drive"]
-  },
-  {
-    "id": "workflow_005",
-    "name": "Site Monitoring Visit Scheduler",
-    "description": "Coordinates CRA availability with site calendars, sends visit confirmation packets, and generates pre-visit checklists automatically",
-    "modified": "2024-11-10",
-    "requiresApproval": "No",
-    "integrations": ["Calendly", "Zoom", "CTMS"]
-  },
-  {
-    "id": "workflow_006",
-    "name": "Protocol Deviation Workflow",
-    "description": "Logs protocol deviations, assesses severity, assigns corrective actions, and tracks resolution with automated follow-up reminders",
-    "modified": "2024-10-30",
-    "requiresApproval": "Yes",
-    "integrations": ["CTMS", "Slack", "Jira"]
-  },
-  {
-    "id": "workflow_007",
-    "name": "Patient Stipend Processing",
-    "description": "Calculates patient compensation based on completed visits, generates payment requests, and tracks disbursement status",
-    "modified": "2024-11-05",
-    "requiresApproval": "Yes",
-    "integrations": ["QuickBooks", "REDCap", "Tango Card"]
-  },
-  {
-    "id": "workflow_008",
-    "name": "CRF Query Resolution",
-    "description": "Routes data queries to appropriate site staff, tracks response times, and escalates overdue queries with automated reminders",
-    "modified": "2024-11-12",
-    "requiresApproval": "No",
-    "integrations": ["Medidata Rave", "Slack", "CTMS"]
-  },
-  {
-    "id": "workflow_009",
-    "name": "Laboratory Results Distribution",
-    "description": "Receives lab results from central lab, flags abnormal values, notifies PIs, and updates EDC with required documentation",
-    "modified": "2024-10-20",
-    "requiresApproval": "No",
-    "integrations": ["Quest Diagnostics", "REDCap", "Email"]
-  },
-  {
-    "id": "workflow_010",
-    "name": "Sponsor Report Generation",
-    "description": "Compiles enrollment metrics, safety data, and milestone achievements into monthly sponsor reports with automated distribution",
-    "modified": "2024-11-08",
-    "requiresApproval": "Yes",
-    "integrations": ["CTMS", "Tableau", "PowerPoint"]
+    "name": "Brain Scan Vendor Results",
+    "description": "Processes brain scan results from Dupliplex vendor, notifies PI of abnormal values, and logs normal results in EDC automatically",
+    "modified": "2024-11-24",
+    "approval": "Yes",
+    "integrations": ["Email", "EDC"],
+    "actions": [
+      {
+        "actionNumber": 1,
+        "action": "Abnormal Values Notification",
+        "input": "Email",
+        "output": "Email",
+        "description": "Check if values are abnormal, if so send email to notify PI",
+        "approval": "Yes"
+      },
+      {
+        "actionNumber": 2,
+        "action": "Normal Value Logging",
+        "input": "Email",
+        "output": "EDC",
+        "description": "Check if values are normal, if so log results in EDC",
+        "approval": "No"
+      }
+    ]
   }
 ]
