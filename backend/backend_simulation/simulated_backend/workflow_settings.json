@@ -1,110 +1,102 @@
 [
   {
     "id": "workflow_001",
-    "name": "Neurological AE Escalation to Partner",
-    "description": "For the partnered Parkinson's study (BIIB122/DNL151), this workflow filters incoming AE reports for specific neurological events and forwards them to the Biogen safety contact and internal medical monitor.",
-    "modified": "2024-05-20T10:00:00Z",
-    "approval": "No",
+    "name": "ROPAD Parkinson's Patient Referral Triage",
+    "description": "Triages potential patient referrals from the ROPAD genetics study and forwards them to the BIIB122/DNL151 study team and Biogen partner contacts.",
+    "modified": "2024-05-20",
+    "approval": "Yes",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Forward Neurological AE to Partner",
+        "action": "Acknowledge Referral Receipt",
         "input": "email",
         "output": "email",
-        "description": "Scan incoming AE report for neurological keywords and forward to the Biogen safety lead and Denali medical monitor.",
-        "approval": "No"
+        "description": "Send an automated acknowledgment to the ROPAD site confirming receipt of the referral."
       },
       {
         "actionNumber": 2,
-        "action": "Acknowledge Site Report",
+        "action": "Forward to Study Team",
         "input": "email",
         "output": "email",
-        "description": "Send an automated acknowledgment to the reporting site confirming receipt of the AE.",
-        "approval": "No"
+        "description": "Forward the de-identified patient information to the internal DNL151 team and Biogen contacts for review."
       }
     ]
   },
   {
     "id": "workflow_002",
-    "name": "Site Activation Packet Distribution",
-    "description": "Upon internal confirmation of a new site selection, this workflow automatically sends the startup document packet and a welcome email to the new Principal Investigator and Study Coordinator.",
-    "modified": "2024-06-15T14:30:00Z",
-    "approval": "Yes",
+    "name": "Initial SAE Triage for ALS Study (DNL343)",
+    "description": "Receives SAE reports from clinical sites for the DNL343 study, acknowledges receipt, and forwards them to the internal pharmacovigilance team.",
+    "modified": "2024-05-21",
+    "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Send Startup Packet",
+        "action": "Acknowledge Site Report",
         "input": "email",
         "output": "email",
-        "description": "Email the standard site startup document packet to the PI and Coordinator at the newly selected site.",
-        "approval": "Yes"
+        "description": "Send an automated confirmation to the reporting site that their SAE report has been received."
+      },
+      {
+        "actionNumber": 2,
+        "action": "Route to Pharmacovigilance",
+        "input": "email",
+        "output": "email",
+        "description": "Forward the complete SAE report to the Denali PV intake group for processing and safety database entry."
       }
     ]
   },
   {
     "id": "workflow_003",
-    "name": "BBB Imaging Result Triage",
-    "description": "Processes incoming brain imaging results from a central vendor to check for confirmation of Transport Vehicle target engagement. Notifies the Clinical Scientist of positive results.",
-    "modified": "2024-07-01T09:00:00Z",
-    "approval": "No",
+    "name": "Site Inquiry Routing",
+    "description": "Monitors the clinical-trials@dnli.com inbox, categorizes incoming site inquiries, and routes them to the appropriate internal department.",
+    "modified": "2024-05-15",
+    "approval": "Yes",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Notify Scientist of Positive Result",
+        "action": "Categorize and Forward Inquiry",
         "input": "email",
         "output": "email",
-        "description": "Review imaging report for 'positive uptake' and forward to the study's Clinical Scientist for review.",
-        "approval": "No"
+        "description": "Scan email for keywords (e.g., 'protocol', 'payment', 'IRB') and forward to the correct internal team (Clinical Ops, Medical, Finance)."
       },
       {
         "actionNumber": 2,
-        "action": "File Negative Result",
+        "action": "Log Inquiry in CTMS",
         "input": "email",
-        "output": "eTMF",
-        "description": "If the report does not show positive uptake, automatically file the result in the eTMF.",
-        "approval": "No"
+        "output": "CTMS",
+        "description": "Create a record of the site communication and its routing in the Clinical Trial Management System."
       }
     ]
   },
   {
     "id": "workflow_004",
-    "name": "Patient Advocacy Inquiry Routing",
-    "description": "Monitors the clinical-trials@dnli.com inbox for messages from patient advocacy groups and routes them to the appropriate internal liaison for a personalized response.",
-    "modified": "2024-04-10T11:45:00Z",
+    "name": "Partner Milestone Notification (TAK-594/DNL593)",
+    "description": "Automates the notification of key study milestones for the TAK-594/DNL593 trial to the Takeda joint project team.",
+    "modified": "2024-05-18",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Route to Patient Advocacy Liaison",
+        "action": "Draft and Send Milestone Update",
         "input": "email",
         "output": "email",
-        "description": "Forward email from known patient advocacy groups to the Patient Advocacy department lead.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Send Receipt Acknowledgment",
-        "input": "email",
-        "output": "email",
-        "description": "Send an automated reply to the sender confirming their message has been routed to the correct team.",
-        "approval": "No"
+        "description": "Upon receiving an internal trigger, format and send a standardized milestone update email to the Takeda collaboration manager."
       }
     ]
   },
   {
     "id": "workflow_005",
-    "name": "DNL310 Low IMP Stock Alert",
-    "description": "Monitors site inventory reports for the DNL310 (Hunter syndrome) study and alerts the clinical supply manager when a site's drug stock falls below the predefined threshold.",
-    "modified": "2024-07-18T16:00:00Z",
+    "name": "Pediatric Consent Form Distribution (DNL126)",
+    "description": "Handles requests from sites for the latest approved pediatric consent and assent forms for the DNL126 (MPS IIIA) study.",
+    "modified": "2024-05-19",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Alert Supply Manager of Low Stock",
+        "action": "Fulfill Form Request",
         "input": "email",
         "output": "email",
-        "description": "If an inventory report shows stock is below threshold, send an urgent notification to the Clinical Supply Manager.",
-        "approval": "No"
+        "description": "Reply to the site's request with a secure link to the current, IRB-approved consent/assent form package stored in the eTMF."
       }
     ]
   }
