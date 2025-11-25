@@ -8,33 +8,43 @@ import WorkflowsList from './WorkflowsList';
 import OpenedWorkflow from './OpenedWorkflow';
 import type { Attachment } from '@/lib/email-utils';
 
-interface Email {
-  id: string;
-  snippet: string;
-  internalDate: string;
-  filename?: string;
-  payload: {
-    headers: Array<{ name: string; value: string }>;
-  };
+interface Thread {
+  filename: string;
+  messages: Array<{
+    from_address: string;
+    to_addresses: string[];
+    cc_addresses: string[];
+    subject: string;
+    timestamp: string;
+    body: string;
+    attachments: string[];
+    message_id: number;
+    in_reply_to: number | null;
+  }>;
 }
 
-interface EmailData {
-  [key: string]: {
-    folder: string;
-    sender?: {
+interface ThreadData {
+  folder: string;
+  senders: Array<{
+    name: string;
+    title: string;
+    organization: string;
+  }>;
+  tasks: string[];
+  hasAttachments: boolean;
+}
+
+interface ThreadAIAnalysis {
+  summary: string;
+  quickActions: any[];
+  workflow: {
+    workflowId: string;
+    status: string;
+    steps: Array<{
       name: string;
-      title: string;
-      organization: string;
-    };
-    tasks?: string[];
-    hasAttachments?: boolean;
-  };
-}
-
-interface EmailAIAnalysis {
-  [key: string]: {
-    summary: string;
-    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
+      result: string;
+      reasoning: string;
+    }>;
   };
 }
 
@@ -57,13 +67,13 @@ interface MainContentProps {
 
 export default function MainContent({ children, activeView, onSelectEmail, onSelectWorkflow }: MainContentProps) {
   const [activeGroup, setActiveGroup] = useState<string>('Critical');
-  const [emails, setEmails] = useState<Email[]>([]);
-  const [emailData, setEmailData] = useState<EmailData>({});
-  const [emailAIAnalysis, setEmailAIAnalysis] = useState<EmailAIAnalysis>({});
+  const [threads, setThreads] = useState<Thread[]>([]);
+  const [threadData, setThreadData] = useState<ThreadData[]>([]);
+  const [threadAIAnalysis, setThreadAIAnalysis] = useState<ThreadAIAnalysis[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [selectedEmailFilename, setSelectedEmailFilename] = useState<string | null>(null);
+  const [selectedThreadFilename, setSelectedThreadFilename] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'list' | 'opened'>('list');
-  const [openedEmailSubject, setOpenedEmailSubject] = useState<string>('');
+  const [openedThreadSubject, setOpenedThreadSubject] = useState<string>('');
   const [currentAttachments, setCurrentAttachments] = useState<Attachment[]>([]);
 
   // Workflow state
@@ -75,32 +85,38 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
   const [openedWorkflowName, setOpenedWorkflowName] = useState<string>('');
   const [activeWorkflowFilter, setActiveWorkflowFilter] = useState<string>('All');
 
-  // Helper function to load thread emails and extract attachments
+  // Helper function to load thread messages and extract attachments
   const loadThreadAttachments = async (filename: string): Promise<Attachment[]> => {
     try {
       const response = await fetch(`/api/emails/${filename}`);
-      const emailData = await response.json();
+      const threadData = await response.json();
       
-      if (emailData.threadEmails) {
-        const { extractAttachmentsFromThread } = await import('@/lib/email-utils');
-        return extractAttachmentsFromThread(emailData.threadEmails);
-      }
-      return [];
+      // Extract attachments from all messages in the thread
+      const allAttachments: Attachment[] = [];
+      threadData.forEach((message: any) => {
+        message.attachments.forEach((attachment: string) => {
+          allAttachments.push({
+            filename: attachment,
+            mimeType: 'application/octet-stream' // Default mime type
+          });
+        });
+      });
+      return allAttachments;
     } catch (error) {
       console.error('Error loading thread attachments:', error);
       return [];
     }
   };
 
-  // Helper function to load thread emails and extract sender email
+  // Helper function to load thread messages and extract sender email
   const loadSenderEmail = async (filename: string): Promise<string | undefined> => {
     try {
       const response = await fetch(`/api/emails/${filename}`);
-      const emailData = await response.json();
+      const threadData = await response.json();
       
-      if (emailData.threadEmails) {
-        const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
-        return extractSenderEmailFromThread(emailData.threadEmails);
+      // Return the from_address of the first message
+      if (threadData.length > 0) {
+        return threadData[0].from_address;
       }
       return undefined;
     } catch (error) {
@@ -110,76 +126,78 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
   };
 
   useEffect(() => {
-    const loadEmails = async () => {
+    const loadThreads = async () => {
       setLoading(true);
       try {
-        // Load email data to get folder assignments
-        const emailDataResponse = await fetch('/api/emails/email_data.json');
-        const emailDataJson: EmailData = await emailDataResponse.json();
-        setEmailData(emailDataJson);
+        // Load thread data to get folder assignments
+        const threadDataResponse = await fetch('/api/emails/thread_data.json');
+        const threadDataJson: ThreadData[] = await threadDataResponse.json();
+        setThreadData(threadDataJson);
 
         // Load AI analysis data
-        const aiAnalysisResponse = await fetch('/api/emails/email_ai_analysis.json');
-        const aiAnalysisJson: EmailAIAnalysis = await aiAnalysisResponse.json();
-        setEmailAIAnalysis(aiAnalysisJson);
+        const aiAnalysisResponse = await fetch('/api/emails/thread_ai_analyses.json');
+        const aiAnalysisJson: ThreadAIAnalysis[] = await aiAnalysisResponse.json();
+        setThreadAIAnalysis(aiAnalysisJson);
 
-        // Load all emails and filter by active group
-        const emailPromises = Object.keys(emailDataJson).map(async (filename) => {
-          if (emailDataJson[filename].folder === activeGroup) {
+        // Load all threads and filter by active group
+        const threadPromises = threadDataJson.map(async (threadInfo, index) => {
+          const filename = `thread_${index.toString().padStart(3, '0')}.json`;
+          if (threadInfo.folder === activeGroup) {
             const response = await fetch(`/api/emails/${filename}`);
-            const emailContent = await response.json();
-            // Attach the filename to the email object so we can look up metadata later
-            return { ...emailContent, filename };
+            const threadContent = await response.json();
+            // Attach the filename to the thread object so we can look up metadata later
+            return { filename, messages: threadContent };
           }
           return null;
         });
 
-        const allEmails = await Promise.all(emailPromises);
-        const filteredEmails = allEmails.filter((email): email is Email => email !== null);
+        const allThreads = await Promise.all(threadPromises);
+        const filteredThreads = allThreads.filter((thread): thread is Thread => thread !== null);
         
-        // Sort by date (most recent first)
-        filteredEmails.sort((a, b) => 
-          parseInt(b.internalDate) - parseInt(a.internalDate)
+        // Sort by date (most recent first) - use the timestamp of the first message
+        filteredThreads.sort((a, b) => 
+          new Date(b.messages[0].timestamp).getTime() - new Date(a.messages[0].timestamp).getTime()
         );
         
-        setEmails(filteredEmails);
+        setThreads(filteredThreads);
         
-        // Select the first email by default
-        if (filteredEmails.length > 0) {
-          const firstEmail = filteredEmails[0];
-          if (firstEmail.filename && emailDataJson[firstEmail.filename]?.sender) {
-            const filename = firstEmail.filename;
-            setSelectedEmailFilename(filename);
-            
-            // Load thread emails to extract attachments and sender email
-            Promise.all([
-              loadThreadAttachments(filename),
-              loadSenderEmail(filename)
-            ]).then(([attachments, senderEmail]) => {
-              onSelectEmail({
-                filename: filename,
-                sender: {
-                  ...emailDataJson[filename].sender!,
-                  email: senderEmail
-                },
-                aiAnalysis: aiAnalysisJson[filename],
-                tasks: emailDataJson[filename].tasks,
-                hasAttachments: emailDataJson[filename].hasAttachments,
-                attachments: attachments
-              });
+        // Select the first thread by default
+        if (filteredThreads.length > 0) {
+          const firstThread = filteredThreads[0];
+          const threadIndex = parseInt(firstThread.filename.replace('thread_', '').replace('.json', ''));
+          setSelectedThreadFilename(firstThread.filename);
+          
+          // Load thread messages to extract attachments and sender email
+          Promise.all([
+            loadThreadAttachments(firstThread.filename),
+            loadSenderEmail(firstThread.filename)
+          ]).then(([attachments, senderEmail]) => {
+            const threadDataItem = threadDataJson[threadIndex];
+            onSelectEmail({
+              filename: firstThread.filename,
+              sender: {
+                name: threadDataItem.senders[0]?.name || 'Unknown',
+                title: threadDataItem.senders[0]?.title || '',
+                organization: threadDataItem.senders[0]?.organization || '',
+                email: senderEmail
+              },
+              aiAnalysis: aiAnalysisJson[threadIndex],
+              tasks: threadDataItem.tasks,
+              hasAttachments: threadDataItem.hasAttachments,
+              attachments: attachments
             });
-          }
+          });
         }
       } catch (error) {
-        console.error('Error loading emails:', error);
-        setEmails([]);
+        console.error('Error loading threads:', error);
+        setThreads([]);
       } finally {
         setLoading(false);
       }
     };
 
     if (activeView === 'email') {
-      loadEmails();
+      loadThreads();
     }
   }, [activeGroup, activeView]);
 
@@ -254,106 +272,112 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
       {activeView === 'email' ? (
         viewMode === 'list' ? (
           <EmailList
-            emails={emails}
-            emailData={emailData}
-            emailAIAnalysis={emailAIAnalysis}
-            selectedEmailFilename={selectedEmailFilename}
+            threads={threads}
+            threadData={threadData}
+            threadAIAnalysis={threadAIAnalysis}
+            selectedThreadFilename={selectedThreadFilename}
             loading={loading}
             activeGroup={activeGroup}
             onActiveGroupChange={setActiveGroup}
             onSelectEmail={onSelectEmail}
-            onEmailHover={(email) => {
-              if (email?.filename) {
-                setSelectedEmailFilename(email.filename);
-                onSelectEmail(email);
+            onThreadHover={(thread) => {
+              if (thread?.filename) {
+                setSelectedThreadFilename(thread.filename);
+                onSelectEmail(thread);
               }
             }}
-            onSetSelectedFilename={setSelectedEmailFilename}
-            onOpenEmail={(subject) => {
-              setOpenedEmailSubject(subject);
+            onSetSelectedFilename={setSelectedThreadFilename}
+            onOpenThread={(subject) => {
+              setOpenedThreadSubject(subject);
               setViewMode('opened');
             }}
             loadThreadAttachments={loadThreadAttachments}
           />
         ) : (
           <OpenedEmail 
-            subject={openedEmailSubject}
-            filename={selectedEmailFilename || undefined}
+            subject={openedThreadSubject}
+            filename={selectedThreadFilename || undefined}
             onBack={() => setViewMode('list')}
             onNavigateUp={() => {
-              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
+              const currentIndex = threads.findIndex(t => t.filename === selectedThreadFilename);
               if (currentIndex > 0) {
-                const prevEmail = emails[currentIndex - 1];
-                if (prevEmail.filename && emailData[prevEmail.filename]?.sender) {
-                  const subjectHeader = prevEmail.payload.headers.find(h => h.name === 'Subject');
-                  const subject = subjectHeader?.value || 'No Subject';
-                  setSelectedEmailFilename(prevEmail.filename);
-                  setOpenedEmailSubject(subject);
-                  
-                  Promise.all([
-                    loadThreadAttachments(prevEmail.filename),
-                    loadSenderEmail(prevEmail.filename)
-                  ]).then(([attachments, senderEmail]) => {
-                    onSelectEmail({
-                      filename: prevEmail.filename,
-                      sender: {
-                        ...emailData[prevEmail.filename!].sender!,
-                        email: senderEmail
-                      },
-                      aiAnalysis: emailAIAnalysis[prevEmail.filename!],
-                      tasks: emailData[prevEmail.filename!].tasks,
-                      hasAttachments: emailData[prevEmail.filename!].hasAttachments,
-                      attachments: attachments
-                    });
+                const prevThread = threads[currentIndex - 1];
+                const threadIndex = parseInt(prevThread.filename.replace('thread_', '').replace('.json', ''));
+                const subject = prevThread.messages[0]?.subject || 'No Subject';
+                setSelectedThreadFilename(prevThread.filename);
+                setOpenedThreadSubject(subject);
+                
+                Promise.all([
+                  loadThreadAttachments(prevThread.filename),
+                  loadSenderEmail(prevThread.filename)
+                ]).then(([attachments, senderEmail]) => {
+                  const threadDataItem = threadData[threadIndex];
+                  onSelectEmail({
+                    filename: prevThread.filename,
+                    sender: {
+                      name: threadDataItem.senders[0]?.name || 'Unknown',
+                      title: threadDataItem.senders[0]?.title || '',
+                      organization: threadDataItem.senders[0]?.organization || '',
+                      email: senderEmail
+                    },
+                    aiAnalysis: threadAIAnalysis[threadIndex],
+                    tasks: threadDataItem.tasks,
+                    hasAttachments: threadDataItem.hasAttachments,
+                    attachments: attachments
                   });
-                }
+                });
               }
             }}
             onNavigateDown={() => {
-              const currentIndex = emails.findIndex(e => e.filename === selectedEmailFilename);
-              if (currentIndex < emails.length - 1) {
-                const nextEmail = emails[currentIndex + 1];
-                if (nextEmail.filename && emailData[nextEmail.filename]?.sender) {
-                  const subjectHeader = nextEmail.payload.headers.find(h => h.name === 'Subject');
-                  const subject = subjectHeader?.value || 'No Subject';
-                  setSelectedEmailFilename(nextEmail.filename);
-                  setOpenedEmailSubject(subject);
-                  
-                  Promise.all([
-                    loadThreadAttachments(nextEmail.filename),
-                    loadSenderEmail(nextEmail.filename)
-                  ]).then(([attachments, senderEmail]) => {
-                    onSelectEmail({
-                      filename: nextEmail.filename,
-                      sender: {
-                        ...emailData[nextEmail.filename!].sender!,
-                        email: senderEmail
-                      },
-                      aiAnalysis: emailAIAnalysis[nextEmail.filename!],
-                      tasks: emailData[nextEmail.filename!].tasks,
-                      hasAttachments: emailData[nextEmail.filename!].hasAttachments,
-                      attachments: attachments
-                    });
-                  });
-                }
-              }
-            }}
-            canNavigateUp={emails.findIndex(e => e.filename === selectedEmailFilename) > 0}
-            canNavigateDown={emails.findIndex(e => e.filename === selectedEmailFilename) < emails.length - 1}
-            onAttachmentsChange={(attachments) => {
-              setCurrentAttachments(attachments);
-              if (selectedEmailFilename && emailData[selectedEmailFilename]?.sender) {
-                // Load sender email when attachments change
-                loadSenderEmail(selectedEmailFilename).then(senderEmail => {
+              const currentIndex = threads.findIndex(t => t.filename === selectedThreadFilename);
+              if (currentIndex < threads.length - 1) {
+                const nextThread = threads[currentIndex + 1];
+                const threadIndex = parseInt(nextThread.filename.replace('thread_', '').replace('.json', ''));
+                const subject = nextThread.messages[0]?.subject || 'No Subject';
+                setSelectedThreadFilename(nextThread.filename);
+                setOpenedThreadSubject(subject);
+                
+                Promise.all([
+                  loadThreadAttachments(nextThread.filename),
+                  loadSenderEmail(nextThread.filename)
+                ]).then(([attachments, senderEmail]) => {
+                  const threadDataItem = threadData[threadIndex];
                   onSelectEmail({
-                    filename: selectedEmailFilename,
+                    filename: nextThread.filename,
                     sender: {
-                      ...emailData[selectedEmailFilename].sender!,
+                      name: threadDataItem.senders[0]?.name || 'Unknown',
+                      title: threadDataItem.senders[0]?.title || '',
+                      organization: threadDataItem.senders[0]?.organization || '',
                       email: senderEmail
                     },
-                    aiAnalysis: emailAIAnalysis[selectedEmailFilename],
-                    tasks: emailData[selectedEmailFilename].tasks,
-                    hasAttachments: emailData[selectedEmailFilename].hasAttachments,
+                    aiAnalysis: threadAIAnalysis[threadIndex],
+                    tasks: threadDataItem.tasks,
+                    hasAttachments: threadDataItem.hasAttachments,
+                    attachments: attachments
+                  });
+                });
+              }
+            }}
+            canNavigateUp={threads.findIndex(t => t.filename === selectedThreadFilename) > 0}
+            canNavigateDown={threads.findIndex(t => t.filename === selectedThreadFilename) < threads.length - 1}
+            onAttachmentsChange={(attachments) => {
+              setCurrentAttachments(attachments);
+              if (selectedThreadFilename && threadData.length > 0) {
+                const threadIndex = parseInt(selectedThreadFilename.replace('thread_', '').replace('.json', ''));
+                // Load sender email when attachments change
+                loadSenderEmail(selectedThreadFilename).then(senderEmail => {
+                  const threadDataItem = threadData[threadIndex];
+                  onSelectEmail({
+                    filename: selectedThreadFilename,
+                    sender: {
+                      name: threadDataItem.senders[0]?.name || 'Unknown',
+                      title: threadDataItem.senders[0]?.title || '',
+                      organization: threadDataItem.senders[0]?.organization || '',
+                      email: senderEmail
+                    },
+                    aiAnalysis: threadAIAnalysis[threadIndex],
+                    tasks: threadDataItem.tasks,
+                    hasAttachments: threadDataItem.hasAttachments,
                     attachments: attachments
                   });
                 });

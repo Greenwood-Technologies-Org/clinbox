@@ -4,7 +4,7 @@ import { join } from 'path';
 
 export async function GET() {
   try {
-    const filePath = join(process.cwd(), 'simulated_backend', 'workflow_settings.json');
+    const filePath = join(process.cwd(), 'simulated_backend_2', 'workflow_settings.json');
     const fileContent = await readFile(filePath, 'utf-8');
     const settingsData = JSON.parse(fileContent);
     

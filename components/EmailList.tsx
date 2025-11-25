@@ -3,67 +3,83 @@
 import { Menu, PenLine, Search, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
 
-interface Email {
-  id: string;
-  snippet: string;
-  internalDate: string;
-  filename?: string;
-  payload: {
-    headers: Array<{ name: string; value: string }>;
-  };
+interface Thread {
+  filename: string;
+  messages: Array<{
+    from_address: string;
+    to_addresses: string[];
+    cc_addresses: string[];
+    subject: string;
+    timestamp: string;
+    body: string;
+    attachments: string[];
+    message_id: number;
+    in_reply_to: number | null;
+  }>;
 }
 
-interface EmailData {
-  [key: string]: {
-    folder: string;
-    sender?: {
+interface ThreadData {
+  folder: string;
+  senders: Array<{
+    name: string;
+    title: string;
+    organization: string;
+  }>;
+  tasks: string[];
+  hasAttachments: boolean;
+}
+
+interface ThreadAIAnalysis {
+  summary: string;
+  quickActions: any[];
+  workflow: {
+    workflowId: string;
+    status: string;
+    steps: Array<{
       name: string;
-      title: string;
-      organization: string;
-    };
-    tasks?: string[];
-    hasAttachments?: boolean;
-  };
-}
-
-interface EmailAIAnalysis {
-  [key: string]: {
-    summary: string;
-    quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }>;
+      result: string;
+      reasoning: string;
+    }>;
   };
 }
 
 interface EmailListProps {
-  emails: Email[];
-  emailData: EmailData;
-  emailAIAnalysis: EmailAIAnalysis;
-  selectedEmailFilename: string | null;
+  threads: Thread[];
+  threadData: ThreadData[];
+  threadAIAnalysis: ThreadAIAnalysis[];
+  selectedThreadFilename: string | null;
   loading: boolean;
   activeGroup: string;
   onActiveGroupChange: (group: string) => void;
   onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
-  onEmailHover: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
+  onThreadHover: (thread: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Array<{ filename: string; mimeType: string }> } | null) => void;
   onSetSelectedFilename: (filename: string | null) => void;
-  onOpenEmail: (subject: string) => void;
+  onOpenThread: (subject: string) => void;
   loadThreadAttachments: (filename: string) => Promise<Array<{ filename: string; mimeType: string }>>;
 }
 
 export default function EmailList({ 
-  emails, 
-  emailData, 
-  emailAIAnalysis, 
-  selectedEmailFilename,
+  threads, 
+  threadData, 
+  threadAIAnalysis, 
+  selectedThreadFilename,
   loading,
   activeGroup,
   onActiveGroupChange,
   onSelectEmail,
-  onEmailHover,
+  onThreadHover,
   onSetSelectedFilename,
-  onOpenEmail,
+  onOpenThread,
   loadThreadAttachments
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
   const groups = ['Critical', 'Urgent', 'Important', 'IRB', 'Other'];
+
+  // Helper function to extract index from filename (e.g., "thread_000.json" -> 0)
+  const getThreadIndex = (filename: string): number => {
+    const match = filename.match(/thread_(\d+)\.json/);
+    return match ? parseInt(match[1], 10) : -1;
+  };
 
   return (
     <>
@@ -108,29 +124,25 @@ export default function EmailList({
           <div className="flex items-center justify-center h-full">
             <p className="text-gray-400">Loading...</p>
           </div>
-        ) : emails.length === 0 ? (
+        ) : threads.length === 0 ? (
           <div className="flex items-center justify-center h-full">
-            <p className="text-gray-400">No {activeGroup} Emails</p>
+            <p className="text-gray-400">No {activeGroup} Threads</p>
           </div>
         ) : (
           <div>
-      {emails.map((email, index) => {
-        const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
-        
-        // Use sender metadata if available, otherwise fall back to parsing From header
+      {threads.map((thread, index) => {
+        // Use sender metadata if available, otherwise fall back to parsing from first message
         let senderName = 'Unknown';
-        if (email.filename && emailData[email.filename]?.sender) {
-          senderName = emailData[email.filename].sender!.name;
-        } else {
-          const fromHeader = email.payload.headers.find(h => h.name === 'From');
-          const fromValue = fromHeader?.value || 'Unknown';
-          const nameMatch = fromValue.match(/^([^<]+)/);
-          senderName = nameMatch ? nameMatch[1].trim() : fromValue;
+        const threadIndex = thread.filename ? getThreadIndex(thread.filename) : -1;
+        if (thread.filename && threadIndex >= 0 && threadData[threadIndex]?.senders) {
+          senderName = threadData[threadIndex].senders[0]?.name || 'Unknown';
+        } else if (thread.messages.length > 0) {
+          senderName = thread.messages[0].from_address;
         }
         
-        const subject = subjectHeader?.value || 'No Subject';
-        const snippet = email.snippet || '';
-        const dateObj = new Date(parseInt(email.internalDate));
+        const subject = thread.messages[0]?.subject || 'No Subject';
+        const snippet = thread.messages[0]?.body?.substring(0, 100) || '';
+        const dateObj = new Date(thread.messages[0]?.timestamp || '');
         const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         
         const handleMouseEnter = () => {
@@ -141,23 +153,20 @@ export default function EmailList({
           
           // Set a new timeout for 0.1 seconds
           const timeout = setTimeout(async () => {
-            if (email.filename && emailData[email.filename]?.sender) {
-              // Extract sender email from thread
-              const response = await fetch(`/api/emails/${email.filename}`);
-              const emailThreadData = await response.json();
-              const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
-              const senderEmail = emailThreadData.threadEmails ? extractSenderEmailFromThread(emailThreadData.threadEmails) : undefined;
-              
-              const attachments = await loadThreadAttachments(email.filename);
-              onEmailHover({
-                filename: email.filename,
+            const threadIndex = thread.filename ? getThreadIndex(thread.filename) : -1;
+            if (thread.filename && threadIndex >= 0 && threadData[threadIndex]?.senders) {
+              const attachments = await loadThreadAttachments(thread.filename);
+              onThreadHover({
+                filename: thread.filename,
                 sender: {
-                  ...emailData[email.filename].sender!,
-                  email: senderEmail
+                  name: threadData[threadIndex].senders[0]?.name || 'Unknown',
+                  title: threadData[threadIndex].senders[0]?.title || '',
+                  organization: threadData[threadIndex].senders[0]?.organization || '',
+                  email: thread.messages[0]?.from_address
                 },
-                aiAnalysis: emailAIAnalysis[email.filename],
-                tasks: emailData[email.filename].tasks,
-                hasAttachments: emailData[email.filename].hasAttachments,
+                aiAnalysis: threadAIAnalysis[threadIndex],
+                tasks: threadData[threadIndex].tasks,
+                hasAttachments: threadData[threadIndex].hasAttachments,
                 attachments: attachments
               });
             }
@@ -176,41 +185,35 @@ export default function EmailList({
         
         return (
           <div
-            key={email.filename || email.id || `email-${index}`}
+            key={thread.filename || `thread-${index}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={async () => {
-              if (email.filename && emailData[email.filename]?.sender) {
-                const subjectHeader = email.payload.headers.find(h => h.name === 'Subject');
-                const subject = subjectHeader?.value || 'No Subject';
+              const threadIndex = thread.filename ? getThreadIndex(thread.filename) : -1;
+              if (thread.filename && threadIndex >= 0 && threadData[threadIndex]?.senders) {
+                const attachments = await loadThreadAttachments(thread.filename);
                 
-                // Extract sender email from thread
-                const response = await fetch(`/api/emails/${email.filename}`);
-                const emailThreadData = await response.json();
-                const { extractSenderEmailFromThread } = await import('@/lib/email-utils');
-                const senderEmail = emailThreadData.threadEmails ? extractSenderEmailFromThread(emailThreadData.threadEmails) : undefined;
-                
-                const attachments = await loadThreadAttachments(email.filename);
-                
-                onSetSelectedFilename(email.filename);
+                onSetSelectedFilename(thread.filename);
                 onSelectEmail({
-                  filename: email.filename,
+                  filename: thread.filename,
                   sender: {
-                    ...emailData[email.filename].sender!,
-                    email: senderEmail
+                    name: threadData[threadIndex].senders[0]?.name || 'Unknown',
+                    title: threadData[threadIndex].senders[0]?.title || '',
+                    organization: threadData[threadIndex].senders[0]?.organization || '',
+                    email: thread.messages[0]?.from_address
                   },
-                  aiAnalysis: emailAIAnalysis[email.filename],
-                  tasks: emailData[email.filename].tasks,
-                  hasAttachments: emailData[email.filename].hasAttachments,
+                  aiAnalysis: threadAIAnalysis[threadIndex],
+                  tasks: threadData[threadIndex].tasks,
+                  hasAttachments: threadData[threadIndex].hasAttachments,
                   attachments: attachments
                 });
-                onOpenEmail(subject);
+                onOpenThread(subject);
               } else {
                 onSelectEmail(null);
               }
             }}
             className={`px-6 py-2 hover:bg-gray-100 cursor-pointer transition-colors min-w-0 ${
-              email.filename === selectedEmailFilename ? 'bg-gray-100' : ''
+              thread.filename === selectedThreadFilename ? 'bg-gray-100' : ''
             }`}
           >
             <div className="flex items-center gap-4 min-w-0">
@@ -231,7 +234,7 @@ export default function EmailList({
               
               {/* Attachment icon and Date - Fixed width */}
               <div className="flex items-center gap-2 shrink-0 justify-end">
-                {email.filename && emailData[email.filename]?.hasAttachments && (
+                {thread.filename && threadIndex >= 0 && threadData[threadIndex]?.hasAttachments && (
                   <Paperclip className="w-4 h-4 text-gray-600" />
                 )}
                 <span className="text-sm text-gray-600 w-16 text-right">

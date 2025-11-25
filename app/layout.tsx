@@ -14,6 +14,7 @@ interface SelectedEmail {
     name: string;
     title: string;
     organization: string;
+    email?: string;
   };
   aiAnalysis?: {
     summary: string;

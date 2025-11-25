@@ -2,23 +2,23 @@
 
 import { ArrowLeft, ArrowUp, ArrowDown, CircleCheck, Bell, Download, Paperclip } from 'lucide-react';
 import { getIconProps } from '@/lib/icon-utils';
-import { extractAttachmentsFromThread, type Attachment } from '@/lib/email-utils';
 import { useState, useEffect } from 'react';
 
-interface ThreadEmail {
-  id: string;
-  snippet: string;
-  internalDate: string;
-  payload: {
-    headers: Array<{ name: string; value: string }>;
-    parts?: Array<{
-      mimeType: string;
-      filename?: string;
-      body: {
-        data?: string;
-      };
-    }>;
-  };
+interface ThreadMessage {
+  from_address: string;
+  to_addresses: string[];
+  cc_addresses: string[];
+  subject: string;
+  timestamp: string;
+  body: string;
+  attachments: string[];
+  message_id: number;
+  in_reply_to: number | null;
+}
+
+interface Attachment {
+  filename: string;
+  mimeType: string;
 }
 
 interface OpenedEmailProps {
@@ -33,12 +33,12 @@ interface OpenedEmailProps {
 }
 
 export default function OpenedEmail({ subject, filename, onBack, onAttachmentsChange, onNavigateUp, onNavigateDown, canNavigateUp = false, canNavigateDown = false }: OpenedEmailProps) {
-  const [threadEmails, setThreadEmails] = useState<ThreadEmail[]>([]);
+  const [threadMessages, setThreadMessages] = useState<ThreadMessage[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [expandedEmailIds, setExpandedEmailIds] = useState<Set<string>>(new Set());
+  const [expandedMessageIds, setExpandedMessageIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    const loadThreadEmails = async () => {
+    const loadThreadMessages = async () => {
       if (!filename) {
         setLoading(false);
         return;
@@ -47,35 +47,43 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
       try {
         setLoading(true);
         const response = await fetch(`/api/emails/${filename}`);
-        const emailData = await response.json();
+        const threadData = await response.json();
         
-        if (emailData.threadEmails) {
-          setThreadEmails(emailData.threadEmails);
+        if (Array.isArray(threadData)) {
+          setThreadMessages(threadData);
           
           // Extract and pass attachments to parent
           if (onAttachmentsChange) {
-            const attachments = extractAttachmentsFromThread(emailData.threadEmails);
-            onAttachmentsChange(attachments);
+            const allAttachments: Attachment[] = [];
+            threadData.forEach((message: ThreadMessage) => {
+              message.attachments.forEach((attachment: string) => {
+                allAttachments.push({
+                  filename: attachment,
+                  mimeType: 'application/octet-stream' // Default mime type
+                });
+              });
+            });
+            onAttachmentsChange(allAttachments);
           }
         }
       } catch (error) {
-        console.error('Error loading thread emails:', error);
-        setThreadEmails([]);
+        console.error('Error loading thread messages:', error);
+        setThreadMessages([]);
       } finally {
         setLoading(false);
       }
     };
 
-    loadThreadEmails();
+    loadThreadMessages();
   }, [filename]);
 
-  const toggleEmail = (emailId: string) => {
-    setExpandedEmailIds(prev => {
+  const toggleMessage = (messageId: number) => {
+    setExpandedMessageIds(prev => {
       const newSet = new Set(prev);
-      if (newSet.has(emailId)) {
-        newSet.delete(emailId);
+      if (newSet.has(messageId)) {
+        newSet.delete(messageId);
       } else {
-        newSet.add(emailId);
+        newSet.add(messageId);
       }
       return newSet;
     });
@@ -112,21 +120,11 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
     return mimeTypeMap[mimeType] || 'FILE';
   };
 
-  const getEmailAttachments = (email: ThreadEmail) => {
-    const attachments: Array<{ filename: string; mimeType: string }> = [];
-    if (email.payload.parts) {
-      email.payload.parts.forEach(part => {
-        if (part.filename && part.filename !== '' && 
-            part.mimeType !== 'text/plain' && 
-            part.mimeType !== 'text/html') {
-          attachments.push({
-            filename: part.filename,
-            mimeType: part.mimeType
-          });
-        }
-      });
-    }
-    return attachments;
+  const getMessageAttachments = (message: ThreadMessage) => {
+    return message.attachments.map((attachment: string) => ({
+      filename: attachment,
+      mimeType: 'application/octet-stream' // Default mime type
+    }));
   };
 
   return (
@@ -176,43 +174,33 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
           <div className="flex items-center justify-center h-full">
             <p className="text-gray-400">Loading...</p>
           </div>
-        ) : threadEmails.length === 0 ? (
+        ) : threadMessages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <p className="text-gray-400">No messages</p>
           </div>
         ) : (
           <div>
-            {threadEmails.map((email, index) => {
-              const fromHeader = email.payload.headers.find(h => h.name === 'From');
-              const toHeader = email.payload.headers.find(h => h.name === 'To');
-              const fromEmail = fromHeader?.value || 'Unknown';
-              const toEmail = toHeader?.value || 'Unknown';
+            {threadMessages.map((message, index) => {
+              const fromEmail = message.from_address;
+              const toEmails = message.to_addresses.join(', ');
+              const ccEmails = message.cc_addresses.length > 0 ? `, ${message.cc_addresses.join(', ')}` : '';
               
-              const snippet = email.snippet || '';
-              const dateObj = new Date(parseInt(email.internalDate));
+              const snippet = message.body.substring(0, 100) + (message.body.length > 100 ? '...' : '');
+              const dateObj = new Date(message.timestamp);
               const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
               
-              const isLastMessage = index === threadEmails.length - 1;
-              const isExpanded = expandedEmailIds.has(email.id) || isLastMessage;
-              
-              // Get message body
-              let messageBody = '';
-              if (email.payload.parts) {
-                const textPart = email.payload.parts.find(part => part.mimeType === 'text/plain');
-                if (textPart?.body?.data) {
-                  messageBody = decodeBase64(textPart.body.data);
-                }
-              }
+              const isLastMessage = index === threadMessages.length - 1;
+              const isExpanded = expandedMessageIds.has(message.message_id) || isLastMessage;
               
               return (
-                <div key={`${email.id}-${index}`} className="group">
+                <div key={`${message.message_id}-${index}`} className="group">
                   {isExpanded && (
                     <div className="mx-6 border-t border-gray-200" />
                   )}
                   
                   {!isExpanded ? (
                     <div
-                      onClick={() => toggleEmail(email.id)}
+                      onClick={() => toggleMessage(message.message_id)}
                       className="px-6 py-2 cursor-pointer min-w-0 relative"
                     >
                       <div className="mx-6 border-t border-gray-200 opacity-0 group-hover:opacity-100 absolute top-0 left-0 right-0" />
@@ -242,7 +230,7 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                     </div>
                   ) : (
                     <div
-                      onClick={() => !isLastMessage && toggleEmail(email.id)}
+                      onClick={() => !isLastMessage && toggleMessage(message.message_id)}
                       className={`px-6 py-4 ${!isLastMessage ? 'cursor-pointer' : ''}`}
                     >
                       {/* Header */}
@@ -251,7 +239,7 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                         <div className="text-sm text-gray-700">
                           <span className="font-medium">{fromEmail}</span>
                           <span className="mx-1 font-medium">to</span>
-                          <span className="font-medium">{toEmail}</span>
+                          <span className="font-medium">{toEmails}{ccEmails}</span>
                         </div>
                         
                         {/* Right: Date */}
@@ -262,12 +250,12 @@ export default function OpenedEmail({ subject, filename, onBack, onAttachmentsCh
                       
                       {/* Message Content */}
                       <div className="text-sm text-gray-900 whitespace-pre-wrap">
-                        {messageBody || snippet}
+                        {message.body}
                       </div>
                       
                       {/* Attachments */}
                       {(() => {
-                        const attachments = getEmailAttachments(email);
+                        const attachments = getMessageAttachments(message);
                         if (attachments.length > 0) {
                           return (
                             <div className="mt-4">
