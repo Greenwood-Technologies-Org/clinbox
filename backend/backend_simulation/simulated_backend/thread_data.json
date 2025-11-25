@@ -1,0 +1,58 @@
+[
+  {
+    "folder": "Critical",
+    "senders": [
+      {
+        "name": "Sarah Chen",
+        "title": "Study Coordinator",
+        "organization": "UCSF Medical Center"
+      },
+      {
+        "name": "David Miller",
+        "title": "Clinical Research Associate",
+        "organization": "PRA Health Sciences"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": true
+  },
+  {
+    "folder": "Urgent",
+    "senders": [
+      {
+        "name": "NeuroScan Analytics System",
+        "title": "Automated System",
+        "organization": "NeuroScan Analytics"
+      },
+      {
+        "name": "Lena Petrova",
+        "title": "Clinical Scientist",
+        "organization": "Denali Therapeutics"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": true
+  },
+  {
+    "folder": "Critical",
+    "senders": [
+      {
+        "name": "IWRS System",
+        "title": "Automated Alert System",
+        "organization": "IWRS System (Vendor)"
+      },
+      {
+        "name": "Dr. Elena Vogel",
+        "title": "Site Pharmacist",
+        "organization": "University Hospital of Munich (Site)"
+      },
+      {
+        "name": "Liam Gallagher",
+        "title": "Clinical Research Associate",
+        "organization": "Syneos Health (CRO)"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": false
+  }
+]
