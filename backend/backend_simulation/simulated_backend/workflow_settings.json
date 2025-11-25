@@ -1,410 +1,109 @@
 [
   {
     "id": "workflow_001",
-    "name": "Serious Adverse Event (SAE) Intake and Triage",
-    "description": "Automates the initial intake, logging, and triage of SAE reports received from clinical sites for timely safety review and processing, which is critical for neurodegenerative disease trials.",
-    "modified": "2023-10-27T10:00:00Z",
+    "name": "Neurological AE Escalation to Partner",
+    "description": "For the partnered Parkinson's study (BIIB122/DNL151), this workflow filters incoming AE reports for specific neurological events and forwards them to the Biogen safety contact and internal medical monitor.",
+    "modified": "2024-05-20T10:00:00Z",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Receive SAE Report from Site",
-        "input": "Email (from clinical-trials@dnli.com)",
-        "output": "Safety Database (Initial Case)",
-        "description": "Monitors the central clinical trials inbox for emails with 'SAE Report' in the subject. Parses the attached SAE form and creates an initial case entry in the safety database.",
+        "action": "Forward Neurological AE to Partner",
+        "input": "email",
+        "output": "email",
+        "description": "Scan incoming AE report for neurological keywords and forward to the Biogen safety lead and Denali medical monitor.",
         "approval": "No"
       },
       {
         "actionNumber": 2,
-        "action": "Acknowledge Receipt to Site",
-        "input": "Safety Database (Case ID)",
-        "output": "Email",
-        "description": "Automatically sends an email acknowledgment to the reporting site with the assigned case ID, confirming receipt within 24 hours.",
+        "action": "Acknowledge Site Report",
+        "input": "email",
+        "output": "email",
+        "description": "Send an automated acknowledgment to the reporting site confirming receipt of the AE.",
         "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Triage Case and Assign",
-        "input": "Safety Database (Initial Case)",
-        "output": "Notification (MS Teams/Email)",
-        "description": "Based on the protocol and seriousness, the case is triaged. A notification is sent to the on-call Safety Physician and assigned Drug Safety Associate for medical review and data entry.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Initial Medical Review and Query Generation",
-        "input": "Safety Database (Case)",
-        "output": "Safety Database (Queries)",
-        "description": "The Safety Physician performs an initial medical review. If information is missing, queries are generated in the safety database and an email is sent to the site's CRA to follow up.",
-        "approval": "Yes"
       }
     ]
   },
   {
     "id": "workflow_002",
-    "name": "SUSAR Reporting to Partners and Authorities",
-    "description": "Manages the expedited reporting of Suspected Unexpected Serious Adverse Reactions (SUSARs) to regulatory authorities (e.g., FDA, EMA) and collaboration partners (e.g., Biogen, Takeda) within mandated timelines.",
-    "modified": "2023-10-27T10:00:00Z",
+    "name": "Site Activation Packet Distribution",
+    "description": "Upon internal confirmation of a new site selection, this workflow automatically sends the startup document packet and a welcome email to the new Principal Investigator and Study Coordinator.",
+    "modified": "2024-06-15T14:30:00Z",
     "approval": "Yes",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Identify Potential SUSAR",
-        "input": "Safety Database (Medically Reviewed Case)",
-        "output": "Notification (Regulatory Affairs Lead)",
-        "description": "Following medical review, if an SAE is deemed a potential SUSAR, the system flags it and immediately notifies the Regulatory Affairs and Safety leadership.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Generate Draft Regulatory Report",
-        "input": "Safety Database (Confirmed SUSAR)",
-        "output": "Regulatory Document (CIOMS/MedWatch Form)",
-        "description": "Populates the appropriate regulatory form (e.g., MedWatch 3500A, CIOMS I) with case data from the safety database.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Finalize and Approve Report",
-        "input": "Regulatory Document (Draft)",
-        "output": "Regulatory Document (Approved)",
-        "description": "The report is routed for final quality check and medical approval by the Head of Pharmacovigilance before submission.",
+        "action": "Send Startup Packet",
+        "input": "email",
+        "output": "email",
+        "description": "Email the standard site startup document packet to the PI and Coordinator at the newly selected site.",
         "approval": "Yes"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Submit to Authorities and Notify Partners",
-        "input": "Regulatory Document (Approved)",
-        "output": "Email (with submission receipt), Secure Portal (Partner)",
-        "description": "Submits the report via the appropriate regulatory gateway. A confirmation package is then sent to the relevant collaboration partner's safety team via a secure portal.",
-        "approval": "No"
       }
     ]
   },
   {
     "id": "workflow_003",
-    "name": "Site Monitoring Visit (SMV) Report Finalization",
-    "description": "Streamlines the review, finalization, and distribution of Site Monitoring Visit reports submitted by CRAs for Denali's multi-center global trials.",
-    "modified": "2023-10-27T10:00:00Z",
+    "name": "BBB Imaging Result Triage",
+    "description": "Processes incoming brain imaging results from a central vendor to check for confirmation of Transport Vehicle target engagement. Notifies the Clinical Scientist of positive results.",
+    "modified": "2024-07-01T09:00:00Z",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "CRA Submits Draft SMV Report",
-        "input": "CTMS Form",
-        "output": "CTMS (Draft Report)",
-        "description": "A Clinical Research Associate (CRA) completes and submits the draft monitoring report and confirmation letter in the Clinical Trial Management System (CTMS) within 5 days of the visit.",
+        "action": "Notify Scientist of Positive Result",
+        "input": "email",
+        "output": "email",
+        "description": "Review imaging report for 'positive uptake' and forward to the study's Clinical Scientist for review.",
         "approval": "No"
       },
       {
         "actionNumber": 2,
-        "action": "Assign for CTM Review",
-        "input": "CTMS (Draft Report)",
-        "output": "Notification (Clinical Trial Manager)",
-        "description": "The CTMS automatically assigns the report to the designated Clinical Trial Manager (CTM) for the study and sends a notification for review.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "CTM Review and Approval",
-        "input": "CTMS (Draft Report)",
-        "output": "CTMS (Approved Report)",
-        "description": "The CTM reviews the report for accuracy and completeness, provides feedback or approves it. If rejected, it returns to the CRA with comments.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Distribute and File Final Report",
-        "input": "CTMS (Approved Report)",
-        "output": "Email (to Site), eTMF",
-        "description": "Upon CTM approval, the final report and follow-up letter are automatically sent to the Principal Investigator at the site and filed in the electronic Trial Master File (eTMF).",
+        "action": "File Negative Result",
+        "input": "email",
+        "output": "eTMF",
+        "description": "If the report does not show positive uptake, automatically file the result in the eTMF.",
         "approval": "No"
       }
     ]
   },
   {
     "id": "workflow_004",
-    "name": "Investigational Product (IP) Resupply Request",
-    "description": "Manages IP resupply requests from clinical sites to ensure continuous drug availability, especially for globally distributed trials of biologic therapies.",
-    "modified": "2023-10-27T10:00:00Z",
+    "name": "Patient Advocacy Inquiry Routing",
+    "description": "Monitors the clinical-trials@dnli.com inbox for messages from patient advocacy groups and routes them to the appropriate internal liaison for a personalized response.",
+    "modified": "2024-04-10T11:45:00Z",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Site Submits Resupply Request",
-        "input": "IWRS (Interactive Web Response System)",
-        "output": "IWRS (Pending Request)",
-        "description": "The site coordinator logs into the IWRS and requests a new shipment of IP when stock reaches a predefined minimum threshold.",
+        "action": "Route to Patient Advocacy Liaison",
+        "input": "email",
+        "output": "email",
+        "description": "Forward email from known patient advocacy groups to the Patient Advocacy department lead.",
         "approval": "No"
       },
       {
         "actionNumber": 2,
-        "action": "System Verifies Request",
-        "input": "IWRS (Pending Request)",
-        "output": "Notification (Clinical Supply Manager)",
-        "description": "The IWRS automatically checks the request against site enrollment and dosing records. If valid, it notifies the Clinical Supply Manager.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Approve and Trigger Shipment",
-        "input": "IWRS (Verified Request)",
-        "output": "ERP System (Shipment Order)",
-        "description": "The Clinical Supply Manager reviews and approves the request in IWRS, which triggers a shipment order to the central depot or manufacturing facility's ERP system.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Confirm Receipt at Site",
-        "input": "Shipping Vendor API (Tracking Info)",
-        "output": "IWRS (Shipment Received)",
-        "description": "Once the shipping vendor confirms delivery, the site coordinator confirms receipt and acceptable condition of the IP in the IWRS, closing the loop.",
+        "action": "Send Receipt Acknowledgment",
+        "input": "email",
+        "output": "email",
+        "description": "Send an automated reply to the sender confirming their message has been routed to the correct team.",
         "approval": "No"
       }
     ]
   },
   {
     "id": "workflow_005",
-    "name": "TMF Document Submission and QC",
-    "description": "Standardizes the process for collecting, performing quality control on, and filing essential trial documents into the eTMF to ensure inspection readiness.",
-    "modified": "2023-10-27T10:00:00Z",
+    "name": "DNL310 Low IMP Stock Alert",
+    "description": "Monitors site inventory reports for the DNL310 (Hunter syndrome) study and alerts the clinical supply manager when a site's drug stock falls below the predefined threshold.",
+    "modified": "2024-07-18T16:00:00Z",
     "approval": "No",
     "actions": [
       {
         "actionNumber": 1,
-        "action": "Receive Document from Site/Vendor",
-        "input": "Email / Secure Portal",
-        "output": "eTMF (Staging Area)",
-        "description": "A new or updated document (e.g., investigator CV, lab certification) is received and uploaded to a staging area in the eTMF by a Clinical Trial Assistant (CTA).",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Assign for QC Review",
-        "input": "eTMF (Staging Area)",
-        "output": "Notification (TMF Specialist)",
-        "description": "The system assigns the staged document to a TMF Specialist for quality control review based on workload and study assignment.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Perform QC Check",
-        "input": "eTMF (Staged Document)",
-        "output": "eTMF (QC Status Update)",
-        "description": "The TMF Specialist reviews the document against a checklist for completeness, legibility, and correct metadata. The document is either approved or rejected with comments.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 4,
-        "action": "File Approved Document",
-        "input": "eTMF (QC Approved Document)",
-        "output": "eTMF (Filed Document)",
-        "description": "Upon QC approval, the document is automatically filed in the appropriate eTMF zone, section, and artifact, and the audit trail is updated.",
-        "approval": "No"
-      }
-    ]
-  },
-  {
-    "id": "workflow_006",
-    "name": "Central Lab Alert Value Management",
-    "description": "Handles the notification and follow-up of out-of-range (alert) lab values from the central laboratory to ensure patient safety is promptly addressed.",
-    "modified": "2023-10-27T10:00:00Z",
-    "approval": "No",
-    "actions": [
-      {
-        "actionNumber": 1,
-        "action": "Receive Lab Alert",
-        "input": "Email / SFTP (from Central Lab)",
-        "output": "CTMS (New Alert Record)",
-        "description": "The system ingests a lab alert notification file from the central lab, creating a new alert record in the CTMS linked to the specific patient and site.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Notify Site and Medical Monitor",
-        "input": "CTMS (New Alert Record)",
-        "output": "Email / SMS Notification",
-        "description": "An immediate notification is sent to the site's Principal Investigator, the assigned CRA, and the Denali Medical Monitor for the study.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Site Acknowledges and Provides Action",
-        "input": "Form (Web Portal)",
-        "output": "CTMS (Alert Record Updated)",
-        "description": "The site PI or coordinator must log into a portal to acknowledge the alert and document the clinical assessment and action taken (e.g., repeat test, patient follow-up).",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Medical Monitor Review and Closure",
-        "input": "CTMS (Updated Alert Record)",
-        "output": "CTMS (Alert Closed)",
-        "description": "The Medical Monitor reviews the site's documented action for appropriateness. Once satisfied, the monitor formally closes the alert in the CTMS.",
-        "approval": "Yes"
-      }
-    ]
-  },
-  {
-    "id": "workflow_007",
-    "name": "Protocol Amendment Dissemination and Training",
-    "description": "Manages the distribution of a new protocol amendment to all global sites and partners, and tracks the completion of required retraining.",
-    "modified": "2023-10-27T10:00:00Z",
-    "approval": "Yes",
-    "actions": [
-      {
-        "actionNumber": 1,
-        "action": "Finalize Protocol Amendment Package",
-        "input": "Document Management System",
-        "output": "Notification (Study Team)",
-        "description": "Once the final protocol amendment and summary of changes are approved internally, the system notifies the full study team that the package is ready for distribution.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Distribute to Sites, IRBs, and Partners",
-        "input": "Approved Document Package",
-        "output": "Email / Secure Portal",
-        "description": "The system distributes the amendment package to all site contacts, relevant IRBs/ECs, and collaboration partners with instructions for submission and implementation.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Track IRB/EC Approval",
-        "input": "eTMF / CTMS",
-        "output": "CTMS (Site Status Update)",
-        "description": "CRAs upload IRB/EC approval letters for the amendment to the eTMF. The system parses the document and updates the site's status in the CTMS to 'Amendment Approved'.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Track Site Staff Retraining",
-        "input": "LMS (Learning Management System)",
-        "output": "CTMS (Training Complete)",
-        "description": "Site staff complete a mandatory training module on the amendment in the LMS. Upon completion, the CTMS is updated, and the site is authorized to implement the changes.",
-        "approval": "No"
-      }
-    ]
-  },
-  {
-    "id": "workflow_008",
-    "name": "Joint Steering Committee (JSC) Data Package Preparation",
-    "description": "Automates the compilation of key study data (enrollment, safety, milestones) for periodic review meetings with collaboration partners like Biogen or Takeda.",
-    "modified": "2023-10-27T10:00:00Z",
-    "approval": "No",
-    "actions": [
-      {
-        "actionNumber": 1,
-        "action": "Trigger Data Pull",
-        "input": "Calendar (Scheduled JSC Meeting)",
-        "output": "Data Warehouse Query",
-        "description": "Two weeks prior to a scheduled JSC meeting, the workflow automatically triggers queries to the CTMS, EDC, and Safety Database to pull pre-defined data points.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Generate Draft Report and Slides",
-        "input": "Data Warehouse (Aggregated Data)",
-        "output": "Document (Draft PowerPoint/Word Report)",
-        "description": "The aggregated data is used to populate a standardized PowerPoint slide deck and report template with updated charts and tables.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Route for Internal Review and Approval",
-        "input": "Document (Draft Report)",
-        "output": "Notification (Alliance Manager, Study Lead)",
-        "description": "The draft data package is routed to the Denali study lead and alliance manager for review, comment, and final approval before sharing.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Distribute to Partner",
-        "input": "Document (Approved Report)",
-        "output": "Secure Portal",
-        "description": "The final, approved data package is uploaded to the secure partner portal 48 hours before the scheduled JSC meeting.",
-        "approval": "No"
-      }
-    ]
-  },
-  {
-    "id": "workflow_009",
-    "name": "Site Initiation Visit (SIV) Readiness Checklist",
-    "description": "Ensures all required documents, training, and supplies are in place before a Site Initiation Visit is scheduled, streamlining the site activation process.",
-    "modified": "2023-10-27T10:00:00Z",
-    "approval": "No",
-    "actions": [
-      {
-        "actionNumber": 1,
-        "action": "Site Selected for Activation",
-        "input": "CTMS (Site Status Change)",
-        "output": "CTMS (Readiness Checklist Generated)",
-        "description": "When a site's status is changed to 'Selected', a dynamic SIV readiness checklist is automatically generated in the CTMS.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Track Essential Document Collection",
-        "input": "eTMF",
-        "output": "CTMS (Checklist Item Update)",
-        "description": "The system monitors the eTMF for required startup documents (e.g., FDF, 1572, IRB approval). As documents are filed, corresponding checklist items are marked complete.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Verify IP and Lab Kit Delivery",
-        "input": "IWRS / Vendor Portal",
-        "output": "CTMS (Checklist Item Update)",
-        "description": "The workflow checks IWRS and lab vendor portals for confirmation that initial supplies of Investigational Product and lab kits have been delivered to the site.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Authorize SIV Scheduling",
-        "input": "CTMS (Completed Checklist)",
-        "output": "Notification (CRA, CTM)",
-        "description": "Once all checklist items are complete, the system sends a notification to the CRA and CTM, authorizing them to proceed with scheduling the Site Initiation Visit.",
-        "approval": "Yes"
-      }
-    ]
-  },
-  {
-    "id": "workflow_010",
-    "name": "Patient Referral from Genetics Study to Interventional Trial",
-    "description": "Manages the process of identifying a potentially eligible patient from an observational study (e.g., ROPAD) and referring them to the nearest participating interventional trial site.",
-    "modified": "2023-10-27T10:00:00Z",
-    "approval": "No",
-    "actions": [
-      {
-        "actionNumber": 1,
-        "action": "Identify Potential Match",
-        "input": "Genetics Database",
-        "output": "Notification (Study Team)",
-        "description": "A participant in the ROPAD genetics study is identified with a genotype of interest for an active interventional trial (e.g., LIGHTHOUSE study for Parkinson's). A secure, anonymized notification is sent to the study team.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 2,
-        "action": "Obtain Consent for Referral",
-        "input": "Notification (Study Team)",
-        "output": "Email (to ROPAD Site)",
-        "description": "The interventional study team requests the ROPAD site to contact the participant and obtain specific consent to be referred for screening for the new trial.",
-        "approval": "Yes"
-      },
-      {
-        "actionNumber": 3,
-        "action": "Route Referral to Nearest Site",
-        "input": "Form (Participant Location and Consent)",
-        "output": "Email (Secure, to Interventional Site PI)",
-        "description": "Once consent is documented, the system uses the participant's location to identify the nearest active interventional site and sends a secure referral email to that site's PI and coordinator.",
-        "approval": "No"
-      },
-      {
-        "actionNumber": 4,
-        "action": "Track Referral Outcome",
-        "input": "CTMS (Screening Log)",
-        "output": "Dashboard (Referral Metrics)",
-        "description": "The workflow tracks whether the referred participant was contacted, screened, and ultimately enrolled, providing metrics on the success of the referral pathway.",
+        "action": "Alert Supply Manager of Low Stock",
+        "input": "email",
+        "output": "email",
+        "description": "If an inventory report shows stock is below threshold, send an urgent notification to the Clinical Supply Manager.",
         "approval": "No"
       }
     ]
