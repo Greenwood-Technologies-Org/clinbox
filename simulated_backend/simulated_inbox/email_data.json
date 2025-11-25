@@ -1,7 +1,7 @@
 {
   "email_001.json": {
     "folder": "Important",
-    "sender": {
+    "senders": {
       "name": "Dupliplex Imaging Services",
       "title": "Central Imaging Lab",
       "organization": "Dupliplex Imaging"
