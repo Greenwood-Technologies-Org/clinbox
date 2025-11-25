@@ -3,53 +3,63 @@
     "folder": "Critical",
     "senders": [
       {
-        "name": "Sarah Chen",
-        "title": "Study Coordinator",
-        "organization": "UCSF Medical Center"
+        "name": "Emily Carter",
+        "title": "Principal Investigator",
+        "organization": "University of Wisconsin"
       },
       {
-        "name": "David Miller",
+        "name": "Sarah Chen",
         "title": "Clinical Research Associate",
-        "organization": "PRA Health Sciences"
+        "organization": "Syneos Health"
+      },
+      {
+        "name": "Alex Johnson",
+        "title": "Clinical Project Manager",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "David Lee",
+        "title": "Medical Monitor",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "Michael Brown",
+        "title": "Study Coordinator",
+        "organization": "University of Wisconsin"
       }
     ],
     "tasks": [],
     "hasAttachments": true
+  },
+  {
+    "folder": "Important",
+    "senders": [
+      {
+        "name": "Maria Garcia",
+        "title": "Data Management Lead",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "David Chen",
+        "title": "Lead Biostatistician",
+        "organization": "Denali Therapeutics"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": false
   },
   {
     "folder": "Urgent",
     "senders": [
       {
-        "name": "NeuroScan Analytics System",
-        "title": "Automated System",
-        "organization": "NeuroScan Analytics"
+        "name": "Klaus Schmidt",
+        "title": "Study Coordinator",
+        "organization": "University Hospital of T\u00fcbingen"
       },
       {
-        "name": "Lena Petrova",
-        "title": "Clinical Scientist",
-        "organization": "Denali Therapeutics"
-      }
-    ],
-    "tasks": [],
-    "hasAttachments": true
-  },
-  {
-    "folder": "Critical",
-    "senders": [
-      {
-        "name": "IWRS System",
-        "title": "Automated Alert System",
-        "organization": "IWRS System (Vendor)"
-      },
-      {
-        "name": "Dr. Elena Vogel",
-        "title": "Site Pharmacist",
-        "organization": "University Hospital of Munich (Site)"
-      },
-      {
-        "name": "Liam Gallagher",
+        "name": "Maria Garcia",
         "title": "Clinical Research Associate",
-        "organization": "Syneos Health (CRO)"
+        "organization": "Syneos Health"
       }
     ],
     "tasks": [],

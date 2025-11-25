@@ -1,35 +1,47 @@
 [
   {
-    "from_address": "notifications@neuroscan-analytics.com",
+    "from_address": "maria.garcia@denalitherapeutics.com",
     "to_addresses": [
-      "dnl593-study-team@denalitx.com"
+      "david.chen@denalitherapeutics.com"
     ],
     "cc_addresses": [
-      "alex.johnson@denalitx.com",
-      "lena.petrova@denalitx.com"
+      "alex.johnson@denalitherapeutics.com"
     ],
-    "subject": "TAK-594/DNL593: New Scans Available",
-    "timestamp": "2023-11-06T11:00:00Z",
-    "body": "Dear Study Team,\n\nA new batch of processed brain scans (Batch ID: DNL593-20231106-A) for the TAK-594/DNL593 FTD-GRN study is now available for review in the NeuroScan portal.\n\nThank you,\nNeuroScan Analytics System",
+    "subject": "TAK-594/DNL593: 12-Month Cohort Queries",
+    "timestamp": "2024-05-20T11:30:00-07:00",
+    "body": "Hi David,\n\nMy team has processed the final batch of query resolutions for the TAK-594/DNL593 12-month cohort. Our system shows zero outstanding queries.\n\nCan you please provide a final confirmation from the biostatistics side that you are aligned and we are ready to proceed with database lock procedures?\n\nThanks,\n\nMaria Garcia\nData Management Lead\nDenali Therapeutics",
     "attachments": [],
     "message_id": 0,
     "in_reply_to": null
   },
   {
-    "from_address": "lena.petrova@denalitx.com",
+    "from_address": "david.chen@denalitherapeutics.com",
     "to_addresses": [
-      "alex.johnson@denalitx.com"
+      "maria.garcia@denalitherapeutics.com"
     ],
     "cc_addresses": [
-      "david.chen@syneos.com"
+      "alex.johnson@denalitherapeutics.com"
     ],
-    "subject": "Re: TAK-594/DNL593: New Scans Available",
-    "timestamp": "2023-11-06T15:25:00Z",
-    "body": "Hi Alex,\n\nThanks for the notification. While reviewing the latest batch, I noted an anomaly in the scan for patient 101-003. There appears to be a slight, unexpected signal enhancement in the cortical region that wasn't present on the baseline scan. This could potentially be related to TV engagement.\n\nCould you please follow up with the site to retrieve the patient's concomitant medication log and check for any adverse events reported around the scan date? We'll need that context to interpret this finding.\n\nBest,\n\nLena\n\n--\nDr. Lena Petrova\nClinical Scientist\nDenali Therapeutics",
-    "attachments": [
-      "Patient_101-003_Scan_Comparison.png"
-    ],
+    "subject": "Re: TAK-594/DNL593: 12-Month Cohort Queries",
+    "timestamp": "2024-05-20T14:05:00-07:00",
+    "body": "Hi Maria,\n\nThanks for the update. I've reviewed the final data listings and can confirm that biostatistics has no further queries. We are clear for database lock.\n\nGreat work by your team to get this closed out.\n\nBest,\n\nDavid Chen\nLead Biostatistician\nDenali Therapeutics",
+    "attachments": [],
     "message_id": 1,
     "in_reply_to": 0
+  },
+  {
+    "from_address": "maria.garcia@denalitherapeutics.com",
+    "to_addresses": [
+      "alex.johnson@denalitherapeutics.com"
+    ],
+    "cc_addresses": [
+      "david.chen@denalitherapeutics.com"
+    ],
+    "subject": "Re: TAK-594/DNL593: 12-Month Cohort Queries",
+    "timestamp": "2024-05-20T14:20:00-07:00",
+    "body": "Hi Alex,\n\nWith David's confirmation, we are officially ready for the 12-month cohort database lock.\n\nBelow is a draft communication for you to send to the joint project team to formally announce this milestone. Please review and send at your convenience.\n\n---\n\n**Subject:** TAK-594/DNL593: 12-Month Cohort Database Ready for Lock\n\n**To:** Takeda-Denali JPT Distribution List\n\nDear Team,\n\nThis email serves as formal notification that all data queries for the 12-month cohort of the TAK-594/DNL593 FTD-GRN study have been resolved. The clinical database is clean and ready for lock.\n\nWe are targeting End of Day this Friday, May 24th, for the final lock to occur.\n\nThank you to all team members for your diligence in reaching this key milestone.\n\nBest regards,\n\nAlex Johnson\n\n---\n\nThanks,\n\nMaria",
+    "attachments": [],
+    "message_id": 2,
+    "in_reply_to": 1
   }
 ]

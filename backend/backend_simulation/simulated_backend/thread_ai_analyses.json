@@ -1,6 +1,6 @@
 [
   {
-    "summary": "Sarah Chen from UCSF reported a Serious Adverse Event (SAE), severe dyskinesia, for patient 112-004 in the LUMA study (BIIB122/DNL151). David Miller from PRA Health Sciences forwarded the report to Denali and Biogen contacts for immediate medical and safety review.",
+    "summary": "Dr. Emily Carter from the University of Wisconsin reported a new Serious Adverse Event (SAE) for participant 101-005 in the DNL343 study, attaching the required CIOMS form. Sarah Chen from Syneos Health acknowledged receipt and confirmed the sponsor team will review the report.",
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_002",
@@ -8,19 +8,19 @@
       "steps": [
         {
           "name": "Acknowledge Site Report",
-          "result": "Not performed. The email thread does not contain a reply to the original sender at the clinical site.",
-          "reasoning": "The first step of the workflow is to send a confirmation to the reporting site. The second email from David Miller forwards the report internally but does not reply to Sarah Chen at UCSF."
+          "result": "Completed",
+          "reasoning": "The second email in the thread from Sarah Chen (Syneos Health) already acknowledges receipt of the SAE report from the site, fulfilling the purpose of this step."
         },
         {
           "name": "Route to Pharmacovigilance",
-          "result": "Completed. The SAE report was forwarded to Denali and Biogen contacts.",
-          "reasoning": "David Miller's email on 2024-05-21 at 14:45:12Z forwarded the SAE report to Maria Garcia (Denali), Alex Johnson (Denali), and safety.contact@biogen.com, fulfilling the routing step of the workflow."
+          "result": "The SAE report and the initial email have been forwarded to the internal Denali Pharmacovigilance (PV) intake group for processing.",
+          "reasoning": "The initial email from the clinical site is identified as an SAE report for the DNL343 study, which triggers this workflow step to route the report to the appropriate internal safety team for handling."
         }
       ]
     }
   },
   {
-    "summary": "NeuroScan Analytics notified the TAK-594/DNL593 study team that a new batch of brain scans is available. Upon review, Dr. Lena Petrova, a Clinical Scientist at Denali, identified a potential anomaly in the scan for patient 101-003. She has requested that Alex Johnson follow up with the clinical site to obtain the patient's concomitant medication log and check for any adverse events to help interpret the finding.",
+    "summary": "Data Management (Maria Garcia) and Biostatistics (David Chen) have confirmed that all data queries for the TAK-594/DNL593 12-month cohort are resolved, clearing the study for database lock. Maria has provided Alex Johnson with a draft email to formally notify the joint Takeda-Denali project team of this milestone, with a target lock date of May 24th.",
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_004",
@@ -28,28 +28,28 @@
       "steps": [
         {
           "name": "Draft and Send Milestone Update",
-          "result": "No action taken.",
-          "reasoning": "This workflow was selected as it is the only one associated with the TAK-594/DNL593 study mentioned in the email. However, the workflow is designed for notifying partners about key study milestones. The email thread concerns a routine data delivery and an internal discussion about a specific patient finding, which does not qualify as a key milestone requiring a formal partner notification."
+          "result": "A draft email has been prepared for Alex Johnson to send to the Takeda-Denali joint project team, formally announcing that the 12-month cohort database for the TAK-594/DNL593 study is ready for lock.",
+          "reasoning": "The final email in the thread from Maria Garcia to Alex Johnson contains a complete, pre-formatted draft notification about the database lock milestone, ready to be sent to the partner team. This fulfills the action of drafting a milestone update."
         }
       ]
     }
   },
   {
-    "summary": "An automated alert and a follow-up email from the pharmacist at Site 1205 (University Hospital of Munich) notified the CRA, Liam Gallagher, of a critical shortage of Investigational Product (DNL310). With only two kits on hand and two patients scheduled for infusions next week, there is an urgent need for a resupply to avoid a dosing delay. The CRA has forwarded the request to Sarah Chen at Denali to arrange an expedited shipment.",
+    "summary": "Dr. Klaus Schmidt from the University Hospital of T\u00fcbingen has identified a potential patient from their ROPAD Parkinson's genetics study for the BIIB122/DNL151 study. He is requesting the referral protocol and the nearest trial site. Maria Garcia from Syneos Health has forwarded this inquiry to Alex Johnson at Denali for guidance.",
     "quickActions": [],
     "workflow": {
-      "workflowId": "workflow_003",
+      "workflowId": "workflow_001",
       "status": "needs approval",
       "steps": [
         {
-          "name": "Categorize and Forward Inquiry",
-          "result": "The inquiry from Site 1205 regarding a critical shortage of Investigational Product (DNL310) has been forwarded to Sarah Chen at Denali, who is likely responsible for clinical trial supplies, to arrange an expedited shipment.",
-          "reasoning": "The initial automated alert and the follow-up email from the site pharmacist, Dr. Elena Vogel, clearly identified a low stock level (2 kits remaining) that would impact two upcoming patient visits. Liam Gallagher correctly identified the urgency and routed the request to the appropriate contact (Sarah Chen) at the sponsor company for immediate action."
+          "name": "Acknowledge Referral Receipt",
+          "result": "Send an email to Dr. Klaus Schmidt (k.schmidt@uktuebingen.de) acknowledging receipt of the patient referral inquiry.",
+          "reasoning": "The initial email from Dr. Schmidt is an inquiry about a patient referral from the ROPAD study, which is the trigger for this workflow. The first step is to acknowledge the receipt of this inquiry."
         },
         {
-          "name": "Log Inquiry in CTMS",
-          "result": "A record of the communication regarding the low IP stock at Site 1205 and the request for an urgent resupply should be logged in the Clinical Trial Management System (CTMS).",
-          "reasoning": "This critical communication involves a potential dosing delay for two patients, making it essential to document the issue, the site's notification, and the sponsor's action plan in the CTMS for tracking, oversight, and audit trail purposes."
+          "name": "Forward to Study Team",
+          "result": "Forward the inquiry to the internal DNL151 team and the designated Biogen contacts for review and to provide the requested protocol and site information.",
+          "reasoning": "The second step of the workflow is to route the referral to the appropriate internal and partner teams. Maria Garcia has already forwarded the email to Alex Johnson at Denali, and this step ensures it reaches the full designated team, including Biogen contacts."
         }
       ]
     }
