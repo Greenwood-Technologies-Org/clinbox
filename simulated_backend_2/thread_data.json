@@ -1,0 +1,68 @@
+[
+  {
+    "folder": "Critical",
+    "senders": [
+      {
+        "name": "Emily Carter",
+        "title": "Principal Investigator",
+        "organization": "University of Wisconsin"
+      },
+      {
+        "name": "Sarah Chen",
+        "title": "Clinical Research Associate",
+        "organization": "Syneos Health"
+      },
+      {
+        "name": "Alex Johnson",
+        "title": "Clinical Project Manager",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "David Lee",
+        "title": "Medical Monitor",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "Michael Brown",
+        "title": "Study Coordinator",
+        "organization": "University of Wisconsin"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": true
+  },
+  {
+    "folder": "Important",
+    "senders": [
+      {
+        "name": "Maria Garcia",
+        "title": "Data Management Lead",
+        "organization": "Denali Therapeutics"
+      },
+      {
+        "name": "David Chen",
+        "title": "Lead Biostatistician",
+        "organization": "Denali Therapeutics"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": false
+  },
+  {
+    "folder": "Urgent",
+    "senders": [
+      {
+        "name": "Klaus Schmidt",
+        "title": "Study Coordinator",
+        "organization": "University Hospital of T\u00fcbingen"
+      },
+      {
+        "name": "Maria Garcia",
+        "title": "Clinical Research Associate",
+        "organization": "Syneos Health"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": false
+  }
+]

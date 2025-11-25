@@ -1,0 +1,82 @@
+[
+  {
+    "id": "doc_001",
+    "name": "Protocol_BIIB122-DNL151_LIGHTHOUSE_v4.0.pdf",
+    "description": "Final protocol for the Phase 3 LIGHTHOUSE study, a multicenter, randomized, double-blind, placebo-controlled study to evaluate the efficacy and safety of BIIB122/DNL151 in participants with early-stage Parkinson's disease. Co-developed with Biogen.",
+    "modified": "2023-11-20T10:00:00Z",
+    "version": "4.0",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_002",
+    "name": "IB_DNL310_tividenofusp_alfa_v8.2.pdf",
+    "description": "Investigator's Brochure for tividenofusp alfa (DNL310), summarizing the comprehensive preclinical and clinical data, including pharmacology, safety, and efficacy from the Phase 1/2 study in Hunter syndrome (MPS II). This version supports the BLA submission.",
+    "modified": "2024-03-15T14:30:00Z",
+    "version": "8.2",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_003",
+    "name": "BLA_DNL310_Module_5_Clinical_Study_Reports.docx",
+    "description": "Module 5 of the Biologics License Application (BLA) submission to the FDA for tividenofusp alfa (DNL310), containing the full clinical study reports for the Phase 1/2 trial and its long-term extension study in patients with MPS II.",
+    "modified": "2024-05-10T09:15:00Z",
+    "version": "1.0",
+    "type": "docx"
+  },
+  {
+    "id": "doc_004",
+    "name": "Denali-Takeda_JSC_Charter_TAK-594-DNL593.pdf",
+    "description": "Joint Steering Committee (JSC) Charter outlining the governance, roles, and responsibilities for the co-development partnership between Denali and Takeda for TAK-594/DNL593, a treatment for frontotemporal dementia with granulin mutations (FTD-GRN).",
+    "modified": "2023-09-05T18:00:00Z",
+    "version": "2.1",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_005",
+    "name": "DSUR_DNL343_Annual_Report_2023.pdf",
+    "description": "The 2023 Annual Development Safety Update Report (DSUR) for DNL343, providing a comprehensive summary of safety data collected during the ALS clinical program, including an analysis of the negative 6-month efficacy readout and ongoing safety follow-up.",
+    "modified": "2024-02-28T11:45:00Z",
+    "version": "2023.1",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_006",
+    "name": "Global_Site_Monitoring_Plan_ROPAD_Study.docx",
+    "description": "Comprehensive site monitoring plan for the ROPAD global genetics and observational study, detailing monitoring visit types, frequency, source data verification requirements, and issue escalation procedures across all ~48 international sites in the US and EU.",
+    "modified": "2023-07-12T16:20:00Z",
+    "version": "3.0",
+    "type": "docx"
+  },
+  {
+    "id": "doc_007",
+    "name": "Master_Pediatric_Assent_Form_DNL126-001.docx",
+    "description": "Master template for the Pediatric Assent Form for study DNL126-001, designed for children and adolescents to explain the Sanfilippo syndrome (MPS IIIA) trial in age-appropriate language, for adaptation at clinical sites.",
+    "modified": "2024-01-22T13:00:00Z",
+    "version": "2.0",
+    "type": "docx"
+  },
+  {
+    "id": "doc_008",
+    "name": "IP_Handling_Manual_TransportVehicle_Platform.pdf",
+    "description": "Manual for clinical site staff detailing specific procedures for receipt, storage, preparation, and administration of investigational products developed using Denali's TransportVehicle\u2122 platform, ensuring the integrity of BBB-crossing biologics.",
+    "modified": "2024-04-03T08:55:00Z",
+    "version": "5.1",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_009",
+    "name": "SAP_DNL919-AD-002_v1.0_Final.pdf",
+    "description": "Final Statistical Analysis Plan (SAP) for study DNL919-AD-002, a Phase 2a study of DNL919 in patients with Alzheimer's disease. This document outlines the planned statistical methods for analyzing primary and secondary endpoints, including biomarker analysis.",
+    "modified": "2023-12-18T17:00:00Z",
+    "version": "1.0",
+    "type": "pdf"
+  },
+  {
+    "id": "doc_010",
+    "name": "Vendor_Oversight_Plan_Central_Labs.docx",
+    "description": "A comprehensive plan detailing the oversight strategy, key performance indicators (KPIs), communication plan, and issue escalation pathways for the central laboratory vendors supporting Denali's neurodegenerative disease portfolio, including the LIGHTHOUSE and FTD-GRN studies.",
+    "modified": "2024-06-01T12:10:00Z",
+    "version": "2.3",
+    "type": "docx"
+  }
+]

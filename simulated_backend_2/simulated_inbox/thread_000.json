@@ -1,0 +1,38 @@
+[
+  {
+    "from_address": "emily.carter@wisc.edu",
+    "to_addresses": [
+      "sarah.chen@syneos.com"
+    ],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com",
+      "david.lee@denalitx.com",
+      "michael.brown@wisc.edu"
+    ],
+    "subject": "DNL343 Study: New SAE Report - Site 101",
+    "timestamp": "2023-10-26T14:30:00Z",
+    "body": "Dear Study Team,\n\nPlease find the attached CIOMS form for a Serious Adverse Event (unexpected hospitalization) for participant 101-005 in the DNL343 study.\n\nKindly acknowledge receipt at your earliest convenience and advise on any additional reporting requirements.\n\nBest regards,\n\nDr. Emily Carter\nPrincipal Investigator\nUniversity of Wisconsin",
+    "attachments": [
+      "SAE_DNL343_101_005_CIOMS.pdf"
+    ],
+    "message_id": 0,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "sarah.chen@syneos.com",
+    "to_addresses": [
+      "emily.carter@wisc.edu"
+    ],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com",
+      "david.lee@denalitx.com",
+      "michael.brown@wisc.edu"
+    ],
+    "subject": "Re: DNL343 Study: New SAE Report - Site 101",
+    "timestamp": "2023-10-26T14:45:15Z",
+    "body": "Dear Dr. Carter,\n\nThank you for the notification. We have received the CIOMS form for participant 101-005.\n\nThe sponsor team will review the report and provide further guidance shortly.\n\nBest,\n\nSarah Chen\nClinical Research Associate\nSyneos Health",
+    "attachments": [],
+    "message_id": 1,
+    "in_reply_to": 0
+  }
+]

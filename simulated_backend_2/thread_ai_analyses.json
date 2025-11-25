@@ -1,0 +1,57 @@
+[
+  {
+    "summary": "Dr. Emily Carter from the University of Wisconsin reported a new Serious Adverse Event (SAE) for participant 101-005 in the DNL343 study, attaching the required CIOMS form. Sarah Chen from Syneos Health acknowledged receipt and confirmed the sponsor team will review the report.",
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_002",
+      "status": "completed",
+      "steps": [
+        {
+          "name": "Acknowledge Site Report",
+          "result": "Completed",
+          "reasoning": "The second email in the thread from Sarah Chen (Syneos Health) already acknowledges receipt of the SAE report from the site, fulfilling the purpose of this step."
+        },
+        {
+          "name": "Route to Pharmacovigilance",
+          "result": "The SAE report and the initial email have been forwarded to the internal Denali Pharmacovigilance (PV) intake group for processing.",
+          "reasoning": "The initial email from the clinical site is identified as an SAE report for the DNL343 study, which triggers this workflow step to route the report to the appropriate internal safety team for handling."
+        }
+      ]
+    }
+  },
+  {
+    "summary": "Data Management (Maria Garcia) and Biostatistics (David Chen) have confirmed that all data queries for the TAK-594/DNL593 12-month cohort are resolved, clearing the study for database lock. Maria has provided Alex Johnson with a draft email to formally notify the joint Takeda-Denali project team of this milestone, with a target lock date of May 24th.",
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_004",
+      "status": "completed",
+      "steps": [
+        {
+          "name": "Draft and Send Milestone Update",
+          "result": "A draft email has been prepared for Alex Johnson to send to the Takeda-Denali joint project team, formally announcing that the 12-month cohort database for the TAK-594/DNL593 study is ready for lock.",
+          "reasoning": "The final email in the thread from Maria Garcia to Alex Johnson contains a complete, pre-formatted draft notification about the database lock milestone, ready to be sent to the partner team. This fulfills the action of drafting a milestone update."
+        }
+      ]
+    }
+  },
+  {
+    "summary": "Dr. Klaus Schmidt from the University Hospital of T\u00fcbingen has identified a potential patient from their ROPAD Parkinson's genetics study for the BIIB122/DNL151 study. He is requesting the referral protocol and the nearest trial site. Maria Garcia from Syneos Health has forwarded this inquiry to Alex Johnson at Denali for guidance.",
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_001",
+      "status": "needs approval",
+      "steps": [
+        {
+          "name": "Acknowledge Referral Receipt",
+          "result": "Send an email to Dr. Klaus Schmidt (k.schmidt@uktuebingen.de) acknowledging receipt of the patient referral inquiry.",
+          "reasoning": "The initial email from Dr. Schmidt is an inquiry about a patient referral from the ROPAD study, which is the trigger for this workflow. The first step is to acknowledge the receipt of this inquiry."
+        },
+        {
+          "name": "Forward to Study Team",
+          "result": "Forward the inquiry to the internal DNL151 team and the designated Biogen contacts for review and to provide the requested protocol and site information.",
+          "reasoning": "The second step of the workflow is to route the referral to the appropriate internal and partner teams. Maria Garcia has already forwarded the email to Alex Johnson at Denali, and this step ensures it reaches the full designated team, including Biogen contacts."
+        }
+      ]
+    }
+  }
+]

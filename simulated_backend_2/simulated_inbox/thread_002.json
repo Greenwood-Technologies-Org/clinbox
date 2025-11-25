@@ -1,0 +1,28 @@
+[
+  {
+    "from_address": "k.schmidt@uktuebingen.de",
+    "to_addresses": [
+      "m.garcia@syneos.com"
+    ],
+    "cc_addresses": [],
+    "subject": "Inquiry: Patient Referral for BIIB122/DNL151",
+    "timestamp": "2024-05-21T09:30:15+02:00",
+    "body": "Dear Maria,\n\nI hope this email finds you well.\n\nWe have identified a patient within our ROPAD Parkinson's genetics study at the University Hospital of T\u00fcbingen who appears to meet the preliminary genetic criteria for the BIIB122/DNL151 study. \n\nCould you please provide us with the protocol for patient referral? Additionally, we would appreciate the contact information for the nearest participating clinical trial site in Europe for this study.\n\nThank you for your assistance.\n\nBest regards,\n\nDr. Klaus Schmidt\nStudy Coordinator\nDepartment of Neurology\nUniversity Hospital of T\u00fcbingen",
+    "attachments": [],
+    "message_id": 0,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "m.garcia@syneos.com",
+    "to_addresses": [
+      "alex.johnson@denalitx.com"
+    ],
+    "cc_addresses": [],
+    "subject": "Fwd: Inquiry: Patient Referral for BIIB122/DNL151",
+    "timestamp": "2024-05-21T11:05:00+02:00",
+    "body": "Hi Alex,\n\nPlease see the inquiry below from a ROPAD study site in Germany. They have a potential referral candidate for the BIIB122/DNL151 study.\n\nCould you please advise on the standard procedure for this type of referral and provide the contact details for the appropriate site? \n\nThanks,\n\nMaria Garcia\nClinical Research Associate\nSyneos Health\n\n---------- Forwarded message ---------\nFrom: Dr. Klaus Schmidt <k.schmidt@uktuebingen.de>\nDate: Tue, May 21, 2024 at 9:30 AM\nSubject: Inquiry: Patient Referral for BIIB122/DNL151\nTo: Maria Garcia <m.garcia@syneos.com>\n\nDear Maria,\n\nI hope this email finds you well.\n\nWe have identified a patient within our ROPAD Parkinson's genetics study at the University Hospital of T\u00fcbingen who appears to meet the preliminary genetic criteria for the BIIB122/DNL151 study. \n\nCould you please provide us with the protocol for patient referral? Additionally, we would appreciate the contact information for the nearest participating clinical trial site in Europe for this study.\n\nThank you for your assistance.\n\nBest regards,\n\nDr. Klaus Schmidt\nStudy Coordinator\nDepartment of Neurology\nUniversity Hospital of T\u00fcbingen",
+    "attachments": [],
+    "message_id": 1,
+    "in_reply_to": 0
+  }
+]
