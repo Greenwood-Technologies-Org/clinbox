@@ -1,0 +1,48 @@
+[
+  {
+    "from_address": "no-reply@iwrs-system.com",
+    "to_addresses": [
+      "liam.gallagher@syneos.com"
+    ],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com"
+    ],
+    "subject": "IWRS Alert: Low IP Stock Site 1205",
+    "timestamp": "2023-11-06T08:00:15Z",
+    "body": "This is an automated notification.\n\nInvestigational Product stock for study DNL310 at Site 1205 (University Hospital of Munich) has fallen below the minimum re-supply threshold.\n\nProduct: DNL310\nKits on hand: 2\nMinimum threshold: 3\n\nPlease review inventory and order a resupply shipment as needed.",
+    "attachments": [],
+    "message_id": 0,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "elena.vogel@uhm.de",
+    "to_addresses": [
+      "liam.gallagher@syneos.com"
+    ],
+    "cc_addresses": [
+      "martina.schmidt@uhm.de"
+    ],
+    "subject": "DNL310 Study: IP Stock at Site 1205",
+    "timestamp": "2023-11-06T09:32:45Z",
+    "body": "Hi Liam,\n\nI just saw the automated low stock notification from the IWRS. We currently only have two kits of DNL310 remaining.\n\nWe have two patients, 1205-003 and 1205-004, scheduled for their infusions next Tuesday and Wednesday. We will not have enough drug to cover both visits.\n\nCould you please look into this for us?\n\nThank you,\n\nDr. Elena Vogel\nPharmacist\nUniversity Hospital of Munich",
+    "attachments": [],
+    "message_id": 1,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "liam.gallagher@syneos.com",
+    "to_addresses": [
+      "sarah.chen@denalitx.com"
+    ],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com",
+      "elena.vogel@uhm.de"
+    ],
+    "subject": "Fwd: DNL310 Study: IP Stock at Site 1205",
+    "timestamp": "2023-11-06T10:15:20Z",
+    "body": "Hi Sarah,\n\nPlease see the email below from the pharmacist at Site 1205. They have insufficient IP for two patient visits scheduled for next week.\n\nCould you please arrange for an expedited shipment to the site to prevent a potential dosing delay?\n\nAlex - FYI.\n\nBest regards,\n\nLiam Gallagher\nClinical Research Associate\nSyneos Health\n\n\u2010\u2010\u2010\u2010\u2010\u2010\u2010 Original Message \u2010\u2010\u2010\u2010\u2010\u2010\u2010\nFrom: Dr. Elena Vogel <elena.vogel@uhm.de>\nSent: Monday, November 6, 2023 9:32 AM\nTo: Liam Gallagher <liam.gallagher@syneos.com>\nCc: Martina Schmidt <martina.schmidt@uhm.de>\nSubject: DNL310 Study: IP Stock at Site 1205\n\nHi Liam,\n\nI just saw the automated low stock notification from the IWRS. We currently only have two kits of DNL310 remaining.\n\nWe have two patients, 1205-003 and 1205-004, scheduled for their infusions next Tuesday and Wednesday. We will not have enough drug to cover both visits.\n\nCould you please look into this for us?\n\nThank you,\n\nDr. Elena Vogel\nPharmacist\nUniversity Hospital of Munich",
+    "attachments": [],
+    "message_id": 2,
+    "in_reply_to": 1
+  }
+]

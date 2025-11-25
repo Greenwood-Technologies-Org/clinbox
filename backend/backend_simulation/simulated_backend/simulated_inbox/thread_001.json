@@ -1,0 +1,35 @@
+[
+  {
+    "from_address": "notifications@neuroscan-analytics.com",
+    "to_addresses": [
+      "dnl593-study-team@denalitx.com"
+    ],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com",
+      "lena.petrova@denalitx.com"
+    ],
+    "subject": "TAK-594/DNL593: New Scans Available",
+    "timestamp": "2023-11-06T11:00:00Z",
+    "body": "Dear Study Team,\n\nA new batch of processed brain scans (Batch ID: DNL593-20231106-A) for the TAK-594/DNL593 FTD-GRN study is now available for review in the NeuroScan portal.\n\nThank you,\nNeuroScan Analytics System",
+    "attachments": [],
+    "message_id": 0,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "lena.petrova@denalitx.com",
+    "to_addresses": [
+      "alex.johnson@denalitx.com"
+    ],
+    "cc_addresses": [
+      "david.chen@syneos.com"
+    ],
+    "subject": "Re: TAK-594/DNL593: New Scans Available",
+    "timestamp": "2023-11-06T15:25:00Z",
+    "body": "Hi Alex,\n\nThanks for the notification. While reviewing the latest batch, I noted an anomaly in the scan for patient 101-003. There appears to be a slight, unexpected signal enhancement in the cortical region that wasn't present on the baseline scan. This could potentially be related to TV engagement.\n\nCould you please follow up with the site to retrieve the patient's concomitant medication log and check for any adverse events reported around the scan date? We'll need that context to interpret this finding.\n\nBest,\n\nLena\n\n--\nDr. Lena Petrova\nClinical Scientist\nDenali Therapeutics",
+    "attachments": [
+      "Patient_101-003_Scan_Comparison.png"
+    ],
+    "message_id": 1,
+    "in_reply_to": 0
+  }
+]
