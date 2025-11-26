@@ -1,37 +1,35 @@
 [
   {
-    "from_address": "emily.carter@wisc.edu",
+    "from_address": "m.garcia@goldenstateclinical.com",
     "to_addresses": [
-      "sarah.chen@syneos.com"
+      "kevin.chen@syneoshealth.com"
     ],
     "cc_addresses": [
-      "alex.johnson@denalitx.com",
-      "david.lee@denalitx.com",
-      "michael.brown@wisc.edu"
+      "e.carter@goldenstateclinical.com"
     ],
-    "subject": "DNL343 Study: New SAE Report - Site 101",
-    "timestamp": "2023-10-26T14:30:00Z",
-    "body": "Dear Study Team,\n\nPlease find the attached CIOMS form for a Serious Adverse Event (unexpected hospitalization) for participant 101-005 in the DNL343 study.\n\nKindly acknowledge receipt at your earliest convenience and advise on any additional reporting requirements.\n\nBest regards,\n\nDr. Emily Carter\nPrincipal Investigator\nUniversity of Wisconsin",
+    "subject": "New SAE Report - BIIB122/DNL151 - Site 101",
+    "timestamp": "2024-05-21T14:30:00Z",
+    "body": "Hi Kevin,\n\nPlease see the attached initial CIOMS form for a new Serious Adverse Event (SAE) for patient 101-005.\n\nBest regards,\n\nMaria Garcia\nSite Coordinator\nGolden State Clinical Research",
     "attachments": [
-      "SAE_DNL343_101_005_CIOMS.pdf"
+      "SAE_CIOMS_BIIB122_101-005_Initial.pdf"
     ],
     "message_id": 0,
     "in_reply_to": null
   },
   {
-    "from_address": "sarah.chen@syneos.com",
+    "from_address": "kevin.chen@syneoshealth.com",
     "to_addresses": [
-      "emily.carter@wisc.edu"
+      "alex.johnson@denalitx.com"
     ],
     "cc_addresses": [
-      "alex.johnson@denalitx.com",
-      "david.lee@denalitx.com",
-      "michael.brown@wisc.edu"
+      "sarah.lee@syneoshealth.com"
     ],
-    "subject": "Re: DNL343 Study: New SAE Report - Site 101",
-    "timestamp": "2023-10-26T14:45:15Z",
-    "body": "Dear Dr. Carter,\n\nThank you for the notification. We have received the CIOMS form for participant 101-005.\n\nThe sponsor team will review the report and provide further guidance shortly.\n\nBest,\n\nSarah Chen\nClinical Research Associate\nSyneos Health",
-    "attachments": [],
+    "subject": "Fwd: New SAE Report - BIIB122/DNL151 - Site 101",
+    "timestamp": "2024-05-21T14:45:10Z",
+    "body": "Hi Alex,\n\nPlease see the new SAE report from Site 101 for study BIIB122/DNL151. The initial CIOMS form is attached for your review and submission to the Denali and Biogen safety teams.\n\nThanks,\n\nKevin Chen\nClinical Research Associate\nSyneos Health",
+    "attachments": [
+      "SAE_CIOMS_BIIB122_101-005_Initial.pdf"
+    ],
     "message_id": 1,
     "in_reply_to": 0
   }

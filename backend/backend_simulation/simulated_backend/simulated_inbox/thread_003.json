@@ -1,0 +1,34 @@
+[
+  {
+    "from_address": "reports@genomadx.com",
+    "to_addresses": [
+      "ben.carter@synergycr.com"
+    ],
+    "cc_addresses": [],
+    "subject": "ROPAD Study: Genetics Screening Report",
+    "timestamp": "2023-11-06T11:00:00Z",
+    "body": "Dear Clinical Team,\n\nAttached is the genetics screening batch report (GDX-ROP-23-08) for the ROPAD study, containing results for 5 participants.\n\nThis is an automated notification. Please do not reply to this email.\n\nThank you,\nGenoma Diagnostics Laboratory",
+    "attachments": [
+      "GDX-ROP-23-08_Screening_Results.pdf"
+    ],
+    "message_id": 0,
+    "in_reply_to": null
+  },
+  {
+    "from_address": "ben.carter@synergycr.com",
+    "to_addresses": [
+      "alex.johnson@denalitx.com"
+    ],
+    "cc_addresses": [
+      "sarah.chen@denalitx.com"
+    ],
+    "subject": "Fwd: ROPAD Study: Genetics Screening Report",
+    "timestamp": "2023-11-06T15:22:00Z",
+    "body": "Hi Alex,\n\nPlease see the attached batch report from Genoma Diagnostics.\n\nThe results indicate two mutation-positive participants (ROP-001-1034 and ROP-002-2011) who are potential candidates for the BIIB122/DNL151 (LIGHTHOUSE) study.\n\nParticipant ROP-002-2011 is located in a country where LIGHTHOUSE is not yet recruiting. Could you please advise on how we should proceed for this individual?\n\nBest regards,\n\nBen Carter\nClinical Research Associate\nSynergy Clinical Research",
+    "attachments": [
+      "GDX-ROP-23-08_Screening_Results.pdf"
+    ],
+    "message_id": 1,
+    "in_reply_to": 0
+  }
+]

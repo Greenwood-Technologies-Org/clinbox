@@ -3,14 +3,19 @@
     "folder": "Critical",
     "senders": [
       {
-        "name": "Emily Carter",
-        "title": "Principal Investigator",
-        "organization": "University of Wisconsin"
+        "name": "Maria Garcia",
+        "title": "Site Coordinator",
+        "organization": "Golden State Clinical Research"
       },
       {
-        "name": "Sarah Chen",
+        "name": "Kevin Chen",
         "title": "Clinical Research Associate",
         "organization": "Syneos Health"
+      },
+      {
+        "name": "E. Carter",
+        "title": "Principal Investigator",
+        "organization": "Golden State Clinical Research"
       },
       {
         "name": "Alex Johnson",
@@ -18,14 +23,26 @@
         "organization": "Denali Therapeutics"
       },
       {
-        "name": "David Lee",
-        "title": "Medical Monitor",
-        "organization": "Denali Therapeutics"
+        "name": "Sarah Lee",
+        "title": "CRO Project Manager",
+        "organization": "Syneos Health"
+      }
+    ],
+    "tasks": [],
+    "hasAttachments": true
+  },
+  {
+    "folder": "Urgent",
+    "senders": [
+      {
+        "name": "Klaus Richter",
+        "title": "Study Coordinator",
+        "organization": "University Hospital Hamburg"
       },
       {
-        "name": "Michael Brown",
-        "title": "Study Coordinator",
-        "organization": "University of Wisconsin"
+        "name": "Maria Garcia",
+        "title": "Clinical Research Associate",
+        "organization": "Synergy Clinical Research"
       }
     ],
     "tasks": [],
@@ -35,34 +52,54 @@
     "folder": "Important",
     "senders": [
       {
-        "name": "Maria Garcia",
-        "title": "Data Management Lead",
-        "organization": "Denali Therapeutics"
+        "name": "Brenda Smith",
+        "title": "Study Coordinator",
+        "organization": "Wisconsin Neurology Clinic (Site)"
       },
       {
-        "name": "David Chen",
-        "title": "Lead Biostatistician",
-        "organization": "Denali Therapeutics"
+        "name": "Maria Garcia",
+        "title": "Clinical Research Associate",
+        "organization": "Synergy Clinical Research (CRO)"
+      },
+      {
+        "name": "Alex Johnson",
+        "title": "Clinical Project Manager",
+        "organization": "Denali Therapeutics (Sponsor)"
+      },
+      {
+        "name": "R Davis",
+        "title": "Principal Investigator",
+        "organization": "Wisconsin Neurology Clinic (Site)"
+      },
+      {
+        "name": "Sarah Chen",
+        "title": "Safety Lead",
+        "organization": "Denali Therapeutics (Sponsor)"
+      },
+      {
+        "name": "David Miller",
+        "title": "Project Manager",
+        "organization": "Biogen (Sponsor)"
       }
     ],
     "tasks": [],
-    "hasAttachments": false
+    "hasAttachments": true
   },
   {
     "folder": "Urgent",
     "senders": [
       {
-        "name": "Klaus Schmidt",
-        "title": "Study Coordinator",
-        "organization": "University Hospital of T\u00fcbingen"
+        "name": "Automated Reporting System",
+        "title": "Automated Reporting System",
+        "organization": "Genoma Diagnostics"
       },
       {
-        "name": "Maria Garcia",
+        "name": "Ben Carter",
         "title": "Clinical Research Associate",
-        "organization": "Syneos Health"
+        "organization": "Synergy Clinical Research"
       }
     ],
     "tasks": [],
-    "hasAttachments": false
+    "hasAttachments": true
   }
 ]

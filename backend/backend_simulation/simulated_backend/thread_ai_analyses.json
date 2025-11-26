@@ -1,6 +1,6 @@
 [
   {
-    "summary": "Dr. Emily Carter from the University of Wisconsin reported a new Serious Adverse Event (SAE) for participant 101-005 in the DNL343 study, attaching the required CIOMS form. Sarah Chen from Syneos Health acknowledged receipt and confirmed the sponsor team will review the report.",
+    "summary": "A new Serious Adverse Event (SAE) for patient 101-005 in the BIIB122/DNL151 study was reported by the clinical site (Golden State Clinical Research) to the CRO (Syneos Health). The CRO then forwarded the SAE report to the sponsor (Denali) for distribution to the internal and partner (Biogen) safety teams.",
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_002",
@@ -8,48 +8,73 @@
       "steps": [
         {
           "name": "Acknowledge Site Report",
-          "result": "Completed",
-          "reasoning": "The second email in the thread from Sarah Chen (Syneos Health) already acknowledges receipt of the SAE report from the site, fulfilling the purpose of this step."
+          "result": "An automated acknowledgement email will be sent to the reporting site (m.garcia@goldenstateclinical.com).",
+          "reasoning": "The initial email from the clinical site reported a new SAE, triggering the first step of the workflow to confirm receipt."
         },
         {
-          "name": "Route to Pharmacovigilance",
-          "result": "The SAE report and the initial email have been forwarded to the internal Denali Pharmacovigilance (PV) intake group for processing.",
-          "reasoning": "The initial email from the clinical site is identified as an SAE report for the DNL343 study, which triggers this workflow step to route the report to the appropriate internal safety team for handling."
+          "name": "Distribute SAE to Safety Teams",
+          "result": "The SAE report (SAE_CIOMS_BIIB122_101-005_Initial.pdf) will be forwarded to the Denali Pharmacovigilance and Biogen Safety contact lists.",
+          "reasoning": "The email thread contains a new SAE report for the BIIB122/DNL151 study, which must be distributed to all required internal and partner safety teams as per the Safety Data Exchange Agreement (SDEA)."
         }
       ]
     }
   },
   {
-    "summary": "Data Management (Maria Garcia) and Biostatistics (David Chen) have confirmed that all data queries for the TAK-594/DNL593 12-month cohort are resolved, clearing the study for database lock. Maria has provided Alex Johnson with a draft email to formally notify the joint Takeda-Denali project team of this milestone, with a target lock date of May 24th.",
-    "quickActions": [],
-    "workflow": {
-      "workflowId": "workflow_004",
-      "status": "completed",
-      "steps": [
-        {
-          "name": "Draft and Send Milestone Update",
-          "result": "A draft email has been prepared for Alex Johnson to send to the Takeda-Denali joint project team, formally announcing that the 12-month cohort database for the TAK-594/DNL593 study is ready for lock.",
-          "reasoning": "The final email in the thread from Maria Garcia to Alex Johnson contains a complete, pre-formatted draft notification about the database lock milestone, ready to be sent to the partner team. This fulfills the action of drafting a milestone update."
-        }
-      ]
-    }
-  },
-  {
-    "summary": "Dr. Klaus Schmidt from the University Hospital of T\u00fcbingen has identified a potential patient from their ROPAD Parkinson's genetics study for the BIIB122/DNL151 study. He is requesting the referral protocol and the nearest trial site. Maria Garcia from Syneos Health has forwarded this inquiry to Alex Johnson at Denali for guidance.",
+    "summary": "Site 4901 (University Hospital Hamburg) reported a positive genetic screening result for participant 4901-0012 in the ROPAD study. The site coordinator, Dr. Klaus Richter, is seeking guidance on referring this participant to the LIGHTHOUSE study. The CRO, Maria Garcia, has forwarded this request to the sponsor, Alex Johnson at Denali, for next steps.",
     "quickActions": [],
     "workflow": {
       "workflowId": "workflow_001",
       "status": "needs approval",
       "steps": [
         {
-          "name": "Acknowledge Referral Receipt",
-          "result": "Send an email to Dr. Klaus Schmidt (k.schmidt@uktuebingen.de) acknowledging receipt of the patient referral inquiry.",
-          "reasoning": "The initial email from Dr. Schmidt is an inquiry about a patient referral from the ROPAD study, which is the trigger for this workflow. The first step is to acknowledge the receipt of this inquiry."
+          "name": "Identify Applicable Workflow",
+          "result": "ROPAD Genetic Screening Referral (workflow_001)",
+          "reasoning": "The email thread concerns a positive genetic screening result from the ROPAD study for a potential referral, which directly matches the purpose of this workflow."
         },
         {
-          "name": "Forward to Study Team",
-          "result": "Forward the inquiry to the internal DNL151 team and the designated Biogen contacts for review and to provide the requested protocol and site information.",
-          "reasoning": "The second step of the workflow is to route the referral to the appropriate internal and partner teams. Maria Garcia has already forwarded the email to Alex Johnson at Denali, and this step ensures it reaches the full designated team, including Biogen contacts."
+          "name": "Refer LRRK2+ Candidates for Parkinson's Trial",
+          "result": "The system has identified participant 4901-0012 as a potential candidate for the LIGHTHOUSE (BIIB122/DNL151) study based on the positive genetic report. The query has been correctly forwarded to the sponsor (Denali).",
+          "reasoning": "The email from Dr. Richter confirms a 'positive finding for the relevant mutation' for participant 4901-0012. This triggers the action to refer mutation-positive candidates. The email has been forwarded to Alex Johnson at Denali, which is the sponsor for the interventional trial."
+        }
+      ]
+    }
+  },
+  {
+    "summary": "The study site (Wisconsin Neurology Clinic) submitted a follow-up Serious Adverse Event (SAE) report for patient 101-005 in the BIIB122/DNL151 study, indicating the patient's condition has improved. The CRO acknowledged the report and instructed the sponsor (Denali) to forward it to internal safety teams and their partner, Biogen.",
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_002",
+      "status": "completed",
+      "steps": [
+        {
+          "name": "Acknowledge Site Report",
+          "result": "The second email from Maria Garcia (Synergy CRO) to Brenda Smith (Wisconsin Neurology Clinic) acknowledges receipt of the site's report.",
+          "reasoning": "Maria Garcia's email begins with 'Thanks, Brenda,' confirming receipt of the SAE follow-up form."
+        },
+        {
+          "name": "Distribute SAE to Safety Teams",
+          "result": "Maria Garcia's email directs Alex Johnson (Denali) to forward the updated CIOMS form to the Denali and Biogen safety teams.",
+          "reasoning": "The email contains the explicit instruction: 'Can you please ensure this updated CIOMS form is distributed to the internal Denali safety group and the Biogen team?', which directly aligns with this step's objective."
+        }
+      ]
+    }
+  },
+  {
+    "summary": "Ben Carter (Synergy) has forwarded a genetics screening report from the ROPAD study to Alex Johnson (Denali). The report identifies two mutation-positive participants (ROP-001-1034 and ROP-002-2011) who are potential candidates for the BIIB122/DNL151 (LIGHTHOUSE) study. Ben is asking for guidance on how to proceed with participant ROP-002-2011, who is located in a country where the LIGHTHOUSE study is not currently recruiting.",
+    "quickActions": [],
+    "workflow": {
+      "workflowId": "workflow_001",
+      "status": "needs approval",
+      "steps": [
+        {
+          "name": "Refer LRRK2+ Candidates for Parkinson's Trial",
+          "result": "The screening report identifying two mutation-positive participants (ROP-001-1034 and ROP-002-2011) has been forwarded to the BIIB122/DNL151 study team at Denali.",
+          "reasoning": "Ben Carter's email to Alex Johnson on 2023-11-06 forwards the Genoma Diagnostics report and explicitly identifies the two positive participants as potential candidates for the BIIB122/DNL151 study, fulfilling the referral action."
+        },
+        {
+          "name": "Log Negative/Other Results",
+          "result": "The results for the 3 mutation-negative participants from batch GDX-ROP-23-08 need to be logged in the CTMS.",
+          "reasoning": "The initial report from Genoma Diagnostics contained results for 5 participants. Since 2 were identified as mutation-positive, the remaining 3 are presumed negative and should be logged in the CTMS for the ROPAD study as per the workflow."
         }
       ]
     }

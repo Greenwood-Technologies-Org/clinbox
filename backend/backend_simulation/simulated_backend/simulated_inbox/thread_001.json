@@ -1,47 +1,34 @@
 [
   {
-    "from_address": "maria.garcia@denalitherapeutics.com",
+    "from_address": "k.richter@uhh-germany.de",
     "to_addresses": [
-      "david.chen@denalitherapeutics.com"
+      "maria.garcia@synergycro.com"
     ],
-    "cc_addresses": [
-      "alex.johnson@denalitherapeutics.com"
+    "cc_addresses": [],
+    "subject": "ROPAD Study: Positive Genetic Result Site 4901",
+    "timestamp": "2023-10-23T10:15:00+02:00",
+    "body": "Dear Maria,\n\nPlease find attached the genetic screening results for participant 4901-0012. The results indicate a positive finding for the relevant mutation.\n\nPlease confirm receipt and advise on the next steps for a potential referral to the LIGHTHOUSE study.\n\nBest regards,\n\nDr. Klaus Richter\nStudy Coordinator\nUniversity Hospital Hamburg",
+    "attachments": [
+      "Genetic_Screening_Report_4901-0012.pdf"
     ],
-    "subject": "TAK-594/DNL593: 12-Month Cohort Queries",
-    "timestamp": "2024-05-20T11:30:00-07:00",
-    "body": "Hi David,\n\nMy team has processed the final batch of query resolutions for the TAK-594/DNL593 12-month cohort. Our system shows zero outstanding queries.\n\nCan you please provide a final confirmation from the biostatistics side that you are aligned and we are ready to proceed with database lock procedures?\n\nThanks,\n\nMaria Garcia\nData Management Lead\nDenali Therapeutics",
-    "attachments": [],
     "message_id": 0,
     "in_reply_to": null
   },
   {
-    "from_address": "david.chen@denalitherapeutics.com",
+    "from_address": "maria.garcia@synergycro.com",
     "to_addresses": [
-      "maria.garcia@denalitherapeutics.com"
+      "alex.johnson@denali.com"
     ],
     "cc_addresses": [
-      "alex.johnson@denalitherapeutics.com"
+      "david.chen@synergycro.com"
     ],
-    "subject": "Re: TAK-594/DNL593: 12-Month Cohort Queries",
-    "timestamp": "2024-05-20T14:05:00-07:00",
-    "body": "Hi Maria,\n\nThanks for the update. I've reviewed the final data listings and can confirm that biostatistics has no further queries. We are clear for database lock.\n\nGreat work by your team to get this closed out.\n\nBest,\n\nDavid Chen\nLead Biostatistician\nDenali Therapeutics",
-    "attachments": [],
+    "subject": "Fwd: ROPAD Study: Positive Genetic Result Site 4901",
+    "timestamp": "2023-10-23T11:30:00+02:00",
+    "body": "Hi Alex,\n\nFYI - Site 4901 has identified a potential candidate for the LIGHTHOUSE study. Please see the attached report and the site's query below.\n\nCould you please advise on the next steps for the referral process?\n\nBest,\n\nMaria Garcia\nClinical Research Associate\nSynergy Clinical Research\n\n---------- Forwarded message ---------\nFrom: Klaus Richter <k.richter@uhh-germany.de>\nDate: Mon, Oct 23, 2023 at 10:15 AM\nSubject: ROPAD Study: Positive Genetic Result Site 4901\nTo: Maria Garcia <maria.garcia@synergycro.com>\n\nDear Maria,\n\nPlease find attached the genetic screening results for participant 4901-0012. The results indicate a positive finding for the relevant mutation.\n\nPlease confirm receipt and advise on the next steps for a potential referral to the LIGHTHOUSE study.\n\nBest regards,\n\nDr. Klaus Richter\nStudy Coordinator\nUniversity Hospital Hamburg",
+    "attachments": [
+      "Genetic_Screening_Report_4901-0012.pdf"
+    ],
     "message_id": 1,
     "in_reply_to": 0
-  },
-  {
-    "from_address": "maria.garcia@denalitherapeutics.com",
-    "to_addresses": [
-      "alex.johnson@denalitherapeutics.com"
-    ],
-    "cc_addresses": [
-      "david.chen@denalitherapeutics.com"
-    ],
-    "subject": "Re: TAK-594/DNL593: 12-Month Cohort Queries",
-    "timestamp": "2024-05-20T14:20:00-07:00",
-    "body": "Hi Alex,\n\nWith David's confirmation, we are officially ready for the 12-month cohort database lock.\n\nBelow is a draft communication for you to send to the joint project team to formally announce this milestone. Please review and send at your convenience.\n\n---\n\n**Subject:** TAK-594/DNL593: 12-Month Cohort Database Ready for Lock\n\n**To:** Takeda-Denali JPT Distribution List\n\nDear Team,\n\nThis email serves as formal notification that all data queries for the 12-month cohort of the TAK-594/DNL593 FTD-GRN study have been resolved. The clinical database is clean and ready for lock.\n\nWe are targeting End of Day this Friday, May 24th, for the final lock to occur.\n\nThank you to all team members for your diligence in reaching this key milestone.\n\nBest regards,\n\nAlex Johnson\n\n---\n\nThanks,\n\nMaria",
-    "attachments": [],
-    "message_id": 2,
-    "in_reply_to": 1
   }
 ]

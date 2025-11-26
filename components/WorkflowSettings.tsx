@@ -26,7 +26,6 @@ interface WorkflowAction {
   input: string;
   output: string;
   description: string;
-  approval: string;
 }
 
 interface WorkflowSettingsProps {
@@ -47,6 +46,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   const [selectedAction, setSelectedAction] = useState<WorkflowAction | null>(null);
   const [editingField, setEditingField] = useState<{ actionId: string; field: keyof WorkflowAction } | null>(null);
   const [editingWorkflowId, setEditingWorkflowId] = useState<string | null>(null);
+  const [workflowApproval, setWorkflowApproval] = useState('');
 
   // Define column widths (percentages for flexible columns, action is fixed width)
   const columnWidths = {
@@ -56,11 +56,10 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
   };
 
   const actionColumnWidths = {
-    action: 20,
+    action: 24,
     input: 12,
     output: 12,
-    description: 46,
-    approval: 10
+    description: 52
   };
 
   useEffect(() => {
@@ -103,8 +102,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
       action: '',
       input: '',
       output: '',
-      description: '',
-      approval: ''
+      description: ''
     };
     setActions([...actions, newAction]);
     setSelectedAction(newAction);
@@ -129,6 +127,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
     setActions([]);
     setWorkflowName('');
     setWorkflowDescription('');
+    setWorkflowApproval('');
     onBuilderModeChange?.(true);
   };
 
@@ -137,6 +136,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
     setEditingWorkflowId(workflow.id);
     setWorkflowName(workflow.name);
     setWorkflowDescription(workflow.description);
+    setWorkflowApproval(workflow.approval);
     // Load actions from workflow if they exist
     if (workflow.actions && workflow.actions.length > 0) {
       const loadedActions: WorkflowAction[] = workflow.actions.map((a, index) => ({
@@ -144,8 +144,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
         action: a.action,
         input: a.input,
         output: a.output,
-        description: a.description,
-        approval: a.approval
+        description: a.description
       }));
       setActions(loadedActions);
     } else {
@@ -175,6 +174,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
     setWorkflowDescription('');
     setIsEditingDescription(false);
     setEditingWorkflowId(null);
+    setWorkflowApproval('');
     setActions([]);
     onBuilderModeChange?.(false);
   };
@@ -200,7 +200,6 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
       if (!action.input) missingFields.push('Input');
       if (!action.output) missingFields.push('Output');
       if (!action.description.trim()) missingFields.push('Description');
-      if (!action.approval) missingFields.push('Approval');
 
       if (missingFields.length > 0) {
         alert(`Missing in Action ${i + 1}: ${missingFields.join(', ')}`);
@@ -216,7 +215,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
           name: workflowName,
           description: workflowDescription || '',
           modified: new Date().toISOString().split('T')[0],
-          approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No'
+          approval: workflowApproval
         } : w
       );
       setWorkflows(updatedWorkflows);
@@ -233,7 +232,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
         name: workflowName,
         description: workflowDescription || '',
         modified: new Date().toISOString().split('T')[0],
-        approval: actions.some(a => a.approval === 'Yes') ? 'Yes' : 'No'
+        approval: workflowApproval
       };
 
       // Add to workflows list
@@ -254,7 +253,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
       <div className="w-full md:w-[66%] lg:w-[69%] xl:w-[73%] bg-white flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-3">
-          <button onClick={handleBackToSettings} className="hover:bg-gray-100 p-1 rounded">
+          <button onClick={handleBackToSettings}>
             <ArrowLeft {...getIconProps()} />
           </button>
           
@@ -283,7 +282,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
             </button>
           )}
           
-          <button onClick={handleSaveWorkflow} className="hover:bg-gray-100 p-1 rounded">
+          <button onClick={handleSaveWorkflow}>
             <Check {...getIconProps()} />
           </button>
         </div>
@@ -305,9 +304,6 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                 <th style={{ width: `${actionColumnWidths.description}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
                   Description
                 </th>
-                <th style={{ width: `${actionColumnWidths.approval}%` }} className="px-3 py-3 text-left text-sm font-semibold text-black">
-                  Approval
-                </th>
                 <th style={{ width: '60px' }} className="pl-3 pr-6 py-3 text-right">
                   <button onClick={handleAddAction}>
                     <CirclePlus {...getIconProps()} />
@@ -315,7 +311,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                 </th>
               </tr>
               <tr>
-                <th colSpan={6} className="px-0 py-0">
+                <th colSpan={5} className="px-0 py-0">
                   <div className="mx-6 border-b border-gray-200"></div>
                 </th>
               </tr>
@@ -323,7 +319,7 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
             <tbody className="bg-white">
               {actions.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="text-center py-4 text-gray-400">
+                  <td colSpan={5} className="text-center py-4 text-gray-400">
                     No actions added yet. Click the + icon to add an action.
                   </td>
                 </tr>
@@ -418,19 +414,6 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
                         </button>
                       )}
                     </td>
-                    <td className="px-3 py-4 text-sm text-gray-600 truncate">
-                      <select
-                        value={action.approval}
-                        onChange={(e) => handleUpdateAction(action.id, 'approval', e.target.value)}
-                        className={`w-full outline-none bg-transparent cursor-pointer ${
-                          action.approval ? 'text-gray-900' : 'text-gray-400'
-                        }`}
-                      >
-                        <option value="" disabled>Approval</option>
-                        <option value="Yes" className="text-gray-900">Yes</option>
-                        <option value="No" className="text-gray-900">No</option>
-                      </select>
-                    </td>
                     <td style={{ width: '60px' }} className="pl-3 pr-6 py-4 text-right">
                       <button onClick={() => handleRemoveAction(action.id)}>
                         <CircleMinus {...getIconProps()} />
@@ -441,6 +424,27 @@ export default function WorkflowSettings({ onSelectWorkflow, onBuilderModeChange
               )}
             </tbody>
           </table>
+          
+          {/* Divider */}
+          <div className="px-0 py-0">
+            <div className="mx-6 border-b border-gray-200"></div>
+          </div>
+          
+          {/* Approval Section */}
+          <div className="px-6 py-4">
+            <div className="flex items-center justify-between">
+              <span className="font-semibold text-gray-900 text-sm">Approval</span>
+              <select
+                value={workflowApproval}
+                onChange={(e) => setWorkflowApproval(e.target.value)}
+                className="text-right outline-none bg-transparent cursor-pointer text-gray-600 text-sm"
+              >
+                <option value="" disabled>Approval</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
           
           {/* Divider */}
           <div className="px-0 py-0">

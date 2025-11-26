@@ -1,26 +1,36 @@
 [
   {
-    "from_address": "k.schmidt@uktuebingen.de",
+    "from_address": "bsmith@wisconsinneuro.com",
     "to_addresses": [
-      "m.garcia@syneos.com"
+      "maria.garcia@synergycro.com"
     ],
-    "cc_addresses": [],
-    "subject": "Inquiry: Patient Referral for BIIB122/DNL151",
-    "timestamp": "2024-05-21T09:30:15+02:00",
-    "body": "Dear Maria,\n\nI hope this email finds you well.\n\nWe have identified a patient within our ROPAD Parkinson's genetics study at the University Hospital of T\u00fcbingen who appears to meet the preliminary genetic criteria for the BIIB122/DNL151 study. \n\nCould you please provide us with the protocol for patient referral? Additionally, we would appreciate the contact information for the nearest participating clinical trial site in Europe for this study.\n\nThank you for your assistance.\n\nBest regards,\n\nDr. Klaus Schmidt\nStudy Coordinator\nDepartment of Neurology\nUniversity Hospital of T\u00fcbingen",
-    "attachments": [],
+    "cc_addresses": [
+      "alex.johnson@denalitx.com",
+      "rdavis@wisconsinneuro.com"
+    ],
+    "subject": "BIIB122/DNL151: SAE Follow-Up (Site 101, Patient 005)",
+    "timestamp": "2023-10-26T10:15:00-05:00",
+    "body": "Hi Team,\n\nPlease see the attached follow-up CIOMS form for patient 101-005 regarding the previously reported SAE. The patient's condition has improved, and they are recovering well.\n\nPlease let us know if any further information is required.\n\nBest regards,\nBrenda Smith\nStudy Coordinator\nWisconsin Neurology Clinic",
+    "attachments": [
+      "SAE_FollowUp_101-005_CIOMS_26OCT2023.pdf"
+    ],
     "message_id": 0,
     "in_reply_to": null
   },
   {
-    "from_address": "m.garcia@syneos.com",
+    "from_address": "maria.garcia@synergycro.com",
     "to_addresses": [
       "alex.johnson@denalitx.com"
     ],
-    "cc_addresses": [],
-    "subject": "Fwd: Inquiry: Patient Referral for BIIB122/DNL151",
-    "timestamp": "2024-05-21T11:05:00+02:00",
-    "body": "Hi Alex,\n\nPlease see the inquiry below from a ROPAD study site in Germany. They have a potential referral candidate for the BIIB122/DNL151 study.\n\nCould you please advise on the standard procedure for this type of referral and provide the contact details for the appropriate site? \n\nThanks,\n\nMaria Garcia\nClinical Research Associate\nSyneos Health\n\n---------- Forwarded message ---------\nFrom: Dr. Klaus Schmidt <k.schmidt@uktuebingen.de>\nDate: Tue, May 21, 2024 at 9:30 AM\nSubject: Inquiry: Patient Referral for BIIB122/DNL151\nTo: Maria Garcia <m.garcia@syneos.com>\n\nDear Maria,\n\nI hope this email finds you well.\n\nWe have identified a patient within our ROPAD Parkinson's genetics study at the University Hospital of T\u00fcbingen who appears to meet the preliminary genetic criteria for the BIIB122/DNL151 study. \n\nCould you please provide us with the protocol for patient referral? Additionally, we would appreciate the contact information for the nearest participating clinical trial site in Europe for this study.\n\nThank you for your assistance.\n\nBest regards,\n\nDr. Klaus Schmidt\nStudy Coordinator\nDepartment of Neurology\nUniversity Hospital of T\u00fcbingen",
+    "cc_addresses": [
+      "bsmith@wisconsinneuro.com",
+      "rdavis@wisconsinneuro.com",
+      "sarah.chen@denalitx.com",
+      "david.miller@biogen.com"
+    ],
+    "subject": "Re: BIIB122/DNL151: SAE Follow-Up (Site 101, Patient 005)",
+    "timestamp": "2023-10-26T12:35:00-04:00",
+    "body": "Thanks, Brenda.\n\nAlex,\n\nCan you please ensure this updated CIOMS form is distributed to the internal Denali safety group and the Biogen team?\n\nBest regards,\n\nMaria Garcia\nClinical Research Associate\nSynergy Clinical Research",
     "attachments": [],
     "message_id": 1,
     "in_reply_to": 0
