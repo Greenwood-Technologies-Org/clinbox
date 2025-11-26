@@ -53,10 +53,20 @@ interface MainContentProps {
   activeView: 'email' | 'calendar' | 'workflows';
   onSelectEmail: (email: { filename?: string; sender?: { name: string; title: string; organization: string; email?: string }; aiAnalysis?: { summary: string; quickActions?: Array<string | { action: string; emails?: Array<{ to: string; subject: string; body: string; references: string[] }> }> }; tasks?: string[]; hasAttachments?: boolean; attachments?: Attachment[] } | null) => void;
   onSelectWorkflow?: (workflow: { id: string; workflowId: string; workflowName: string; eventDescription: string; date: string; status: string } | null) => void;
+  externalActiveGroup?: string;
+  onActiveGroupChange?: (group: string) => void;
+  onEmailClick?: (filename: string) => void;
 }
 
-export default function MainContent({ children, activeView, onSelectEmail, onSelectWorkflow }: MainContentProps) {
-  const [activeGroup, setActiveGroup] = useState<string>('Critical');
+export default function MainContent({ children, activeView, onSelectEmail, onSelectWorkflow, externalActiveGroup, onActiveGroupChange, onEmailClick }: MainContentProps) {
+  const [internalActiveGroup, setInternalActiveGroup] = useState<string>('Critical');
+  const activeGroup = externalActiveGroup !== undefined ? externalActiveGroup : internalActiveGroup;
+  const setActiveGroup = (group: string) => {
+    if (externalActiveGroup === undefined) {
+      setInternalActiveGroup(group);
+    }
+    onActiveGroupChange?.(group);
+  };
   const [emails, setEmails] = useState<Email[]>([]);
   const [emailData, setEmailData] = useState<EmailData>({});
   const [emailAIAnalysis, setEmailAIAnalysis] = useState<EmailAIAnalysis>({});
@@ -274,6 +284,7 @@ export default function MainContent({ children, activeView, onSelectEmail, onSel
               setViewMode('opened');
             }}
             loadThreadAttachments={loadThreadAttachments}
+            onEmailClick={onEmailClick}
           />
         ) : (
           <OpenedEmail 

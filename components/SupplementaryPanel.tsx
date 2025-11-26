@@ -420,6 +420,7 @@ export default function SupplementaryPanel({
                                   }
                                 }}
                                 className="hover:text-green-600 text-gray-400 transition-colors"
+                                data-tutorial="quick-action-checkbox"
                               >
                                 <CircleCheck className="w-4 h-4" />
                               </button>
@@ -496,6 +497,7 @@ export default function SupplementaryPanel({
                           className="text-gray-400 hover:text-green-600 transition-colors"
                           title="Approve workflow"
                           onClick={() => setShowWorkflowModal(true)}
+                          data-tutorial="approval-checkmark"
                         >
                           <CircleCheck className="w-4 h-4" />
                         </button>

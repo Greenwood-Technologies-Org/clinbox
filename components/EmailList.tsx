@@ -46,6 +46,7 @@ interface EmailListProps {
   onSetSelectedFilename: (filename: string | null) => void;
   onOpenEmail: (subject: string) => void;
   loadThreadAttachments: (filename: string) => Promise<Array<{ filename: string; mimeType: string }>>;
+  onEmailClick?: (filename: string) => void;
 }
 
 export default function EmailList({ 
@@ -60,7 +61,8 @@ export default function EmailList({
   onEmailHover,
   onSetSelectedFilename,
   onOpenEmail,
-  loadThreadAttachments
+  loadThreadAttachments,
+  onEmailClick
 }: EmailListProps) {
   let hoverTimeout: NodeJS.Timeout | null = null;
   const groups = ['Critical', 'Urgent', 'Important', 'IRB', 'Other'];
@@ -85,6 +87,7 @@ export default function EmailList({
                   ? 'text-black font-medium'
                   : 'text-gray-400 hover:text-black'
               }`}
+              data-tutorial={group === 'Important' ? 'important-tab' : group === 'Urgent' ? 'urgent-tab' : undefined}
             >
               {group}
             </button>
@@ -174,6 +177,11 @@ export default function EmailList({
           }
         };
         
+        // Check if this is the Dupliplex Imaging email
+        const isDupliplexEmail = email.filename && 
+          emailData[email.filename]?.sender?.organization === 'Dupliplex Imaging';
+        const isUrgentEmail = activeGroup === 'Urgent';
+
         return (
           <div
             key={email.filename || email.id || `email-${index}`}
@@ -205,6 +213,11 @@ export default function EmailList({
                   attachments: attachments
                 });
                 onOpenEmail(subject);
+                
+                // Trigger external email click handler
+                if (onEmailClick && email.filename) {
+                  onEmailClick(email.filename);
+                }
               } else {
                 onSelectEmail(null);
               }
@@ -212,6 +225,8 @@ export default function EmailList({
             className={`px-6 py-2 hover:bg-gray-100 cursor-pointer transition-colors min-w-0 ${
               email.filename === selectedEmailFilename ? 'bg-gray-100' : ''
             }`}
+            data-tutorial={isDupliplexEmail ? 'dupliplex-email' : isUrgentEmail ? 'urgent-email' : undefined}
+            data-email-filename={email.filename || undefined}
           >
             <div className="flex items-center gap-4 min-w-0">
               {/* Sender Name - Fixed 20% width */}
